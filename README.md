@@ -2,4 +2,4 @@
 Website for the CVPR 2019 workshop
 
 
-* Under construction, please check back later *
+*Under construction, please check back later*
