@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Image Matching: Local Features &amp; Beyond</title>
+    <link>/</link>
+    <description>Recent content on Image Matching: Local Features &amp; Beyond</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 02 Oct 2016 22:55:05 -0400</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Challenge</title>
+      <link>/challenge/</link>
+      <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
+      
+      <guid>/challenge/</guid>
+      <description>More information about the challenge will be added soon.</description>
+    </item>
+    
+    <item>
+      <title>Paper submission</title>
+      <link>/papers/</link>
+      <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
+      
+      <guid>/papers/</guid>
+      <description>More information about paper submission, deadlines and CMT link will be added soon.</description>
+    </item>
+    
+  </channel>
+</rss>

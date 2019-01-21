@@ -1,0 +1,297 @@
+@-ms-viewport
+{
+    width: device-width;
+}
+@-o-viewport
+{
+    width: device-width;
+}
+@viewport
+{
+    width: device-width;
+}
+a,
+a:hover,
+a:visited,
+a:link
+{
+    text-decoration: none;
+
+    color: #526d7a;
+}
+body
+{
+    font-family: 'Roboto Slab', 'Roboto', 'Lato', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+
+    width: auto;
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+
+    background-color: #fcfcfc;
+}
+html
+{
+    position: relative;
+
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+.author
+{
+    color: #444;
+}
+.author h1,
+.author h2,
+.author h3,
+.author h4,
+.author h5,
+.author h6,
+.author p
+{
+    font-family: 'Roboto Slab', serif;
+}
+.category
+{
+    color: #966 !important;
+}
+.container
+{
+    overflow: auto;
+
+    max-width: 1000px;
+    padding: 0 15px;
+}
+.content
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+div.content
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    color: #777;
+}
+.copyright
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+}
+.description
+{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #8b8b8b;
+    font-size:1.5em;
+}
+.error
+{
+    font-family: 'Roboto', sans-serif;
+
+    margin-top: 100px;
+}
+.error h1
+{
+    font-size: 20px;
+
+    color: #8b8b8b;
+}
+.error p
+{
+    margin-top: 150px;
+
+    color: #777;
+}
+.excerpt
+{
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+
+    color: #555;
+    margin-bottom: 20px;
+}
+.footer
+{
+    margin-top: 10px;
+
+    color: #8b8b8b;
+}
+.header
+{
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+.banner
+{
+    max-width: 100%;
+}
+.info
+{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.intro
+{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 450;
+    color: #5F5F5F;
+    font-size:1.9em;
+}
+h3.intro
+{
+    margin-top: 0px
+}
+.list
+{
+    font-family: 'Roboto', sans-serif;
+
+    margin-top: 50px;
+}
+.list li
+{
+    list-style: none;
+}
+.list-entry
+{
+    font-family: 'Roboto Slab', serif;
+    font-size: 25px;
+    font-weight: 400;
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.list-entry-link
+{
+    padding: 0;
+}
+.main-menu
+{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.menu
+{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.menu-item
+{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+
+    text-decoration: none;
+
+    color: #966 !important;
+}
+.meta
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+
+    color: #8b8b8b;
+}
+a.meta
+{
+    color: #966;
+}
+h6.meta
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+
+    color: #8b8b8b;
+}
+section.meta {
+    margin-top:
+}
+.powered
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+}
+.social {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.social,
+.social a
+{
+    color: #526d7a;
+}
+.title
+{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+
+    color: #555;
+}
+header.title
+{
+    margin-top: 50px;
+    padding: 0 15px;
+}
+@media (max-width: 991px)
+{
+    .header
+    {
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+    .list
+    {
+        font-family: 'Roboto', sans-serif;
+
+        margin-top: 30px;
+    }
+}
+pre > code {
+    white-space: pre;
+    word-wrap: initial;
+    word-break: initial;
+}
+
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+
+    font-weight: 600;
+    color: inherit;
+    font-size:1.1em;
+}
+
+
+div.item {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 110px;
+}
+.headshot {
+    width: 85px;
+    height: 85px;
+    background-color: grey;
+    border-radius: 50%;
+}
+.name {
+    font-family: 'Roboto Slab', 'Roboto', 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    display: block;
+    color:#966;
+}
+.affiliation {
+    font-family: 'Roboto Slab', 'Roboto', 'Lato', sans-serif;
+    display: block;
+    font-size:14px;
+    font-weight: 300;
+}
