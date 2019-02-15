@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="description" content="Image Matching: Local Features &amp; Beyond - CVPR 2019 Workshop">
+<meta name="keywords" content="image,matching,local Features, CVPR 2019, Workshop, CVPR">
+
+<base href="">
+
+<title>Image Matching: Local Features &amp; Beyond</title>
+
+<meta name="generator" content="Hugo 0.53" />
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+<link rel="stylesheet" href="css/datatables.min.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/custom.css">
+
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+<script type="text/javascript" src="js/jquery.latest.min.js"></script>
+<script type="text/javascript" src="js/datatables.min.js"></script>
+<script>
+$(document).ready(function (){
+    var table = $('.leaderboard_stereo').DataTable({
+        "columnDefs": [{targets:[0, 2], orderSequence: ['desc', 'asc']}],
+        "columnDefs": [{targets:[1, 3, 4, 5, 6, 7, 8, 9], orderSequence: ['desc', 'asc']}],
+        "order": [[7, 'desc']],
+        responsive: {
+            details: {
+                renderer: function ( api, rowIdx, columns ) {
+                    var data = $.map( columns, function ( col, i ) {
+                        return col.hidden ?
+                            '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
+                                '<td><b>'+col.title+':'+'</b></td> '+
+                                '<td>'+col.data+'</td>'+
+                            '</tr>' :
+                            '';
+                    } ).join('');
+ 
+                    return data ?
+                        $('<table/>').append( data ) :
+                        false;
+                }
+            }
+        }
+    });
+
+    var table = $('.leaderboard_mvs').DataTable({
+        "columnDefs": [{targets:[0, 2], orderSequence: ['desc', 'asc']}],
+        "columnDefs": [{targets:[1, 3, 4, 5, 6, 7, 8, 9, 10, 11], orderSequence: ['desc', 'asc']}],
+        "order": [[8, 'desc']],
+        responsive: {
+            details: {
+                renderer: function ( api, rowIdx, columns ) {
+                    var data = $.map( columns, function ( col, i ) {
+                        return col.hidden ?
+                            '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
+                                '<td><b>'+col.title+':'+'</b></td> '+
+                                '<td>'+col.data+'</td>'+
+                            '</tr>' :
+                            '';
+                    } ).join('');
+ 
+                    return data ?
+                        $('<table/>').append( data ) :
+                        false;
+                }
+            }
+        }
+    });
+
+    var table = $('.checkerboard').DataTable({
+        "columnDefs": [{targets:[0], orderSequence: ['desc', 'asc']}],
+        "columnDefs": [{targets:[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], orderSequence: ['desc', 'asc']}],
+        "order": [[12, 'desc']],
+        responsive: {
+            details: {
+                renderer: function ( api, rowIdx, columns ) {
+                    var data = $.map( columns, function ( col, i ) {
+                        return col.hidden ?
+                            '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
+                                '<td><b>'+col.title+':'+'</b></td> '+
+                                '<td>'+col.data+'</td>'+
+                            '</tr>' :
+                            '';
+                    } ).join('');
+ 
+                    return data ?
+                        $('<table/>').append( data ) :
+                        false;
+                }
+            }
+        }
+    });
+
+    $('.tablelist').dataTable({searching: false, paging: false, info: false});
+
+    
+
+    
+    $('#btn-show-all-children').on('click', function(){
+        
+        table.rows(':not(.parent)').nodes().to$().find('td:first-child').trigger('click');
+    });
+
+    
+    $('#btn-hide-all-children').on('click', function(){
+        
+        table.rows('.parent').nodes().to$().find('td:first-child').trigger('click');
+    });
+});
+</script>
+</head>
+<body lang="en-US">
+<div class="container">
+
+
+<header class="row text-left title">
+  <h1 class="title">Breakdown: Phototourism | MVS | Subsets</h1>
+</header>
+<section id="category-pane" class="row meta">
+  
+</section>
+<section id="content-pane" class="row">
+  <div class="col-md-12 text-justify content">
+    
+
+<p>Breakdown on the Phototourism dataset, multi-view stereo task, by subset size.</p>
+
+<hr>
+
+<p>
+
+
+
+<table class="display leaderboard_mvs" width="100%" cellspacing="0">
+<thead>
+<tr>
+  <th colspan="12" style="text-align: center;" class="sorter-false">MVS, bag size 3</th>
+</tr>
+<tr>
+  
+  <th class="all">Method</th>
+  <th class="all">Date</th>
+  <th class="all">Type</th>
+  
+  <th class="all">#Pts</th>
+  <th class="all">SR</th>
+  <th class="all">TL</th>
+  <th class="all">mAP<sup>5<sup>o</sup></sup></th>
+  <th class="all">mAP<sup>10<sup>o</sup></sup></th>
+  <th class="all">mAP<sup>15<sup>o</sup></sup></th>
+  <th class="all">mAP<sup>20<sup>o</sup></sup></th>
+  <th class="all">mAP<sup>25<sup>o</sup></sup></th>
+  <th class="all">ATE</th>
+  
+  <th class="none hidden_key">By</th>
+  <th class="none hidden_key">Details</th>
+  <th class="none hidden_key">Link</th>
+  <th class="none hidden_key">Contact</th>
+  <th class="none hidden_key">Updated</th>
+</tr>
+</thead>
+<tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td>AKAZE</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-12</td>
+  <td>F</td>
+  
+  
+  <td>&mdash;</td>
+  <td>76.0</td>
+  <td>2.35</td>
+  <td>0.094</td>
+  <td>0.185</td>
+  <td>0.263</td>
+  <td>0.339</td>
+  <td>0.401</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Challenge organizers</td>
+  <td class="hidden_value">TBA</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value">N/A</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td>ORB</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-12</td>
+  <td>F</td>
+  
+  
+  <td>&mdash;</td>
+  <td>37.0</td>
+  <td>2.25</td>
+  <td>0.010</td>
+  <td>0.042</td>
+  <td>0.075</td>
+  <td>0.111</td>
+  <td>0.129</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Challenge organizers</td>
+  <td class="hidden_value">TBA</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value">N/A</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td>SIFT</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-12</td>
+  <td>F</td>
+  
+  
+  <td>&mdash;</td>
+  <td>71.0</td>
+  <td>2.30</td>
+  <td>0.060</td>
+  <td>0.120</td>
+  <td>0.182</td>
+  <td>0.244</td>
+  <td>0.294</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Challenge organizers</td>
+  <td class="hidden_value">TBA</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value">N/A</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td>SP</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-12</td>
+  <td>F</td>
+  
+  
+  <td>&mdash;</td>
+  <td>50.5</td>
+  <td>2.41</td>
+  <td>0.044</td>
+  <td>0.089</td>
+  <td>0.139</td>
+  <td>0.166</td>
+  <td>0.194</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Challenge organizers</td>
+  <td class="hidden_value">TBA</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value">N/A</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td>SURF</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-12</td>
+  <td>F</td>
+  
+  
+  <td>&mdash;</td>
+  <td>42.5</td>
+  <td>2.25</td>
+  <td>0.015</td>
+  <td>0.045</td>
+  <td>0.077</td>
+  <td>0.100</td>
+  <td>0.116</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Challenge organizers</td>
+  <td class="hidden_value">TBA</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value">N/A</td>
+</tr>
+  
+
+
+
+
+
+
+
+</tbody>
+</table>
+
+
+
+<hr>
+
+
+
+
+<table class="display leaderboard_mvs" width="100%" cellspacing="0">
+<thead>
+<tr>
+  <th colspan="12" style="text-align: center;" class="sorter-false">MVS, bag size 5</th>
+</tr>
+<tr>
+  
+  <th class="all">Method</th>
+  <th class="all">Date</th>
+  <th class="all">Type</th>
+  
+  <th class="all">#Pts</th>
+  <th class="all">SR</th>
+  <th class="all">TL</th>
+  <th class="all">mAP<sup>5<sup>o</sup></sup></th>
+  <th class="all">mAP<sup>10<sup>o</sup></sup></th>
+  <th class="all">mAP<sup>15<sup>o</sup></sup></th>
+  <th class="all">mAP<sup>20<sup>o</sup></sup></th>
+  <th class="all">mAP<sup>25<sup>o</sup></sup></th>
+  <th class="all">ATE</th>
+  
+  <th class="none hidden_key">By</th>
+  <th class="none hidden_key">Details</th>
+  <th class="none hidden_key">Link</th>
+  <th class="none hidden_key">Contact</th>
+  <th class="none hidden_key">Updated</th>
+</tr>
+</thead>
+<tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td>AKAZE</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-12</td>
+  <td>F</td>
+  
+  
+  <td>&mdash;</td>
+  <td>96.5</td>
+  <td>2.86</td>
+  <td>0.261</td>
+  <td>0.436</td>
+  <td>0.544</td>
+  <td>0.605</td>
+  <td>0.658</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Challenge organizers</td>
+  <td class="hidden_value">TBA</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value">N/A</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td>ORB</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-12</td>
+  <td>F</td>
+  
+  
+  <td>&mdash;</td>
+  <td>40.5</td>
+  <td>2.69</td>
+  <td>0.052</td>
+  <td>0.112</td>
+  <td>0.151</td>
+  <td>0.181</td>
+  <td>0.205</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Challenge organizers</td>
+  <td class="hidden_value">TBA</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value">N/A</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td>SIFT</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-12</td>
+  <td>F</td>
+  
+  
+  <td>&mdash;</td>
+  <td>81.5</td>
+  <td>2.78</td>
+  <td>0.179</td>
+  <td>0.296</td>
+  <td>0.373</td>
+  <td>0.437</td>
+  <td>0.475</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Challenge organizers</td>
+  <td class="hidden_value">TBA</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value">N/A</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td>SP</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-12</td>
+  <td>F</td>
+  
+  
+  <td>&mdash;</td>
+  <td>58.5</td>
+  <td>2.89</td>
+  <td>0.096</td>
+  <td>0.181</td>
+  <td>0.233</td>
+  <td>0.277</td>
+  <td>0.308</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Challenge organizers</td>
+  <td class="hidden_value">TBA</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value">N/A</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td>SURF</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-12</td>
+  <td>F</td>
+  
+  
+  <td>&mdash;</td>
+  <td>68.0</td>
+  <td>2.71</td>
+  <td>0.064</td>
+  <td>0.162</td>
+  <td>0.233</td>
+  <td>0.292</td>
+  <td>0.340</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Challenge organizers</td>
+  <td class="hidden_value">TBA</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value">N/A</td>
+</tr>
+  
+
+
+
+
+
+
+
+</tbody>
+</table>
+
+
+
+<hr>
+
+
+
+
+<table class="display leaderboard_mvs" width="100%" cellspacing="0">
+<thead>
+<tr>
+  <th colspan="12" style="text-align: center;" class="sorter-false">MVS, bag size 10</th>
+</tr>
+<tr>
+  
+  <th class="all">Method</th>
+  <th class="all">Date</th>
+  <th class="all">Type</th>
+  
+  <th class="all">#Pts</th>
+  <th class="all">SR</th>
+  <th class="all">TL</th>
+  <th class="all">mAP<sup>5<sup>o</sup></sup></th>
+  <th class="all">mAP<sup>10<sup>o</sup></sup></th>
+  <th class="all">mAP<sup>15<sup>o</sup></sup></th>
+  <th class="all">mAP<sup>20<sup>o</sup></sup></th>
+  <th class="all">mAP<sup>25<sup>o</sup></sup></th>
+  <th class="all">ATE</th>
+  
+  <th class="none hidden_key">By</th>
+  <th class="none hidden_key">Details</th>
+  <th class="none hidden_key">Link</th>
+  <th class="none hidden_key">Contact</th>
+  <th class="none hidden_key">Updated</th>
+</tr>
+</thead>
+<tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td>AKAZE</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-12</td>
+  <td>F</td>
+  
+  
+  <td>&mdash;</td>
+  <td>100.0</td>
+  <td>3.79</td>
+  <td>0.480</td>
+  <td>0.658</td>
+  <td>0.737</td>
+  <td>0.788</td>
+  <td>0.819</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Challenge organizers</td>
+  <td class="hidden_value">TBA</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value">N/A</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td>ORB</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-12</td>
+  <td>F</td>
+  
+  
+  <td>&mdash;</td>
+  <td>43.5</td>
+  <td>3.17</td>
+  <td>0.148</td>
+  <td>0.224</td>
+  <td>0.263</td>
+  <td>0.289</td>
+  <td>0.307</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Challenge organizers</td>
+  <td class="hidden_value">TBA</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value">N/A</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td>SIFT</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-12</td>
+  <td>F</td>
+  
+  
+  <td>&mdash;</td>
+  <td>98.0</td>
+  <td>3.47</td>
+  <td>0.365</td>
+  <td>0.533</td>
+  <td>0.619</td>
+  <td>0.669</td>
+  <td>0.706</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Challenge organizers</td>
+  <td class="hidden_value">TBA</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value">N/A</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td>SP</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-12</td>
+  <td>F</td>
+  
+  
+  <td>&mdash;</td>
+  <td>60.5</td>
+  <td>3.56</td>
+  <td>0.168</td>
+  <td>0.288</td>
+  <td>0.352</td>
+  <td>0.386</td>
+  <td>0.415</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Challenge organizers</td>
+  <td class="hidden_value">TBA</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value">N/A</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td>SURF</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-12</td>
+  <td>F</td>
+  
+  
+  <td>&mdash;</td>
+  <td>86.5</td>
+  <td>3.25</td>
+  <td>0.222</td>
+  <td>0.381</td>
+  <td>0.468</td>
+  <td>0.525</td>
+  <td>0.568</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Challenge organizers</td>
+  <td class="hidden_value">TBA</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value">N/A</td>
+</tr>
+  
+
+
+
+
+
+
+
+</tbody>
+</table>
+
+
+
+<hr></p>
+
+<h3 id="a-name-glossary-a-glossary"><a name="glossary"></a>Glossary</h3>
+
+Multi-view reconstruction task:
+
+<ul>
+  <li><b>Type:</b> Input format. "F": Features. "M": Features and matches. "P": Poses.</li>
+  <li><b>#Pts:</b> Average number of 3D points obtained by the reconstruction.</li>
+  <li><b>SR:</b> Success ratio (percentage) in the re-construction with COLMAP, out of 100 subsets.</li>
+  <li><b>TL:</b> Average track length (number of 3D point observations).</li>
+  <li><b>mAP<sup>x</sup>:</b> Mean average precision at angular threshold *x*.</li>
+  <li><b>ATE:</b> Absolute Trajectory Error.</li>
+</ul>
+
+
+  </div>
+</section>
+<section id="tag-pane" class="row meta">
+  
+</section>
+
+
+
+
+
+
+
+
+<section id="menu-pane" class="row menu text-center">
+  
+  
+  <span><a class="menu-item" href="/breakdown/phototourism/stereo/by_seq/">&lt; prev | </a></span>
+  
+  
+  <span><a class="menu-item" href="/breakdown">breakdown</a></span>
+  
+  
+  <span><a class="menu-item" href="/breakdown/phototourism/mvs/by_seq/"> | next &gt;</a></span>
+  
+  
+  <h4 class="text-center"><a class="menu-item" href="">home</a></h4>
+</section>
+
+
+
+<footer class="row text-center footer">
+  
+  
+</footer>
+
+</div>
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-62863910-6', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+
+</script>
+</body>
+</html>
+
+

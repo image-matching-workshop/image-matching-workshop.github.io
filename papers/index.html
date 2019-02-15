@@ -14,14 +14,16 @@
 
 <title>Image Matching: Local Features &amp; Beyond</title>
 
-<meta name="generator" content="Hugo 0.47.1" />
+<meta name="generator" content="Hugo 0.53" />
 
 
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+<link rel="stylesheet" href="css/datatables.min.css">
 <link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/custom.css">
 
 
 
@@ -33,20 +35,169 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="theme-color" content="#ffffff">
 
+
+
+
+
+<script type="text/javascript" src="js/jquery.latest.min.js"></script>
+<script type="text/javascript" src="js/datatables.min.js"></script>
+<script>
+$(document).ready(function (){
+    var table = $('.leaderboard_stereo').DataTable({
+        "columnDefs": [{targets:[0, 2], orderSequence: ['desc', 'asc']}],
+        "columnDefs": [{targets:[1, 3, 4, 5, 6, 7, 8, 9], orderSequence: ['desc', 'asc']}],
+        "order": [[7, 'desc']],
+        responsive: {
+            details: {
+                renderer: function ( api, rowIdx, columns ) {
+                    var data = $.map( columns, function ( col, i ) {
+                        return col.hidden ?
+                            '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
+                                '<td><b>'+col.title+':'+'</b></td> '+
+                                '<td>'+col.data+'</td>'+
+                            '</tr>' :
+                            '';
+                    } ).join('');
+ 
+                    return data ?
+                        $('<table/>').append( data ) :
+                        false;
+                }
+            }
+        }
+    });
+
+    var table = $('.leaderboard_mvs').DataTable({
+        "columnDefs": [{targets:[0, 2], orderSequence: ['desc', 'asc']}],
+        "columnDefs": [{targets:[1, 3, 4, 5, 6, 7, 8, 9, 10, 11], orderSequence: ['desc', 'asc']}],
+        "order": [[8, 'desc']],
+        responsive: {
+            details: {
+                renderer: function ( api, rowIdx, columns ) {
+                    var data = $.map( columns, function ( col, i ) {
+                        return col.hidden ?
+                            '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
+                                '<td><b>'+col.title+':'+'</b></td> '+
+                                '<td>'+col.data+'</td>'+
+                            '</tr>' :
+                            '';
+                    } ).join('');
+ 
+                    return data ?
+                        $('<table/>').append( data ) :
+                        false;
+                }
+            }
+        }
+    });
+
+    var table = $('.checkerboard').DataTable({
+        "columnDefs": [{targets:[0], orderSequence: ['desc', 'asc']}],
+        "columnDefs": [{targets:[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], orderSequence: ['desc', 'asc']}],
+        "order": [[12, 'desc']],
+        responsive: {
+            details: {
+                renderer: function ( api, rowIdx, columns ) {
+                    var data = $.map( columns, function ( col, i ) {
+                        return col.hidden ?
+                            '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
+                                '<td><b>'+col.title+':'+'</b></td> '+
+                                '<td>'+col.data+'</td>'+
+                            '</tr>' :
+                            '';
+                    } ).join('');
+ 
+                    return data ?
+                        $('<table/>').append( data ) :
+                        false;
+                }
+            }
+        }
+    });
+
+    $('.tablelist').dataTable({searching: false, paging: false, info: false});
+
+    
+
+    
+    $('#btn-show-all-children').on('click', function(){
+        
+        table.rows(':not(.parent)').nodes().to$().find('td:first-child').trigger('click');
+    });
+
+    
+    $('#btn-hide-all-children').on('click', function(){
+        
+        table.rows('.parent').nodes().to$().find('td:first-child').trigger('click');
+    });
+});
+</script>
 </head>
 <body lang="en-US">
 <div class="container">
 
 
 <header class="row text-left title">
-  <h1 class="title">Paper submission</h1>
+  <h1 class="title">Call for Papers</h1>
 </header>
 <section id="category-pane" class="row meta">
   
 </section>
 <section id="content-pane" class="row">
   <div class="col-md-12 text-justify content">
-    <p>More information about paper submission, deadlines and CMT link will be added soon.</p>
+    
+
+<h2 id="overview">Overview</h2>
+
+<p>The goal of this workshop is to encourage and highlight novel strategies for image matching that deviate from and advance traditional formulations, with a focus on large-scale, wide-baseline matching for 3D reconstruction or pose estimation. This can be achieved by applying new technologies to sparse feature matching, or doing away with keypoints and descriptors entirely.</p>
+
+<h2 id="topics">Topics</h2>
+
+<p>Workshop topics include (but are not limited to):</p>
+
+<ul>
+<li>Reformulating keypoint extraction and matching pipelines with deep networks.</li>
+<li>Applying geometric constraints into the training of (sparse or dense) deep networks.</li>
+<li>Leveraging additional cues such as semantics.</li>
+<li>Developing adversarial methods to deal with conditions where current methods fail (weather changes, day versus night, etc.).</li>
+<li>Exploring attention mechanisms to match salient image regions.</li>
+<li>Integrating differentiable components into 3D reconstruction frameworks.</li>
+<li>Matching across different data modalities such as aerial versus ground.</li>
+</ul>
+
+<h2 id="challenge">Challenge</h2>
+
+<p>In order to advance research in these areas, we have issued a public challenge which contains two new datasets. Winners will be awarded prizes. For details please refer to the website.</p>
+
+<h2 id="submission">Submission</h2>
+
+<p>We invite paper submissions in two tracks:</p>
+
+<ul>
+<li><strong>Workshop papers:</strong> up to 6 pages, excluding references and acknowledgements.</li>
+<li><strong>Extended abstracts:</strong> up to 2 pages, excluding references and acknowledgements.</li>
+</ul>
+
+<p>Workshop papers must contain novel work. They will receive at least two reviews with a single-blind policy. Accepted papers will be published in the conference proceedings and presented as posters in the workshop.</p>
+
+<p>Extended abstracts may contain work previously published or currently under review. They will be made publicly available as non-archival reports, allowing for future submissions, and can be submitted up to the challenge deadline. Extended abstracts are eligible for poster presentation, by invitation.</p>
+
+<p>Both tracks are eligible for challenge prizes. Papers will be selected based on novelty, relevance to workshop topics, technical merit, and performance in the challenge, if applicable. All submissions should use the CVPR template and sent to:</p>
+
+<ul>
+<li>Workshop papers on CMT: <a href="https://cmt3.research.microsoft.com/IMW2019">https://cmt3.research.microsoft.com/IMW2019</a></li>
+<li>Extended abstracts via e-mail: <a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></li>
+</ul>
+
+<h2 id="important-dates">Important dates</h2>
+
+<ul>
+<li><strong>Paper submission deadline:</strong> March 10, 2019</li>
+<li><strong>Notification to authors:</strong> April 1, 2019</li>
+<li><strong>Camera-ready deadline:</strong> April 10, 2019</li>
+<li><strong>Challenge and extended abstracts deadline:</strong> May 20, 2019</li>
+<li><strong>Workshop date:</strong> June 16, 2019 (Sunday, morning session)</li>
+</ul>
 
   </div>
 </section>
@@ -93,9 +244,11 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
+
+</script>
 </body>
 </html>
 

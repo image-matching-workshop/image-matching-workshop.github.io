@@ -8,13 +8,39 @@
   </url>
   
   <url>
-    <loc>/challenge/</loc>
+    <loc>/breakdown/phototourism/mvs/by_seq/</loc>
+    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/breakdown/phototourism/mvs/by_bag/</loc>
+    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/breakdown/phototourism/stereo/by_seq/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
   </url>
   
   <url>
     <loc>/papers/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/challenge/</loc>
+    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/leaderboard/</loc>
+    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/breakdown/</loc>
+    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
