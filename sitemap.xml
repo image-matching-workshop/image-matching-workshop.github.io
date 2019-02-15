@@ -8,21 +8,7 @@
   </url>
   
   <url>
-<<<<<<< HEAD
     <loc>https://image-matching-workshop.github.io/breakdown/phototourism/mvs/by_seq/</loc>
-=======
-    <loc>/breakdown/phototourism/mvs/by_seq/</loc>
-    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/breakdown/phototourism/mvs/by_bag/</loc>
-    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/breakdown/phototourism/stereo/by_seq/</loc>
->>>>>>> a30a071b03ab5da39dcb934eca1aa243f12e689b
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
   </url>
   
@@ -32,25 +18,16 @@
   </url>
   
   <url>
-<<<<<<< HEAD
     <loc>https://image-matching-workshop.github.io/breakdown/phototourism/stereo/by_seq/</loc>
-=======
-    <loc>/challenge/</loc>
->>>>>>> a30a071b03ab5da39dcb934eca1aa243f12e689b
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
   </url>
   
   <url>
-<<<<<<< HEAD
     <loc>https://image-matching-workshop.github.io/papers/</loc>
-=======
-    <loc>/leaderboard/</loc>
->>>>>>> a30a071b03ab5da39dcb934eca1aa243f12e689b
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
   </url>
   
   <url>
-<<<<<<< HEAD
     <loc>https://image-matching-workshop.github.io/challenge/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
   </url>
@@ -62,19 +39,12 @@
   
   <url>
     <loc>https://image-matching-workshop.github.io/breakdown/</loc>
-=======
-    <loc>/breakdown/</loc>
->>>>>>> a30a071b03ab5da39dcb934eca1aa243f12e689b
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-<<<<<<< HEAD
     <loc>https://image-matching-workshop.github.io/categories/</loc>
-=======
-    <loc>/categories/</loc>
->>>>>>> a30a071b03ab5da39dcb934eca1aa243f12e689b
     <priority>0</priority>
   </url>
   
