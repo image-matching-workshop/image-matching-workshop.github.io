@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Image Matching: Local Features &amp; Beyond</title>
-    <link>https://image-matching-workshop.github.io/</link>
-    <description>Recent content on Image Matching: Local Features &amp; Beyond</description>
+    <title>Breakdowns on Image Matching: Local Features &amp; Beyond</title>
+    <link>https://image-matching-workshop.github.io/breakdown/</link>
+    <description>Recent content in Breakdowns on Image Matching: Local Features &amp; Beyond</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Sun, 02 Oct 2016 22:55:05 -0400</lastBuildDate>
     
-	<atom:link href="https://image-matching-workshop.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://image-matching-workshop.github.io/breakdown/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -39,37 +39,6 @@
       <guid>https://image-matching-workshop.github.io/breakdown/phototourism/stereo/by_seq/</guid>
       <description>Breakdown on the Phototourism dataset, multi-view stereo task, by sequence.
   BM: &#34;british_museum&#34; FCS: &#34;florence_cathedral_side&#34; LMS: &#34;lincoln_memorial_statue&#34; LB: &#34;london_bridge&#34; MC: &#34;milan_cathedral&#34; MR: &#34;mount_rushmore&#34; PSM: &#34;piazza_san_marco&#34; RS: &#34;reichstag&#34; SF: &#34;sagrada_familia&#34; SPC: &#34;st_pauls_cathedral&#34; USC: &#34;united_states_capitol&#34; AVG: average Sequence index:   Stereo &amp;mdash; All sequences &amp;mdash; Sorted by mAP15o   Method BM FCS LMS LB MC MR PSM RS SF SPC USC AVG Date Type By Details Link Contact Updated     AKAZE &amp;mdash; &amp;mdash; &amp;mdash; &amp;mdash; 0.</description>
-    </item>
-    
-    <item>
-      <title>Call for Papers</title>
-      <link>https://image-matching-workshop.github.io/papers/</link>
-      <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
-      
-      <guid>https://image-matching-workshop.github.io/papers/</guid>
-      <description>Overview The goal of this workshop is to encourage and highlight novel strategies for image matching that deviate from and advance traditional formulations, with a focus on large-scale, wide-baseline matching for 3D reconstruction or pose estimation. This can be achieved by applying new technologies to sparse feature matching, or doing away with keypoints and descriptors entirely.
-Topics Workshop topics include (but are not limited to):
- Reformulating keypoint extraction and matching pipelines with deep networks.</description>
-    </item>
-    
-    <item>
-      <title>Challenge</title>
-      <link>https://image-matching-workshop.github.io/challenge/</link>
-      <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
-      
-      <guid>https://image-matching-workshop.github.io/challenge/</guid>
-      <description>Introduction Local features have played a key role in a wide range of computer vision applications throughout the past 20 years, particularly since the introduction of SIFT.  Despite the drastic advancements resulting from deep learning techniques, 3D reconstruction under challenging conditions remains somewhat of an outlier, as performance in small, constrained benchmarks does not necessarily translate to real-world scenarios. In practice, keypoint-based methods remain the most common solution to this problem, and techniques such as SIFT or RANSAC are still very much in use.</description>
-    </item>
-    
-    <item>
-      <title>Leaderboard</title>
-      <link>https://image-matching-workshop.github.io/leaderboard/</link>
-      <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
-      
-      <guid>https://image-matching-workshop.github.io/leaderboard/</guid>
-      <description>The 2019 edition of the challenge contains two tasks over two datasets:
- Task 1.1: Stereo maching in the &amp;lsquo;Phototourism&amp;rsquo; dataset Task 1.2: Multi-view reconstruction in the &amp;lsquo;Phototourism&amp;rsquo; dataset Task 2.1: Stereo maching in the &amp;lsquo;London&amp;rsquo; dataset Task 2.2: Multi-view reconstruction in the &amp;lsquo;London&amp;rsquo; dataset Glossary  For details about the datasets, tasks, and evaluation metrics, please refer to the datasets page.
-Dataset 1: Phototourism Task 1.1: Stereo Performance in stereo matching, averaged over all the test sequences.</description>
     </item>
     
   </channel>
