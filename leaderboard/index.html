@@ -441,7 +441,7 @@ the <a href="datasets">datasets page</a>.</p>
 <table class="display leaderboard_mvs" width="100%" cellspacing="0">
 <thead>
 <tr>
-  <th colspan="12" style="text-align: center;" class="sorter-false">MVS &mdash; averaged over all sequences</th>
+  <th colspan="13" style="text-align: center;" class="sorter-false">MVS &mdash; averaged over all sequences</th>
 </tr>
 <tr>
   
@@ -449,6 +449,7 @@ the <a href="datasets">datasets page</a>.</p>
   <th class="all">Date</th>
   <th class="all">Type</th>
   
+  <th class="all">#Ims</th>
   <th class="all">#Pts</th>
   <th class="all">SR</th>
   <th class="all">TL</th>
@@ -489,12 +490,21 @@ the <a href="datasets">datasets page</a>.</p>
 
 
 
+
+
+
+
+
+
+
 <tr>
   
   <td>AKAZE</td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-12</td>
   <td>F</td>
   
+  
+  <td>&mdash;</td>
   
   <td>&mdash;</td>
   <td>90.8</td>
@@ -536,12 +546,21 @@ the <a href="datasets">datasets page</a>.</p>
 
 
 
+
+
+
+
+
+
+
 <tr>
   
   <td>ORB</td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-12</td>
   <td>F</td>
   
+  
+  <td>&mdash;</td>
   
   <td>&mdash;</td>
   <td>40.3</td>
@@ -583,12 +602,21 @@ the <a href="datasets">datasets page</a>.</p>
 
 
 
+
+
+
+
+
+
+
 <tr>
   
   <td>SIFT</td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-12</td>
   <td>F</td>
   
+  
+  <td>&mdash;</td>
   
   <td>&mdash;</td>
   <td>83.5</td>
@@ -630,12 +658,21 @@ the <a href="datasets">datasets page</a>.</p>
 
 
 
+
+
+
+
+
+
+
 <tr>
   
   <td>SuperPoint</td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-12</td>
   <td>F</td>
   
+  
+  <td>&mdash;</td>
   
   <td>&mdash;</td>
   <td>56.5</td>
@@ -677,12 +714,21 @@ the <a href="datasets">datasets page</a>.</p>
 
 
 
+
+
+
+
+
+
+
 <tr>
   
   <td>SURF</td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-12</td>
   <td>F</td>
   
+  
+  <td>&mdash;</td>
   
   <td>&mdash;</td>
   <td>65.7</td>
@@ -806,7 +852,7 @@ the <a href="datasets">datasets page</a>.</p>
 <table class="display leaderboard_mvs" width="100%" cellspacing="0">
 <thead>
 <tr>
-  <th colspan="12" style="text-align: center;" class="sorter-false">MVS &mdash; sequence &#39;???&#39;</th>
+  <th colspan="13" style="text-align: center;" class="sorter-false">MVS &mdash; sequence &#39;???&#39;</th>
 </tr>
 <tr>
   
@@ -814,6 +860,7 @@ the <a href="datasets">datasets page</a>.</p>
   <th class="all">Date</th>
   <th class="all">Type</th>
   
+  <th class="all">#Ims</th>
   <th class="all">#Pts</th>
   <th class="all">SR</th>
   <th class="all">TL</th>
@@ -871,6 +918,7 @@ Multi-view reconstruction task:
 
 <ul>
   <li><b>Type:</b> Input format. "F": Features. "M": Features and matches. "P": Poses.</li>
+  <li><b>#Ims:</b> Average number of images registered by the reconstruction.</li>
   <li><b>#Pts:</b> Average number of 3D points obtained by the reconstruction.</li>
   <li><b>SR:</b> Success ratio (percentage) in the re-construction with COLMAP, out of 100 subsets.</li>
   <li><b>TL:</b> Average track length (number of 3D point observations).</li>
