@@ -192,7 +192,7 @@ changes.</p>
 benchmarks to both train and evaluate new methods for image matching. To this
 end, we propose a new challenge with two datasets. Both contain training data
 with accurate ground truth poses, along with other cues that can be used for further
-supervision. The challenge consists of two tracks, stereo matching and
+supervision. The challenge consists of two tracks: stereo matching, and
 multi-view reconstruction with small subsets of images. New tasks and data
 modalities will be added in future editions.</p>
 
@@ -215,7 +215,7 @@ modalities will be added in future editions.</p>
 of situations, it is of paramount importance to collect information from
 multiple sensors obtained at different times. A natural solution is thus to turn
 to photo-tourism data.
-In this dataset we rely on 25 photo-tourism image collections of popular
+In this dataset we rely on 26 photo-tourism image collections of popular
 landmarks originally collected by <a href="webscope.sandbox.yahoo.com/catalog.php?datatype=i&amp;did=67">the Yahoo Flickr Creative Commons 100M (YFCC)
 dataset</a> and
 <a href="www.cs.unc.edu/~jheinly/reconstructing_the_world.html">Reconstructing the world in six
@@ -227,8 +227,8 @@ range from 75 images to almost 4k per sequence.</p>
     <span>Examples from brandenburg_gate</span>
 </div>
 
-<p>We can obtain dense 3D reconstructions from these collection of images with
-off-the-shelf Structure from Motion (SfM) algorithms.  We choose
+<p>We can obtain dense 3D reconstructions from these collections of images with
+off-the-shelf Structure from Motion (SfM) algorithms.  We rely on
 <a href="demuc.de">COLMAP</a>, a state of the art method. In addition to a sparse point
 cloud, COLMAP is able to densify the estimates to produce noisy but useful depth
 maps for every image. We post-process these depth maps by projecting each image
@@ -247,7 +247,7 @@ visible in either image, and applied over both views. We use this criteria to
 select valid image subsets for testing, and provide the entire visibility matrix
 for training, which can be easily thresholded to generate a list of valid pairs.</p>
 
-<p>We use 14 sequences for training and validation and 11 for testing.</p>
+<p>We provide 15 sequences for training and validation and 11 for testing.</p>
 
 <table class="display tablelist" cellspacing="0" width="80%">
 <thead>
@@ -348,7 +348,7 @@ for training, which can be easily thresholded to generate a list of valid pairs.
 <p><table class="display tablelist" cellspacing="0" width="80%">
 <thead>
   <tr>
-    <th class="all">Training sequences</th>
+    <th class="all">Test sequences</th>
     <th class="all">Num. images</th>
     <th class="all">Num. 3D points</th>
   </tr>
@@ -445,9 +445,9 @@ the two cameras. For dense methods, we expect the pose. We then measure
 performance with the angular difference between the estimated and ground truth
 vectors for both rotation and translation. To reduce this to one value, we use a
 variable threshold (the same value for rotation and translation) to determine
-each pose as correct or not, and compute the area under the curve up to <em>x</em>.
-This value is the mean average precision up to <em>x</em>, or mAP<sup>x</sup>.  We
-consider 5, 10, 15, 20, and 25<sup>o</sup>.</li>
+each pose as correct or not, and compute the area under the curve up to the
+angular threshold<em>x</em>.  This value is thus the mean average precision up to <em>x</em>,
+or mAP<sup>x</sup>.  We consider 5, 10, 15, 20, and 25<sup>o</sup>.</li>
 </ul>
 
 <p>For the purposes of the challenge, the ranking metric is pose estimation. In
@@ -457,30 +457,31 @@ adequate proxy for wide-baseline stereo matching performance.</p>
 <h2 id="a-name-mvs-a-task-2-sfm-from-small-subsets"><a name="mvs"></a>Task 2: SfM from small subsets</h2>
 
 <p>While modern solutions have shown very promising results in stereo, it is not
-clear how much of this remains after attempting a reconstruction via Bundle
-Adjustment.  An alternative approach is to evaluate local features for the
-ultimate goal, which is reconstruction with SfM. This is the approach followed
-by the <a href="https://github.com/ahojnnes/local-feature-evaluation">Comparative Evaluation
+clear how much of these improvements remains after large-scale reconstruction
+with Bundle Adjustment.  An alternative approach is thus to evaluate local
+features directly for SfM, as done by the <a href="https://github.com/ahojnnes/local-feature-evaluation">Comparative Evaluation
 Benchmark</a>. Unfortunately,
 it is not feasible to obtain truly accurate depth measurements for large image
 sequences collected from heterogenous sensors, so that under most circumstances
-the best one can do is collecting statistics such as the number of observations
+the best we can do is collect statistics such as the number of observations
 obtained with the reconstruction, the track length, or the reprojection error.
-While informative, most methods perform similarly under this scenario.</p>
+While this is informative, most methods seem to perform similarly under this
+scenario.</p>
 
-<p>By contrast, we propose to build SfM reconstructions from small (3, 5, 10)
-subsets of images and use the poses obtained from the entire set as ground
-truth.  We believe this can provide a better proxy for learning and evaluating
-feature extractors and matching algorithms.</p>
+<p>By contrast, we propose to build SfM reconstructions from small (3, 5, 10, 25)
+subsets of images and use the poses obtained from the entire (much larger) set
+as ground truth.  We believe this can provide a better proxy for learning and
+evaluating feature extractors and matching algorithms for the task of pose
+estimation.</p>
 
-<p>We consider 100 image subsets of 3, 5, and 10 images. They are sampled randomly
-from each dataset, accounting for visibility constraints. In order to compute
-the mAP, we use the same procedure as for stereo, with every possible
-combination of two images (i.e. 3 combinations for 3 images, 10 for 5 images,
-and 45 for 10 images), and average the results. Note that this penalizes
-reconstructions that are missing images or fail entirely, for which we set the
-metric to 0. As for task 1, for the purposes of ranking challenge entries we use
-mAP<sup>15<sup>o</sup></sup>.</p>
+<p>In specific, we subsample the test sets to 100 images and generate 100 different
+subsets of 3, 5, 10, and 25 images. The subsets are sampled randomly from each
+dataset, accounting for visibility constraints. In order to compute the mAP, we
+use the same procedure as for stereo, with every possible combination of two
+images (i.e. 3 combinations for 3 images, 10 for 5 images, etc.) and average the
+results. Note that this penalizes reconstructions that are missing images or
+fail entirely. As for stereo, use mAP<sup>15<sup>o</sup></sup> to rank challenge
+entries.</p>
 
 <h2 id="a-name-framework-a-evaluation-framework-and-submissions"><a name="framework"></a>Evaluation framework and submissions</h2>
 
