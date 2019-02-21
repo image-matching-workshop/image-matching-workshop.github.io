@@ -216,9 +216,9 @@ of situations, it is of paramount importance to collect information from
 multiple sensors obtained at different times. A natural solution is thus to turn
 to photo-tourism data.
 In this dataset we rely on 26 photo-tourism image collections of popular
-landmarks originally collected by <a href="webscope.sandbox.yahoo.com/catalog.php?datatype=i&amp;did=67">the Yahoo Flickr Creative Commons 100M (YFCC)
+landmarks originally collected by <a href="https://webscope.sandbox.yahoo.com/catalog.php?datatype=i&amp;did=67">the Yahoo Flickr Creative Commons 100M (YFCC)
 dataset</a> and
-<a href="www.cs.unc.edu/~jheinly/reconstructing_the_world.html">Reconstructing the world in six
+<a href="https://www.cs.unc.edu/~jheinly/reconstructing_the_world.html">Reconstructing the world in six
 days</a>. The sequences
 range from 75 images to almost 4k per sequence.</p>
 
@@ -229,7 +229,7 @@ range from 75 images to almost 4k per sequence.</p>
 
 <p>We can obtain dense 3D reconstructions from these collections of images with
 off-the-shelf Structure from Motion (SfM) algorithms.  We rely on
-<a href="demuc.de">COLMAP</a>, a state of the art method. In addition to a sparse point
+<a href="https://demuc.de">COLMAP</a>, a state of the art method. In addition to a sparse point
 cloud, COLMAP is able to densify the estimates to produce noisy but useful depth
 maps for every image. We post-process these depth maps by projecting each image
 pixel to 3D space at the estimated depth, and mark it as invalid if the closest
@@ -237,7 +237,7 @@ pixel to 3D space at the estimated depth, and mark it as invalid if the closest
 depth maps are still noisy, but many occluded pixels are filtered out. While not
 perfect, these estimates can be used to project points across images and train
 keypoint detectors and descriptors, as done for example by
-<a href="papers.nips.cc/paper/7861-lf-net-learning-local-features-from-images">LF-Net</a>.
+<a href="https://papers.nips.cc/paper/7861-lf-net-learning-local-features-from-images">LF-Net</a>.
 We provide these &lsquo;clean&rsquo; depth maps along with the images.</p>
 
 <p>In order to guarantee a reasonable degree of overlap for each image pair we
