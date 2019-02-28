@@ -192,24 +192,20 @@ changes.</p>
 benchmarks to both train and evaluate new methods for image matching. To this
 end, we propose a new challenge with two datasets. Both contain training data
 with accurate ground truth poses, along with other cues that can be used for further
-supervision. The challenge consists of two tracks: stereo matching, and
-multi-view reconstruction with small subsets of images. New tasks and data
-modalities will be added in future editions.</p>
+supervision.</p>
 
 <ul>
-<li><a href="challenge#photot">Dataset 1: &lsquo;Phototourism&rsquo;</a></li>
+<li><a href="challenge#pt">Dataset 1: &lsquo;Phototourism&rsquo;</a>
+
+<ul>
+<li><a href="challenge#pt_stereo">Task 1: Stereo</a></li>
+<li><a href="challenge#pt_mvs">Task 2: Multi-view reconstruction</a></li>
+<li><a href="challenge#pt_framework">Download links</a></li>
+</ul></li>
 <li><a href="challenge#london">Dataset 2: &lsquo;London&rsquo;</a></li>
-<li><a href="challenge#stereo">Task 1: Stereo</a></li>
-<li><a href="challenge#mvs">Task 2: Multi-view reconstruction</a></li>
-<li><a href="challenge#framework">Framework</a></li>
 </ul>
 
-<h2 id="a-name-photot-a-dataset-1-phototourism"><a name="photot"></a>Dataset 1: Phototourism</h2>
-
-<ul>
-<li><a href="http://">Download link (very soon): training data (TBA Gb)</a></li>
-<li><a href="http://">Download link (very soon): test data (TBA Gb)</a></li>
-</ul>
+<h2 id="a-name-pt-a-dataset-1-phototourism"><a name="pt"></a>Dataset 1: Phototourism</h2>
 
 <p>In order to learn and evaluate models that can perform well under a wide range
 of situations, it is of paramount importance to collect information from
@@ -420,11 +416,11 @@ for training, which can be easily thresholded to generate a list of valid pairs.
 </table>
 <br /></p>
 
-<h2 id="a-name-london-a-dataset-2-london"><a name="london"></a>Dataset 2: London</h2>
+<p>The challenge consists of two tracks: stereo matching, and
+multi-view reconstruction with small subsets of images. New tasks and data
+modalities will be added in future editions.</p>
 
-<p>TBA.</p>
-
-<h2 id="a-name-stereo-a-task-1-wide-baseline-stereo-matching"><a name="stereo"></a>Task 1: Wide-baseline stereo matching</h2>
+<h3 id="a-name-pt-stereo-a-task-1-wide-baseline-stereo-matching"><a name="pt_stereo"></a>Task 1: Wide-baseline stereo matching</h3>
 
 <p>In this task we attempt to match keypoints over two images across wide
 baselines.  Image pairs are selected according to visibility constraints so that
@@ -454,7 +450,7 @@ or mAP<sup>x</sup>.  We consider 5, 10, 15, 20, and 25<sup>o</sup>.</li>
 specific, we rank by mAP<sup>15<sup>o</sup></sup>, which we have found empirically to be an
 adequate proxy for wide-baseline stereo matching performance.</p>
 
-<h2 id="a-name-mvs-a-task-2-sfm-from-small-subsets"><a name="mvs"></a>Task 2: SfM from small subsets</h2>
+<h3 id="a-name-pt-mvs-a-task-2-sfm-from-small-subsets"><a name="pt_mvs"></a>Task 2: SfM from small subsets</h3>
 
 <p>While modern solutions have shown very promising results in stereo, it is not
 clear how much of these improvements remains after large-scale reconstruction
@@ -474,29 +470,46 @@ as ground truth.  We believe this can provide a better proxy for learning and
 evaluating feature extractors and matching algorithms for the task of pose
 estimation.</p>
 
-<p>In specific, we subsample the test sets to 100 images and generate 100 different
-subsets of 3, 5, 10, and 25 images. The subsets are sampled randomly from each
-dataset, accounting for visibility constraints. In order to compute the mAP, we
-use the same procedure as for stereo, with every possible combination of two
-images (i.e. 3 combinations for 3 images, 10 for 5 images, etc.) and average the
-results. Note that this penalizes reconstructions that are missing images or
-fail entirely. As for stereo, use mAP<sup>15<sup>o</sup></sup> to rank challenge
-entries.</p>
+<p>In specific, we subsample the test sets to 100 images and from them, generate
+100 different subsets of 3, 5, 10, and 25 images. The subsets are sampled
+randomly from each dataset, accounting for visibility constraints. In order to
+compute the mAP, we use the same procedure as for stereo, with every possible
+combination of two images (i.e. 3 combinations for 3 images, 10 for 5 images,
+etc.) and average the results. Note that this penalizes reconstructions that
+fail to register images. If COLMAP generates multiple 3D models which cannot be
+co-registered, we consider the largest one (the one with the most images).  As
+for stereo, use mAP<sup>15<sup>o</sup></sup> to rank challenge entries.</p>
 
-<h2 id="a-name-framework-a-evaluation-framework-and-submissions"><a name="framework"></a>Evaluation framework and submissions</h2>
+<h3 id="a-name-pt-framework-a-download-links-and-and-submission-instructions"><a name="pt_framework"></a>Download links and and submission instructions</h3>
 
-<p>Some examples to handle the training data and the submission format can be found here:</p>
+<p>The data can be downloaded here:</p>
 
 <ul>
-<li><a href="https://github.com/vcg-uvic/sfm_benchmark_release">Data parsing for the Phototourism
-dataset</a></li>
-<li>Data parsing for the London dataset: TBA</li>
+<li><a href="http://">Download link for the training data: SOON</a></li>
+<li><a href="http://webhome.cs.uvic.ca/~kyi/files/2019/image-matching/imw2019-test.tar.gz">Download link for the test data: 450 Mb</a></li>
 </ul>
 
-<p>We are publishing ground truth data for the training sequences, but not for the
-test sequences. To submit results please contact the organizers at
-<a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a>. We will provide a
-standardized solution soon.</p>
+<p>Results can be submitted here:</p>
+
+<ul>
+<li><a href="https://gfx.uvic.ca/nextcloud/index.php/s/1z3K0JzRY4w2cfk">Submission link</a></li>
+</ul>
+
+<p>The submission website is password-protected to prevent abuse, please contact
+the organizers at <a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a> for the
+password (please account for short delays in answering and uploading close the
+deadline).</p>
+
+<p>Some examples to parse the training data and format challenge submissions can be
+found here:</p>
+
+<ul>
+<li><a href="https://github.com/vcg-uvic/sfm_benchmark_release">Data parsing and submission instructions</a></li>
+</ul>
+
+<h2 id="a-name-london-a-dataset-2-london"><a name="london"></a>Dataset 2: London</h2>
+
+<p>TBA.</p>
 
   </div>
 </section>
