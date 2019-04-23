@@ -14,7 +14,7 @@
 
 <title>Image Matching: Local Features &amp; Beyond</title>
 
-<meta name="generator" content="Hugo 0.53" />
+<meta name="generator" content="Hugo 0.55.3" />
 
 
 
@@ -202,7 +202,12 @@ supervision.</p>
 <li><a href="challenge#pt_mvs">Task 2: Multi-view reconstruction</a></li>
 <li><a href="challenge#pt_framework">Download links</a></li>
 </ul></li>
-<li><a href="challenge#london">Dataset 2: &lsquo;London&rsquo;</a></li>
+<li><a href="challenge#silda">Dataset 2: &lsquo;SILDa&rsquo;</a>
+
+<ul>
+<li><a href="challenge#silda_description">Task: Image Matching&rsquo;</a></li>
+<li><a href="challenge#silda_submission">Download links</a></li>
+</ul></li>
 </ul>
 
 <h2 id="a-name-pt-a-dataset-1-phototourism"><a name="pt"></a>Dataset 1: Phototourism</h2>
@@ -507,9 +512,49 @@ the organizers at <a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</
 password (please account for short delays in answering and uploading close the
 deadline).</p>
 
-<h2 id="a-name-london-a-dataset-2-london"><a name="london"></a>Dataset 2: London</h2>
+<h2 id="a-name-silda-a-dataset-2-silda-image-matching"><a name="silda"></a>Dataset 2: SILDa Image Matching</h2>
 
-<p>TBA.</p>
+<p>The Scape Imperial Localisation Dataset (<em>SILDa</em>) focuses on several localisation related tasks, and one of the tasks included is concerned with image matching under very significant camera pose and enviromental condition changes. The data were collected around Imperial College London over a period of one year. For the interested reader, a more detailed description of the dataset can be found <a href="https://research.scape.io/silda/">here</a>.
+<div style="width: 100%; text-align: center; margin: 30px 0;">
+    <img style="width: 80%" src="img/silda/silda-teaser.png"/><br />
+    <span>The Royal School of Mines at Imperial College London, across different conditions.</span>
+</div></p>
+
+<h3 id="a-name-silda-description-a-matching-task-description"><a name="silda_description"></a> Matching Task Description</h3>
+
+<p>The <em>SILDa Image Matching task</em>, focuses on evaluating matching performance in pairs of images with significant difficulty.
+The ground truth models for the accurate camera pose estimation were built using an SfM pipeline. Given the nature of the data, some pairs are quite challenging due to the fact that the possible matching area is constrained to a small region of an image.</p>
+
+<div style="width: 100%; text-align: center; margin: 30px 0;">
+    <img style="width: 60%" src="img/silda/11.png"/><br />
+    <img style="width: 60%" src="img/silda/15.png"/><br />
+    <img style="width: 60%" src="img/silda/40.png"/><br />
+    <img style="width: 60%" src="img/silda/62.png"/><br />
+    <img style="width: 60%" src="img/silda/63.png"/><br />
+    <span>Example of the pairs available in the SILDa Image Matching dataset.</span>
+</div>
+
+<p>The results will be based on evaluating the matching accuracy, in terms of pixel level matching. Each method will produce a list of pixel to pixel matches for each image pair, which will then be evaluated in terms of their accuracy w.r.t to the underlying epipolar geometry.</p>
+
+<h3 id="a-name-silda-submission-a-download-links-and-and-submission-instructions"><a name="silda_submission"></a>Download links and and submission instructions</h3>
+
+<p>The data can be downloaded here:</p>
+
+<ul>
+<li><a href="https://github.com/scape-research/silda#getting-the-data">Download the data</a></li>
+</ul>
+
+<p>Code to parse the test data and format challenge submissions can be found
+here:</p>
+
+<ul>
+<li><a href="https://github.com/scape-research/silda/blob/master/silda-image-matching.ipynb">Data parsing and submission instructions</a></li>
+</ul>
+
+<p>Results can be submitted directly with this link:
+* <a href="https://www.dropbox.com/request/03Jp7P1TROvmIIpXju6U?oref=e">Submission link</a></p>
+
+<p>Please note that the subsmission process is different than the one for the Phototourism dataset.</p>
 
   </div>
 </section>
@@ -527,7 +572,13 @@ deadline).</p>
 <section id="menu-pane" class="row menu text-center">
   
   
+  <span><a class="menu-item" href="https://image-matching-workshop.github.io/leaderboard/">&lt; prev | </a></span>
   
+  
+  <span><a class="menu-item" href="/"></a></span>
+  
+  
+  <span><a class="menu-item" href="https://image-matching-workshop.github.io/papers/"> | next &gt;</a></span>
   
   
   <h4 class="text-center"><a class="menu-item" href="https://image-matching-workshop.github.io/">home</a></h4>
