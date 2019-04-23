@@ -18,7 +18,7 @@
       
       <guid>https://image-matching-workshop.github.io/breakdown/phototourism/mvs/by_seq/</guid>
       <description>Breakdown on the Phototourism dataset, multi-view stereo task, by sequence.
-  BM: &#34;british_museum&#34; FCS: &#34;florence_cathedral_side&#34; LMS: &#34;lincoln_memorial_statue&#34; LB: &#34;london_bridge&#34; MC: &#34;milan_cathedral&#34; MR: &#34;mount_rushmore&#34; PSM: &#34;piazza_san_marco&#34; RS: &#34;reichstag&#34; SF: &#34;sagrada_familia&#34; SPC: &#34;st_pauls_cathedral&#34; USC: &#34;united_states_capitol&#34; AVG: average   MVS &amp;mdash; All sequences &amp;mdash; Sorted by mAP15o   Method BM FCS LMS LB MC MR PSM RS SF SPC USC AVG Date Type By Details Link Contact Updated     AKAZE 0.</description>
+  BM: &#34;british_museum&#34; FCS: &#34;florence_cathedral_side&#34; LMS: &#34;lincoln_memorial_statue&#34; LB: &#34;london_bridge&#34; MC: &#34;milan_cathedral&#34; MR: &#34;mount_rushmore&#34; PSM: &#34;piazza_san_marco&#34; RS: &#34;reichstag&#34; SF: &#34;sagrada_familia&#34; SPC: &#34;st_pauls_cathedral&#34; USC: &#34;united_states_capitol&#34; AVG: average   MVS &amp;mdash; All sequences &amp;mdash; Sorted by mAP15o   Method BM FCS LMS LB MC MR PSM RS SF SPC USC AVG Date Type By Details Link Contact Updated     AKAZE &amp;mdash; &amp;mdash; &amp;mdash; &amp;mdash; 0.</description>
     </item>
     
     <item>
@@ -28,7 +28,7 @@
       
       <guid>https://image-matching-workshop.github.io/breakdown/phototourism/mvs/by_bag/</guid>
       <description>Breakdown on the Phototourism dataset, multi-view stereo task, by subset size.
-    MVS, bag size 3   Method Date Type #Ims #Pts SR TL mAP5o mAP10o mAP15o mAP20o mAP25o ATE By Details Link Contact Updated     AKAZE 2019-03-14 F 100.0 &amp;mdash; 64.2 2.29 0.063 0.125 0.181 0.232 0.278 &amp;mdash; Challenge organizers TBA TBA imagematching@uvic.ca N/A   ORB 2019-03-14 F 100.0 &amp;mdash; 42.</description>
+    MVS, bag size 3   Method Date Type #Ims #Pts SR TL mAP5o mAP10o mAP15o mAP20o mAP25o ATE By Details Link Contact Updated     AKAZE 2019-02-18 F 100.0 &amp;mdash; 57.0 2.29 0.060 0.131 0.176 0.215 0.263 &amp;mdash; Challenge organizers TBA TBA imagematching@uvic.ca N/A   ORB 2019-02-18 F 100.0 &amp;mdash; 29.</description>
     </item>
     
     <item>
@@ -38,7 +38,7 @@
       
       <guid>https://image-matching-workshop.github.io/breakdown/phototourism/stereo/by_seq/</guid>
       <description>Breakdown on the Phototourism dataset, multi-view stereo task, by sequence.
-  BM: &#34;british_museum&#34; FCS: &#34;florence_cathedral_side&#34; LMS: &#34;lincoln_memorial_statue&#34; LB: &#34;london_bridge&#34; MC: &#34;milan_cathedral&#34; MR: &#34;mount_rushmore&#34; PSM: &#34;piazza_san_marco&#34; RS: &#34;reichstag&#34; SF: &#34;sagrada_familia&#34; SPC: &#34;st_pauls_cathedral&#34; USC: &#34;united_states_capitol&#34; AVG: average Sequence index:   Stereo &amp;mdash; All sequences &amp;mdash; Sorted by mAP15o   Method BM FCS LMS LB MC MR PSM RS SF SPC USC AVG Date Type By Details Link Contact Updated     AKAZE 0.</description>
+  BM: &#34;british_museum&#34; FCS: &#34;florence_cathedral_side&#34; LMS: &#34;lincoln_memorial_statue&#34; LB: &#34;london_bridge&#34; MC: &#34;milan_cathedral&#34; MR: &#34;mount_rushmore&#34; PSM: &#34;piazza_san_marco&#34; RS: &#34;reichstag&#34; SF: &#34;sagrada_familia&#34; SPC: &#34;st_pauls_cathedral&#34; USC: &#34;united_states_capitol&#34; AVG: average Sequence index:   Stereo &amp;mdash; All sequences &amp;mdash; Sorted by mAP15o   Method BM FCS LMS LB MC MR PSM RS SF SPC USC AVG Date Type By Details Link Contact Updated     AKAZE &amp;mdash; &amp;mdash; &amp;mdash; &amp;mdash; 0.</description>
     </item>
     
     <item>
@@ -69,7 +69,7 @@ Topics Workshop topics include (but are not limited to):
       <guid>https://image-matching-workshop.github.io/leaderboard/</guid>
       <description>This is a work in progress. More baselines/sequences will be added (by the organizers) over the next 1-2 weeks. Minor alterations to the test pipeline will happen before the final release of the test data and evaluation procedure.
 The 2019 edition of the challenge contains two tasks over two datasets:
- Task 1.1: Stereo maching in the &amp;lsquo;Phototourism&amp;rsquo; dataset Task 1.2: Multi-view reconstruction in the &amp;lsquo;Phototourism&amp;rsquo; dataset Task 2.</description>
+ Task P1: Stereo maching in the &amp;lsquo;Phototourism&amp;rsquo; dataset Task P2: Multi-view reconstruction in the &amp;lsquo;Phototourism&amp;rsquo; dataset Task L1: Stereo maching in the &amp;lsquo;London&amp;rsquo; dataset Glossary  For details about the datasets, tasks, and evaluation metrics, please refer to the datasets page.</description>
     </item>
     
   </channel>
