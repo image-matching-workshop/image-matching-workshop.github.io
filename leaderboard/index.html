@@ -161,12 +161,12 @@ evaluation procedure.</span></p>
 <ul>
 <li><a href="leaderboard#photot_stereo">Task P1: Stereo maching in the &lsquo;Phototourism&rsquo; dataset</a></li>
 <li><a href="leaderboard#photot_mvs">Task P2: Multi-view reconstruction in the &lsquo;Phototourism&rsquo; dataset</a></li>
-<li><a href="leaderboard#london">Task L1: Stereo maching in the &lsquo;London&rsquo; dataset</a></li>
+<li><a href="leaderboard#silda">Task L1: Stereo maching in the &lsquo;SILDa Image Matching&rsquo; dataset</a></li>
 <li><a href="leaderboard#glossary">Glossary</a></li>
 </ul>
 
 <p>For details about the datasets, tasks, and evaluation metrics, please refer to
-the <a href="datasets">datasets page</a>.</p>
+the <a href="challenge">datasets page</a>.</p>
 
 <h2 id="a-name-photot-a-dataset-1-phototourism"><a name="photot"></a>Dataset 1: Phototourism</h2>
 
@@ -227,60 +227,21 @@ the <a href="datasets">datasets page</a>.</p>
 
 <tr>
   
-  <td>AKAZE</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-18</td>
+  <td>AKAZE (8k, NN)</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
   <td>F</td>
   
-  <td>7883.7</td>
-  <td>0.030</td>
+  <td>7879.7</td>
+  <td>0.221</td>
   <td>0.001</td>
-  <td>0.012</td>
-  <td>0.037</td>
-  <td>0.097</td>
-  <td>0.178</td>
- 
-  <td class="hidden_value">Challenge organizers</td>
-  <td class="hidden_value">TBA</td>
-  <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
-  <td class="hidden_value">N/A</td>
-</tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<tr>
-  
-  <td>ORB</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-18</td>
-  <td>F</td>
-  
-  <td>7521.9</td>
-  <td>0.029</td>
-  <td>0.001</td>
-  <td>0.008</td>
+  <td>0.007</td>
   <td>0.029</td>
   <td>0.073</td>
-  <td>0.126</td>
+  <td>0.138</td>
  
   <td class="hidden_value">Challenge organizers</td>
-  <td class="hidden_value">TBA</td>
-  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value">AKAZE, as implemented in OpenCV. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search.</td>
+  <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
 </tr>
@@ -305,21 +266,60 @@ the <a href="datasets">datasets page</a>.</p>
 
 <tr>
   
-  <td>SIFT</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-18</td>
+  <td>ORB (8k, NN)</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
   <td>F</td>
   
-  <td>7893.8</td>
-  <td>0.026</td>
+  <td>7128.0</td>
+  <td>0.224</td>
+  <td>0.000</td>
+  <td>0.004</td>
+  <td>0.019</td>
+  <td>0.050</td>
+  <td>0.095</td>
+ 
+  <td class="hidden_value">Challenge organizers</td>
+  <td class="hidden_value">ORB, as implemented in OpenCV. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search.</td>
+  <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
+  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value">N/A</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td>GeoDesc (8k, NN)</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td>F</td>
+  
+  <td>7885.0</td>
+  <td>0.233</td>
   <td>0.001</td>
-  <td>0.009</td>
-  <td>0.031</td>
-  <td>0.078</td>
-  <td>0.141</td>
+  <td>0.010</td>
+  <td>0.037</td>
+  <td>0.091</td>
+  <td>0.165</td>
  
   <td class="hidden_value">Challenge organizers</td>
-  <td class="hidden_value">TBA</td>
-  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value">GeoDesc extracted on SIFT keypoints. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search.</td>
+  <td class="hidden_value"><a href="https://github.com/lzx551402/geodesc">https://github.com/lzx551402/geodesc</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
 </tr>
@@ -344,21 +344,21 @@ the <a href="datasets">datasets page</a>.</p>
 
 <tr>
   
-  <td>SP</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-18</td>
+  <td>HardNet (8k, NN)</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
   <td>F</td>
   
-  <td>646.1</td>
-  <td>0.035</td>
+  <td>7885.0</td>
+  <td>0.252</td>
   <td>0.001</td>
-  <td>0.009</td>
-  <td>0.034</td>
-  <td>0.083</td>
-  <td>0.152</td>
+  <td>0.011</td>
+  <td>0.043</td>
+  <td>0.101</td>
+  <td>0.179</td>
  
   <td class="hidden_value">Challenge organizers</td>
-  <td class="hidden_value">TBA</td>
-  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value">HardNet extracted on SIFT keypoints. Number of keypoints: 8000 per image. Models trained on the Liberty sequence of the Brown dataset. We use slightly larger paches than specified for SIFT (scale multiplying factor 16/12). Feature matching with brute-force nearest-neighbour search.</td>
+  <td class="hidden_value"><a href="https://github.com/DagnyT/hardnet">https://github.com/DagnyT/hardnet</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
 </tr>
@@ -383,21 +383,177 @@ the <a href="datasets">datasets page</a>.</p>
 
 <tr>
   
-  <td>SURF</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-18</td>
+  <td>L2-Net (8k, NN)</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
   <td>F</td>
   
-  <td>7697.9</td>
-  <td>0.025</td>
+  <td>7885.0</td>
+  <td>0.248</td>
+  <td>0.001</td>
+  <td>0.011</td>
+  <td>0.040</td>
+  <td>0.093</td>
+  <td>0.170</td>
+ 
+  <td class="hidden_value">Challenge organizers</td>
+  <td class="hidden_value">L2-Net extracted on SIFT keypoints. Number of keypoints: 8000 per image. Models trained on the Liberty sequence of the Brown dataset. We use slightly larger paches than specified for SIFT (scale multiplying factor 16/12). Feature matching with brute-force nearest-neighbour search.</td>
+  <td class="hidden_value"><a href="https://github.com/yuruntian/L2-Net">https://github.com/yuruntian/L2-Net</a></td>
+  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value">N/A</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td>SIFT (8k, NN)</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td>F</td>
+  
+  <td>7884.4</td>
+  <td>0.215</td>
+  <td>0.000</td>
+  <td>0.007</td>
+  <td>0.028</td>
+  <td>0.069</td>
+  <td>0.130</td>
+ 
+  <td class="hidden_value">Challenge organizers</td>
+  <td class="hidden_value">SIFT, as implemented in OpenCV. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search.</td>
+  <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
+  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value">N/A</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td>TFeat (8k, NN)</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td>F</td>
+  
+  <td>7885.0</td>
+  <td>0.236</td>
+  <td>0.001</td>
+  <td>0.010</td>
+  <td>0.036</td>
+  <td>0.084</td>
+  <td>0.154</td>
+ 
+  <td class="hidden_value">Challenge organizers</td>
+  <td class="hidden_value">T-Feat extracted on SIFT keypoints. Number of keypoints: 8000 per image. Models trained on the Liberty sequence of the Brown dataset. We use slightly larger paches than specified for SIFT (scale multiplying factor 16/12). Feature matching with brute-force nearest-neighbour search.</td>
+  <td class="hidden_value"><a href="https://github.com/vbalnt/tfeat">https://github.com/vbalnt/tfeat</a></td>
+  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value">N/A</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td>SuperPoint</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td>F</td>
+  
+  <td>1266.5</td>
+  <td>0.258</td>
+  <td>0.001</td>
+  <td>0.012</td>
+  <td>0.041</td>
+  <td>0.097</td>
+  <td>0.168</td>
+ 
+  <td class="hidden_value">Challenge organizers</td>
+  <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels, and use as many keypoints as the model returns. Feature matching with brute-force nearest-neighbour search.</td>
+  <td class="hidden_value"><a href="https://github.com/rpautrat/SuperPoint">https://github.com/rpautrat/SuperPoint</a></td>
+  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value">N/A</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td>SURF (8k, NN)</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td>F</td>
+  
+  <td>7748.8</td>
+  <td>0.208</td>
   <td>0.001</td>
   <td>0.006</td>
-  <td>0.024</td>
-  <td>0.058</td>
-  <td>0.113</td>
+  <td>0.021</td>
+  <td>0.054</td>
+  <td>0.106</td>
  
   <td class="hidden_value">Challenge organizers</td>
-  <td class="hidden_value">TBA</td>
-  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value">SURF, as implemented in OpenCV. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search.</td>
+  <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
 </tr>
@@ -443,7 +599,7 @@ the <a href="datasets">datasets page</a>.</p>
   <th class="all">Date</th>
   <th class="all">Type</th>
   
-  <th class="all">#Ims</th>
+  <th class="all">Ims (%)</th>
   <th class="all">#Pts</th>
   <th class="all">SR</th>
   <th class="all">TL</th>
@@ -492,28 +648,28 @@ the <a href="datasets">datasets page</a>.</p>
 
 
 
+
 <tr>
   
-  <td>AKAZE</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-18</td>
+  <td>AKAZE (8k, NN)</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
   <td>F</td>
   
-  <td>85.0</td>
-  
-  <td>&mdash;</td>
-  <td>83.9</td>
-  <td>3.06</td>
-  <td>0.287</td>
-  <td>0.397</td>
-  <td>0.461</td>
-  <td>0.512</td>
-  <td>0.558</td>
+  <td>79.3</td>
+  <td>2163.6</td>
+  <td>88.5</td>
+  <td>2.86</td>
+  <td>0.220</td>
+  <td>0.306</td>
+  <td>0.365</td>
+  <td>0.413</td>
+  <td>0.451</td>
   
   <td>&mdash;</td>
   
   <td class="hidden_value">Challenge organizers</td>
-  <td class="hidden_value">TBA</td>
-  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value">AKAZE, as implemented in OpenCV. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search.</td>
+  <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
 </tr>
@@ -548,28 +704,28 @@ the <a href="datasets">datasets page</a>.</p>
 
 
 
+
 <tr>
   
-  <td>ORB</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-18</td>
+  <td>ORB (8k, NN)</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
   <td>F</td>
   
-  <td>85.0</td>
-  
-  <td>&mdash;</td>
-  <td>41.0</td>
-  <td>2.78</td>
-  <td>0.102</td>
-  <td>0.158</td>
-  <td>0.192</td>
-  <td>0.218</td>
-  <td>0.240</td>
+  <td>72.8</td>
+  <td>1432.0</td>
+  <td>77.6</td>
+  <td>2.59</td>
+  <td>0.073</td>
+  <td>0.121</td>
+  <td>0.160</td>
+  <td>0.196</td>
+  <td>0.230</td>
   
   <td>&mdash;</td>
   
   <td class="hidden_value">Challenge organizers</td>
-  <td class="hidden_value">TBA</td>
-  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value">ORB, as implemented in OpenCV. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search.</td>
+  <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
 </tr>
@@ -604,28 +760,28 @@ the <a href="datasets">datasets page</a>.</p>
 
 
 
+
 <tr>
   
-  <td>SIFT</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-18</td>
+  <td>GeoDesc (8k, NN)</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
   <td>F</td>
   
-  <td>85.0</td>
-  
-  <td>&mdash;</td>
-  <td>69.2</td>
-  <td>2.96</td>
-  <td>0.250</td>
-  <td>0.332</td>
-  <td>0.381</td>
-  <td>0.420</td>
-  <td>0.450</td>
+  <td>82.5</td>
+  <td>3094.0</td>
+  <td>95.8</td>
+  <td>2.99</td>
+  <td>0.325</td>
+  <td>0.421</td>
+  <td>0.480</td>
+  <td>0.532</td>
+  <td>0.571</td>
   
   <td>&mdash;</td>
   
   <td class="hidden_value">Challenge organizers</td>
-  <td class="hidden_value">TBA</td>
-  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value">GeoDesc extracted on SIFT keypoints. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search.</td>
+  <td class="hidden_value"><a href="https://github.com/lzx551402/geodesc">https://github.com/lzx551402/geodesc</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
 </tr>
@@ -660,28 +816,28 @@ the <a href="datasets">datasets page</a>.</p>
 
 
 
+
 <tr>
   
-  <td>SP</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-18</td>
+  <td>HardNet (8k, NN)</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
   <td>F</td>
   
-  <td>85.0</td>
-  
-  <td>&mdash;</td>
-  <td>40.8</td>
-  <td>3.20</td>
-  <td>0.089</td>
-  <td>0.148</td>
-  <td>0.185</td>
-  <td>0.215</td>
-  <td>0.238</td>
+  <td>83.2</td>
+  <td>3788.6</td>
+  <td>97.2</td>
+  <td>2.97</td>
+  <td>0.337</td>
+  <td>0.439</td>
+  <td>0.502</td>
+  <td>0.552</td>
+  <td>0.593</td>
   
   <td>&mdash;</td>
   
   <td class="hidden_value">Challenge organizers</td>
-  <td class="hidden_value">TBA</td>
-  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value">HardNet extracted on SIFT keypoints. Number of keypoints: 8000 per image. Models trained on the Liberty sequence of the Brown dataset. We use slightly larger paches than specified for SIFT (scale multiplying factor 16/12). Feature matching with brute-force nearest-neighbour search.</td>
+  <td class="hidden_value"><a href="https://github.com/DagnyT/hardnet">https://github.com/DagnyT/hardnet</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
 </tr>
@@ -716,28 +872,252 @@ the <a href="datasets">datasets page</a>.</p>
 
 
 
+
 <tr>
   
-  <td>SURF</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-02-18</td>
+  <td>L2-Net (8k, NN)</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
   <td>F</td>
   
-  <td>85.0</td>
-  
-  <td>&mdash;</td>
-  <td>54.4</td>
-  <td>2.83</td>
-  <td>0.132</td>
-  <td>0.195</td>
-  <td>0.238</td>
-  <td>0.272</td>
-  <td>0.299</td>
+  <td>82.5</td>
+  <td>3313.0</td>
+  <td>96.3</td>
+  <td>2.90</td>
+  <td>0.289</td>
+  <td>0.386</td>
+  <td>0.452</td>
+  <td>0.503</td>
+  <td>0.547</td>
   
   <td>&mdash;</td>
   
   <td class="hidden_value">Challenge organizers</td>
-  <td class="hidden_value">TBA</td>
-  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value">L2-Net extracted on SIFT keypoints. Number of keypoints: 8000 per image. Models trained on the Liberty sequence of the Brown dataset. We use slightly larger paches than specified for SIFT (scale multiplying factor 16/12). Feature matching with brute-force nearest-neighbour search.</td>
+  <td class="hidden_value"><a href="https://github.com/yuruntian/L2-Net">https://github.com/yuruntian/L2-Net</a></td>
+  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value">N/A</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td>SIFT (8k, NN)</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td>F</td>
+  
+  <td>78.6</td>
+  <td>2026.9</td>
+  <td>88.5</td>
+  <td>2.80</td>
+  <td>0.214</td>
+  <td>0.292</td>
+  <td>0.347</td>
+  <td>0.391</td>
+  <td>0.429</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Challenge organizers</td>
+  <td class="hidden_value">SIFT, as implemented in OpenCV. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search.</td>
+  <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
+  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value">N/A</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td>TFeat (8k, NN)</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td>F</td>
+  
+  <td>81.7</td>
+  <td>2825.6</td>
+  <td>94.1</td>
+  <td>2.84</td>
+  <td>0.252</td>
+  <td>0.346</td>
+  <td>0.409</td>
+  <td>0.462</td>
+  <td>0.506</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Challenge organizers</td>
+  <td class="hidden_value">T-Feat extracted on SIFT keypoints. Number of keypoints: 8000 per image. Models trained on the Liberty sequence of the Brown dataset. We use slightly larger paches than specified for SIFT (scale multiplying factor 16/12). Feature matching with brute-force nearest-neighbour search.</td>
+  <td class="hidden_value"><a href="https://github.com/vbalnt/tfeat">https://github.com/vbalnt/tfeat</a></td>
+  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value">N/A</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td>SuperPoint</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td>F</td>
+  
+  <td>76.9</td>
+  <td>570.6</td>
+  <td>85.9</td>
+  <td>3.03</td>
+  <td>0.228</td>
+  <td>0.319</td>
+  <td>0.374</td>
+  <td>0.417</td>
+  <td>0.451</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Challenge organizers</td>
+  <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels, and use as many keypoints as the model returns. Feature matching with brute-force nearest-neighbour search.</td>
+  <td class="hidden_value"><a href="https://github.com/rpautrat/SuperPoint">https://github.com/rpautrat/SuperPoint</a></td>
+  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value">N/A</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td>SURF (8k, NN)</td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td>F</td>
+  
+  <td>74.9</td>
+  <td>1158.8</td>
+  <td>80.8</td>
+  <td>2.60</td>
+  <td>0.116</td>
+  <td>0.177</td>
+  <td>0.222</td>
+  <td>0.260</td>
+  <td>0.295</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Challenge organizers</td>
+  <td class="hidden_value">SURF, as implemented in OpenCV. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search.</td>
+  <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
 </tr>
@@ -757,9 +1137,9 @@ the <a href="datasets">datasets page</a>.</p>
 
 <p><br /><br /></p>
 
-<h2 id="a-name-london-a-dataset-2-london"><a name="london"></a>Dataset 2: London</h2>
+<h2 id="a-name-silda-a-dataset-2-silda-image-matching"><a name="silda"></a>Dataset 2: SILDa Image Matching</h2>
 
-<p>TBD</p>
+<p>Coming Soon.</p>
 
 <p><br /><br /></p>
 
