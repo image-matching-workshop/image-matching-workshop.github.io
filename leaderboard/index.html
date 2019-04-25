@@ -152,7 +152,7 @@ $(document).ready(function (){
 
 <!--* Add automated images with maching results/3D point clouds, for comparison, like in the Middlebury leaderboard.-->
 
-<p>Datasets and tasks:</p>
+<p>The challenge contains the following datasets and tasks (<a href="challenge">see this for details</a>):</p>
 
 <ul>
 <li><a href="leaderboard#photot_stereo">Task P1: Stereo maching in the &lsquo;Phototourism&rsquo; dataset</a></li>
@@ -161,10 +161,17 @@ $(document).ready(function (){
 <!--* [Glossary](leaderboard#glossary)--></li>
 </ul>
 
-<p>Place the mouse cursor over row headers for details about the metrics (or <span class="balloon" data-balloon="This is an example."
-data-balloon-pos="up">here for an example</span>). For details about the
-datasets, tasks, and evaluation metrics, please refer to the <a href="challenge">datasets
-page</a>.</p>
+<p>Some notes:</p>
+
+<ul>
+<li>Place the mouse cursor over row headers for details about the metrics (or <span class="balloon" data-balloon="This is an example."
+data-balloon-pos="up">here for an example</span>).</li>
+<li>You can filter using the search box and labels, which are listed under the
+name of the method. Sparse methods are broken down into categories by the
+number of keypoints used: up to 1024, 2048, and 8000 keypoints per image.
+Sparse feature matching can be done by brute-force nearest neighbour search
+(&ldquo;nn&rdquo;), one to one correspondences (&ldquo;1to1&rdquo;), or user-provided matches.</li>
+</ul>
 
 <hr>
 

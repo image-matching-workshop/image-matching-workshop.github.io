@@ -70,9 +70,9 @@ Topics Workshop topics include (but are not limited to):
       <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
       
       <guid>https://image-matching-workshop.github.io/leaderboard/</guid>
-      <description>Datasets and tasks:
- Task P1: Stereo maching in the &amp;lsquo;Phototourism&amp;rsquo; dataset Task P2: Multi-view reconstruction in the &amp;lsquo;Phototourism&amp;rsquo; dataset Task S1: Stereo maching in the &amp;lsquo;SILDa Image Matching&amp;rsquo; dataset   Place the mouse cursor over row headers for details about the metrics (or here for an example). For details about the datasets, tasks, and evaluation metrics, please refer to the datasets page.
- [P1] Phototourism dataset &amp;mdash; Stereo task Performance in stereo matching, averaged over all the test sequences.</description>
+      <description>The challenge contains the following datasets and tasks (see this for details):
+ Task P1: Stereo maching in the &amp;lsquo;Phototourism&amp;rsquo; dataset Task P2: Multi-view reconstruction in the &amp;lsquo;Phototourism&amp;rsquo; dataset Task S1: Stereo maching in the &amp;lsquo;SILDa Image Matching&amp;rsquo; dataset   Some notes:
+ Place the mouse cursor over row headers for details about the metrics (or here for an example). You can filter using the search box and labels, which are listed under the name of the method.</description>
     </item>
     
   </channel>
