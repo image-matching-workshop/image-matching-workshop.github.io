@@ -22,6 +22,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
 <link rel="stylesheet" href="https://image-matching-workshop.github.io/css/datatables.min.css">
+<link rel="stylesheet" href="https://image-matching-workshop.github.io/css/balloon.min.css">
 <link rel="stylesheet" href="https://image-matching-workshop.github.io/css/main.css">
 <link rel="stylesheet" href="https://image-matching-workshop.github.io/css/custom.css">
 
@@ -53,8 +54,8 @@ $(document).ready(function (){
                     var data = $.map( columns, function ( col, i ) {
                         return col.hidden ?
                             '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
-                                '<td><b>'+col.title+':'+'</b></td> '+
-                                '<td>'+col.data+'</td>'+
+                                '<td class="align_left details_title"><b>'+col.title+':'+'</b></td> '+
+                                '<td class="align_left details_data">'+col.data+'</td>'+
                             '</tr>' :
                             '';
                     } ).join('');
@@ -77,8 +78,8 @@ $(document).ready(function (){
                     var data = $.map( columns, function ( col, i ) {
                         return col.hidden ?
                             '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
-                                '<td><b>'+col.title+':'+'</b></td> '+
-                                '<td>'+col.data+'</td>'+
+                                '<td class="align_left details_title"><b>'+col.title+':'+'</b></td> '+
+                                '<td class="align_left details_data">'+col.data+'</td>'+
                             '</tr>' :
                             '';
                     } ).join('');
@@ -101,8 +102,8 @@ $(document).ready(function (){
                     var data = $.map( columns, function ( col, i ) {
                         return col.hidden ?
                             '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
-                                '<td><b>'+col.title+':'+'</b></td> '+
-                                '<td>'+col.data+'</td>'+
+                                '<td class="align_left details_title"><b>'+col.title+':'+'</b></td> '+
+                                '<td class="align_left details_data">'+col.data+'</td>'+
                             '</tr>' :
                             '';
                     } ).join('');
@@ -145,9 +146,7 @@ $(document).ready(function (){
 </section>
 <section id="content-pane" class="row">
   <div class="col-md-12 text-justify content">
-    
-
-<p>Breakdown on the Phototourism dataset, multi-view stereo task, by subset size.</p>
+    <p>Breakdown on the Phototourism dataset, multi-view stereo task, by subset size.</p>
 
 <hr>
 
@@ -155,27 +154,27 @@ $(document).ready(function (){
 
 
 
-<table class="display leaderboard_mvs" width="100%" cellspacing="0">
+<table class="display leaderboard_mvs" width="99%" cellspacing="0">
 <thead>
 <tr>
   <th colspan="13" style="text-align: center;" class="sorter-false">MVS, bag size 3</th>
 </tr>
 <tr>
   
-  <th class="all">Method</th>
+  <th class="all align_left" width="99%">Method</th>
   <th class="all">Date</th>
-  <th class="all">Type</th>
+  <th class="all"><span class="balloon" data-balloon="F: Features only.&#10;M: Features and custom matches.&#10;P: Poses." data-balloon-break data-balloon-pos="up">Type</span></th>
   
-  <th class="all">Ims (%)</th>
-  <th class="all">#Pts</th>
-  <th class="all">SR</th>
-  <th class="all">TL</th>
-  <th class="all">mAP<sup>5<sup>o</sup></sup></th>
-  <th class="all">mAP<sup>10<sup>o</sup></sup></th>
-  <th class="all">mAP<sup>15<sup>o</sup></sup></th>
-  <th class="all">mAP<sup>20<sup>o</sup></sup></th>
-  <th class="all">mAP<sup>25<sup>o</sup></sup></th>
-  <th class="all">ATE</th>
+  <th class="all"><span class="balloon" data-balloon="Average number of images&#10;in the reconstruction (min: 3)." data-balloon-break data-balloon-pos="up">Ims (%)</span></th>
+  <th class="all"><span class="balloon" data-balloon="Average number of 3D points&#10;in the reconstruction." data-balloon-break data-balloon-pos="up">#Pts</span></th>
+  <th class="all"><span class="balloon" data-balloon="Success ratio in the&#10;3D reconstruction (%)." data-balloon-break data-balloon-pos="up">SR</span></th>
+  <th class="all"><span class="balloon" data-balloon="Average Track Length&#10;(# of observations per 3D point)." data-balloon-break data-balloon-pos="up">TL</span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 5-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>5<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 10-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>10<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 15-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>15<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 20-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>20<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 25-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>25<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Average Trajectory Error." data-balloon-break data-balloon-pos="up">ATE</span></th>
   
   <th class="none hidden_key">By</th>
   <th class="none hidden_key">Details</th>
@@ -211,8 +210,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>AKAZE (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">AKAZE (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>100.0</td>
@@ -260,8 +259,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>ORB (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">ORB (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>100.0</td>
@@ -309,8 +308,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>GeoDesc (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SIFT &#43; GeoDesc</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>100.0</td>
@@ -358,8 +357,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>HardNet (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SIFT &#43; HardNet</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>100.0</td>
@@ -407,8 +406,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>L2-Net (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SIFT &#43; L2-Net</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>100.0</td>
@@ -456,8 +455,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>SIFT (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SIFT (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>100.0</td>
@@ -505,8 +504,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>TFeat (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SIFT &#43; TFeat</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>100.0</td>
@@ -554,8 +553,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>SuperPoint</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SuperPoint</span><br /><span class="boards_subtitle">N/A<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>100.0</td>
@@ -571,7 +570,7 @@ $(document).ready(function (){
   <td>&mdash;</td>
   
   <td class="hidden_value">Challenge organizers</td>
-  <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels, and use as many keypoints as the model returns. Feature matching with brute-force nearest-neighbour search.</td>
+  <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels, and use as many keypoints as the model returns. Feature matching with brute-force nearest-neighbour search. TODO these results will be replaced with a more consistent number of keypoints.</td>
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
@@ -603,8 +602,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>SURF (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SURF (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>100.0</td>
@@ -637,27 +636,27 @@ $(document).ready(function (){
 
 
 
-<table class="display leaderboard_mvs" width="100%" cellspacing="0">
+<table class="display leaderboard_mvs" width="99%" cellspacing="0">
 <thead>
 <tr>
   <th colspan="13" style="text-align: center;" class="sorter-false">MVS, bag size 5</th>
 </tr>
 <tr>
   
-  <th class="all">Method</th>
+  <th class="all align_left" width="99%">Method</th>
   <th class="all">Date</th>
-  <th class="all">Type</th>
+  <th class="all"><span class="balloon" data-balloon="F: Features only.&#10;M: Features and custom matches.&#10;P: Poses." data-balloon-break data-balloon-pos="up">Type</span></th>
   
-  <th class="all">Ims (%)</th>
-  <th class="all">#Pts</th>
-  <th class="all">SR</th>
-  <th class="all">TL</th>
-  <th class="all">mAP<sup>5<sup>o</sup></sup></th>
-  <th class="all">mAP<sup>10<sup>o</sup></sup></th>
-  <th class="all">mAP<sup>15<sup>o</sup></sup></th>
-  <th class="all">mAP<sup>20<sup>o</sup></sup></th>
-  <th class="all">mAP<sup>25<sup>o</sup></sup></th>
-  <th class="all">ATE</th>
+  <th class="all"><span class="balloon" data-balloon="Average number of images&#10;in the reconstruction (min: 3)." data-balloon-break data-balloon-pos="up">Ims (%)</span></th>
+  <th class="all"><span class="balloon" data-balloon="Average number of 3D points&#10;in the reconstruction." data-balloon-break data-balloon-pos="up">#Pts</span></th>
+  <th class="all"><span class="balloon" data-balloon="Success ratio in the&#10;3D reconstruction (%)." data-balloon-break data-balloon-pos="up">SR</span></th>
+  <th class="all"><span class="balloon" data-balloon="Average Track Length&#10;(# of observations per 3D point)." data-balloon-break data-balloon-pos="up">TL</span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 5-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>5<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 10-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>10<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 15-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>15<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 20-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>20<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 25-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>25<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Average Trajectory Error." data-balloon-break data-balloon-pos="up">ATE</span></th>
   
   <th class="none hidden_key">By</th>
   <th class="none hidden_key">Details</th>
@@ -693,8 +692,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>AKAZE (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">AKAZE (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>88.0</td>
@@ -742,8 +741,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>ORB (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">ORB (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>79.4</td>
@@ -791,8 +790,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>GeoDesc (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SIFT &#43; GeoDesc</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>94.5</td>
@@ -840,8 +839,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>HardNet (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SIFT &#43; HardNet</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>96.1</td>
@@ -889,8 +888,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>L2-Net (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SIFT &#43; L2-Net</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>94.1</td>
@@ -938,8 +937,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>SIFT (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SIFT (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>87.0</td>
@@ -987,8 +986,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>TFeat (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SIFT &#43; TFeat</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>92.3</td>
@@ -1036,8 +1035,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>SuperPoint</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SuperPoint</span><br /><span class="boards_subtitle">N/A<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>85.1</td>
@@ -1053,7 +1052,7 @@ $(document).ready(function (){
   <td>&mdash;</td>
   
   <td class="hidden_value">Challenge organizers</td>
-  <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels, and use as many keypoints as the model returns. Feature matching with brute-force nearest-neighbour search.</td>
+  <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels, and use as many keypoints as the model returns. Feature matching with brute-force nearest-neighbour search. TODO these results will be replaced with a more consistent number of keypoints.</td>
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
@@ -1085,8 +1084,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>SURF (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SURF (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>80.4</td>
@@ -1119,27 +1118,27 @@ $(document).ready(function (){
 
 
 
-<table class="display leaderboard_mvs" width="100%" cellspacing="0">
+<table class="display leaderboard_mvs" width="99%" cellspacing="0">
 <thead>
 <tr>
   <th colspan="13" style="text-align: center;" class="sorter-false">MVS, bag size 10</th>
 </tr>
 <tr>
   
-  <th class="all">Method</th>
+  <th class="all align_left" width="99%">Method</th>
   <th class="all">Date</th>
-  <th class="all">Type</th>
+  <th class="all"><span class="balloon" data-balloon="F: Features only.&#10;M: Features and custom matches.&#10;P: Poses." data-balloon-break data-balloon-pos="up">Type</span></th>
   
-  <th class="all">Ims (%)</th>
-  <th class="all">#Pts</th>
-  <th class="all">SR</th>
-  <th class="all">TL</th>
-  <th class="all">mAP<sup>5<sup>o</sup></sup></th>
-  <th class="all">mAP<sup>10<sup>o</sup></sup></th>
-  <th class="all">mAP<sup>15<sup>o</sup></sup></th>
-  <th class="all">mAP<sup>20<sup>o</sup></sup></th>
-  <th class="all">mAP<sup>25<sup>o</sup></sup></th>
-  <th class="all">ATE</th>
+  <th class="all"><span class="balloon" data-balloon="Average number of images&#10;in the reconstruction (min: 3)." data-balloon-break data-balloon-pos="up">Ims (%)</span></th>
+  <th class="all"><span class="balloon" data-balloon="Average number of 3D points&#10;in the reconstruction." data-balloon-break data-balloon-pos="up">#Pts</span></th>
+  <th class="all"><span class="balloon" data-balloon="Success ratio in the&#10;3D reconstruction (%)." data-balloon-break data-balloon-pos="up">SR</span></th>
+  <th class="all"><span class="balloon" data-balloon="Average Track Length&#10;(# of observations per 3D point)." data-balloon-break data-balloon-pos="up">TL</span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 5-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>5<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 10-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>10<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 15-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>15<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 20-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>20<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 25-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>25<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Average Trajectory Error." data-balloon-break data-balloon-pos="up">ATE</span></th>
   
   <th class="none hidden_key">By</th>
   <th class="none hidden_key">Details</th>
@@ -1175,8 +1174,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>AKAZE (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">AKAZE (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>92.3</td>
@@ -1224,8 +1223,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>ORB (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">ORB (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>79.9</td>
@@ -1273,8 +1272,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>GeoDesc (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SIFT &#43; GeoDesc</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>96.7</td>
@@ -1322,8 +1321,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>HardNet (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SIFT &#43; HardNet</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>97.7</td>
@@ -1371,8 +1370,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>L2-Net (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SIFT &#43; L2-Net</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>97.1</td>
@@ -1420,8 +1419,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>SIFT (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SIFT (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>91.0</td>
@@ -1469,8 +1468,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>TFeat (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SIFT &#43; TFeat</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>96.2</td>
@@ -1518,8 +1517,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>SuperPoint</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SuperPoint</span><br /><span class="boards_subtitle">N/A<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>87.4</td>
@@ -1535,7 +1534,7 @@ $(document).ready(function (){
   <td>&mdash;</td>
   
   <td class="hidden_value">Challenge organizers</td>
-  <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels, and use as many keypoints as the model returns. Feature matching with brute-force nearest-neighbour search.</td>
+  <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels, and use as many keypoints as the model returns. Feature matching with brute-force nearest-neighbour search. TODO these results will be replaced with a more consistent number of keypoints.</td>
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
@@ -1567,8 +1566,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>SURF (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SURF (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>85.0</td>
@@ -1601,27 +1600,27 @@ $(document).ready(function (){
 
 
 
-<table class="display leaderboard_mvs" width="100%" cellspacing="0">
+<table class="display leaderboard_mvs" width="99%" cellspacing="0">
 <thead>
 <tr>
   <th colspan="13" style="text-align: center;" class="sorter-false">MVS, bag size 25</th>
 </tr>
 <tr>
   
-  <th class="all">Method</th>
+  <th class="all align_left" width="99%">Method</th>
   <th class="all">Date</th>
-  <th class="all">Type</th>
+  <th class="all"><span class="balloon" data-balloon="F: Features only.&#10;M: Features and custom matches.&#10;P: Poses." data-balloon-break data-balloon-pos="up">Type</span></th>
   
-  <th class="all">Ims (%)</th>
-  <th class="all">#Pts</th>
-  <th class="all">SR</th>
-  <th class="all">TL</th>
-  <th class="all">mAP<sup>5<sup>o</sup></sup></th>
-  <th class="all">mAP<sup>10<sup>o</sup></sup></th>
-  <th class="all">mAP<sup>15<sup>o</sup></sup></th>
-  <th class="all">mAP<sup>20<sup>o</sup></sup></th>
-  <th class="all">mAP<sup>25<sup>o</sup></sup></th>
-  <th class="all">ATE</th>
+  <th class="all"><span class="balloon" data-balloon="Average number of images&#10;in the reconstruction (min: 3)." data-balloon-break data-balloon-pos="up">Ims (%)</span></th>
+  <th class="all"><span class="balloon" data-balloon="Average number of 3D points&#10;in the reconstruction." data-balloon-break data-balloon-pos="up">#Pts</span></th>
+  <th class="all"><span class="balloon" data-balloon="Success ratio in the&#10;3D reconstruction (%)." data-balloon-break data-balloon-pos="up">SR</span></th>
+  <th class="all"><span class="balloon" data-balloon="Average Track Length&#10;(# of observations per 3D point)." data-balloon-break data-balloon-pos="up">TL</span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 5-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>5<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 10-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>10<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 15-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>15<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 20-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>20<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 25-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>25<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Average Trajectory Error." data-balloon-break data-balloon-pos="up">ATE</span></th>
   
   <th class="none hidden_key">By</th>
   <th class="none hidden_key">Details</th>
@@ -1657,8 +1656,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>AKAZE (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">AKAZE (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>96.9</td>
@@ -1706,8 +1705,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>ORB (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">ORB (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>91.3</td>
@@ -1755,8 +1754,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>GeoDesc (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SIFT &#43; GeoDesc</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>98.2</td>
@@ -1804,8 +1803,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>HardNet (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SIFT &#43; HardNet</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>97.9</td>
@@ -1853,8 +1852,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>L2-Net (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SIFT &#43; L2-Net</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>98.0</td>
@@ -1902,8 +1901,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>SIFT (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SIFT (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>96.5</td>
@@ -1951,8 +1950,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>TFeat (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SIFT &#43; TFeat</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>97.3</td>
@@ -2000,8 +1999,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>SuperPoint</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SuperPoint</span><br /><span class="boards_subtitle">N/A<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>92.3</td>
@@ -2017,7 +2016,7 @@ $(document).ready(function (){
   <td>&mdash;</td>
   
   <td class="hidden_value">Challenge organizers</td>
-  <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels, and use as many keypoints as the model returns. Feature matching with brute-force nearest-neighbour search.</td>
+  <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels, and use as many keypoints as the model returns. Feature matching with brute-force nearest-neighbour search. TODO these results will be replaced with a more consistent number of keypoints.</td>
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
@@ -2049,8 +2048,8 @@ $(document).ready(function (){
 
 <tr>
   
-  <td>SURF (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SURF (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>94.8</td>
@@ -2079,21 +2078,6 @@ $(document).ready(function (){
 
 
 <hr></p>
-
-<h3 id="a-name-glossary-a-glossary"><a name="glossary"></a>Glossary</h3>
-
-Multi-view reconstruction task:
-
-<ul>
-  <li><b>Type:</b> Input format. "F": Features. "M": Features and matches. "P": Poses.</li>
-  <li><b>#Ims:</b> Ratio of images registered by the reconstruction (on successful reconstructions).</li>
-  <li><b>#Pts:</b> Average number of 3D points obtained by the reconstruction.</li>
-  <li><b>SR:</b> Success ratio (percentage) in the re-construction with COLMAP, out of 100 subsets.</li>
-  <li><b>TL:</b> Average track length (number of 3D point observations).</li>
-  <li><b>mAP<sup>x</sup>:</b> Mean average precision at angular threshold *x*.</li>
-  <li><b>ATE:</b> Absolute Trajectory Error.</li>
-</ul>
-
 
   </div>
 </section>

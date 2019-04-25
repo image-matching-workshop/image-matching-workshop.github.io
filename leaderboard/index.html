@@ -22,6 +22,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
 <link rel="stylesheet" href="https://image-matching-workshop.github.io/css/datatables.min.css">
+<link rel="stylesheet" href="https://image-matching-workshop.github.io/css/balloon.min.css">
 <link rel="stylesheet" href="https://image-matching-workshop.github.io/css/main.css">
 <link rel="stylesheet" href="https://image-matching-workshop.github.io/css/custom.css">
 
@@ -53,8 +54,8 @@ $(document).ready(function (){
                     var data = $.map( columns, function ( col, i ) {
                         return col.hidden ?
                             '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
-                                '<td><b>'+col.title+':'+'</b></td> '+
-                                '<td>'+col.data+'</td>'+
+                                '<td class="align_left details_title"><b>'+col.title+':'+'</b></td> '+
+                                '<td class="align_left details_data">'+col.data+'</td>'+
                             '</tr>' :
                             '';
                     } ).join('');
@@ -77,8 +78,8 @@ $(document).ready(function (){
                     var data = $.map( columns, function ( col, i ) {
                         return col.hidden ?
                             '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
-                                '<td><b>'+col.title+':'+'</b></td> '+
-                                '<td>'+col.data+'</td>'+
+                                '<td class="align_left details_title"><b>'+col.title+':'+'</b></td> '+
+                                '<td class="align_left details_data">'+col.data+'</td>'+
                             '</tr>' :
                             '';
                     } ).join('');
@@ -101,8 +102,8 @@ $(document).ready(function (){
                     var data = $.map( columns, function ( col, i ) {
                         return col.hidden ?
                             '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
-                                '<td><b>'+col.title+':'+'</b></td> '+
-                                '<td>'+col.data+'</td>'+
+                                '<td class="align_left details_title"><b>'+col.title+':'+'</b></td> '+
+                                '<td class="align_left details_data">'+col.data+'</td>'+
                             '</tr>' :
                             '';
                     } ).join('');
@@ -151,53 +152,53 @@ $(document).ready(function (){
 
 <!--* Add automated images with maching results/3D point clouds, for comparison, like in the Middlebury leaderboard.-->
 
-<p><span style="color: #c00">This is a work in progress. More baselines/sequences
-will be added (by the organizers) over the next 1-2 weeks. Minor alterations to
-the test pipeline will happen before the final release of the test data and
-evaluation procedure.</span></p>
-
-<p>The 2019 edition of the challenge contains two tasks over two datasets:</p>
+<p>Datasets and tasks:</p>
 
 <ul>
 <li><a href="leaderboard#photot_stereo">Task P1: Stereo maching in the &lsquo;Phototourism&rsquo; dataset</a></li>
 <li><a href="leaderboard#photot_mvs">Task P2: Multi-view reconstruction in the &lsquo;Phototourism&rsquo; dataset</a></li>
-<li><a href="leaderboard#silda">Task L1: Stereo maching in the &lsquo;SILDa Image Matching&rsquo; dataset</a></li>
-<li><a href="leaderboard#glossary">Glossary</a></li>
+<li><a href="leaderboard#silda">Task S1: Stereo maching in the &lsquo;SILDa Image Matching&rsquo; dataset</a>
+<!--* [Glossary](leaderboard#glossary)--></li>
 </ul>
 
-<p>For details about the datasets, tasks, and evaluation metrics, please refer to
-the <a href="challenge">datasets page</a>.</p>
-
-<h2 id="a-name-photot-a-dataset-1-phototourism"><a name="photot"></a>Dataset 1: Phototourism</h2>
-
-<h3 id="a-name-photot-stereo-a-task-p1-stereo"><a name="photot_stereo"></a>Task P1: Stereo</h3>
-
-<p>Performance in stereo matching, averaged over all the test sequences.</p>
+<p>Place the mouse cursor over row headers for details about the metrics (or <span class="balloon" data-balloon="This is an example."
+data-balloon-pos="up">here for an example</span>). For details about the
+datasets, tasks, and evaluation metrics, please refer to the <a href="challenge">datasets
+page</a>.</p>
 
 <hr>
 
-<p>
+<h2 id="a-name-photot-stereo-a-p1-phototourism-dataset-mdash-stereo-task"><a name="photot_stereo"></a>[P1] Phototourism dataset &mdash; Stereo task</h2>
+
+<p>Performance in stereo matching, averaged over all the test sequences.</p>
+
+<ul>
+<li><a href="breakdown/phototourism/stereo/by_seq">Click here for a breakdown by sequence</a></li>
+</ul>
+
+<p><br />
 
 
 
-<table class="display leaderboard_stereo" cellspacing="0" width="100%">
+
+<table class="display leaderboard_stereo" width="99%" cellspacing="0">
 <thead>
 <tr>
   <th colspan="10" style="text-align: center;" class="sorter-false">Stereo &mdash; averaged over all sequences</th>
 </tr>
 <tr>
   
-  <th class="all">Method</th>
+  <th class="all align_left" width="99%">Method</th>
   <th class="all">Date</th>
-  <th class="all">Type</th>
+  <th class="all"><span class="balloon" data-balloon="F: Features only.&#10;M: Features and custom matches." data-balloon-break data-balloon-pos="up">Type</span></th>
   
-  <th class="all">#Kp</th>
-  <th class="all">MS</th>
-  <th class="all">mAP<sup>5<sup>o</sup></sup></th>
-  <th class="all">mAP<sup>10<sup>o</sup></sup></th>
-  <th class="all">mAP<sup>15<sup>o</sup></sup></th>
-  <th class="all">mAP<sup>20<sup>o</sup></sup></th>
-  <th class="all">mAP<sup>25<sup>o</sup></sup></th>
+  <th class="all"><span class="balloon" data-balloon="Average number of keypoints extracted." data-balloon-pos="up">#kp</span></th>
+  <th class="all"><span class="balloon" data-balloon="Matching Score." data-balloon-pos="up">MS</span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 5-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>5<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 10-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>10<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 15-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>15<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 20-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>20<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 25-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>25<sup>o</sup></sup></span></th>
   
   <th class="none hidden_key">By</th>
   <th class="none hidden_key">Details</th>
@@ -227,8 +228,9 @@ the <a href="challenge">datasets page</a>.</p>
 
 <tr>
   
-  <td>AKAZE (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  
+  <td class="align_left"><span class="boards_title">AKAZE (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>7879.7</td>
@@ -266,8 +268,9 @@ the <a href="challenge">datasets page</a>.</p>
 
 <tr>
   
-  <td>ORB (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  
+  <td class="align_left"><span class="boards_title">ORB (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>7128.0</td>
@@ -305,8 +308,9 @@ the <a href="challenge">datasets page</a>.</p>
 
 <tr>
   
-  <td>GeoDesc (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  
+  <td class="align_left"><span class="boards_title">SIFT &#43; GeoDesc</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>7885.0</td>
@@ -344,8 +348,9 @@ the <a href="challenge">datasets page</a>.</p>
 
 <tr>
   
-  <td>HardNet (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  
+  <td class="align_left"><span class="boards_title">SIFT &#43; HardNet</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>7885.0</td>
@@ -383,8 +388,9 @@ the <a href="challenge">datasets page</a>.</p>
 
 <tr>
   
-  <td>L2-Net (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  
+  <td class="align_left"><span class="boards_title">SIFT &#43; L2-Net</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>7885.0</td>
@@ -422,8 +428,9 @@ the <a href="challenge">datasets page</a>.</p>
 
 <tr>
   
-  <td>SIFT (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  
+  <td class="align_left"><span class="boards_title">SIFT (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>7884.4</td>
@@ -461,8 +468,9 @@ the <a href="challenge">datasets page</a>.</p>
 
 <tr>
   
-  <td>TFeat (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  
+  <td class="align_left"><span class="boards_title">SIFT &#43; TFeat</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>7885.0</td>
@@ -500,8 +508,9 @@ the <a href="challenge">datasets page</a>.</p>
 
 <tr>
   
-  <td>SuperPoint</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  
+  <td class="align_left"><span class="boards_title">SuperPoint</span><br /><span class="boards_subtitle">N/A<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>1266.5</td>
@@ -513,7 +522,7 @@ the <a href="challenge">datasets page</a>.</p>
   <td>0.168</td>
  
   <td class="hidden_value">Challenge organizers</td>
-  <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels, and use as many keypoints as the model returns. Feature matching with brute-force nearest-neighbour search.</td>
+  <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels, and use as many keypoints as the model returns. Feature matching with brute-force nearest-neighbour search. TODO these results will be replaced with a more consistent number of keypoints.</td>
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
@@ -539,8 +548,9 @@ the <a href="challenge">datasets page</a>.</p>
 
 <tr>
   
-  <td>SURF (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  
+  <td class="align_left"><span class="boards_title">SURF (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>7748.8</td>
@@ -566,49 +576,49 @@ the <a href="challenge">datasets page</a>.</p>
 
 <hr></p>
 
-<ul>
-<li><a href="breakdown/phototourism/stereo/by_seq">Click here for a breakdown by sequence</a></li>
-</ul>
-
 <p><br /></p>
 
-<h3 id="a-name-photot-mvs-a-task-p2-multi-view"><a name="photot_mvs"></a>Task P2: Multi-view</h3>
+<h2 id="a-name-photot-mvs-a-p2-phototourism-dataset-mdash-multi-view-task"><a name="photot_mvs"></a>[P2] Phototourism dataset &mdash; Multi-view task</h2>
 
 <p>Performance in SfM reconstruction, averaged over all the test sequences.</p>
 
-<hr>
+<ul>
+<li><a href="breakdown/phototourism/mvs/by_seq">Click here for a breakdown by sequence</a></li>
+<li><a href="breakdown/phototourism/mvs/by_bag">Click here for a breakdown by subset size</a></li>
+</ul>
 
-<p>
-
-
-
-
-
+<p><br />
 
 
 
 
-<table class="display leaderboard_mvs" width="100%" cellspacing="0">
+
+
+
+
+
+
+<table class="display leaderboard_mvs" width="99%" cellspacing="0">
 <thead>
 <tr>
   <th colspan="13" style="text-align: center;" class="sorter-false">MVS &mdash; averaged over all sequences</th>
 </tr>
 <tr>
   
-  <th class="all">Method</th>
+  <th class="all align_left" width="99%">Method</th>
   <th class="all">Date</th>
-  <th class="all">Type</th>
+  <th class="all"><span class="balloon" data-balloon="F: Features only.&#10;M: Features and custom matches.&#10;P: Poses." data-balloon-break data-balloon-pos="up">Type</span></th>
   
-  <th class="all">Ims (%)</th>
-  <th class="all">#Pts</th>
-  <th class="all">SR</th>
-  <th class="all">TL</th>
-  <th class="all">mAP<sup>5<sup>o</sup></sup></th>
-  <th class="all">mAP<sup>10<sup>o</sup></sup></th>
-  <th class="all">mAP<sup>15<sup>o</sup></sup></th>
-  <th class="all">mAP<sup>20<sup>o</sup></sup></th>
-  <th class="all">mAP<sup>25<sup>o</sup></sup></th>
-  <th class="all">ATE</th>
+  <th class="all"><span class="balloon" data-balloon="Average number of images&#10;in the reconstruction (min: 3)." data-balloon-break data-balloon-pos="up">Ims (%)</span></th>
+  <th class="all"><span class="balloon" data-balloon="Average number of 3D points&#10;in the reconstruction." data-balloon-break data-balloon-pos="up">#Pts</span></th>
+  <th class="all"><span class="balloon" data-balloon="Success ratio in the&#10;3D reconstruction (%)." data-balloon-break data-balloon-pos="up">SR</span></th>
+  <th class="all"><span class="balloon" data-balloon="Average Track Length&#10;(# of observations per 3D point)." data-balloon-break data-balloon-pos="up">TL</span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 5-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>5<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 10-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>10<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 15-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>15<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 20-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>20<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 25-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>25<sup>o</sup></sup></span></th>
+  <th class="all"><span class="balloon" data-balloon="Average Trajectory Error." data-balloon-break data-balloon-pos="up">ATE</span></th>
   
   <th class="none hidden_key">By</th>
   <th class="none hidden_key">Details</th>
@@ -651,8 +661,8 @@ the <a href="challenge">datasets page</a>.</p>
 
 <tr>
   
-  <td>AKAZE (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">AKAZE (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>79.3</td>
@@ -707,8 +717,8 @@ the <a href="challenge">datasets page</a>.</p>
 
 <tr>
   
-  <td>ORB (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">ORB (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>72.8</td>
@@ -763,8 +773,8 @@ the <a href="challenge">datasets page</a>.</p>
 
 <tr>
   
-  <td>GeoDesc (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SIFT &#43; GeoDesc</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>82.5</td>
@@ -819,8 +829,8 @@ the <a href="challenge">datasets page</a>.</p>
 
 <tr>
   
-  <td>HardNet (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SIFT &#43; HardNet</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>83.2</td>
@@ -875,8 +885,8 @@ the <a href="challenge">datasets page</a>.</p>
 
 <tr>
   
-  <td>L2-Net (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SIFT &#43; L2-Net</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>82.5</td>
@@ -931,8 +941,8 @@ the <a href="challenge">datasets page</a>.</p>
 
 <tr>
   
-  <td>SIFT (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SIFT (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>78.6</td>
@@ -987,8 +997,8 @@ the <a href="challenge">datasets page</a>.</p>
 
 <tr>
   
-  <td>TFeat (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SIFT &#43; TFeat</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>81.7</td>
@@ -1043,8 +1053,8 @@ the <a href="challenge">datasets page</a>.</p>
 
 <tr>
   
-  <td>SuperPoint</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SuperPoint</span><br /><span class="boards_subtitle">N/A<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>76.9</td>
@@ -1060,7 +1070,7 @@ the <a href="challenge">datasets page</a>.</p>
   <td>&mdash;</td>
   
   <td class="hidden_value">Challenge organizers</td>
-  <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels, and use as many keypoints as the model returns. Feature matching with brute-force nearest-neighbour search.</td>
+  <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels, and use as many keypoints as the model returns. Feature matching with brute-force nearest-neighbour search. TODO these results will be replaced with a more consistent number of keypoints.</td>
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
@@ -1099,8 +1109,8 @@ the <a href="challenge">datasets page</a>.</p>
 
 <tr>
   
-  <td>SURF (8k, NN)</td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd">2019-04-24</td>
+  <td class="align_left"><span class="boards_title">SURF (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">2019-04-24</span></td>
   <td>F</td>
   
   <td>74.9</td>
@@ -1130,22 +1140,16 @@ the <a href="challenge">datasets page</a>.</p>
 
 <hr></p>
 
-<ul>
-<li><a href="breakdown/phototourism/mvs/by_seq">Click here for a breakdown by sequence</a></li>
-<li><a href="breakdown/phototourism/mvs/by_bag">Click here for a breakdown by subset size</a></li>
-</ul>
-
 <p><br /><br /></p>
 
-<h2 id="a-name-silda-a-dataset-2-silda-image-matching"><a name="silda"></a>Dataset 2: SILDa Image Matching</h2>
+<h2 id="a-name-silda-a-s1-silda-dataset-mdash-image-matching-task"><a name="silda"></a>[S1] SILDa dataset &mdash; Image matching task</h2>
 
 <p>Coming Soon.</p>
 
-<p><br /><br /></p>
+<p><br /><br />
+<!--### <a name="glossary"></a>Glossary--></p>
 
-<h3 id="a-name-glossary-a-glossary"><a name="glossary"></a>Glossary</h3>
-
-<p>Stereo task:
+<!--Stereo task:
 
 <ul>
   <li><b>Type:</b> Input format. "F": Features. "M": Features and matches. "P": Poses.</li>
@@ -1153,8 +1157,9 @@ the <a href="challenge">datasets page</a>.</p>
   <li><b>MS:</b> Matching Score.</li>
   <li><b>mAP<sup>x</sup>:</b> Mean average precision at angular threshold *x*.</li>
 </ul>
+-->
 
-Multi-view reconstruction task:
+<!--Multi-view reconstruction task:
 
 <ul>
   <li><b>Type:</b> Input format. "F": Features. "M": Features and matches. "P": Poses.</li>
@@ -1165,7 +1170,7 @@ Multi-view reconstruction task:
   <li><b>mAP<sup>x</sup>:</b> Mean average precision at angular threshold *x*.</li>
   <li><b>ATE:</b> Absolute Trajectory Error.</li>
 </ul>
-</p>
+-->
 
   </div>
 </section>

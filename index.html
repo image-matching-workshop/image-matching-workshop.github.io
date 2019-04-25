@@ -23,6 +23,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
 <link rel="stylesheet" href="https://image-matching-workshop.github.io/css/datatables.min.css">
+<link rel="stylesheet" href="https://image-matching-workshop.github.io/css/balloon.min.css">
 <link rel="stylesheet" href="https://image-matching-workshop.github.io/css/main.css">
 <link rel="stylesheet" href="https://image-matching-workshop.github.io/css/custom.css">
 
@@ -54,8 +55,8 @@ $(document).ready(function (){
                     var data = $.map( columns, function ( col, i ) {
                         return col.hidden ?
                             '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
-                                '<td><b>'+col.title+':'+'</b></td> '+
-                                '<td>'+col.data+'</td>'+
+                                '<td class="align_left details_title"><b>'+col.title+':'+'</b></td> '+
+                                '<td class="align_left details_data">'+col.data+'</td>'+
                             '</tr>' :
                             '';
                     } ).join('');
@@ -78,8 +79,8 @@ $(document).ready(function (){
                     var data = $.map( columns, function ( col, i ) {
                         return col.hidden ?
                             '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
-                                '<td><b>'+col.title+':'+'</b></td> '+
-                                '<td>'+col.data+'</td>'+
+                                '<td class="align_left details_title"><b>'+col.title+':'+'</b></td> '+
+                                '<td class="align_left details_data">'+col.data+'</td>'+
                             '</tr>' :
                             '';
                     } ).join('');
@@ -102,8 +103,8 @@ $(document).ready(function (){
                     var data = $.map( columns, function ( col, i ) {
                         return col.hidden ?
                             '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
-                                '<td><b>'+col.title+':'+'</b></td> '+
-                                '<td>'+col.data+'</td>'+
+                                '<td class="align_left details_title"><b>'+col.title+':'+'</b></td> '+
+                                '<td class="align_left details_data">'+col.data+'</td>'+
                             '</tr>' :
                             '';
                     } ).join('');
@@ -269,8 +270,8 @@ ground.</li>
 <h2 id="news">News</h2>
 
 <ul>
+<li>April 25: Updated the <a href="./leaderboard">leaderboards for the Phototourism dataset</a>. More entries coming soon.</li>
 <li>April 24: Updated <a href="https://github.com/vcg-uvic/sfm_benchmark_release">submission instructions</a> for the PhotoTourism dataset, please follow this format in future submissions.</li>
-<li>April 24: Updated <a href="./leaderboard">leaderboard for the PhotoTourism dataset</a> with multiple baselines.</li>
 <li>April 23: Uploaded <a href="./challenge#silda_framework">data</a> and <a href="https://github.com/scape-research/silda/blob/master/silda-image-matching.ipynb">submission instructions</a> for the SILDa image matching dataset.</li>
 <li>April 11: Uploaded <a href="https://gfx.uvic.ca/nextcloud/index.php/s/75JNSoggacQhOkQ">training data</a> for the Phototourism dataset.</li>
 <li>March 27: Due to demand and to the proximity with the ICCV deadline, <span style='font-weight: bold; color: #a00'>we are

@@ -325,10 +325,21 @@ div.item {
     font-size:14px;
     font-weight: 300;
 }
+span.nolinebreak { white-space: nowrap; }
 
-th.hidden_key { font-size: 75%; font-weight: bold; padding: 0; margin: 0; }
-tr.hidden_value { font-size: 75%; font-weight: normal; padding: 0; margin: 0; }
-table.leaderboard_stereo th, td { font-size: 90%; }
-table.leaderboard_mvs th, td { font-size: 75%; }
-table.checkerboard th, td { font-size: 75%; }
+/* Datatables */
+table.leaderboard_stereo tr, th, td { font-size: 90%; text-align: center; }
+table.leaderboard_mvs tr, th, td { font-size: 80%; }
+table.checkerboard tr, th, td { font-size: 85%; }
+td.details_title { font-size: 100%; font-weight: bold; padding: 0; margin: 0; }
+td.details_data { font-size: 100%; font-weight: normal; padding: 0; margin: 0; }
+
+/* Balloons */
 hr { border-top: 5px solid #eee; margin: 2em 0;}
+span.balloon { border-bottom: 1px dotted; }
+th span.balloon, tr span.balloon, td span.balloon { white-space: nowrap; }
+span.boards_title { font-size: 100%; font-weight: bold; color: #999; }
+span.boards_subtitle { font-size: 90%; font-weight: normal; color: black; }
+.align_left { text-align: left; }
+.align_center { text-align: center; }
+.align_right { text-align: right; }

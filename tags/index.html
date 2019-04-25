@@ -23,6 +23,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
 <link rel="stylesheet" href="https://image-matching-workshop.github.io/css/datatables.min.css">
+<link rel="stylesheet" href="https://image-matching-workshop.github.io/css/balloon.min.css">
 <link rel="stylesheet" href="https://image-matching-workshop.github.io/css/main.css">
 <link rel="stylesheet" href="https://image-matching-workshop.github.io/css/custom.css">
 
@@ -54,8 +55,8 @@ $(document).ready(function (){
                     var data = $.map( columns, function ( col, i ) {
                         return col.hidden ?
                             '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
-                                '<td><b>'+col.title+':'+'</b></td> '+
-                                '<td>'+col.data+'</td>'+
+                                '<td class="align_left details_title"><b>'+col.title+':'+'</b></td> '+
+                                '<td class="align_left details_data">'+col.data+'</td>'+
                             '</tr>' :
                             '';
                     } ).join('');
@@ -78,8 +79,8 @@ $(document).ready(function (){
                     var data = $.map( columns, function ( col, i ) {
                         return col.hidden ?
                             '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
-                                '<td><b>'+col.title+':'+'</b></td> '+
-                                '<td>'+col.data+'</td>'+
+                                '<td class="align_left details_title"><b>'+col.title+':'+'</b></td> '+
+                                '<td class="align_left details_data">'+col.data+'</td>'+
                             '</tr>' :
                             '';
                     } ).join('');
@@ -102,8 +103,8 @@ $(document).ready(function (){
                     var data = $.map( columns, function ( col, i ) {
                         return col.hidden ?
                             '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
-                                '<td><b>'+col.title+':'+'</b></td> '+
-                                '<td>'+col.data+'</td>'+
+                                '<td class="align_left details_title"><b>'+col.title+':'+'</b></td> '+
+                                '<td class="align_left details_data">'+col.data+'</td>'+
                             '</tr>' :
                             '';
                     } ).join('');
