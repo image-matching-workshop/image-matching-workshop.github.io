@@ -428,33 +428,35 @@ modalities will be added in future editions.</p>
 
 <h3 id="a-name-pt-stereo-a-task-1-wide-baseline-stereo-matching"><a name="pt_stereo"></a>Task 1: Wide-baseline stereo matching</h3>
 
-<p>In this task we attempt to match keypoints over two images across wide
-baselines.  Image pairs are selected according to visibility constraints so that
-at least part of the scene is guaranteed to overlap. We use two metrics:</p>
+<p>In this task we match two images across wide baselines. Image pairs are selected
+according to visibility constraints so that at least part of the scene is
+guaranteed to overlap. The input can be a set of keypoints, or keypoints and
+correspondences. We primarily use two metrics:</p>
 
 <ul>
-<li><strong>Matching score (sparse methods only):</strong>
-The ratio of ground truth correspondences that can be recovered with Nearest
-Neighbour matching (and optionally the ratio test). For this we rely on ground
+<li><strong>Matching score:</strong>
+The ratio of ground truth correspondences that can be recovered with nearest
+neighbour matching (and optionally the ratio test), without a robust matching
+strategy. For this we rely on ground
 truth depth to translate pixel coordinates from one image to another and a fixed
 threshold to decide if two keypoints match. Occluded points that cannot be
-matched are excluded from the calculation. This metric isolates the performance
-of the features.</li>
-<li><strong>Pose estimation (sparse or dense):</strong>
-For sparse methods, we apply a robust matching strategy (RANSAC, or a custom
-solution) and use the surviving inliers to retrieve the relative pose between
-the two cameras. For dense methods, we expect the pose. We then measure
-performance with the angular difference between the estimated and ground truth
-vectors for both rotation and translation. To reduce this to one value, we use a
-variable threshold (the same value for rotation and translation) to determine
-each pose as correct or not, and compute the area under the curve up to the
-angular threshold<em>x</em>.  This value is thus the mean average precision up to <em>x</em>,
-or mAP<sup>x</sup>.  We consider 5, 10, 15, 20, and 25<sup>o</sup>.</li>
+matched are excluded from the calculation.</li>
+<li><strong>Pose estimation:</strong>
+We apply robust matching with RANSAC and use the surviving inliers to retrieve
+the relative pose between the two cameras. We measure performance with the angular difference between the
+estimated and ground truth vectors for both rotation and translation. To reduce
+this to one value, we use a variable threshold (the same value for rotation and
+translation) to determine each pose as correct or not, and compute the area
+under the curve up to the angular threshold <em>x</em>.  This value is thus the mean
+average precision up to <em>x</em>, or mAP<sup>x</sup>.  We consider 5, 10, 15, 20, and
+25<sup>o</sup>.</li>
 </ul>
 
-<p>For the purposes of the challenge, the ranking metric is pose estimation. In
-specific, we rank by mAP<sup>15<sup>o</sup></sup>, which we have found empirically to be an
-adequate proxy for wide-baseline stereo matching performance.</p>
+<p>For the purposes of the challenge, we rank entries by
+mAP<sup>15<sup>o</sup></sup>, which we have found empirically to be an adequate
+proxy for wide-baseline stereo matching performance. Note that we also plan to
+allow submissions of the estimated poses in the future, to include dense methods
+based on deep networks.</p>
 
 <h3 id="a-name-pt-mvs-a-task-2-sfm-from-small-subsets"><a name="pt_mvs"></a>Task 2: SfM from small subsets</h3>
 
