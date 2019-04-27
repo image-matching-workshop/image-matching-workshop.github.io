@@ -330,7 +330,7 @@ span.nolinebreak { white-space: nowrap; }
 /* Datatables */
 table.leaderboard_stereo tr, th, td { font-size: 90%; text-align: center; }
 table.leaderboard_mvs tr, th, td { font-size: 80%; }
-table.checkerboard tr, th, td { font-size: 85%; }
+table.checkerboard tr, th, td { font-size: 90%; }
 td.details_title { font-size: 100%; font-weight: bold; padding: 0; margin: 0; }
 td.details_data { font-size: 100%; font-weight: normal; padding: 0; margin: 0; }
 
