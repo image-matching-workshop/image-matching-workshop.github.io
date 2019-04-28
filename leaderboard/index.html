@@ -14,7 +14,7 @@
 
 <title>Image Matching: Local Features &amp; Beyond</title>
 
-<meta name="generator" content="Hugo 0.53" />
+<meta name="generator" content="Hugo 0.54.0" />
 
 
 
@@ -1025,18 +1025,18 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
 
 </p>
 
+<p>
 <div id="chart-stereo-map-th" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
   callback: function () {
-    csvFile = "https://image-matching-workshop.github.io/csv/stereo-map-th.csv";
-
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/stereo-map-th.csv";
     $.get(csvFile, function(csvString) {
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
       var data = new google.visualization.arrayToDataTable(arrayData);
       var chart = new google.visualization.LineChart(document.getElementById('chart-stereo-map-th'));
       var options = {
-        title: 'mAP in pose estimation at different error thresholds (degrees)',
+        title: 'mAP in pose estimation at different error thresholds [all]',
         titleTextStyle: {
           color: '#aaa',
           fontName: 'Helvetica',
@@ -1053,8 +1053,8 @@ google.charts.load('current', {
           left: '6%',
           right: '30%',
           bottom: '10%',
-          width: "100%",
-          height: "80%",
+          width: '100%',
+          height: '80%',
         },
         pointSize: 0,
         lineWidth: 2,
@@ -1075,6 +1075,302 @@ google.charts.load('current', {
 });
 </script>
 </div>
+
+
+
+<div id="chart-stereo-map-th-kp-8000" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/stereo-map-th-kp-8000.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-stereo-map-th-kp-8000'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds [kp:8000]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-stereo-map-th-kp-2048" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/stereo-map-th-kp-2048.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-stereo-map-th-kp-2048'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds [kp:2048]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-stereo-map-th-kp-1024" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/stereo-map-th-kp-1024.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-stereo-map-th-kp-1024'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds [kp:1024]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-stereo-map-th-kp-512" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/stereo-map-th-kp-512.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-stereo-map-th-kp-512'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds [kp:512]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-stereo-map-th-kp-256" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/stereo-map-th-kp-256.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-stereo-map-th-kp-256'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds [kp:256]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+</p>
+
+<!-- cannot get this to render properly now :( -->
+
+<!--<input type="button" id="show1" value="Show 1" />-->
+
+<!--<input type="button" id="show2" value="Show 2" />-->
+
+<!--<script type="text/javascript">-->
+
+<!--$("#show1").click(function(){-->
+
+<!--  document.getElementById('chart-stereo-map-th').style.visibility = 'visible';-->
+
+<!--  $('chart-stereo-map-th').css("height", "400px");-->
+
+<!--  document.getElementById('chart-stereo-map-th-1024').style.visibility = 'none';-->
+
+<!--  $('chart-stereo-map-th-1024').css("height", "0px");-->
+
+<!--});-->
+
+<!--$("#show2").click(function(){-->
+
+<!--  document.getElementById('chart-stereo-map-th').style.visibility = 'none';-->
+
+<!--  $('chart-stereo-map-th').css("height", "0px");-->
+
+<!--  document.getElementById('chart-stereo-map-th-1024').style.visibility = 'visible';-->
+
+<!--  $('chart-stereo-map-th-1024').css("height", "400px");-->
+
+<!--});-->
+
+<!--</script>-->
 
 <hr>
 
@@ -2257,18 +2553,18 @@ google.charts.load('current', {
 
 </p>
 
+<p>
 <div id="chart-mvs-map-th" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
   callback: function () {
-    csvFile = "https://image-matching-workshop.github.io/csv/mvs-map-th.csv";
-
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th.csv";
     $.get(csvFile, function(csvString) {
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
       var data = new google.visualization.arrayToDataTable(arrayData);
       var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th'));
       var options = {
-        title: 'mAP in pose estimation at different error thresholds (degrees)',
+        title: 'mAP in pose estimation at different error thresholds [all]',
         titleTextStyle: {
           color: '#aaa',
           fontName: 'Helvetica',
@@ -2285,8 +2581,8 @@ google.charts.load('current', {
           left: '6%',
           right: '30%',
           bottom: '10%',
-          width: "100%",
-          height: "80%",
+          width: '100%',
+          height: '80%',
         },
         pointSize: 0,
         lineWidth: 2,
@@ -2307,6 +2603,268 @@ google.charts.load('current', {
 });
 </script>
 </div>
+
+
+
+<div id="chart-mvs-map-th-kp-8000" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-kp-8000.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-kp-8000'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds [kp:8000]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-kp-2048" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-kp-2048.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-kp-2048'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds [kp:2048]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-kp-1024" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-kp-1024.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-kp-1024'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds [kp:1024]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-kp-512" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-kp-512.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-kp-512'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds [kp:512]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-kp-256" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-kp-256.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-kp-256'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds [kp:256]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+</p>
 
 <hr>
 
