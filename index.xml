@@ -43,7 +43,7 @@ google.charts.load(&#39;current&#39;, { callback: function () { csvFile = &#34;h
     </item>
     
     <item>
-      <title>Call for Papers</title>
+      <title>IMW CVPR 2019: Call for Papers</title>
       <link>https://image-matching-workshop.github.io/papers/</link>
       <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
       
@@ -54,7 +54,7 @@ Topics Workshop topics include (but are not limited to):
     </item>
     
     <item>
-      <title>Challenge</title>
+      <title>IMW CVPR 2019: Challenge</title>
       <link>https://image-matching-workshop.github.io/challenge/</link>
       <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
       
@@ -63,7 +63,7 @@ Topics Workshop topics include (but are not limited to):
     </item>
     
     <item>
-      <title>Leaderboard</title>
+      <title>IMW CVPR 2019: Leaderboard</title>
       <link>https://image-matching-workshop.github.io/leaderboard/</link>
       <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
       
