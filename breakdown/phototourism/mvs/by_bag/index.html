@@ -150,8 +150,17 @@ $(document).ready(function (){
   <div class="col-md-12 text-justify content">
     <p>Breakdown on the Phototourism dataset, multi-view stereo task, by subset size.</p>
 
+<ul>
+<li><a href="breakdown/phototourism/mvs/by_bag#bag3">Breakdown by bag size of 3 images</a></li>
+<li><a href="breakdown/phototourism/mvs/by_bag#bag5">Breakdown by bag size of 5 images</a></li>
+<li><a href="breakdown/phototourism/mvs/by_bag#bag10">Breakdown by bag size of 10 images</a></li>
+<li><a href="breakdown/phototourism/mvs/by_bag#bag25">Breakdown by bag size of 25 images</a></li>
+<li><a href="leaderboard">Back to the leaderboard</a></li>
+</ul>
+
 <hr>
 
+<p><a name="bag3"></a>
 
 
 
@@ -1192,20 +1201,20 @@ $(document).ready(function (){
 </table>
 
 
+</p>
 
-
-<div id="chart-mvs-map-th-bag3" style="width: 100%; height: 500px; margin-top: 1em">
+<p>
+<div id="chart-mvs-map-th-bagsize-3" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
   callback: function () {
-    csvFile = "https://image-matching-workshop.github.io/csv/mvs-map-th-bagsize-3.csv";
-
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-3.csv";
     $.get(csvFile, function(csvString) {
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
       var data = new google.visualization.arrayToDataTable(arrayData);
-      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bag3'));
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-3'));
       var options = {
-        title: 'mAP in pose estimation at different error thresholds (degrees), bag size 3',
+        title: 'mAP in pose estimation at different error thresholds, bag size 3 [all]',
         titleTextStyle: {
           color: '#aaa',
           fontName: 'Helvetica',
@@ -1222,8 +1231,8 @@ google.charts.load('current', {
           left: '6%',
           right: '30%',
           bottom: '10%',
-          width: "100%",
-          height: "80%",
+          width: '100%',
+          height: '80%',
         },
         pointSize: 0,
         lineWidth: 2,
@@ -1245,8 +1254,271 @@ google.charts.load('current', {
 </script>
 </div>
 
+
+
+<div id="chart-mvs-map-th-bagsize-3-kp-8000" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-3-kp-8000.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-3-kp-8000'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 3 [kp:8000]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-3-kp-2048" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-3-kp-2048.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-3-kp-2048'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 3 [kp:2048]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-3-kp-1024" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-3-kp-1024.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-3-kp-1024'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 3 [kp:1024]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-3-kp-512" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-3-kp-512.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-3-kp-512'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 3 [kp:512]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-3-kp-256" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-3-kp-256.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-3-kp-256'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 3 [kp:256]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+</p>
+
 <hr>
 
+<p><a name="bag5"></a>
 
 
 
@@ -2287,20 +2559,20 @@ google.charts.load('current', {
 </table>
 
 
+</p>
 
-
-<div id="chart-mvs-map-th-bag5" style="width: 100%; height: 500px; margin-top: 1em">
+<p>
+<div id="chart-mvs-map-th-bagsize-5" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
   callback: function () {
-    csvFile = "https://image-matching-workshop.github.io/csv/mvs-map-th-bagsize-5.csv";
-
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-5.csv";
     $.get(csvFile, function(csvString) {
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
       var data = new google.visualization.arrayToDataTable(arrayData);
-      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bag5'));
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-5'));
       var options = {
-        title: 'mAP in pose estimation at different error thresholds (degrees), bag size 5',
+        title: 'mAP in pose estimation at different error thresholds, bag size 5 [all]',
         titleTextStyle: {
           color: '#aaa',
           fontName: 'Helvetica',
@@ -2317,8 +2589,8 @@ google.charts.load('current', {
           left: '6%',
           right: '30%',
           bottom: '10%',
-          width: "100%",
-          height: "80%",
+          width: '100%',
+          height: '80%',
         },
         pointSize: 0,
         lineWidth: 2,
@@ -2340,8 +2612,271 @@ google.charts.load('current', {
 </script>
 </div>
 
+
+
+<div id="chart-mvs-map-th-bagsize-5-kp-8000" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-5-kp-8000.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-5-kp-8000'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 5 [kp:8000]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-5-kp-2048" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-5-kp-2048.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-5-kp-2048'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 5 [kp:2048]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-5-kp-1024" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-5-kp-1024.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-5-kp-1024'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 5 [kp:1024]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-5-kp-512" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-5-kp-512.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-5-kp-512'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 5 [kp:512]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-5-kp-256" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-5-kp-256.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-5-kp-256'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 5 [kp:256]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+</p>
+
 <hr>
 
+<p><a name="bag10"></a>
 
 
 
@@ -3382,20 +3917,20 @@ google.charts.load('current', {
 </table>
 
 
+</p>
 
-
-<div id="chart-mvs-map-th-bag10" style="width: 100%; height: 500px; margin-top: 1em">
+<p>
+<div id="chart-mvs-map-th-bagsize-10" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
   callback: function () {
-    csvFile = "https://image-matching-workshop.github.io/csv/mvs-map-th-bagsize-10.csv";
-
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-10.csv";
     $.get(csvFile, function(csvString) {
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
       var data = new google.visualization.arrayToDataTable(arrayData);
-      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bag10'));
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-10'));
       var options = {
-        title: 'mAP in pose estimation at different error thresholds (degrees), bag size 10',
+        title: 'mAP in pose estimation at different error thresholds, bag size 10 [all]',
         titleTextStyle: {
           color: '#aaa',
           fontName: 'Helvetica',
@@ -3412,8 +3947,8 @@ google.charts.load('current', {
           left: '6%',
           right: '30%',
           bottom: '10%',
-          width: "100%",
-          height: "80%",
+          width: '100%',
+          height: '80%',
         },
         pointSize: 0,
         lineWidth: 2,
@@ -3435,8 +3970,271 @@ google.charts.load('current', {
 </script>
 </div>
 
+
+
+<div id="chart-mvs-map-th-bagsize-10-kp-8000" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-10-kp-8000.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-10-kp-8000'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 10 [kp:8000]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-10-kp-2048" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-10-kp-2048.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-10-kp-2048'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 10 [kp:2048]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-10-kp-1024" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-10-kp-1024.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-10-kp-1024'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 10 [kp:1024]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-10-kp-512" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-10-kp-512.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-10-kp-512'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 10 [kp:512]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-10-kp-256" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-10-kp-256.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-10-kp-256'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 10 [kp:256]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+</p>
+
 <hr>
 
+<p><a name="bag25"></a>
 
 
 
@@ -4477,20 +5275,20 @@ google.charts.load('current', {
 </table>
 
 
+</p>
 
-
-<div id="chart-mvs-map-th-bag25" style="width: 100%; height: 500px; margin-top: 1em">
+<p>
+<div id="chart-mvs-map-th-bagsize-25" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
   callback: function () {
-    csvFile = "https://image-matching-workshop.github.io/csv/mvs-map-th-bagsize-25.csv";
-
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-25.csv";
     $.get(csvFile, function(csvString) {
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
       var data = new google.visualization.arrayToDataTable(arrayData);
-      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bag25'));
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-25'));
       var options = {
-        title: 'mAP in pose estimation at different error thresholds (degrees), bag size 25',
+        title: 'mAP in pose estimation at different error thresholds, bag size 25 [all]',
         titleTextStyle: {
           color: '#aaa',
           fontName: 'Helvetica',
@@ -4507,8 +5305,8 @@ google.charts.load('current', {
           left: '6%',
           right: '30%',
           bottom: '10%',
-          width: "100%",
-          height: "80%",
+          width: '100%',
+          height: '80%',
         },
         pointSize: 0,
         lineWidth: 2,
@@ -4529,6 +5327,268 @@ google.charts.load('current', {
 });
 </script>
 </div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-25-kp-8000" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-25-kp-8000.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-25-kp-8000'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 25 [kp:8000]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-25-kp-2048" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-25-kp-2048.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-25-kp-2048'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 25 [kp:2048]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-25-kp-1024" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-25-kp-1024.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-25-kp-1024'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 25 [kp:1024]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-25-kp-512" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-25-kp-512.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-25-kp-512'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 25 [kp:512]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-25-kp-256" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-25-kp-256.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-25-kp-256'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 25 [kp:256]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+</p>
 
 <hr>
 

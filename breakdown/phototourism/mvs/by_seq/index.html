@@ -150,16 +150,20 @@ $(document).ready(function (){
   <div class="col-md-12 text-justify content">
     <p>Breakdown on the Phototourism dataset, multi-view stereo task, by sequence.</p>
 
-<div id="chart-mvs-perseq" style="width: 100%; height: 650px; margin-top: 0em">
+<ul>
+<li><a href="leaderboard">Back to the leaderboard</a></li>
+</ul>
+
+
+<div id="chart-mvs-map15-perseq" style="width: 100%; height: 650px; margin-top: 0em">
 <script type="text/javascript">
 google.charts.load('current', {
   callback: function () {
-    csvFile = "https://image-matching-workshop.github.io/csv/mvs-map15-perseq.csv";
-
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map15-perseq.csv";
     $.get(csvFile, function(csvString) {
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
       var data = new google.visualization.arrayToDataTable(arrayData);
-      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-perseq'));
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map15-perseq'));
       var options = {
         title: 'mAP at 15 degrees, per sequence',
         titleTextStyle: {
@@ -198,6 +202,8 @@ google.charts.load('current', {
 });
 </script>
 </div>
+
+
 
 <p>
 
@@ -3269,7 +3275,27 @@ google.charts.load('current', {
 
 
 
-<hr>
+<hr></p>
+
+<p>Results for individual sequences:</p>
+
+<ul>
+<li><a href="breakdown/phototourism/mvs/by_seq#bm">British Museum</a></li>
+<li><a href="breakdown/phototourism/mvs/by_seq#fcs">Florence Cathedral Side</a></li>
+<li><a href="breakdown/phototourism/mvs/by_seq#lms">Lincoln Memorial Statue</a></li>
+<li><a href="breakdown/phototourism/mvs/by_seq#lb">London Bridge</a></li>
+<li><a href="breakdown/phototourism/mvs/by_seq#mc">Milan Cathedral</a></li>
+<li><a href="breakdown/phototourism/mvs/by_seq#mr">Mount Rushmore</a></li>
+<li><a href="breakdown/phototourism/mvs/by_seq#psm">Piazza San Marco</a></li>
+<li><a href="breakdown/phototourism/mvs/by_seq#rs">Reichstag</a></li>
+<li><a href="breakdown/phototourism/mvs/by_seq#sf">Sagrada Familia</a></li>
+<li><a href="breakdown/phototourism/mvs/by_seq#spc">St. Paul&rsquo;s Cathedral</a></li>
+<li><a href="breakdown/phototourism/mvs/by_seq#usc">United States Capitol</a></li>
+</ul>
+
+<p><br /></p>
+
+<p><a name="bm"></a>
 
 
 
@@ -4458,6 +4484,7 @@ google.charts.load('current', {
 
 
 <hr>
+<a name="fcs"></a>
 
 
 
@@ -5646,6 +5673,7 @@ google.charts.load('current', {
 
 
 <hr>
+<a name="lms"></a>
 
 
 
@@ -6834,6 +6862,7 @@ google.charts.load('current', {
 
 
 <hr>
+<a name="lb"></a>
 
 
 
@@ -8022,6 +8051,7 @@ google.charts.load('current', {
 
 
 <hr>
+<a name="mc"></a>
 
 
 
@@ -9210,6 +9240,7 @@ google.charts.load('current', {
 
 
 <hr>
+<a name="mr"></a>
 
 
 
@@ -10398,6 +10429,7 @@ google.charts.load('current', {
 
 
 <hr>
+<a name="psm"></a>
 
 
 
@@ -11586,6 +11618,7 @@ google.charts.load('current', {
 
 
 <hr>
+<a name="rs"></a>
 
 
 
@@ -12774,6 +12807,7 @@ google.charts.load('current', {
 
 
 <hr>
+<a name="sf"></a>
 
 
 
@@ -13962,6 +13996,7 @@ google.charts.load('current', {
 
 
 <hr>
+<a name="spc"></a>
 
 
 
@@ -15150,6 +15185,7 @@ google.charts.load('current', {
 
 
 <hr>
+<a name="usc"></a>
 
 
 
