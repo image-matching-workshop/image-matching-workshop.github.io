@@ -150,8 +150,17 @@ $(document).ready(function (){
   <div class="col-md-12 text-justify content">
     <p>Breakdown on the Phototourism dataset, multi-view stereo task, by subset size.</p>
 
+<ul>
+<li><a href="breakdown/phototourism/mvs/by_bag#bag3">Breakdown by bag size of 3 images</a></li>
+<li><a href="breakdown/phototourism/mvs/by_bag#bag5">Breakdown by bag size of 5 images</a></li>
+<li><a href="breakdown/phototourism/mvs/by_bag#bag10">Breakdown by bag size of 10 images</a></li>
+<li><a href="breakdown/phototourism/mvs/by_bag#bag25">Breakdown by bag size of 25 images</a></li>
+<li><a href="leaderboard">Back to the leaderboard</a></li>
+</ul>
+
 <hr>
 
+<p><a name="bag3"></a>
 
 
 
@@ -183,6 +192,7 @@ $(document).ready(function (){
   <th class="none hidden_key">Link</th>
   <th class="none hidden_key">Contact</th>
   <th class="none hidden_key">Updated</th>
+  <th class="none hidden_key">Descriptor size</th>
 </tr>
 </thead>
 <tbody>
@@ -233,6 +243,7 @@ $(document).ready(function (){
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -282,6 +293,7 @@ $(document).ready(function (){
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -331,6 +343,7 @@ $(document).ready(function (){
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -380,6 +393,57 @@ $(document).ready(function (){
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
+  <td>F/M</td>
+  
+  <td>100.0</td>
+  <td>389.7</td>
+  <td>35.5</td>
+  <td>2.19</td>
+  <td>0.008</td>
+  <td>0.030</td>
+  <td>0.056</td>
+  <td>0.079</td>
+  <td>0.105</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
 </tr>
   
 
@@ -429,6 +493,7 @@ $(document).ready(function (){
   <td class="hidden_value"><a href="https://github.com/lzx551402/geodesc">https://github.com/lzx551402/geodesc</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -478,6 +543,7 @@ $(document).ready(function (){
   <td class="hidden_value"><a href="https://github.com/DagnyT/hardnet">https://github.com/DagnyT/hardnet</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -527,6 +593,7 @@ $(document).ready(function (){
   <td class="hidden_value"><a href="https://github.com/yuruntian/L2-Net">https://github.com/yuruntian/L2-Net</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -576,6 +643,7 @@ $(document).ready(function (){
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -625,6 +693,7 @@ $(document).ready(function (){
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -674,6 +743,7 @@ $(document).ready(function (){
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -723,6 +793,7 @@ $(document).ready(function (){
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -772,6 +843,7 @@ $(document).ready(function (){
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -821,6 +893,7 @@ $(document).ready(function (){
   <td class="hidden_value"><a href="https://github.com/vbalnt/tfeat">https://github.com/vbalnt/tfeat</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -870,6 +943,7 @@ $(document).ready(function (){
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -919,6 +993,7 @@ $(document).ready(function (){
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -968,6 +1043,7 @@ $(document).ready(function (){
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -1017,6 +1093,7 @@ $(document).ready(function (){
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -1066,6 +1143,7 @@ $(document).ready(function (){
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -1115,6 +1193,7 @@ $(document).ready(function (){
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -1164,6 +1243,7 @@ $(document).ready(function (){
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -1171,20 +1251,20 @@ $(document).ready(function (){
 </table>
 
 
+</p>
 
-
-<div id="chart-mvs-map-th-bag3" style="width: 100%; height: 500px; margin-top: 1em">
+<p>
+<div id="chart-mvs-map-th-bagsize-3" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
   callback: function () {
-    csvFile = "https://image-matching-workshop.github.io/csv/mvs-map-th-bagsize-3.csv";
-
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-3.csv";
     $.get(csvFile, function(csvString) {
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
       var data = new google.visualization.arrayToDataTable(arrayData);
-      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bag3'));
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-3'));
       var options = {
-        title: 'mAP in pose estimation at different error thresholds (degrees), bag size 3',
+        title: 'mAP in pose estimation at different error thresholds, bag size 3 [all]',
         titleTextStyle: {
           color: '#aaa',
           fontName: 'Helvetica',
@@ -1201,8 +1281,8 @@ google.charts.load('current', {
           left: '6%',
           right: '30%',
           bottom: '10%',
-          width: "100%",
-          height: "80%",
+          width: '100%',
+          height: '80%',
         },
         pointSize: 0,
         lineWidth: 2,
@@ -1224,8 +1304,271 @@ google.charts.load('current', {
 </script>
 </div>
 
+
+
+<div id="chart-mvs-map-th-bagsize-3-kp-8000" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-3-kp-8000.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-3-kp-8000'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 3 [kp:8000]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-3-kp-2048" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-3-kp-2048.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-3-kp-2048'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 3 [kp:2048]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-3-kp-1024" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-3-kp-1024.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-3-kp-1024'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 3 [kp:1024]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-3-kp-512" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-3-kp-512.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-3-kp-512'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 3 [kp:512]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-3-kp-256" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-3-kp-256.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-3-kp-256'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 3 [kp:256]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+</p>
+
 <hr>
 
+<p><a name="bag5"></a>
 
 
 
@@ -1257,6 +1600,7 @@ google.charts.load('current', {
   <th class="none hidden_key">Link</th>
   <th class="none hidden_key">Contact</th>
   <th class="none hidden_key">Updated</th>
+  <th class="none hidden_key">Descriptor size</th>
 </tr>
 </thead>
 <tbody>
@@ -1307,6 +1651,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -1356,6 +1701,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -1405,6 +1751,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -1454,6 +1801,57 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
+  <td>F/M</td>
+  
+  <td>78.0</td>
+  <td>522.7</td>
+  <td>81.2</td>
+  <td>2.31</td>
+  <td>0.037</td>
+  <td>0.081</td>
+  <td>0.116</td>
+  <td>0.149</td>
+  <td>0.184</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
 </tr>
   
 
@@ -1503,6 +1901,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/lzx551402/geodesc">https://github.com/lzx551402/geodesc</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -1552,6 +1951,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/DagnyT/hardnet">https://github.com/DagnyT/hardnet</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -1601,6 +2001,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/yuruntian/L2-Net">https://github.com/yuruntian/L2-Net</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -1650,6 +2051,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -1699,6 +2101,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -1748,6 +2151,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -1797,6 +2201,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -1846,6 +2251,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -1895,6 +2301,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/vbalnt/tfeat">https://github.com/vbalnt/tfeat</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -1944,6 +2351,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -1993,6 +2401,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -2042,6 +2451,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -2091,6 +2501,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -2140,6 +2551,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -2189,6 +2601,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -2238,6 +2651,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -2245,20 +2659,20 @@ google.charts.load('current', {
 </table>
 
 
+</p>
 
-
-<div id="chart-mvs-map-th-bag5" style="width: 100%; height: 500px; margin-top: 1em">
+<p>
+<div id="chart-mvs-map-th-bagsize-5" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
   callback: function () {
-    csvFile = "https://image-matching-workshop.github.io/csv/mvs-map-th-bagsize-5.csv";
-
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-5.csv";
     $.get(csvFile, function(csvString) {
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
       var data = new google.visualization.arrayToDataTable(arrayData);
-      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bag5'));
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-5'));
       var options = {
-        title: 'mAP in pose estimation at different error thresholds (degrees), bag size 5',
+        title: 'mAP in pose estimation at different error thresholds, bag size 5 [all]',
         titleTextStyle: {
           color: '#aaa',
           fontName: 'Helvetica',
@@ -2275,8 +2689,8 @@ google.charts.load('current', {
           left: '6%',
           right: '30%',
           bottom: '10%',
-          width: "100%",
-          height: "80%",
+          width: '100%',
+          height: '80%',
         },
         pointSize: 0,
         lineWidth: 2,
@@ -2298,8 +2712,271 @@ google.charts.load('current', {
 </script>
 </div>
 
+
+
+<div id="chart-mvs-map-th-bagsize-5-kp-8000" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-5-kp-8000.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-5-kp-8000'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 5 [kp:8000]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-5-kp-2048" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-5-kp-2048.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-5-kp-2048'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 5 [kp:2048]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-5-kp-1024" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-5-kp-1024.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-5-kp-1024'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 5 [kp:1024]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-5-kp-512" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-5-kp-512.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-5-kp-512'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 5 [kp:512]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-5-kp-256" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-5-kp-256.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-5-kp-256'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 5 [kp:256]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+</p>
+
 <hr>
 
+<p><a name="bag10"></a>
 
 
 
@@ -2331,6 +3008,7 @@ google.charts.load('current', {
   <th class="none hidden_key">Link</th>
   <th class="none hidden_key">Contact</th>
   <th class="none hidden_key">Updated</th>
+  <th class="none hidden_key">Descriptor size</th>
 </tr>
 </thead>
 <tbody>
@@ -2381,6 +3059,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -2430,6 +3109,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -2479,6 +3159,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -2528,6 +3209,57 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
+  <td>F/M</td>
+  
+  <td>79.6</td>
+  <td>1492.5</td>
+  <td>99.8</td>
+  <td>2.73</td>
+  <td>0.145</td>
+  <td>0.224</td>
+  <td>0.278</td>
+  <td>0.319</td>
+  <td>0.358</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
 </tr>
   
 
@@ -2577,6 +3309,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/lzx551402/geodesc">https://github.com/lzx551402/geodesc</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -2626,6 +3359,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/DagnyT/hardnet">https://github.com/DagnyT/hardnet</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -2675,6 +3409,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/yuruntian/L2-Net">https://github.com/yuruntian/L2-Net</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -2724,6 +3459,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -2773,6 +3509,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -2822,6 +3559,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -2871,6 +3609,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -2920,6 +3659,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -2969,6 +3709,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/vbalnt/tfeat">https://github.com/vbalnt/tfeat</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -3018,6 +3759,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -3067,6 +3809,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -3116,6 +3859,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -3165,6 +3909,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -3214,6 +3959,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -3263,6 +4009,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -3312,6 +4059,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -3319,20 +4067,20 @@ google.charts.load('current', {
 </table>
 
 
+</p>
 
-
-<div id="chart-mvs-map-th-bag10" style="width: 100%; height: 500px; margin-top: 1em">
+<p>
+<div id="chart-mvs-map-th-bagsize-10" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
   callback: function () {
-    csvFile = "https://image-matching-workshop.github.io/csv/mvs-map-th-bagsize-10.csv";
-
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-10.csv";
     $.get(csvFile, function(csvString) {
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
       var data = new google.visualization.arrayToDataTable(arrayData);
-      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bag10'));
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-10'));
       var options = {
-        title: 'mAP in pose estimation at different error thresholds (degrees), bag size 10',
+        title: 'mAP in pose estimation at different error thresholds, bag size 10 [all]',
         titleTextStyle: {
           color: '#aaa',
           fontName: 'Helvetica',
@@ -3349,8 +4097,8 @@ google.charts.load('current', {
           left: '6%',
           right: '30%',
           bottom: '10%',
-          width: "100%",
-          height: "80%",
+          width: '100%',
+          height: '80%',
         },
         pointSize: 0,
         lineWidth: 2,
@@ -3372,8 +4120,271 @@ google.charts.load('current', {
 </script>
 </div>
 
+
+
+<div id="chart-mvs-map-th-bagsize-10-kp-8000" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-10-kp-8000.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-10-kp-8000'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 10 [kp:8000]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-10-kp-2048" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-10-kp-2048.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-10-kp-2048'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 10 [kp:2048]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-10-kp-1024" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-10-kp-1024.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-10-kp-1024'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 10 [kp:1024]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-10-kp-512" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-10-kp-512.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-10-kp-512'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 10 [kp:512]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-10-kp-256" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-10-kp-256.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-10-kp-256'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 10 [kp:256]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+</p>
+
 <hr>
 
+<p><a name="bag25"></a>
 
 
 
@@ -3405,6 +4416,7 @@ google.charts.load('current', {
   <th class="none hidden_key">Link</th>
   <th class="none hidden_key">Contact</th>
   <th class="none hidden_key">Updated</th>
+  <th class="none hidden_key">Descriptor size</th>
 </tr>
 </thead>
 <tbody>
@@ -3455,6 +4467,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -3504,6 +4517,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -3553,6 +4567,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -3602,6 +4617,57 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
+  <td>F/M</td>
+  
+  <td>92.7</td>
+  <td>6640.7</td>
+  <td>100.0</td>
+  <td>3.88</td>
+  <td>0.391</td>
+  <td>0.508</td>
+  <td>0.572</td>
+  <td>0.617</td>
+  <td>0.653</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
 </tr>
   
 
@@ -3651,6 +4717,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/lzx551402/geodesc">https://github.com/lzx551402/geodesc</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -3700,6 +4767,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/DagnyT/hardnet">https://github.com/DagnyT/hardnet</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -3749,6 +4817,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/yuruntian/L2-Net">https://github.com/yuruntian/L2-Net</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -3798,6 +4867,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -3847,6 +4917,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -3896,6 +4967,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -3945,6 +5017,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -3994,6 +5067,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -4043,6 +5117,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/vbalnt/tfeat">https://github.com/vbalnt/tfeat</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -4092,6 +5167,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -4141,6 +5217,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -4190,6 +5267,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -4239,6 +5317,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -4288,6 +5367,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -4337,6 +5417,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -4386,6 +5467,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -4393,20 +5475,20 @@ google.charts.load('current', {
 </table>
 
 
+</p>
 
-
-<div id="chart-mvs-map-th-bag25" style="width: 100%; height: 500px; margin-top: 1em">
+<p>
+<div id="chart-mvs-map-th-bagsize-25" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
   callback: function () {
-    csvFile = "https://image-matching-workshop.github.io/csv/mvs-map-th-bagsize-25.csv";
-
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-25.csv";
     $.get(csvFile, function(csvString) {
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
       var data = new google.visualization.arrayToDataTable(arrayData);
-      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bag25'));
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-25'));
       var options = {
-        title: 'mAP in pose estimation at different error thresholds (degrees), bag size 25',
+        title: 'mAP in pose estimation at different error thresholds, bag size 25 [all]',
         titleTextStyle: {
           color: '#aaa',
           fontName: 'Helvetica',
@@ -4423,8 +5505,8 @@ google.charts.load('current', {
           left: '6%',
           right: '30%',
           bottom: '10%',
-          width: "100%",
-          height: "80%",
+          width: '100%',
+          height: '80%',
         },
         pointSize: 0,
         lineWidth: 2,
@@ -4445,6 +5527,268 @@ google.charts.load('current', {
 });
 </script>
 </div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-25-kp-8000" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-25-kp-8000.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-25-kp-8000'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 25 [kp:8000]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-25-kp-2048" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-25-kp-2048.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-25-kp-2048'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 25 [kp:2048]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-25-kp-1024" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-25-kp-1024.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-25-kp-1024'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 25 [kp:1024]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-25-kp-512" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-25-kp-512.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-25-kp-512'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 25 [kp:512]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-bagsize-25-kp-256" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-bagsize-25-kp-256.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-bagsize-25-kp-256'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds, bag size 25 [kp:256]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+</p>
 
 <hr>
 

@@ -141,7 +141,7 @@ $(document).ready(function (){
 
 
 <header class="row text-left title">
-  <h1 class="title">Leaderboard</h1>
+  <h1 class="title">IMW CVPR 2019: Leaderboard</h1>
 </header>
 <section id="category-pane" class="row meta">
   
@@ -215,6 +215,7 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <th class="none hidden_key">Link</th>
   <th class="none hidden_key">Contact</th>
   <th class="none hidden_key">Updated</th>
+  <th class="none hidden_key">Descriptor size</th>
 </tr>
 </thead>
 <tbody>
@@ -256,6 +257,7 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
 
 
@@ -296,6 +298,7 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
 
 
@@ -336,6 +339,7 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
 
 
@@ -376,6 +380,48 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
+  <td>F/M</td>
+  
+  <td>3828.5</td>
+  <td>0.245</td>
+  <td>0.000</td>
+  <td>0.005</td>
+  <td>0.022</td>
+  <td>0.052</td>
+  <td>0.096</td>
+ 
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
 </tr>
 
 
@@ -416,6 +462,7 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value"><a href="https://github.com/lzx551402/geodesc">https://github.com/lzx551402/geodesc</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
 
 
@@ -456,6 +503,7 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value"><a href="https://github.com/DagnyT/hardnet">https://github.com/DagnyT/hardnet</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
 
 
@@ -496,6 +544,7 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value"><a href="https://github.com/yuruntian/L2-Net">https://github.com/yuruntian/L2-Net</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
 
 
@@ -536,6 +585,7 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
 
 
@@ -576,6 +626,7 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
 
 
@@ -616,6 +667,7 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
 
 
@@ -656,6 +708,7 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
 
 
@@ -696,6 +749,7 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
 
 
@@ -736,6 +790,7 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value"><a href="https://github.com/vbalnt/tfeat">https://github.com/vbalnt/tfeat</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
 
 
@@ -776,6 +831,7 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
 
 
@@ -816,6 +872,7 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
 
 
@@ -856,6 +913,7 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
 
 
@@ -896,6 +954,7 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
 
 
@@ -936,6 +995,7 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
 
 
@@ -976,6 +1036,7 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
 
 
@@ -1016,6 +1077,7 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
 
 
@@ -1025,18 +1087,18 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
 
 </p>
 
+<p>
 <div id="chart-stereo-map-th" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
   callback: function () {
-    csvFile = "https://image-matching-workshop.github.io/csv/stereo-map-th.csv";
-
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/stereo-map-th.csv";
     $.get(csvFile, function(csvString) {
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
       var data = new google.visualization.arrayToDataTable(arrayData);
       var chart = new google.visualization.LineChart(document.getElementById('chart-stereo-map-th'));
       var options = {
-        title: 'mAP in pose estimation at different error thresholds (degrees)',
+        title: 'mAP in pose estimation at different error thresholds [all]',
         titleTextStyle: {
           color: '#aaa',
           fontName: 'Helvetica',
@@ -1053,8 +1115,8 @@ google.charts.load('current', {
           left: '6%',
           right: '30%',
           bottom: '10%',
-          width: "100%",
-          height: "80%",
+          width: '100%',
+          height: '80%',
         },
         pointSize: 0,
         lineWidth: 2,
@@ -1075,6 +1137,302 @@ google.charts.load('current', {
 });
 </script>
 </div>
+
+
+
+<div id="chart-stereo-map-th-kp-8000" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/stereo-map-th-kp-8000.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-stereo-map-th-kp-8000'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds [kp:8000]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-stereo-map-th-kp-2048" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/stereo-map-th-kp-2048.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-stereo-map-th-kp-2048'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds [kp:2048]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-stereo-map-th-kp-1024" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/stereo-map-th-kp-1024.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-stereo-map-th-kp-1024'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds [kp:1024]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-stereo-map-th-kp-512" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/stereo-map-th-kp-512.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-stereo-map-th-kp-512'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds [kp:512]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-stereo-map-th-kp-256" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/stereo-map-th-kp-256.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-stereo-map-th-kp-256'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds [kp:256]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+</p>
+
+<!-- cannot get this to render properly now :( -->
+
+<!--<input type="button" id="show1" value="Show 1" />-->
+
+<!--<input type="button" id="show2" value="Show 2" />-->
+
+<!--<script type="text/javascript">-->
+
+<!--$("#show1").click(function(){-->
+
+<!--  document.getElementById('chart-stereo-map-th').style.visibility = 'visible';-->
+
+<!--  $('chart-stereo-map-th').css("height", "400px");-->
+
+<!--  document.getElementById('chart-stereo-map-th-1024').style.visibility = 'none';-->
+
+<!--  $('chart-stereo-map-th-1024').css("height", "0px");-->
+
+<!--});-->
+
+<!--$("#show2").click(function(){-->
+
+<!--  document.getElementById('chart-stereo-map-th').style.visibility = 'none';-->
+
+<!--  $('chart-stereo-map-th').css("height", "0px");-->
+
+<!--  document.getElementById('chart-stereo-map-th-1024').style.visibility = 'visible';-->
+
+<!--  $('chart-stereo-map-th-1024').css("height", "400px");-->
+
+<!--});-->
+
+<!--</script>-->
 
 <hr>
 
@@ -1127,6 +1485,7 @@ google.charts.load('current', {
   <th class="none hidden_key">Link</th>
   <th class="none hidden_key">Contact</th>
   <th class="none hidden_key">Updated</th>
+  <th class="none hidden_key">Descriptor size</th>
 </tr>
 </thead>
 <tbody>
@@ -1184,6 +1543,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -1240,6 +1600,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -1296,6 +1657,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -1352,6 +1714,64 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
+  <td>F/M</td>
+  
+  <td>72.3</td>
+  <td>974.4</td>
+  <td>79.1</td>
+  <td>2.49</td>
+  <td>0.084</td>
+  <td>0.140</td>
+  <td>0.182</td>
+  <td>0.217</td>
+  <td>0.251</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
 </tr>
   
 
@@ -1408,6 +1828,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/lzx551402/geodesc">https://github.com/lzx551402/geodesc</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -1464,6 +1885,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/DagnyT/hardnet">https://github.com/DagnyT/hardnet</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -1520,6 +1942,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/yuruntian/L2-Net">https://github.com/yuruntian/L2-Net</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -1576,6 +1999,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -1632,6 +2056,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -1688,6 +2113,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -1744,6 +2170,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -1800,6 +2227,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -1856,6 +2284,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/vbalnt/tfeat">https://github.com/vbalnt/tfeat</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -1912,6 +2341,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -1968,6 +2398,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -2024,6 +2455,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -2080,6 +2512,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -2136,6 +2569,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -2192,6 +2626,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -2248,6 +2683,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -2257,18 +2693,18 @@ google.charts.load('current', {
 
 </p>
 
+<p>
 <div id="chart-mvs-map-th" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
   callback: function () {
-    csvFile = "https://image-matching-workshop.github.io/csv/mvs-map-th.csv";
-
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th.csv";
     $.get(csvFile, function(csvString) {
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
       var data = new google.visualization.arrayToDataTable(arrayData);
       var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th'));
       var options = {
-        title: 'mAP in pose estimation at different error thresholds (degrees)',
+        title: 'mAP in pose estimation at different error thresholds [all]',
         titleTextStyle: {
           color: '#aaa',
           fontName: 'Helvetica',
@@ -2285,8 +2721,8 @@ google.charts.load('current', {
           left: '6%',
           right: '30%',
           bottom: '10%',
-          width: "100%",
-          height: "80%",
+          width: '100%',
+          height: '80%',
         },
         pointSize: 0,
         lineWidth: 2,
@@ -2307,6 +2743,268 @@ google.charts.load('current', {
 });
 </script>
 </div>
+
+
+
+<div id="chart-mvs-map-th-kp-8000" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-kp-8000.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-kp-8000'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds [kp:8000]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-kp-2048" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-kp-2048.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-kp-2048'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds [kp:2048]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-kp-1024" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-kp-1024.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-kp-1024'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds [kp:1024]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-kp-512" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-kp-512.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-kp-512'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds [kp:512]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+
+
+<div id="chart-mvs-map-th-kp-256" style="width: 100%; height: 500px; margin-top: 1em">
+<script type="text/javascript">
+google.charts.load('current', {
+  callback: function () {
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-kp-256.csv";
+    $.get(csvFile, function(csvString) {
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+      var data = new google.visualization.arrayToDataTable(arrayData);
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map-th-kp-256'));
+      var options = {
+        title: 'mAP in pose estimation at different error thresholds [kp:256]',
+        titleTextStyle: {
+          color: '#aaa',
+          fontName: 'Helvetica',
+          fontSize: 18,
+          bold: false,
+        },
+        bar: {groupWidth: "80%"},
+        legend: {
+          position: 'right',
+          textStyle: { fontSize: 12 },
+          alignment: 'center',
+        },
+        chartArea: {
+          left: '6%',
+          right: '30%',
+          bottom: '10%',
+          width: '100%',
+          height: '80%',
+        },
+        pointSize: 0,
+        lineWidth: 2,
+        backgroundColor: { fill:'transparent' },
+        vAxis: {
+          title: "mAP",
+        },
+        hAxis: {
+          title: "Error threshold in R and T (degrees)",
+          viewWindow: { min: 4.75, max: 25.25 },
+          ticks: [5, 10, 15, 20, 25],
+        },
+      };
+    chart.draw(data, options);
+    });
+  },
+  packages: ['corechart']
+});
+</script>
+</div>
+
+</p>
 
 <hr>
 

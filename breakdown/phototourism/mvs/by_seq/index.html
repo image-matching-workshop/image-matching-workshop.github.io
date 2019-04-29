@@ -150,16 +150,20 @@ $(document).ready(function (){
   <div class="col-md-12 text-justify content">
     <p>Breakdown on the Phototourism dataset, multi-view stereo task, by sequence.</p>
 
-<div id="chart-mvs-perseq" style="width: 100%; height: 650px; margin-top: 0em">
+<ul>
+<li><a href="leaderboard">Back to the leaderboard</a></li>
+</ul>
+
+
+<div id="chart-mvs-map15-perseq" style="width: 100%; height: 650px; margin-top: 0em">
 <script type="text/javascript">
 google.charts.load('current', {
   callback: function () {
-    csvFile = "https://image-matching-workshop.github.io/csv/mvs-map15-perseq.csv";
-
+    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map15-perseq.csv";
     $.get(csvFile, function(csvString) {
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
       var data = new google.visualization.arrayToDataTable(arrayData);
-      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-perseq'));
+      var chart = new google.visualization.LineChart(document.getElementById('chart-mvs-map15-perseq'));
       var options = {
         title: 'mAP at 15 degrees, per sequence',
         titleTextStyle: {
@@ -198,6 +202,8 @@ google.charts.load('current', {
 });
 </script>
 </div>
+
+
 
 <p>
 
@@ -259,6 +265,7 @@ google.charts.load('current', {
   <th class="none hidden_key">Link</th>
   <th class="none hidden_key">Contact</th>
   <th class="none hidden_key">Updated</th>
+  <th class="none hidden_key">Descriptor size</th>
 </tr>
 </thead>
 <tbody>
@@ -409,6 +416,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
 
 
@@ -558,6 +566,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
 
 
@@ -707,6 +716,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
 
 
@@ -856,6 +866,157 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
+</tr>
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+
+
+
+
+
+
+
+
+
+
+  <td>0.135</td>
+
+
+
+
+
+
+
+
+
+
+  <td>0.343</td>
+
+
+
+
+
+
+
+
+
+
+  <td>0.159</td>
+
+
+
+
+
+
+
+
+
+
+  <td>0.242</td>
+
+
+
+
+
+
+
+
+
+
+  <td>0.444</td>
+
+
+
+
+
+
+
+
+
+
+  <td>0.137</td>
+
+
+
+
+
+
+
+
+
+
+  <td>0.190</td>
+
+
+
+
+
+
+
+
+
+
+  <td>0.318</td>
+
+
+
+
+
+
+
+
+
+
+  <td>0.456</td>
+
+
+
+
+
+
+
+
+
+
+  <td>0.336</td>
+
+
+
+
+
+
+
+
+
+
+  <td>0.049</td>
+
+
+
+
+
+
+
+
+
+
+  <td>0.255</td>
+
+  
+  <td class="hidden_value">19-04-29</td>
+  <td class="hidden_value">F/M</td>
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
 </tr>
 
 
@@ -1005,6 +1166,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/lzx551402/geodesc">https://github.com/lzx551402/geodesc</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
 
 
@@ -1154,6 +1316,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/DagnyT/hardnet">https://github.com/DagnyT/hardnet</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
 
 
@@ -1303,6 +1466,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/yuruntian/L2-Net">https://github.com/yuruntian/L2-Net</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
 
 
@@ -1452,6 +1616,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
 
 
@@ -1601,6 +1766,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
 
 
@@ -1750,6 +1916,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
 
 
@@ -1899,6 +2066,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
 
 
@@ -2048,6 +2216,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
 
 
@@ -2197,6 +2366,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/vbalnt/tfeat">https://github.com/vbalnt/tfeat</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
 
 
@@ -2346,6 +2516,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
 
 
@@ -2495,6 +2666,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
 
 
@@ -2644,6 +2816,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
 
 
@@ -2793,6 +2966,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
 
 
@@ -2942,6 +3116,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
 
 
@@ -3091,6 +3266,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
 
 
@@ -3240,6 +3416,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
 
 
@@ -3248,7 +3425,27 @@ google.charts.load('current', {
 
 
 
-<hr>
+<hr></p>
+
+<p>Results for individual sequences:</p>
+
+<ul>
+<li><a href="breakdown/phototourism/mvs/by_seq#bm">British Museum</a></li>
+<li><a href="breakdown/phototourism/mvs/by_seq#fcs">Florence Cathedral Side</a></li>
+<li><a href="breakdown/phototourism/mvs/by_seq#lms">Lincoln Memorial Statue</a></li>
+<li><a href="breakdown/phototourism/mvs/by_seq#lb">London Bridge</a></li>
+<li><a href="breakdown/phototourism/mvs/by_seq#mc">Milan Cathedral</a></li>
+<li><a href="breakdown/phototourism/mvs/by_seq#mr">Mount Rushmore</a></li>
+<li><a href="breakdown/phototourism/mvs/by_seq#psm">Piazza San Marco</a></li>
+<li><a href="breakdown/phototourism/mvs/by_seq#rs">Reichstag</a></li>
+<li><a href="breakdown/phototourism/mvs/by_seq#sf">Sagrada Familia</a></li>
+<li><a href="breakdown/phototourism/mvs/by_seq#spc">St. Paul&rsquo;s Cathedral</a></li>
+<li><a href="breakdown/phototourism/mvs/by_seq#usc">United States Capitol</a></li>
+</ul>
+
+<p><br /></p>
+
+<p><a name="bm"></a>
 
 
 
@@ -3286,6 +3483,7 @@ google.charts.load('current', {
   <th class="none hidden_key">Link</th>
   <th class="none hidden_key">Contact</th>
   <th class="none hidden_key">Updated</th>
+  <th class="none hidden_key">Descriptor size</th>
 </tr>
 </thead>
 <tbody>
@@ -3343,6 +3541,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -3399,6 +3598,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -3455,6 +3655,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -3511,6 +3712,64 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
+  <td>F/M</td>
+  
+  <td>81.3</td>
+  <td>862.6</td>
+  <td>92.8</td>
+  <td>2.71</td>
+  <td>0.016</td>
+  <td>0.051</td>
+  <td>0.102</td>
+  <td>0.159</td>
+  <td>0.230</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
 </tr>
   
 
@@ -3567,6 +3826,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/lzx551402/geodesc">https://github.com/lzx551402/geodesc</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -3623,6 +3883,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/DagnyT/hardnet">https://github.com/DagnyT/hardnet</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -3679,6 +3940,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/yuruntian/L2-Net">https://github.com/yuruntian/L2-Net</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -3735,6 +3997,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -3791,6 +4054,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -3847,6 +4111,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -3903,6 +4168,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -3959,6 +4225,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -4015,6 +4282,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/vbalnt/tfeat">https://github.com/vbalnt/tfeat</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -4071,6 +4339,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -4127,6 +4396,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -4183,6 +4453,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -4239,6 +4510,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -4295,6 +4567,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -4351,6 +4624,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -4407,6 +4681,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -4416,6 +4691,7 @@ google.charts.load('current', {
 
 
 <hr>
+<a name="fcs"></a>
 
 
 
@@ -4453,6 +4729,7 @@ google.charts.load('current', {
   <th class="none hidden_key">Link</th>
   <th class="none hidden_key">Contact</th>
   <th class="none hidden_key">Updated</th>
+  <th class="none hidden_key">Descriptor size</th>
 </tr>
 </thead>
 <tbody>
@@ -4510,6 +4787,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -4566,6 +4844,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -4622,6 +4901,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -4678,6 +4958,64 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
+  <td>F/M</td>
+  
+  <td>71.0</td>
+  <td>1332.2</td>
+  <td>74.8</td>
+  <td>2.42</td>
+  <td>0.141</td>
+  <td>0.197</td>
+  <td>0.229</td>
+  <td>0.254</td>
+  <td>0.280</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
 </tr>
   
 
@@ -4734,6 +5072,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/lzx551402/geodesc">https://github.com/lzx551402/geodesc</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -4790,6 +5129,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/DagnyT/hardnet">https://github.com/DagnyT/hardnet</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -4846,6 +5186,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/yuruntian/L2-Net">https://github.com/yuruntian/L2-Net</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -4902,6 +5243,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -4958,6 +5300,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -5014,6 +5357,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -5070,6 +5414,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -5126,6 +5471,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -5182,6 +5528,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/vbalnt/tfeat">https://github.com/vbalnt/tfeat</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -5238,6 +5585,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -5294,6 +5642,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -5350,6 +5699,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -5406,6 +5756,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -5462,6 +5813,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -5518,6 +5870,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -5574,6 +5927,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -5583,6 +5937,7 @@ google.charts.load('current', {
 
 
 <hr>
+<a name="lms"></a>
 
 
 
@@ -5620,6 +5975,7 @@ google.charts.load('current', {
   <th class="none hidden_key">Link</th>
   <th class="none hidden_key">Contact</th>
   <th class="none hidden_key">Updated</th>
+  <th class="none hidden_key">Descriptor size</th>
 </tr>
 </thead>
 <tbody>
@@ -5677,6 +6033,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -5733,6 +6090,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -5789,6 +6147,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -5845,6 +6204,64 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
+  <td>F/M</td>
+  
+  <td>70.5</td>
+  <td>329.9</td>
+  <td>80.2</td>
+  <td>2.62</td>
+  <td>0.019</td>
+  <td>0.040</td>
+  <td>0.062</td>
+  <td>0.087</td>
+  <td>0.108</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
 </tr>
   
 
@@ -5901,6 +6318,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/lzx551402/geodesc">https://github.com/lzx551402/geodesc</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -5957,6 +6375,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/DagnyT/hardnet">https://github.com/DagnyT/hardnet</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -6013,6 +6432,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/yuruntian/L2-Net">https://github.com/yuruntian/L2-Net</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -6069,6 +6489,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -6125,6 +6546,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -6181,6 +6603,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -6237,6 +6660,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -6293,6 +6717,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -6349,6 +6774,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/vbalnt/tfeat">https://github.com/vbalnt/tfeat</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -6405,6 +6831,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -6461,6 +6888,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -6517,6 +6945,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -6573,6 +7002,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -6629,6 +7059,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -6685,6 +7116,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -6741,6 +7173,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -6750,6 +7183,7 @@ google.charts.load('current', {
 
 
 <hr>
+<a name="lb"></a>
 
 
 
@@ -6787,6 +7221,7 @@ google.charts.load('current', {
   <th class="none hidden_key">Link</th>
   <th class="none hidden_key">Contact</th>
   <th class="none hidden_key">Updated</th>
+  <th class="none hidden_key">Descriptor size</th>
 </tr>
 </thead>
 <tbody>
@@ -6844,6 +7279,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -6900,6 +7336,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -6956,6 +7393,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -7012,6 +7450,64 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
+  <td>F/M</td>
+  
+  <td>79.2</td>
+  <td>962.8</td>
+  <td>88.8</td>
+  <td>2.65</td>
+  <td>0.071</td>
+  <td>0.139</td>
+  <td>0.192</td>
+  <td>0.242</td>
+  <td>0.286</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
 </tr>
   
 
@@ -7068,6 +7564,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/lzx551402/geodesc">https://github.com/lzx551402/geodesc</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -7124,6 +7621,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/DagnyT/hardnet">https://github.com/DagnyT/hardnet</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -7180,6 +7678,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/yuruntian/L2-Net">https://github.com/yuruntian/L2-Net</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -7236,6 +7735,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -7292,6 +7792,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -7348,6 +7849,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -7404,6 +7906,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -7460,6 +7963,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -7516,6 +8020,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/vbalnt/tfeat">https://github.com/vbalnt/tfeat</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -7572,6 +8077,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -7628,6 +8134,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -7684,6 +8191,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -7740,6 +8248,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -7796,6 +8305,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -7852,6 +8362,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -7908,6 +8419,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -7917,6 +8429,7 @@ google.charts.load('current', {
 
 
 <hr>
+<a name="mc"></a>
 
 
 
@@ -7954,6 +8467,7 @@ google.charts.load('current', {
   <th class="none hidden_key">Link</th>
   <th class="none hidden_key">Contact</th>
   <th class="none hidden_key">Updated</th>
+  <th class="none hidden_key">Descriptor size</th>
 </tr>
 </thead>
 <tbody>
@@ -8011,6 +8525,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -8067,6 +8582,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -8123,6 +8639,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -8179,6 +8696,64 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
+  <td>F/M</td>
+  
+  <td>75.8</td>
+  <td>1371.5</td>
+  <td>82.0</td>
+  <td>2.60</td>
+  <td>0.185</td>
+  <td>0.300</td>
+  <td>0.365</td>
+  <td>0.411</td>
+  <td>0.447</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
 </tr>
   
 
@@ -8235,6 +8810,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/lzx551402/geodesc">https://github.com/lzx551402/geodesc</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -8291,6 +8867,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/DagnyT/hardnet">https://github.com/DagnyT/hardnet</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -8347,6 +8924,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/yuruntian/L2-Net">https://github.com/yuruntian/L2-Net</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -8403,6 +8981,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -8459,6 +9038,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -8515,6 +9095,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -8571,6 +9152,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -8627,6 +9209,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -8683,6 +9266,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/vbalnt/tfeat">https://github.com/vbalnt/tfeat</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -8739,6 +9323,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -8795,6 +9380,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -8851,6 +9437,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -8907,6 +9494,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -8963,6 +9551,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -9019,6 +9608,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -9075,6 +9665,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -9084,6 +9675,7 @@ google.charts.load('current', {
 
 
 <hr>
+<a name="mr"></a>
 
 
 
@@ -9121,6 +9713,7 @@ google.charts.load('current', {
   <th class="none hidden_key">Link</th>
   <th class="none hidden_key">Contact</th>
   <th class="none hidden_key">Updated</th>
+  <th class="none hidden_key">Descriptor size</th>
 </tr>
 </thead>
 <tbody>
@@ -9178,6 +9771,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -9234,6 +9828,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -9290,6 +9885,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -9346,6 +9942,64 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
+  <td>F/M</td>
+  
+  <td>61.8</td>
+  <td>476.4</td>
+  <td>64.8</td>
+  <td>2.45</td>
+  <td>0.013</td>
+  <td>0.032</td>
+  <td>0.052</td>
+  <td>0.075</td>
+  <td>0.094</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
 </tr>
   
 
@@ -9402,6 +10056,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/lzx551402/geodesc">https://github.com/lzx551402/geodesc</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -9458,6 +10113,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/DagnyT/hardnet">https://github.com/DagnyT/hardnet</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -9514,6 +10170,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/yuruntian/L2-Net">https://github.com/yuruntian/L2-Net</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -9570,6 +10227,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -9626,6 +10284,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -9682,6 +10341,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -9738,6 +10398,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -9794,6 +10455,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -9850,6 +10512,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/vbalnt/tfeat">https://github.com/vbalnt/tfeat</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -9906,6 +10569,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -9962,6 +10626,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -10018,6 +10683,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -10074,6 +10740,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -10130,6 +10797,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -10186,6 +10854,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -10242,6 +10911,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -10251,6 +10921,7 @@ google.charts.load('current', {
 
 
 <hr>
+<a name="psm"></a>
 
 
 
@@ -10288,6 +10959,7 @@ google.charts.load('current', {
   <th class="none hidden_key">Link</th>
   <th class="none hidden_key">Contact</th>
   <th class="none hidden_key">Updated</th>
+  <th class="none hidden_key">Descriptor size</th>
 </tr>
 </thead>
 <tbody>
@@ -10345,6 +11017,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -10401,6 +11074,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -10457,6 +11131,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -10513,6 +11188,64 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
+  <td>F/M</td>
+  
+  <td>66.4</td>
+  <td>991.1</td>
+  <td>74.2</td>
+  <td>2.15</td>
+  <td>0.027</td>
+  <td>0.072</td>
+  <td>0.116</td>
+  <td>0.151</td>
+  <td>0.186</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
 </tr>
   
 
@@ -10569,6 +11302,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/lzx551402/geodesc">https://github.com/lzx551402/geodesc</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -10625,6 +11359,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/DagnyT/hardnet">https://github.com/DagnyT/hardnet</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -10681,6 +11416,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/yuruntian/L2-Net">https://github.com/yuruntian/L2-Net</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -10737,6 +11473,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -10793,6 +11530,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -10849,6 +11587,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -10905,6 +11644,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -10961,6 +11701,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -11017,6 +11758,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/vbalnt/tfeat">https://github.com/vbalnt/tfeat</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -11073,6 +11815,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -11129,6 +11872,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -11185,6 +11929,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -11241,6 +11986,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -11297,6 +12043,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -11353,6 +12100,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -11409,6 +12157,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -11418,6 +12167,7 @@ google.charts.load('current', {
 
 
 <hr>
+<a name="rs"></a>
 
 
 
@@ -11455,6 +12205,7 @@ google.charts.load('current', {
   <th class="none hidden_key">Link</th>
   <th class="none hidden_key">Contact</th>
   <th class="none hidden_key">Updated</th>
+  <th class="none hidden_key">Descriptor size</th>
 </tr>
 </thead>
 <tbody>
@@ -11512,6 +12263,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -11568,6 +12320,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -11624,6 +12377,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -11680,6 +12434,64 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
+  <td>F/M</td>
+  
+  <td>77.0</td>
+  <td>865.0</td>
+  <td>91.2</td>
+  <td>2.52</td>
+  <td>0.086</td>
+  <td>0.177</td>
+  <td>0.244</td>
+  <td>0.289</td>
+  <td>0.337</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
 </tr>
   
 
@@ -11736,6 +12548,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/lzx551402/geodesc">https://github.com/lzx551402/geodesc</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -11792,6 +12605,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/DagnyT/hardnet">https://github.com/DagnyT/hardnet</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -11848,6 +12662,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/yuruntian/L2-Net">https://github.com/yuruntian/L2-Net</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -11904,6 +12719,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -11960,6 +12776,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -12016,6 +12833,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -12072,6 +12890,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -12128,6 +12947,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -12184,6 +13004,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/vbalnt/tfeat">https://github.com/vbalnt/tfeat</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -12240,6 +13061,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -12296,6 +13118,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -12352,6 +13175,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -12408,6 +13232,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -12464,6 +13289,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -12520,6 +13346,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -12576,6 +13403,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -12585,6 +13413,7 @@ google.charts.load('current', {
 
 
 <hr>
+<a name="sf"></a>
 
 
 
@@ -12622,6 +13451,7 @@ google.charts.load('current', {
   <th class="none hidden_key">Link</th>
   <th class="none hidden_key">Contact</th>
   <th class="none hidden_key">Updated</th>
+  <th class="none hidden_key">Descriptor size</th>
 </tr>
 </thead>
 <tbody>
@@ -12679,6 +13509,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -12735,6 +13566,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -12791,6 +13623,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -12847,6 +13680,64 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
+  <td>F/M</td>
+  
+  <td>74.8</td>
+  <td>2227.8</td>
+  <td>74.5</td>
+  <td>2.57</td>
+  <td>0.286</td>
+  <td>0.359</td>
+  <td>0.386</td>
+  <td>0.404</td>
+  <td>0.420</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
 </tr>
   
 
@@ -12903,6 +13794,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/lzx551402/geodesc">https://github.com/lzx551402/geodesc</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -12959,6 +13851,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/DagnyT/hardnet">https://github.com/DagnyT/hardnet</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -13015,6 +13908,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/yuruntian/L2-Net">https://github.com/yuruntian/L2-Net</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -13071,6 +13965,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -13127,6 +14022,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -13183,6 +14079,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -13239,6 +14136,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -13295,6 +14193,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -13351,6 +14250,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/vbalnt/tfeat">https://github.com/vbalnt/tfeat</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -13407,6 +14307,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -13463,6 +14364,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -13519,6 +14421,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -13575,6 +14478,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -13631,6 +14535,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -13687,6 +14592,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -13743,6 +14649,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -13752,6 +14659,7 @@ google.charts.load('current', {
 
 
 <hr>
+<a name="spc"></a>
 
 
 
@@ -13789,6 +14697,7 @@ google.charts.load('current', {
   <th class="none hidden_key">Link</th>
   <th class="none hidden_key">Contact</th>
   <th class="none hidden_key">Updated</th>
+  <th class="none hidden_key">Descriptor size</th>
 </tr>
 </thead>
 <tbody>
@@ -13846,6 +14755,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -13902,6 +14812,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -13958,6 +14869,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -14014,6 +14926,64 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
+  <td>F/M</td>
+  
+  <td>73.2</td>
+  <td>1020.0</td>
+  <td>78.0</td>
+  <td>2.38</td>
+  <td>0.078</td>
+  <td>0.158</td>
+  <td>0.217</td>
+  <td>0.258</td>
+  <td>0.301</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
 </tr>
   
 
@@ -14070,6 +15040,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/lzx551402/geodesc">https://github.com/lzx551402/geodesc</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -14126,6 +15097,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/DagnyT/hardnet">https://github.com/DagnyT/hardnet</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -14182,6 +15154,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/yuruntian/L2-Net">https://github.com/yuruntian/L2-Net</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -14238,6 +15211,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -14294,6 +15268,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -14350,6 +15325,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -14406,6 +15382,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -14462,6 +15439,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -14518,6 +15496,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/vbalnt/tfeat">https://github.com/vbalnt/tfeat</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -14574,6 +15553,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -14630,6 +15610,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -14686,6 +15667,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -14742,6 +15724,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -14798,6 +15781,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -14854,6 +15838,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -14910,6 +15895,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -14919,6 +15905,7 @@ google.charts.load('current', {
 
 
 <hr>
+<a name="usc"></a>
 
 
 
@@ -14956,6 +15943,7 @@ google.charts.load('current', {
   <th class="none hidden_key">Link</th>
   <th class="none hidden_key">Contact</th>
   <th class="none hidden_key">Updated</th>
+  <th class="none hidden_key">Descriptor size</th>
 </tr>
 </thead>
 <tbody>
@@ -15013,6 +16001,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
@@ -15069,6 +16058,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -15125,6 +16115,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="N/A">N/A</a></td>
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -15181,6 +16172,64 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
+  <td>F/M</td>
+  
+  <td>64.5</td>
+  <td>278.6</td>
+  <td>68.5</td>
+  <td>2.28</td>
+  <td>0.002</td>
+  <td>0.012</td>
+  <td>0.034</td>
+  <td>0.053</td>
+  <td>0.072</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
 </tr>
   
 
@@ -15237,6 +16286,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/lzx551402/geodesc">https://github.com/lzx551402/geodesc</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -15293,6 +16343,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/DagnyT/hardnet">https://github.com/DagnyT/hardnet</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -15349,6 +16400,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/yuruntian/L2-Net">https://github.com/yuruntian/L2-Net</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -15405,6 +16457,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -15461,6 +16514,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -15517,6 +16571,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -15573,6 +16628,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -15629,6 +16685,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -15685,6 +16742,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/vbalnt/tfeat">https://github.com/vbalnt/tfeat</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
   
 
@@ -15741,6 +16799,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -15797,6 +16856,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -15853,6 +16913,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -15909,6 +16970,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -15965,6 +17027,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -16021,6 +17084,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
 </tr>
   
 
@@ -16077,6 +17141,7 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
+  <td class="hidden_value">TBA</td>
 </tr>
   
 
