@@ -28,7 +28,19 @@
       
       <guid>https://image-matching-workshop.github.io/breakdown/phototourism/mvs/by_bag/</guid>
       <description>Breakdown on the Phototourism dataset, multi-view stereo task, by subset size.
- Breakdown by bag size of 3 images Breakdown by bag size of 5 images Breakdown by bag size of 10 images Breakdown by bag size of 25 images Back to the leaderboard      MVS, bag size 3   Method Date Type Ims (%) #Pts SR TL mAP5o mAP10o mAP15o mAP20o mAP25o ATE By Details Link Contact Updated Descriptor size     AKAZE (OpenCV)</description>
+ Breakdown by bag size of 3 images Breakdown by bag size of 5 images Breakdown by bag size of 10 images Breakdown by bag size of 25 images Back to the leaderboard   
+  MVS, bag size 3   Method Date Type Ims (%) #Pts SR TL mAP5o mAP10o mAP15o mAP20o mAP25o ATE By Details Link Contact Updated Descriptor size     AKAZE (OpenCV)</description>
+    </item>
+    
+    <item>
+      <title>Breakdown: Phototourism | MVS | Subsets</title>
+      <link>https://image-matching-workshop.github.io/visualization/phototourism/mvs/</link>
+      <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
+      
+      <guid>https://image-matching-workshop.github.io/visualization/phototourism/mvs/</guid>
+      <description>Breakdown on the Phototourism dataset, multi-view stereo task, by subset size.
+ Breakdown by bag size of 3 images Breakdown by bag size of 5 images Breakdown by bag size of 10 images Breakdown by bag size of 25 images Back to the leaderboard   
+  MVS, bag size 3   Method Date Type Ims (%) #Pts SR TL mAP5o mAP10o mAP15o mAP20o mAP25o ATE By Details Link Contact Updated Descriptor size     AKAZE (OpenCV)</description>
     </item>
     
     <item>

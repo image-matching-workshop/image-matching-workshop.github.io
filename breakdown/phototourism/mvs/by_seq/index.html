@@ -14,7 +14,7 @@
 
 <title>Image Matching: Local Features &amp; Beyond</title>
 
-<meta name="generator" content="Hugo 0.53" />
+<meta name="generator" content="Hugo 0.55.5" />
 
 
 
@@ -44,6 +44,11 @@
 <script type="text/javascript" src="https://image-matching-workshop.github.io/js/jquery.latest.min.js"></script>
 <script type="text/javascript" src="https://image-matching-workshop.github.io/js/jquery.csv.min.js"></script>
 <script type="text/javascript" src="https://image-matching-workshop.github.io/js/datatables.min.js"></script>
+<script type="text/javascript" src="https://image-matching-workshop.github.io/js/three.js"></script>
+<script type="text/javascript" src="https://image-matching-workshop.github.io/js/PCDLoader.js"></script>
+<script type="text/javascript" src="https://image-matching-workshop.github.io/js/TrackballControls.js"></script>
+<script type="text/javascript" src="https://image-matching-workshop.github.io/js/WebGL.js"></script>
+<script type="text/javascript" src="https://image-matching-workshop.github.io/js/stats.min.js"></script>
 <script>
 $(document).ready(function (){
     var table = $('.leaderboard_stereo').DataTable({
@@ -154,7 +159,6 @@ $(document).ready(function (){
 <li><a href="leaderboard">Back to the leaderboard</a></li>
 </ul>
 
-
 <div id="chart-mvs-map15-perseq" style="width: 100%; height: 650px; margin-top: 0em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -203,62 +207,42 @@ google.charts.load('current', {
 </script>
 </div>
 
-
-
-<p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br />
+<p><br />
 <br />
 <table class="display checkerboard" width="99%" cellspacing="0">
 <thead>
 <tr>
   <th colspan="13" style="text-align: center;" class="sorter-false">MVS &mdash; All sequences &mdash; Sorted by mAP<sup>15<sup>o</sup></sup></th>
 </tr>
-<tr>
-  
-  <th class="all">Method</th>
-  
+<tr></p>
 
-<th class="all"><span class="balloon" data-balloon="british_museum" data-balloon-pos="up">BM</span></th>
+<p><th class="all">Method</th></p>
 
-<th class="all"><span class="balloon" data-balloon="florence_cathedral_side" data-balloon-pos="up">FCS</span></th>
+<p><th class="all"><span class="balloon" data-balloon="british_museum" data-balloon-pos="up">BM</span></th></p>
 
-<th class="all"><span class="balloon" data-balloon="lincoln_memorial_statue" data-balloon-pos="up">LMS</span></th>
+<p><th class="all"><span class="balloon" data-balloon="florence_cathedral_side" data-balloon-pos="up">FCS</span></th></p>
 
-<th class="all"><span class="balloon" data-balloon="london_bridge" data-balloon-pos="up">LB</span></th>
+<p><th class="all"><span class="balloon" data-balloon="lincoln_memorial_statue" data-balloon-pos="up">LMS</span></th></p>
 
-<th class="all"><span class="balloon" data-balloon="milan_cathedral" data-balloon-pos="up">MC</span></th>
+<p><th class="all"><span class="balloon" data-balloon="london_bridge" data-balloon-pos="up">LB</span></th></p>
 
-<th class="all"><span class="balloon" data-balloon="mount_rushmore" data-balloon-pos="up">MR</span></th>
+<p><th class="all"><span class="balloon" data-balloon="milan_cathedral" data-balloon-pos="up">MC</span></th></p>
 
-<th class="all"><span class="balloon" data-balloon="piazza_san_marco" data-balloon-pos="up">PSM</span></th>
+<p><th class="all"><span class="balloon" data-balloon="mount_rushmore" data-balloon-pos="up">MR</span></th></p>
 
-<th class="all"><span class="balloon" data-balloon="reichstag" data-balloon-pos="up">RS</span></th>
+<p><th class="all"><span class="balloon" data-balloon="piazza_san_marco" data-balloon-pos="up">PSM</span></th></p>
 
-<th class="all"><span class="balloon" data-balloon="sagrada_familia" data-balloon-pos="up">SF</span></th>
+<p><th class="all"><span class="balloon" data-balloon="reichstag" data-balloon-pos="up">RS</span></th></p>
 
-<th class="all"><span class="balloon" data-balloon="st_pauls_cathedral" data-balloon-pos="up">SPC</span></th>
+<p><th class="all"><span class="balloon" data-balloon="sagrada_familia" data-balloon-pos="up">SF</span></th></p>
 
-<th class="all"><span class="balloon" data-balloon="united_states_capitol" data-balloon-pos="up">USC</span></th>
+<p><th class="all"><span class="balloon" data-balloon="st_pauls_cathedral" data-balloon-pos="up">SPC</span></th></p>
 
-<th class="all"><span class="balloon" data-balloon="Average" data-balloon-pos="up">AVG</span></th>
+<p><th class="all"><span class="balloon" data-balloon="united_states_capitol" data-balloon-pos="up">USC</span></th></p>
 
-  
-  <th class="none hidden_key">Date</th>
+<p><th class="all"><span class="balloon" data-balloon="Average" data-balloon-pos="up">AVG</span></th></p>
+
+<p><th class="none hidden_key">Date</th>
   <th class="none hidden_key">Type</th>
   <th class="none hidden_key">By</th>
   <th class="none hidden_key">Details</th>
@@ -268,148 +252,37 @@ google.charts.load('current', {
   <th class="none hidden_key">Descriptor size</th>
 </tr>
 </thead>
-<tbody>
+<tbody></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">AKAZE (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">AKAZE (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+<p><td>0.3576</td></p>
 
+<p><td>0.4385</td></p>
 
+<p><td>0.5551</td></p>
 
+<p><td>0.3696</td></p>
 
+<p><td>0.5935</td></p>
 
+<p><td>0.3131</td></p>
 
+<p><td>0.2543</td></p>
 
+<p><td>0.4708</td></p>
 
+<p><td>0.5709</td></p>
 
+<p><td>0.6054</td></p>
 
-  <td>0.3576</td>
+<p><td>0.1847</td></p>
 
+<p><td>0.4285</td></p>
 
-
-
-
-
-
-
-
-
-  <td>0.4385</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.5551</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3696</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.5935</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3131</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.2543</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4708</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.5709</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.6054</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1847</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4285</td>
-
-  
-  <td class="hidden_value">19-04-24</td>
+<p><td class="hidden_value">19-04-24</td>
   <td class="hidden_value">F</td>
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">AKAZE, as implemented in OpenCV. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search.</td>
@@ -417,149 +290,37 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">TBA</td>
-</tr>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">SphereDesc</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td></p>
 
+<p><td>0.3772</td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SphereDesc</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+<p><td>0.5865</td></p>
 
+<p><td>0.6595</td></p>
 
+<p><td>0.3789</td></p>
 
+<p><td>0.6131</td></p>
 
+<p><td>0.3458</td></p>
 
+<p><td>0.4122</td></p>
 
+<p><td>0.4310</td></p>
 
+<p><td>0.7381</td></p>
 
+<p><td>0.6481</td></p>
 
+<p><td>0.1606</td></p>
 
-  <td>0.3772</td>
+<p><td>0.4865</td></p>
 
-
-
-
-
-
-
-
-
-
-  <td>0.5865</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.6595</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3789</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.6131</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3458</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4122</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4310</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.7381</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.6481</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1606</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4865</td>
-
-  
-  <td class="hidden_value">19-04-26</td>
+<p><td class="hidden_value">19-04-26</td>
   <td class="hidden_value">F</td>
   <td class="hidden_value">Anonymous</td>
   <td class="hidden_value">We use OpenCV&#39;s implementation of AKAZE detector, and for each keypoint we extract a descriptor via CNN.</td>
@@ -567,1049 +328,265 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
-</tr>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">D2-Net (single scale)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td></p>
 
+<p><td>0.2518</td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">D2-Net (single scale)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+<p><td>0.4914</td></p>
 
+<p><td>0.6187</td></p>
 
+<p><td>0.4915</td></p>
 
+<p><td>0.4482</td></p>
 
+<p><td>0.3186</td></p>
 
+<p><td>0.3673</td></p>
 
+<p><td>0.3340</td></p>
 
+<p><td>0.5189</td></p>
 
+<p><td>0.5070</td></p>
 
+<p><td>0.1321</td></p>
 
-  <td>0.2518</td>
+<p><td>0.4072</td></p>
 
-
-
-
-
-
-
-
-
-
-  <td>0.4914</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.6187</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4915</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4482</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3186</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3673</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3340</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.5189</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.5070</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1321</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4072</td>
-
-  
-  <td class="hidden_value">19-05-07</td>
+<p><td class="hidden_value">19-05-07</td>
   <td class="hidden_value">F</td>
   <td class="hidden_value">Challenge organizers</td>
-  <td class="hidden_value">D2-Net: A Trainable CNN for Joint Detection and Description of Local Features. Single-scale features, brute-force nearest neighbour matching. Paper: https://dsmn.ml/files/d2-net/d2-net.pdf</td>
+  <td class="hidden_value">D2-Net: A Trainable CNN for Joint Detection and Description of Local Features. Single-scale features, brute-force nearest neighbour matching. Paper: <a href="https://dsmn.ml/files/d2-net/d2-net.pdf">https://dsmn.ml/files/d2-net/d2-net.pdf</a></td>
   <td class="hidden_value"><a href="https://github.com/mihaidusmanu/d2-net">https://github.com/mihaidusmanu/d2-net</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">512 float32</td>
-</tr>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">D2-Net (multiscale)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td></p>
 
+<p><td>0.1904</td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">D2-Net (multiscale)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+<p><td>0.4486</td></p>
 
+<p><td>0.6308</td></p>
 
+<p><td>0.4622</td></p>
 
+<p><td>0.4263</td></p>
 
+<p><td>0.3543</td></p>
 
+<p><td>0.3746</td></p>
 
+<p><td>0.3690</td></p>
 
+<p><td>0.5083</td></p>
 
+<p><td>0.5044</td></p>
 
+<p><td>0.1323</td></p>
 
-  <td>0.1904</td>
+<p><td>0.4001</td></p>
 
-
-
-
-
-
-
-
-
-
-  <td>0.4486</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.6308</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4622</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4263</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3543</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3746</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3690</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.5083</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.5044</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1323</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4001</td>
-
-  
-  <td class="hidden_value">19-05-07</td>
+<p><td class="hidden_value">19-05-07</td>
   <td class="hidden_value">F</td>
   <td class="hidden_value">Challenge organizers</td>
-  <td class="hidden_value">D2-Net: A Trainable CNN for Joint Detection and Description of Local Features. Multi-scale features, brute-force nearest neighbour matching. Paper: https://dsmn.ml/files/d2-net/d2-net.pdf</td>
+  <td class="hidden_value">D2-Net: A Trainable CNN for Joint Detection and Description of Local Features. Multi-scale features, brute-force nearest neighbour matching. Paper: <a href="https://dsmn.ml/files/d2-net/d2-net.pdf">https://dsmn.ml/files/d2-net/d2-net.pdf</a></td>
   <td class="hidden_value"><a href="https://github.com/mihaidusmanu/d2-net">https://github.com/mihaidusmanu/d2-net</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">512 float32</td>
-</tr>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">DELF</span><br /><span class="boards_subtitle">kp:1024, match:nn<span></td></p>
 
+<p><td>0.0858</td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">DELF</span><br /><span class="boards_subtitle">kp:1024, match:nn<span></td>
+<p><td>0.2017</td></p>
 
+<p><td>0.2292</td></p>
 
+<p><td>0.1254</td></p>
 
+<p><td>0.1748</td></p>
 
+<p><td>0.0330</td></p>
 
+<p><td>0.0476</td></p>
 
+<p><td>0.1275</td></p>
 
+<p><td>0.0621</td></p>
 
+<p><td>0.2125</td></p>
 
+<p><td>0.0602</td></p>
 
-  <td>0.0858</td>
+<p><td>0.1236</td></p>
 
-
-
-
-
-
-
-
-
-
-  <td>0.2017</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.2292</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1254</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1748</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0330</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0476</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1275</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0621</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.2125</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0602</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1236</td>
-
-  
-  <td class="hidden_value">19-05-05</td>
+<p><td class="hidden_value">19-05-05</td>
   <td class="hidden_value">F</td>
   <td class="hidden_value">Challenge organizers</td>
-  <td class="hidden_value">DELF features for object retrieval, trained on the Google Landmarks dataset. Paper: https://arxiv.org/abs/1612.06321</td>
+  <td class="hidden_value">DELF features for object retrieval, trained on the Google Landmarks dataset. Paper: <a href="https://arxiv.org/abs/1612.06321">https://arxiv.org/abs/1612.06321</a></td>
   <td class="hidden_value"><a href="https://github.com/tensorflow/models/tree/master/research/delf">https://github.com/tensorflow/models/tree/master/research/delf</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">40 float32</td>
-</tr>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">DELF</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td></p>
 
+<p><td>0.1014</td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">DELF</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td>
+<p><td>0.2859</td></p>
 
+<p><td>0.2730</td></p>
 
+<p><td>0.1300</td></p>
 
+<p><td>0.2152</td></p>
 
+<p><td>0.0592</td></p>
 
+<p><td>0.1378</td></p>
 
+<p><td>0.1566</td></p>
 
+<p><td>0.1365</td></p>
 
+<p><td>0.2347</td></p>
 
+<p><td>0.0615</td></p>
 
-  <td>0.1014</td>
+<p><td>0.1629</td></p>
 
-
-
-
-
-
-
-
-
-
-  <td>0.2859</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.2730</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1300</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.2152</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0592</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1378</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1566</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1365</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.2347</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0615</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1629</td>
-
-  
-  <td class="hidden_value">19-05-05</td>
+<p><td class="hidden_value">19-05-05</td>
   <td class="hidden_value">F</td>
   <td class="hidden_value">Challenge organizers</td>
-  <td class="hidden_value">DELF features for object retrieval, trained on the Google Landmarks dataset. Paper: https://arxiv.org/abs/1612.06321</td>
+  <td class="hidden_value">DELF features for object retrieval, trained on the Google Landmarks dataset. Paper: <a href="https://arxiv.org/abs/1612.06321">https://arxiv.org/abs/1612.06321</a></td>
   <td class="hidden_value"><a href="https://github.com/tensorflow/models/tree/master/research/delf">https://github.com/tensorflow/models/tree/master/research/delf</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">40 float32</td>
-</tr>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">DELF</span><br /><span class="boards_subtitle">kp:256, match:nn<span></td></p>
 
+<p><td>0.0001</td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">DELF</span><br /><span class="boards_subtitle">kp:256, match:nn<span></td>
+<p><td>0.0019</td></p>
 
+<p><td>0.0148</td></p>
 
+<p><td>0.0195</td></p>
 
+<p><td>0.0075</td></p>
 
+<p><td>0.0010</td></p>
 
+<p><td>%!f(int64=0000)</td></p>
 
+<p><td>0.0223</td></p>
 
+<p><td>%!f(int64=0000)</td></p>
 
+<p><td>0.0005</td></p>
 
+<p><td>0.0112</td></p>
 
-  <td>0.0001</td>
+<p><td>0.0072</td></p>
 
-
-
-
-
-
-
-
-
-
-  <td>0.0019</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0148</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0195</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0075</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0010</td>
-
-
-
-
-
-
-
-
-
-
-  <td>%!f(int64=0000)</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0223</td>
-
-
-
-
-
-
-
-
-
-
-  <td>%!f(int64=0000)</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0005</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0112</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0072</td>
-
-  
-  <td class="hidden_value">19-05-05</td>
+<p><td class="hidden_value">19-05-05</td>
   <td class="hidden_value">F</td>
   <td class="hidden_value">Challenge organizers</td>
-  <td class="hidden_value">DELF features for object retrieval, trained on the Google Landmarks dataset. Paper: https://arxiv.org/abs/1612.06321</td>
+  <td class="hidden_value">DELF features for object retrieval, trained on the Google Landmarks dataset. Paper: <a href="https://arxiv.org/abs/1612.06321">https://arxiv.org/abs/1612.06321</a></td>
   <td class="hidden_value"><a href="https://github.com/tensorflow/models/tree/master/research/delf">https://github.com/tensorflow/models/tree/master/research/delf</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">40 float32</td>
-</tr>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">DELF</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td></p>
 
+<p><td>0.0409</td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">DELF</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
+<p><td>0.0558</td></p>
 
+<p><td>0.0850</td></p>
 
+<p><td>0.0988</td></p>
 
+<p><td>0.0773</td></p>
 
+<p><td>0.0140</td></p>
 
+<p><td>0.0010</td></p>
 
+<p><td>0.0895</td></p>
 
+<p><td>0.0018</td></p>
 
+<p><td>0.1425</td></p>
 
+<p><td>0.0375</td></p>
 
-  <td>0.0409</td>
+<p><td>0.0585</td></p>
 
-
-
-
-
-
-
-
-
-
-  <td>0.0558</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0850</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0988</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0773</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0140</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0010</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0895</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0018</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1425</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0375</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0585</td>
-
-  
-  <td class="hidden_value">19-05-05</td>
+<p><td class="hidden_value">19-05-05</td>
   <td class="hidden_value">F</td>
   <td class="hidden_value">Challenge organizers</td>
-  <td class="hidden_value">DELF features for object retrieval, trained on the Google Landmarks dataset. Paper: https://arxiv.org/abs/1612.06321</td>
+  <td class="hidden_value">DELF features for object retrieval, trained on the Google Landmarks dataset. Paper: <a href="https://arxiv.org/abs/1612.06321">https://arxiv.org/abs/1612.06321</a></td>
   <td class="hidden_value"><a href="https://github.com/tensorflow/models/tree/master/research/delf">https://github.com/tensorflow/models/tree/master/research/delf</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">40 float32</td>
-</tr>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">ELF-256D</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td></p>
 
+<p><td>0.0449</td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">ELF-256D</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
+<p><td>0.0499</td></p>
 
+<p><td>0.1188</td></p>
 
+<p><td>0.1584</td></p>
 
+<p><td>0.0372</td></p>
 
+<p><td>0.0190</td></p>
 
+<p><td>0.0010</td></p>
 
+<p><td>0.1209</td></p>
 
+<p><td>0.0985</td></p>
 
+<p><td>0.0742</td></p>
 
+<p><td>0.0002</td></p>
 
-  <td>0.0449</td>
+<p><td>0.0657</td></p>
 
-
-
-
-
-
-
-
-
-
-  <td>0.0499</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1188</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1584</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0372</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0190</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0010</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1209</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0985</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0742</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0002</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0657</td>
-
-  
-  <td class="hidden_value">19-05-07</td>
+<p><td class="hidden_value">19-05-07</td>
   <td class="hidden_value">F</td>
   <td class="hidden_value">Anonymous</td>
   <td class="hidden_value">ELF detector: Keypoints are local maxima of a saliency map generated by the gradient of a feature map with respect to the image of a pre-trained CNN. Descriptors are computed with the interpolation of the VGG pool3 feature map on the detected keypoints.</td>
@@ -1617,149 +594,75 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
-</tr>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">ELF-512D</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td></p>
 
+<p><td>0.0499</td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">ELF-SIFT</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
+<p><td>0.0654</td></p>
 
+<p><td>0.1666</td></p>
 
+<p><td>0.2027</td></p>
 
+<p><td>0.0645</td></p>
 
+<p><td>0.0207</td></p>
 
+<p><td>0.0024</td></p>
 
+<p><td>0.1424</td></p>
 
+<p><td>0.0889</td></p>
 
+<p><td>0.1297</td></p>
 
+<p><td>0.0009</td></p>
 
-  <td>0.0933</td>
+<p><td>0.0849</td></p>
 
+<p><td class="hidden_value">19-05-09</td>
+  <td class="hidden_value">F</td>
+  <td class="hidden_value">Anonymous</td>
+  <td class="hidden_value">ELF detector: Keypoints are local maxima of a saliency map generated by the gradient of a feature map with respect to the image of a pre-trained CNN. Descriptors are computed with the interpolation of the VGG pool3 feature map on the detected keypoints.</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">ELF-SIFT</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td></p>
 
+<p><td>0.0933</td></p>
 
+<p><td>0.1873</td></p>
 
+<p><td>0.2702</td></p>
 
+<p><td>0.2906</td></p>
 
+<p><td>0.2627</td></p>
 
+<p><td>0.0799</td></p>
 
-  <td>0.1873</td>
+<p><td>0.0148</td></p>
 
+<p><td>0.2254</td></p>
 
+<p><td>0.2236</td></p>
 
+<p><td>0.1925</td></p>
 
+<p><td>0.0055</td></p>
 
+<p><td>0.1678</td></p>
 
-
-
-
-
-  <td>0.2702</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.2906</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.2627</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0799</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0148</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.2254</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.2236</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1925</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0055</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1678</td>
-
-  
-  <td class="hidden_value">19-04-26</td>
+<p><td class="hidden_value">19-04-26</td>
   <td class="hidden_value">F</td>
   <td class="hidden_value">Anonymous</td>
   <td class="hidden_value">ELF detector: Keypoints are local maxima of a saliency map generated by the gradient of a feature map with respect to the image of a pre-trained CNN. Descriptors are HOG (as in SIFT).</td>
@@ -1767,149 +670,37 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 uint8</td>
-</tr>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">ORB (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td></p>
 
+<p><td>0.1587</td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">ORB (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+<p><td>0.3061</td></p>
 
+<p><td>0.3016</td></p>
 
+<p><td>0.1642</td></p>
 
+<p><td>0.2027</td></p>
 
+<p><td>0.1402</td></p>
 
+<p><td>0.1302</td></p>
 
+<p><td>0.3006</td></p>
 
+<p><td>0.3802</td></p>
 
+<p><td>0.3913</td></p>
 
+<p><td>0.0613</td></p>
 
-  <td>0.1587</td>
+<p><td>0.2307</td></p>
 
-
-
-
-
-
-
-
-
-
-  <td>0.3061</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3016</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1642</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.2027</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1402</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1302</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3006</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3802</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3913</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0613</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.2307</td>
-
-  
-  <td class="hidden_value">19-04-24</td>
+<p><td class="hidden_value">19-04-24</td>
   <td class="hidden_value">F</td>
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">ORB, as implemented in OpenCV. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search.</td>
@@ -1917,299 +708,151 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">TBA</td>
-</tr>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">SIFT-AID (NN matcher)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td></p>
 
+<p><td>0.1532</td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+<p><td>0.3674</td></p>
 
+<p><td>0.2183</td></p>
 
+<p><td>0.2667</td></p>
 
+<p><td>0.4313</td></p>
 
+<p><td>0.1428</td></p>
 
+<p><td>0.1834</td></p>
 
+<p><td>0.3325</td></p>
 
+<p><td>0.4663</td></p>
 
+<p><td>0.3444</td></p>
 
+<p><td>0.0502</td></p>
 
-  <td>0.1351</td>
+<p><td>0.2688</td></p>
 
-
-
-
-
-
-
-
-
-
-  <td>0.3428</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1588</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.2417</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4441</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1367</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1903</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3177</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4562</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3357</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0491</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.2553</td>
-
-  
-  <td class="hidden_value">19-04-29</td>
-  <td class="hidden_value">F/M</td>
+<p><td class="hidden_value">19-05-10</td>
+  <td class="hidden_value">F</td>
   <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
-  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: <a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a>. Code: <a href="https://github.com/rdguez-mariano/sift-aid">https://github.com/rdguez-mariano/sift-aid</a></td>
   <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
   <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">6272 bits</td>
-</tr>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">SIFT-AID (custom matcher)</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td></p>
 
+<p><td>0.1351</td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SIFT-GeoDesc-GitHub</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+<p><td>0.3428</td></p>
 
+<p><td>0.1588</td></p>
 
+<p><td>0.2417</td></p>
 
+<p><td>0.4441</td></p>
 
+<p><td>0.1367</td></p>
 
+<p><td>0.1903</td></p>
 
+<p><td>0.3177</td></p>
 
+<p><td>0.4562</td></p>
 
+<p><td>0.3357</td></p>
 
+<p><td>0.0491</td></p>
 
-  <td>0.3375</td>
+<p><td>0.2553</td></p>
 
+<p><td class="hidden_value">19-04-29</td>
+  <td class="hidden_value">F/M</td>
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: <a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a>. Code: <a href="https://github.com/rdguez-mariano/sift-aid">https://github.com/rdguez-mariano/sift-aid</a></td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">SIFT-ContextDesc-GitHub</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td></p>
 
+<p><td>0.3339</td></p>
 
+<p><td>0.6322</td></p>
 
+<p><td>0.7204</td></p>
 
+<p><td>0.5712</td></p>
 
+<p><td>0.7115</td></p>
 
+<p><td>0.4788</td></p>
 
-  <td>0.6042</td>
+<p><td>0.4852</td></p>
 
+<p><td>0.4540</td></p>
 
+<p><td>0.7826</td></p>
 
+<p><td>0.5961</td></p>
 
+<p><td>0.1735</td></p>
 
+<p><td>0.5399</td></p>
 
+<p><td class="hidden_value">19-05-09</td>
+  <td class="hidden_value">F</td>
+  <td class="hidden_value">Zixin Luo</td>
+  <td class="hidden_value">ContextDesc extracted on SIFT keypoints. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search. Features are quantized to uint8 and extracted from the code provided by the authors.</td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value"><a href="mailto:zluoag@cse.ust.hk">zluoag@cse.ust.hk</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">SIFT-GeoDesc-GitHub</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td></p>
 
+<p><td>0.3375</td></p>
 
-  <td>0.6834</td>
+<p><td>0.6042</td></p>
 
+<p><td>0.6834</td></p>
 
+<p><td>0.4911</td></p>
 
+<p><td>0.7246</td></p>
 
+<p><td>0.4662</td></p>
 
+<p><td>0.4772</td></p>
 
+<p><td>0.4788</td></p>
 
+<p><td>0.7983</td></p>
 
+<p><td>0.6165</td></p>
 
+<p><td>0.1497</td></p>
 
-  <td>0.4911</td>
+<p><td>0.5298</td></p>
 
-
-
-
-
-
-
-
-
-
-  <td>0.7246</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4662</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4772</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4788</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.7983</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.6165</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1497</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.5298</td>
-
-  
-  <td class="hidden_value">19-05-08</td>
+<p><td class="hidden_value">19-05-08</td>
   <td class="hidden_value">F</td>
   <td class="hidden_value">Zixin Luo</td>
   <td class="hidden_value">GeoDesc extracted on SIFT keypoints. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search. Features extracted from the code provided by the authors.</td>
@@ -2217,149 +860,37 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:zluoag@cse.ust.hk">zluoag@cse.ust.hk</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
-</tr>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">SIFT &#43; GeoDesc</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td></p>
 
+<p><td>0.4169</td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SIFT &#43; GeoDesc</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+<p><td>0.6473</td></p>
 
+<p><td>0.6744</td></p>
 
+<p><td>0.4696</td></p>
 
+<p><td>0.7138</td></p>
 
+<p><td>0.4907</td></p>
 
+<p><td>0.4137</td></p>
 
+<p><td>0.4632</td></p>
 
+<p><td>0.7740</td></p>
 
+<p><td>0.6234</td></p>
 
+<p><td>0.1616</td></p>
 
-  <td>0.4169</td>
+<p><td>0.5317</td></p>
 
-
-
-
-
-
-
-
-
-
-  <td>0.6473</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.6744</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4696</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.7138</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4907</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4137</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4632</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.7740</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.6234</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1616</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.5317</td>
-
-  
-  <td class="hidden_value">19-04-24</td>
+<p><td class="hidden_value">19-04-24</td>
   <td class="hidden_value">F</td>
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">GeoDesc extracted on SIFT keypoints. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search.</td>
@@ -2367,449 +898,113 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
-</tr>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">SIFT &#43; HardNet</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td></p>
 
+<p><td>0.4090</td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SIFT &#43; HardNet</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+<p><td>0.6438</td></p>
 
+<p><td>0.7726</td></p>
 
+<p><td>0.4702</td></p>
 
+<p><td>0.6945</td></p>
 
+<p><td>0.5106</td></p>
 
+<p><td>0.4612</td></p>
 
+<p><td>0.4477</td></p>
 
+<p><td>0.8030</td></p>
 
+<p><td>0.6376</td></p>
 
+<p><td>0.1794</td></p>
 
-  <td>0.4090</td>
+<p><td>0.5481</td></p>
 
-
-
-
-
-
-
-
-
-
-  <td>0.6438</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.7726</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4702</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.6945</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.5106</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4612</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4477</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.8030</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.6376</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1794</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.5481</td>
-
-  
-  <td class="hidden_value">19-04-24</td>
+<p><td class="hidden_value">19-04-24</td>
   <td class="hidden_value">F</td>
   <td class="hidden_value">Challenge organizers</td>
-  <td class="hidden_value">HardNet extracted on SIFT keypoints. Number of keypoints: 8000 per image. Models trained on the Liberty sequence of the Brown dataset. We use slightly larger paches than specified for SIFT (scale multiplying factor 16/12). Feature matching with brute-force nearest-neighbour search.</td>
+  <td class="hidden_value">HardNet extracted on SIFT keypoints. Number of keypoints: 8000 per image. Models trained on the Liberty sequence of the Brown dataset. We use slightly larger paches than specified for SIFT (scale multiplying factor <sup>16</sup>&frasl;<sub>12</sub>). Feature matching with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://github.com/DagnyT/hardnet">https://github.com/DagnyT/hardnet</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
-</tr>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">SIFT &#43; L2-Net</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td></p>
 
+<p><td>0.3292</td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SIFT &#43; L2-Net</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+<p><td>0.5935</td></p>
 
+<p><td>0.7109</td></p>
 
+<p><td>0.4380</td></p>
 
+<p><td>0.7093</td></p>
 
+<p><td>0.4667</td></p>
 
+<p><td>0.4000</td></p>
 
+<p><td>0.4192</td></p>
 
+<p><td>0.7682</td></p>
 
+<p><td>0.5832</td></p>
 
+<p><td>0.1778</td></p>
 
-  <td>0.3292</td>
+<p><td>0.5087</td></p>
 
-
-
-
-
-
-
-
-
-
-  <td>0.5935</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.7109</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4380</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.7093</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4667</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4000</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4192</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.7682</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.5832</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1778</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.5087</td>
-
-  
-  <td class="hidden_value">19-04-24</td>
+<p><td class="hidden_value">19-04-24</td>
   <td class="hidden_value">F</td>
   <td class="hidden_value">Challenge organizers</td>
-  <td class="hidden_value">L2-Net extracted on SIFT keypoints. Number of keypoints: 8000 per image. Models trained on the Liberty sequence of the Brown dataset. We use slightly larger paches than specified for SIFT (scale multiplying factor 16/12). Feature matching with brute-force nearest-neighbour search.</td>
+  <td class="hidden_value">L2-Net extracted on SIFT keypoints. Number of keypoints: 8000 per image. Models trained on the Liberty sequence of the Brown dataset. We use slightly larger paches than specified for SIFT (scale multiplying factor <sup>16</sup>&frasl;<sub>12</sub>). Feature matching with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://github.com/yuruntian/L2-Net">https://github.com/yuruntian/L2-Net</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
-</tr>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">SIFT (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td></p>
 
+<p><td>0.2714</td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SIFT (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+<p><td>0.5530</td></p>
 
+<p><td>0.4768</td></p>
 
+<p><td>0.3859</td></p>
 
+<p><td>0.6433</td></p>
 
+<p><td>0.3181</td></p>
 
+<p><td>0.2797</td></p>
 
+<p><td>0.4216</td></p>
 
+<p><td>0.6002</td></p>
 
+<p><td>0.4979</td></p>
 
+<p><td>0.1131</td></p>
 
-  <td>0.2714</td>
+<p><td>0.4146</td></p>
 
-
-
-
-
-
-
-
-
-
-  <td>0.5530</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4768</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3859</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.6433</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3181</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.2797</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4216</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.6002</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4979</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1131</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4146</td>
-
-  
-  <td class="hidden_value">19-04-24</td>
+<p><td class="hidden_value">19-04-24</td>
   <td class="hidden_value">F</td>
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SIFT, as implemented in OpenCV. Feature matching with brute-force nearest-neighbour search.</td>
@@ -2817,149 +1012,37 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
-</tr>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">SIFT (OpenCV)</span><br /><span class="boards_subtitle">kp:1024, match:nn<span></td></p>
 
+<p><td>0.0349</td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SIFT (OpenCV)</span><br /><span class="boards_subtitle">kp:1024, match:nn<span></td>
+<p><td>0.0082</td></p>
 
+<p><td>0.0258</td></p>
 
+<p><td>0.0090</td></p>
 
+<p><td>0.0040</td></p>
 
+<p><td>0.0101</td></p>
 
+<p><td>0.0025</td></p>
 
+<p><td>0.0650</td></p>
 
+<p><td>0.0018</td></p>
 
+<p><td>0.0048</td></p>
 
+<p><td>0.0103</td></p>
 
-  <td>0.0349</td>
+<p><td>0.0160</td></p>
 
-
-
-
-
-
-
-
-
-
-  <td>0.0082</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0258</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0090</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0040</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0101</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0025</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0650</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0018</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0048</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0103</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0160</td>
-
-  
-  <td class="hidden_value">19-04-25</td>
+<p><td class="hidden_value">19-04-25</td>
   <td class="hidden_value">F</td>
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SIFT, as implemented in OpenCV. Feature matching with brute-force nearest-neighbour search.</td>
@@ -2967,149 +1050,37 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 uint8</td>
-</tr>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">SIFT (OpenCV)</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td></p>
 
+<p><td>0.0391</td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SIFT (OpenCV)</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td>
+<p><td>0.0169</td></p>
 
+<p><td>0.0392</td></p>
 
+<p><td>0.0148</td></p>
 
+<p><td>0.0152</td></p>
 
+<p><td>0.0229</td></p>
 
+<p><td>0.0074</td></p>
 
+<p><td>0.0785</td></p>
 
+<p><td>0.0023</td></p>
 
+<p><td>0.0070</td></p>
 
+<p><td>0.0312</td></p>
 
-  <td>0.0391</td>
+<p><td>0.0250</td></p>
 
-
-
-
-
-
-
-
-
-
-  <td>0.0169</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0392</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0148</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0152</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0229</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0074</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0785</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0023</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0070</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0312</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0250</td>
-
-  
-  <td class="hidden_value">19-04-25</td>
+<p><td class="hidden_value">19-04-25</td>
   <td class="hidden_value">F</td>
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SIFT, as implemented in OpenCV. Feature matching with brute-force nearest-neighbour search.</td>
@@ -3117,149 +1088,37 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 uint8</td>
-</tr>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">SIFT (OpenCV)</span><br /><span class="boards_subtitle">kp:256, match:nn<span></td></p>
 
+<p><td>0.0118</td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SIFT (OpenCV)</span><br /><span class="boards_subtitle">kp:256, match:nn<span></td>
+<p><td>0.0001</td></p>
 
+<p><td>0.0059</td></p>
 
+<p><td>0.0010</td></p>
 
+<p><td>0.0002</td></p>
 
+<p><td>0.0025</td></p>
 
+<p><td>0.0002</td></p>
 
+<p><td>0.0266</td></p>
 
+<p><td>0.0003</td></p>
 
+<p><td>0.0003</td></p>
 
+<p><td>0.0000</td></p>
 
-  <td>0.0118</td>
+<p><td>0.0044</td></p>
 
-
-
-
-
-
-
-
-
-
-  <td>0.0001</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0059</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0010</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0002</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0025</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0002</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0266</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0003</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0003</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0000</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0044</td>
-
-  
-  <td class="hidden_value">19-04-25</td>
+<p><td class="hidden_value">19-04-25</td>
   <td class="hidden_value">F</td>
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SIFT, as implemented in OpenCV. Feature matching with brute-force nearest-neighbour search.</td>
@@ -3267,149 +1126,37 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 uint8</td>
-</tr>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">SIFT (OpenCV)</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td></p>
 
+<p><td>0.0255</td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SIFT (OpenCV)</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
+<p><td>0.0017</td></p>
 
+<p><td>0.0143</td></p>
 
+<p><td>0.0028</td></p>
 
+<p><td>0.0016</td></p>
 
+<p><td>0.0049</td></p>
 
+<p><td>0.0014</td></p>
 
+<p><td>0.0425</td></p>
 
+<p><td>0.0007</td></p>
 
+<p><td>0.0017</td></p>
 
+<p><td>0.0019</td></p>
 
-  <td>0.0255</td>
+<p><td>0.0090</td></p>
 
-
-
-
-
-
-
-
-
-
-  <td>0.0017</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0143</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0028</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0016</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0049</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0014</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0425</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0007</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0017</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0019</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0090</td>
-
-  
-  <td class="hidden_value">19-04-25</td>
+<p><td class="hidden_value">19-04-25</td>
   <td class="hidden_value">F</td>
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SIFT, as implemented in OpenCV. Feature matching with brute-force nearest-neighbour search.</td>
@@ -3417,299 +1164,75 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 uint8</td>
-</tr>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">SIFT &#43; TFeat</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td></p>
 
+<p><td>0.3304</td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SIFT &#43; TFeat</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+<p><td>0.5315</td></p>
 
+<p><td>0.6238</td></p>
 
+<p><td>0.4131</td></p>
 
+<p><td>0.6819</td></p>
 
+<p><td>0.4022</td></p>
 
+<p><td>0.3557</td></p>
 
+<p><td>0.3929</td></p>
 
+<p><td>0.6857</td></p>
 
+<p><td>0.5503</td></p>
 
+<p><td>0.1402</td></p>
 
-  <td>0.3304</td>
+<p><td>0.4643</td></p>
 
-
-
-
-
-
-
-
-
-
-  <td>0.5315</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.6238</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4131</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.6819</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4022</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3557</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3929</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.6857</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.5503</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1402</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4643</td>
-
-  
-  <td class="hidden_value">19-04-24</td>
+<p><td class="hidden_value">19-04-24</td>
   <td class="hidden_value">F</td>
   <td class="hidden_value">Challenge organizers</td>
-  <td class="hidden_value">T-Feat extracted on SIFT keypoints. Number of keypoints: 8000 per image. Models trained on the Liberty sequence of the Brown dataset. We use slightly larger paches than specified for SIFT (scale multiplying factor 16/12). Feature matching with brute-force nearest-neighbour search.</td>
+  <td class="hidden_value">T-Feat extracted on SIFT keypoints. Number of keypoints: 8000 per image. Models trained on the Liberty sequence of the Brown dataset. We use slightly larger paches than specified for SIFT (scale multiplying factor <sup>16</sup>&frasl;<sub>12</sub>). Feature matching with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://github.com/vbalnt/tfeat">https://github.com/vbalnt/tfeat</a></td>
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
-</tr>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">SuperPoint (default)</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td></p>
 
+<p><td>0.3763</td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SuperPoint (default)</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td>
+<p><td>0.3927</td></p>
 
+<p><td>0.6357</td></p>
 
+<p><td>0.5936</td></p>
 
+<p><td>0.5046</td></p>
 
+<p><td>0.3569</td></p>
 
+<p><td>0.3163</td></p>
 
+<p><td>0.3722</td></p>
 
+<p><td>0.4853</td></p>
 
+<p><td>0.5128</td></p>
 
+<p><td>0.1470</td></p>
 
-  <td>0.3763</td>
+<p><td>0.4267</td></p>
 
-
-
-
-
-
-
-
-
-
-  <td>0.3927</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.6357</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.5936</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.5046</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3569</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3163</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3722</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4853</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.5128</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1470</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4267</td>
-
-  
-  <td class="hidden_value">19-04-24</td>
+<p><td class="hidden_value">19-04-24</td>
   <td class="hidden_value">F</td>
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels. We extract features with the default parameters and use however many are returned (about 1200 on average). Feature matching done with brute-force nearest-neighbour search.</td>
@@ -3717,149 +1240,37 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
-</tr>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">SuperPoint</span><br /><span class="boards_subtitle">kp:1024, match:nn<span></td></p>
 
+<p><td>0.3752</td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SuperPoint</span><br /><span class="boards_subtitle">kp:1024, match:nn<span></td>
+<p><td>0.3704</td></p>
 
+<p><td>0.6258</td></p>
 
+<p><td>0.6135</td></p>
 
+<p><td>0.4946</td></p>
 
+<p><td>0.3670</td></p>
 
+<p><td>0.2659</td></p>
 
+<p><td>0.3370</td></p>
 
+<p><td>0.4623</td></p>
 
+<p><td>0.5174</td></p>
 
+<p><td>0.1302</td></p>
 
-  <td>0.3752</td>
+<p><td>0.4145</td></p>
 
-
-
-
-
-
-
-
-
-
-  <td>0.3704</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.6258</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.6135</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4946</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3670</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.2659</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3370</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4623</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.5174</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1302</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4145</td>
-
-  
-  <td class="hidden_value">19-04-26</td>
+<p><td class="hidden_value">19-04-26</td>
   <td class="hidden_value">F</td>
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels. We lower the default detection threshold to take the number of features indicated in the label. Feature matching done with brute-force nearest-neighbour search.</td>
@@ -3867,149 +1278,37 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
-</tr>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">SuperPoint</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td></p>
 
+<p><td>0.3557</td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SuperPoint</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td>
+<p><td>0.3989</td></p>
 
+<p><td>0.5727</td></p>
 
+<p><td>0.5711</td></p>
 
+<p><td>0.5072</td></p>
 
+<p><td>0.3859</td></p>
 
+<p><td>0.3269</td></p>
 
+<p><td>0.3598</td></p>
 
+<p><td>0.4956</td></p>
 
+<p><td>0.5199</td></p>
 
+<p><td>0.1501</td></p>
 
-  <td>0.3557</td>
+<p><td>0.4222</td></p>
 
-
-
-
-
-
-
-
-
-
-  <td>0.3989</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.5727</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.5711</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.5072</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3859</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3269</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3598</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4956</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.5199</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1501</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4222</td>
-
-  
-  <td class="hidden_value">19-04-26</td>
+<p><td class="hidden_value">19-04-26</td>
   <td class="hidden_value">F</td>
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels. We lower the default detection threshold to take the number of features indicated in the label. Feature matching done with brute-force nearest-neighbour search.</td>
@@ -4017,149 +1316,37 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
-</tr>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">SuperPoint</span><br /><span class="boards_subtitle">kp:256, match:nn<span></td></p>
 
+<p><td>0.1089</td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SuperPoint</span><br /><span class="boards_subtitle">kp:256, match:nn<span></td>
+<p><td>0.0256</td></p>
 
+<p><td>0.2964</td></p>
 
+<p><td>0.3699</td></p>
 
+<p><td>0.0160</td></p>
 
+<p><td>0.1125</td></p>
 
+<p><td>0.0002</td></p>
 
+<p><td>0.1210</td></p>
 
+<p><td>0.2019</td></p>
 
+<p><td>0.1638</td></p>
 
+<p><td>0.0016</td></p>
 
-  <td>0.1089</td>
+<p><td>0.1289</td></p>
 
-
-
-
-
-
-
-
-
-
-  <td>0.0256</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.2964</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3699</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0160</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1125</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0002</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1210</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.2019</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1638</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0016</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1289</td>
-
-  
-  <td class="hidden_value">19-04-26</td>
+<p><td class="hidden_value">19-04-26</td>
   <td class="hidden_value">F</td>
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels. We lower the default detection threshold to take the number of features indicated in the label. Feature matching done with brute-force nearest-neighbour search.</td>
@@ -4167,149 +1354,37 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
-</tr>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">SuperPoint</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td></p>
 
+<p><td>0.3242</td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SuperPoint</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
+<p><td>0.1806</td></p>
 
+<p><td>0.5745</td></p>
 
+<p><td>0.5669</td></p>
 
+<p><td>0.3108</td></p>
 
+<p><td>0.2704</td></p>
 
+<p><td>0.0990</td></p>
 
+<p><td>0.2769</td></p>
 
+<p><td>0.3634</td></p>
 
+<p><td>0.4048</td></p>
 
+<p><td>0.0585</td></p>
 
-  <td>0.3242</td>
+<p><td>0.3118</td></p>
 
-
-
-
-
-
-
-
-
-
-  <td>0.1806</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.5745</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.5669</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3108</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.2704</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0990</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.2769</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3634</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4048</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0585</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3118</td>
-
-  
-  <td class="hidden_value">19-04-26</td>
+<p><td class="hidden_value">19-04-26</td>
   <td class="hidden_value">F</td>
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels. We lower the default detection threshold to take the number of features indicated in the label. Feature matching done with brute-force nearest-neighbour search.</td>
@@ -4317,149 +1392,37 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
-</tr>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">SuperPoint</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td></p>
 
+<p><td>0.3283</td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SuperPoint</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+<p><td>0.3907</td></p>
 
+<p><td>0.5753</td></p>
 
+<p><td>0.4620</td></p>
 
+<p><td>0.4401</td></p>
 
+<p><td>0.3203</td></p>
 
+<p><td>0.3695</td></p>
 
+<p><td>0.3651</td></p>
 
+<p><td>0.4828</td></p>
 
+<p><td>0.4707</td></p>
 
+<p><td>0.1208</td></p>
 
-  <td>0.3283</td>
+<p><td>0.3932</td></p>
 
-
-
-
-
-
-
-
-
-
-  <td>0.3907</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.5753</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4620</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4401</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3203</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3695</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3651</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4828</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4707</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.1208</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3932</td>
-
-  
-  <td class="hidden_value">19-04-26</td>
+<p><td class="hidden_value">19-04-26</td>
   <td class="hidden_value">F</td>
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels. We lower the default detection threshold to take the number of features indicated in the label. Feature matching done with brute-force nearest-neighbour search.</td>
@@ -4467,149 +1430,37 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
-</tr>
+</tr></p>
 
+<p><tr></p>
 
+<p><td class="align_left"><span class="boards_title">SURF (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td></p>
 
+<p><td>0.1458</td></p>
 
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SURF (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+<p><td>0.3515</td></p>
 
+<p><td>0.3862</td></p>
 
+<p><td>0.2207</td></p>
 
+<p><td>0.4503</td></p>
 
+<p><td>0.2126</td></p>
 
+<p><td>0.2072</td></p>
 
+<p><td>0.3438</td></p>
 
+<p><td>0.4977</td></p>
 
+<p><td>0.4159</td></p>
 
+<p><td>0.0760</td></p>
 
-  <td>0.1458</td>
+<p><td>0.3007</td></p>
 
-
-
-
-
-
-
-
-
-
-  <td>0.3515</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3862</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.2207</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4503</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.2126</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.2072</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3438</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4977</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.4159</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.0760</td>
-
-
-
-
-
-
-
-
-
-
-  <td>0.3007</td>
-
-  
-  <td class="hidden_value">19-04-24</td>
+<p><td class="hidden_value">19-04-24</td>
   <td class="hidden_value">F</td>
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SURF, as implemented in OpenCV. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search.</td>
@@ -4617,15 +1468,12 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">TBA</td>
-</tr>
+</tr></p>
 
+<p></tbody>
+</table></p>
 
-</tbody>
-</table>
-
-
-
-<hr></p>
+<hr>
 
 <p>Results for individual sequences:</p>
 
@@ -4645,16 +1493,7 @@ google.charts.load('current', {
 
 <p><br /></p>
 
-<p><a name="bm"></a>
-
-
-
-
-
-
-
-
-
+<p><a name="bm"></a></p>
 
 <table class="display leaderboard_mvs" width="99%" cellspacing="0">
 <thead>
@@ -5233,6 +2072,63 @@ google.charts.load('current', {
 
 <tr>
   
+  <td class="align_left"><span class="boards_title">ELF-512D</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-09</span></td>
+  <td>F</td>
+  
+  <td>66.9</td>
+  <td>148.6</td>
+  <td>73.8</td>
+  <td>2.53</td>
+  <td>0.0063</td>
+  <td>0.0204</td>
+  <td>0.0393</td>
+  <td>0.0733</td>
+  <td>0.1056</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Anonymous</td>
+  <td class="hidden_value">ELF detector: Keypoints are local maxima of a saliency map generated by the gradient of a feature map with respect to the image of a pre-trained CNN. Descriptors are computed with the interpolation of the VGG pool3 feature map on the detected keypoints.</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
   <td class="align_left"><span class="boards_title">ELF-SIFT</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
@@ -5347,7 +2243,64 @@ google.charts.load('current', {
 
 <tr>
   
-  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+  <td class="align_left"><span class="boards_title">SIFT-AID (NN matcher)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-10</span></td>
+  <td>F</td>
+  
+  <td>82.7</td>
+  <td>931.4</td>
+  <td>92.0</td>
+  <td>2.80</td>
+  <td>0.0209</td>
+  <td>0.0568</td>
+  <td>0.1122</td>
+  <td>0.1777</td>
+  <td>0.2487</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID (custom matcher)</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
   <td>F/M</td>
   
@@ -5369,6 +2322,63 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">6272 bits</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-ContextDesc-GitHub</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-09</span></td>
+  <td>F</td>
+  
+  <td>84.4</td>
+  <td>3106.7</td>
+  <td>99.8</td>
+  <td>2.77</td>
+  <td>0.1127</td>
+  <td>0.2040</td>
+  <td>0.2859</td>
+  <td>0.3651</td>
+  <td>0.4320</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Zixin Luo</td>
+  <td class="hidden_value">ContextDesc extracted on SIFT keypoints. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search. Features are quantized to uint8 and extracted from the code provided by the authors.</td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value"><a href="mailto:zluoag@cse.ust.hk">zluoag@cse.ust.hk</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -6344,19 +3354,9 @@ google.charts.load('current', {
 </tbody>
 </table>
 
-
-
 <hr>
-<a name="fcs"></a>
 
-
-
-
-
-
-
-
-
+<p><a name="fcs"></a></p>
 
 <table class="display leaderboard_mvs" width="99%" cellspacing="0">
 <thead>
@@ -6935,6 +3935,63 @@ google.charts.load('current', {
 
 <tr>
   
+  <td class="align_left"><span class="boards_title">ELF-512D</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-09</span></td>
+  <td>F</td>
+  
+  <td>56.4</td>
+  <td>128.2</td>
+  <td>27.7</td>
+  <td>2.14</td>
+  <td>0.0098</td>
+  <td>0.0184</td>
+  <td>0.0261</td>
+  <td>0.0319</td>
+  <td>0.0371</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Anonymous</td>
+  <td class="hidden_value">ELF detector: Keypoints are local maxima of a saliency map generated by the gradient of a feature map with respect to the image of a pre-trained CNN. Descriptors are computed with the interpolation of the VGG pool3 feature map on the detected keypoints.</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
   <td class="align_left"><span class="boards_title">ELF-SIFT</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
@@ -7049,7 +4106,64 @@ google.charts.load('current', {
 
 <tr>
   
-  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+  <td class="align_left"><span class="boards_title">SIFT-AID (NN matcher)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-10</span></td>
+  <td>F</td>
+  
+  <td>73.8</td>
+  <td>1735.2</td>
+  <td>78.0</td>
+  <td>2.50</td>
+  <td>0.1801</td>
+  <td>0.2443</td>
+  <td>0.2760</td>
+  <td>0.3073</td>
+  <td>0.3418</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID (custom matcher)</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
   <td>F/M</td>
   
@@ -7071,6 +4185,63 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">6272 bits</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-ContextDesc-GitHub</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-09</span></td>
+  <td>F</td>
+  
+  <td>83.4</td>
+  <td>4083.4</td>
+  <td>96.0</td>
+  <td>2.87</td>
+  <td>0.4643</td>
+  <td>0.5320</td>
+  <td>0.5750</td>
+  <td>0.6131</td>
+  <td>0.6446</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Zixin Luo</td>
+  <td class="hidden_value">ContextDesc extracted on SIFT keypoints. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search. Features are quantized to uint8 and extracted from the code provided by the authors.</td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value"><a href="mailto:zluoag@cse.ust.hk">zluoag@cse.ust.hk</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -8046,19 +5217,9 @@ google.charts.load('current', {
 </tbody>
 </table>
 
-
-
 <hr>
-<a name="lms"></a>
 
-
-
-
-
-
-
-
-
+<p><a name="lms"></a></p>
 
 <table class="display leaderboard_mvs" width="99%" cellspacing="0">
 <thead>
@@ -8637,6 +5798,63 @@ google.charts.load('current', {
 
 <tr>
   
+  <td class="align_left"><span class="boards_title">ELF-512D</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-09</span></td>
+  <td>F</td>
+  
+  <td>59.5</td>
+  <td>124.9</td>
+  <td>49.5</td>
+  <td>2.52</td>
+  <td>0.0228</td>
+  <td>0.0472</td>
+  <td>0.0671</td>
+  <td>0.0754</td>
+  <td>0.0839</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Anonymous</td>
+  <td class="hidden_value">ELF detector: Keypoints are local maxima of a saliency map generated by the gradient of a feature map with respect to the image of a pre-trained CNN. Descriptors are computed with the interpolation of the VGG pool3 feature map on the detected keypoints.</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
   <td class="align_left"><span class="boards_title">ELF-SIFT</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
@@ -8751,7 +5969,64 @@ google.charts.load('current', {
 
 <tr>
   
-  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+  <td class="align_left"><span class="boards_title">SIFT-AID (NN matcher)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-10</span></td>
+  <td>F</td>
+  
+  <td>73.0</td>
+  <td>438.3</td>
+  <td>83.2</td>
+  <td>2.81</td>
+  <td>0.0404</td>
+  <td>0.0774</td>
+  <td>0.1080</td>
+  <td>0.1296</td>
+  <td>0.1511</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID (custom matcher)</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
   <td>F/M</td>
   
@@ -8773,6 +6048,63 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">6272 bits</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-ContextDesc-GitHub</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-09</span></td>
+  <td>F</td>
+  
+  <td>83.8</td>
+  <td>2960.3</td>
+  <td>97.0</td>
+  <td>3.09</td>
+  <td>0.5917</td>
+  <td>0.6626</td>
+  <td>0.6986</td>
+  <td>0.7222</td>
+  <td>0.7480</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Zixin Luo</td>
+  <td class="hidden_value">ContextDesc extracted on SIFT keypoints. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search. Features are quantized to uint8 and extracted from the code provided by the authors.</td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value"><a href="mailto:zluoag@cse.ust.hk">zluoag@cse.ust.hk</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -9748,19 +7080,9 @@ google.charts.load('current', {
 </tbody>
 </table>
 
-
-
 <hr>
-<a name="lb"></a>
 
-
-
-
-
-
-
-
-
+<p><a name="lb"></a></p>
 
 <table class="display leaderboard_mvs" width="99%" cellspacing="0">
 <thead>
@@ -10339,6 +7661,63 @@ google.charts.load('current', {
 
 <tr>
   
+  <td class="align_left"><span class="boards_title">ELF-512D</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-09</span></td>
+  <td>F</td>
+  
+  <td>63.4</td>
+  <td>106.3</td>
+  <td>52.2</td>
+  <td>2.66</td>
+  <td>0.0415</td>
+  <td>0.0802</td>
+  <td>0.1100</td>
+  <td>0.1267</td>
+  <td>0.1397</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Anonymous</td>
+  <td class="hidden_value">ELF detector: Keypoints are local maxima of a saliency map generated by the gradient of a feature map with respect to the image of a pre-trained CNN. Descriptors are computed with the interpolation of the VGG pool3 feature map on the detected keypoints.</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
   <td class="align_left"><span class="boards_title">ELF-SIFT</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
@@ -10453,7 +7832,64 @@ google.charts.load('current', {
 
 <tr>
   
-  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+  <td class="align_left"><span class="boards_title">SIFT-AID (NN matcher)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-10</span></td>
+  <td>F</td>
+  
+  <td>79.6</td>
+  <td>1072.5</td>
+  <td>89.5</td>
+  <td>2.73</td>
+  <td>0.0859</td>
+  <td>0.1670</td>
+  <td>0.2197</td>
+  <td>0.2655</td>
+  <td>0.3120</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID (custom matcher)</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
   <td>F/M</td>
   
@@ -10475,6 +7911,63 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">6272 bits</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-ContextDesc-GitHub</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-09</span></td>
+  <td>F</td>
+  
+  <td>83.7</td>
+  <td>3476.1</td>
+  <td>98.0</td>
+  <td>3.04</td>
+  <td>0.3519</td>
+  <td>0.4737</td>
+  <td>0.5330</td>
+  <td>0.5794</td>
+  <td>0.6202</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Zixin Luo</td>
+  <td class="hidden_value">ContextDesc extracted on SIFT keypoints. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search. Features are quantized to uint8 and extracted from the code provided by the authors.</td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value"><a href="mailto:zluoag@cse.ust.hk">zluoag@cse.ust.hk</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -11450,19 +8943,9 @@ google.charts.load('current', {
 </tbody>
 </table>
 
-
-
 <hr>
-<a name="mc"></a>
 
-
-
-
-
-
-
-
-
+<p><a name="mc"></a></p>
 
 <table class="display leaderboard_mvs" width="99%" cellspacing="0">
 <thead>
@@ -12041,6 +9524,63 @@ google.charts.load('current', {
 
 <tr>
   
+  <td class="align_left"><span class="boards_title">ELF-512D</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-09</span></td>
+  <td>F</td>
+  
+  <td>56.8</td>
+  <td>124.3</td>
+  <td>28.7</td>
+  <td>2.45</td>
+  <td>0.0084</td>
+  <td>0.0192</td>
+  <td>0.0281</td>
+  <td>0.0335</td>
+  <td>0.0372</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Anonymous</td>
+  <td class="hidden_value">ELF detector: Keypoints are local maxima of a saliency map generated by the gradient of a feature map with respect to the image of a pre-trained CNN. Descriptors are computed with the interpolation of the VGG pool3 feature map on the detected keypoints.</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
   <td class="align_left"><span class="boards_title">ELF-SIFT</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
@@ -12155,7 +9695,64 @@ google.charts.load('current', {
 
 <tr>
   
-  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+  <td class="align_left"><span class="boards_title">SIFT-AID (NN matcher)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-10</span></td>
+  <td>F</td>
+  
+  <td>76.6</td>
+  <td>1503.2</td>
+  <td>82.5</td>
+  <td>2.65</td>
+  <td>0.1867</td>
+  <td>0.2916</td>
+  <td>0.3542</td>
+  <td>0.3998</td>
+  <td>0.4430</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID (custom matcher)</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
   <td>F/M</td>
   
@@ -12177,6 +9774,63 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">6272 bits</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-ContextDesc-GitHub</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-09</span></td>
+  <td>F</td>
+  
+  <td>85.0</td>
+  <td>4574.6</td>
+  <td>99.0</td>
+  <td>3.14</td>
+  <td>0.4560</td>
+  <td>0.6109</td>
+  <td>0.6817</td>
+  <td>0.7379</td>
+  <td>0.7704</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Zixin Luo</td>
+  <td class="hidden_value">ContextDesc extracted on SIFT keypoints. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search. Features are quantized to uint8 and extracted from the code provided by the authors.</td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value"><a href="mailto:zluoag@cse.ust.hk">zluoag@cse.ust.hk</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -13152,19 +10806,9 @@ google.charts.load('current', {
 </tbody>
 </table>
 
-
-
 <hr>
-<a name="mr"></a>
 
-
-
-
-
-
-
-
-
+<p><a name="mr"></a></p>
 
 <table class="display leaderboard_mvs" width="99%" cellspacing="0">
 <thead>
@@ -13743,6 +11387,63 @@ google.charts.load('current', {
 
 <tr>
   
+  <td class="align_left"><span class="boards_title">ELF-512D</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-09</span></td>
+  <td>F</td>
+  
+  <td>54.4</td>
+  <td>105.0</td>
+  <td>35.8</td>
+  <td>2.52</td>
+  <td>0.0023</td>
+  <td>0.0069</td>
+  <td>0.0129</td>
+  <td>0.0187</td>
+  <td>0.0227</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Anonymous</td>
+  <td class="hidden_value">ELF detector: Keypoints are local maxima of a saliency map generated by the gradient of a feature map with respect to the image of a pre-trained CNN. Descriptors are computed with the interpolation of the VGG pool3 feature map on the detected keypoints.</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
   <td class="align_left"><span class="boards_title">ELF-SIFT</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
@@ -13857,7 +11558,64 @@ google.charts.load('current', {
 
 <tr>
   
-  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+  <td class="align_left"><span class="boards_title">SIFT-AID (NN matcher)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-10</span></td>
+  <td>F</td>
+  
+  <td>65.6</td>
+  <td>685.1</td>
+  <td>65.8</td>
+  <td>2.51</td>
+  <td>0.0193</td>
+  <td>0.0439</td>
+  <td>0.0692</td>
+  <td>0.0961</td>
+  <td>0.1194</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID (custom matcher)</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
   <td>F/M</td>
   
@@ -13879,6 +11637,63 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">6272 bits</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-ContextDesc-GitHub</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-09</span></td>
+  <td>F</td>
+  
+  <td>79.9</td>
+  <td>2525.1</td>
+  <td>95.0</td>
+  <td>3.06</td>
+  <td>0.2138</td>
+  <td>0.3347</td>
+  <td>0.4064</td>
+  <td>0.4691</td>
+  <td>0.5115</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Zixin Luo</td>
+  <td class="hidden_value">ContextDesc extracted on SIFT keypoints. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search. Features are quantized to uint8 and extracted from the code provided by the authors.</td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value"><a href="mailto:zluoag@cse.ust.hk">zluoag@cse.ust.hk</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -14854,19 +12669,9 @@ google.charts.load('current', {
 </tbody>
 </table>
 
-
-
 <hr>
-<a name="psm"></a>
 
-
-
-
-
-
-
-
-
+<p><a name="psm"></a></p>
 
 <table class="display leaderboard_mvs" width="99%" cellspacing="0">
 <thead>
@@ -15445,6 +13250,63 @@ google.charts.load('current', {
 
 <tr>
   
+  <td class="align_left"><span class="boards_title">ELF-512D</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-09</span></td>
+  <td>F</td>
+  
+  <td>26.4</td>
+  <td>93.3</td>
+  <td>12.0</td>
+  <td>1.62</td>
+  <td>0.0003</td>
+  <td>0.0011</td>
+  <td>0.0021</td>
+  <td>0.0034</td>
+  <td>0.0039</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Anonymous</td>
+  <td class="hidden_value">ELF detector: Keypoints are local maxima of a saliency map generated by the gradient of a feature map with respect to the image of a pre-trained CNN. Descriptors are computed with the interpolation of the VGG pool3 feature map on the detected keypoints.</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
   <td class="align_left"><span class="boards_title">ELF-SIFT</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
@@ -15559,7 +13421,64 @@ google.charts.load('current', {
 
 <tr>
   
-  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+  <td class="align_left"><span class="boards_title">SIFT-AID (NN matcher)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-10</span></td>
+  <td>F</td>
+  
+  <td>67.1</td>
+  <td>1023.4</td>
+  <td>77.2</td>
+  <td>2.15</td>
+  <td>0.0203</td>
+  <td>0.0650</td>
+  <td>0.1071</td>
+  <td>0.1480</td>
+  <td>0.1825</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID (custom matcher)</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
   <td>F/M</td>
   
@@ -15581,6 +13500,63 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">6272 bits</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-ContextDesc-GitHub</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-09</span></td>
+  <td>F</td>
+  
+  <td>84.1</td>
+  <td>4230.8</td>
+  <td>98.0</td>
+  <td>2.44</td>
+  <td>0.2037</td>
+  <td>0.3216</td>
+  <td>0.4051</td>
+  <td>0.4682</td>
+  <td>0.5232</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Zixin Luo</td>
+  <td class="hidden_value">ContextDesc extracted on SIFT keypoints. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search. Features are quantized to uint8 and extracted from the code provided by the authors.</td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value"><a href="mailto:zluoag@cse.ust.hk">zluoag@cse.ust.hk</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -16556,19 +14532,9 @@ google.charts.load('current', {
 </tbody>
 </table>
 
-
-
 <hr>
-<a name="rs"></a>
 
-
-
-
-
-
-
-
-
+<p><a name="rs"></a></p>
 
 <table class="display leaderboard_mvs" width="99%" cellspacing="0">
 <thead>
@@ -17147,6 +15113,63 @@ google.charts.load('current', {
 
 <tr>
   
+  <td class="align_left"><span class="boards_title">ELF-512D</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-09</span></td>
+  <td>F</td>
+  
+  <td>62.7</td>
+  <td>110.6</td>
+  <td>59.5</td>
+  <td>2.62</td>
+  <td>0.0197</td>
+  <td>0.0618</td>
+  <td>0.0912</td>
+  <td>0.1090</td>
+  <td>0.1258</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Anonymous</td>
+  <td class="hidden_value">ELF detector: Keypoints are local maxima of a saliency map generated by the gradient of a feature map with respect to the image of a pre-trained CNN. Descriptors are computed with the interpolation of the VGG pool3 feature map on the detected keypoints.</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
   <td class="align_left"><span class="boards_title">ELF-SIFT</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
@@ -17261,7 +15284,64 @@ google.charts.load('current', {
 
 <tr>
   
-  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+  <td class="align_left"><span class="boards_title">SIFT-AID (NN matcher)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-10</span></td>
+  <td>F</td>
+  
+  <td>77.5</td>
+  <td>965.9</td>
+  <td>92.0</td>
+  <td>2.54</td>
+  <td>0.0887</td>
+  <td>0.1871</td>
+  <td>0.2559</td>
+  <td>0.3100</td>
+  <td>0.3455</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID (custom matcher)</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
   <td>F/M</td>
   
@@ -17283,6 +15363,63 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">6272 bits</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-ContextDesc-GitHub</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-09</span></td>
+  <td>F</td>
+  
+  <td>83.0</td>
+  <td>3518.1</td>
+  <td>98.2</td>
+  <td>2.95</td>
+  <td>0.1999</td>
+  <td>0.3178</td>
+  <td>0.3896</td>
+  <td>0.4391</td>
+  <td>0.4777</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Zixin Luo</td>
+  <td class="hidden_value">ContextDesc extracted on SIFT keypoints. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search. Features are quantized to uint8 and extracted from the code provided by the authors.</td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value"><a href="mailto:zluoag@cse.ust.hk">zluoag@cse.ust.hk</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -18258,19 +16395,9 @@ google.charts.load('current', {
 </tbody>
 </table>
 
-
-
 <hr>
-<a name="sf"></a>
 
-
-
-
-
-
-
-
-
+<p><a name="sf"></a></p>
 
 <table class="display leaderboard_mvs" width="99%" cellspacing="0">
 <thead>
@@ -18849,6 +16976,63 @@ google.charts.load('current', {
 
 <tr>
   
+  <td class="align_left"><span class="boards_title">ELF-512D</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-09</span></td>
+  <td>F</td>
+  
+  <td>57.0</td>
+  <td>125.2</td>
+  <td>34.0</td>
+  <td>2.45</td>
+  <td>0.0093</td>
+  <td>0.0176</td>
+  <td>0.0240</td>
+  <td>0.0294</td>
+  <td>0.0339</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Anonymous</td>
+  <td class="hidden_value">ELF detector: Keypoints are local maxima of a saliency map generated by the gradient of a feature map with respect to the image of a pre-trained CNN. Descriptors are computed with the interpolation of the VGG pool3 feature map on the detected keypoints.</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
   <td class="align_left"><span class="boards_title">ELF-SIFT</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
@@ -18963,7 +17147,64 @@ google.charts.load('current', {
 
 <tr>
   
-  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+  <td class="align_left"><span class="boards_title">SIFT-AID (NN matcher)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-10</span></td>
+  <td>F</td>
+  
+  <td>75.9</td>
+  <td>2431.0</td>
+  <td>77.5</td>
+  <td>2.61</td>
+  <td>0.3097</td>
+  <td>0.3772</td>
+  <td>0.4065</td>
+  <td>0.4280</td>
+  <td>0.4461</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID (custom matcher)</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
   <td>F/M</td>
   
@@ -18985,6 +17226,63 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">6272 bits</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-ContextDesc-GitHub</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-09</span></td>
+  <td>F</td>
+  
+  <td>84.2</td>
+  <td>5033.9</td>
+  <td>97.8</td>
+  <td>3.24</td>
+  <td>0.6615</td>
+  <td>0.7349</td>
+  <td>0.7638</td>
+  <td>0.7796</td>
+  <td>0.7986</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Zixin Luo</td>
+  <td class="hidden_value">ContextDesc extracted on SIFT keypoints. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search. Features are quantized to uint8 and extracted from the code provided by the authors.</td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value"><a href="mailto:zluoag@cse.ust.hk">zluoag@cse.ust.hk</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -19960,19 +18258,9 @@ google.charts.load('current', {
 </tbody>
 </table>
 
-
-
 <hr>
-<a name="spc"></a>
 
-
-
-
-
-
-
-
-
+<p><a name="spc"></a></p>
 
 <table class="display leaderboard_mvs" width="99%" cellspacing="0">
 <thead>
@@ -20551,6 +18839,63 @@ google.charts.load('current', {
 
 <tr>
   
+  <td class="align_left"><span class="boards_title">ELF-512D</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-09</span></td>
+  <td>F</td>
+  
+  <td>31.0</td>
+  <td>107.3</td>
+  <td>34.0</td>
+  <td>1.78</td>
+  <td>0.0094</td>
+  <td>0.0234</td>
+  <td>0.0320</td>
+  <td>0.0389</td>
+  <td>0.0455</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Anonymous</td>
+  <td class="hidden_value">ELF detector: Keypoints are local maxima of a saliency map generated by the gradient of a feature map with respect to the image of a pre-trained CNN. Descriptors are computed with the interpolation of the VGG pool3 feature map on the detected keypoints.</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
   <td class="align_left"><span class="boards_title">ELF-SIFT</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
@@ -20665,7 +19010,64 @@ google.charts.load('current', {
 
 <tr>
   
-  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+  <td class="align_left"><span class="boards_title">SIFT-AID (NN matcher)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-10</span></td>
+  <td>F</td>
+  
+  <td>73.7</td>
+  <td>1002.2</td>
+  <td>79.8</td>
+  <td>2.41</td>
+  <td>0.0664</td>
+  <td>0.1439</td>
+  <td>0.2051</td>
+  <td>0.2570</td>
+  <td>0.3033</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID (custom matcher)</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
   <td>F/M</td>
   
@@ -20687,6 +19089,63 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">6272 bits</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-ContextDesc-GitHub</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-09</span></td>
+  <td>F</td>
+  
+  <td>84.4</td>
+  <td>3751.8</td>
+  <td>99.0</td>
+  <td>2.84</td>
+  <td>0.3239</td>
+  <td>0.4649</td>
+  <td>0.5449</td>
+  <td>0.6077</td>
+  <td>0.6600</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Zixin Luo</td>
+  <td class="hidden_value">ContextDesc extracted on SIFT keypoints. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search. Features are quantized to uint8 and extracted from the code provided by the authors.</td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value"><a href="mailto:zluoag@cse.ust.hk">zluoag@cse.ust.hk</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -21662,19 +20121,9 @@ google.charts.load('current', {
 </tbody>
 </table>
 
-
-
 <hr>
-<a name="usc"></a>
 
-
-
-
-
-
-
-
-
+<p><a name="usc"></a></p>
 
 <table class="display leaderboard_mvs" width="99%" cellspacing="0">
 <thead>
@@ -22253,6 +20702,63 @@ google.charts.load('current', {
 
 <tr>
   
+  <td class="align_left"><span class="boards_title">ELF-512D</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-09</span></td>
+  <td>F</td>
+  
+  <td>25.5</td>
+  <td>64.5</td>
+  <td>3.8</td>
+  <td>1.72</td>
+  <td>0.0000</td>
+  <td>0.0003</td>
+  <td>0.0008</td>
+  <td>0.0012</td>
+  <td>0.0014</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Anonymous</td>
+  <td class="hidden_value">ELF detector: Keypoints are local maxima of a saliency map generated by the gradient of a feature map with respect to the image of a pre-trained CNN. Descriptors are computed with the interpolation of the VGG pool3 feature map on the detected keypoints.</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">256 float32</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
   <td class="align_left"><span class="boards_title">ELF-SIFT</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
@@ -22367,7 +20873,64 @@ google.charts.load('current', {
 
 <tr>
   
-  <td class="align_left"><span class="boards_title">SIFT-AID</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
+  <td class="align_left"><span class="boards_title">SIFT-AID (NN matcher)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-10</span></td>
+  <td>F</td>
+  
+  <td>65.7</td>
+  <td>309.4</td>
+  <td>70.2</td>
+  <td>2.31</td>
+  <td>0.0033</td>
+  <td>0.0152</td>
+  <td>0.0320</td>
+  <td>0.0587</td>
+  <td>0.0835</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
+  <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
+  <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
+  <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">6272 bits</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-AID (custom matcher)</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
   <td>F/M</td>
   
@@ -22389,6 +20952,63 @@ google.charts.load('current', {
   <td class="hidden_value"><a href="mailto:facciolo@cmla.ens-cachan.fr">facciolo@cmla.ens-cachan.fr</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">6272 bits</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  <td class="align_left"><span class="boards_title">SIFT-ContextDesc-GitHub</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-09</span></td>
+  <td>F</td>
+  
+  <td>78.6</td>
+  <td>831.0</td>
+  <td>90.8</td>
+  <td>2.46</td>
+  <td>0.0252</td>
+  <td>0.0693</td>
+  <td>0.1258</td>
+  <td>0.1822</td>
+  <td>0.2297</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Zixin Luo</td>
+  <td class="hidden_value">ContextDesc extracted on SIFT keypoints. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search. Features are quantized to uint8 and extracted from the code provided by the authors.</td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value"><a href="mailto:zluoag@cse.ust.hk">zluoag@cse.ust.hk</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 uint8</td>
 </tr>
   
 
@@ -23363,9 +21983,6 @@ google.charts.load('current', {
 
 </tbody>
 </table>
-
-
-</p>
 
   </div>
 </section>
