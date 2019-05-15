@@ -14,7 +14,7 @@
 
 <title>Image Matching: Local Features &amp; Beyond</title>
 
-<meta name="generator" content="Hugo 0.55.5" />
+<meta name="generator" content="Hugo 0.53" />
 
 
 
@@ -191,7 +191,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
 <li><a href="breakdown/phototourism/stereo/by_seq">Click here for a breakdown by sequence</a></li>
 </ul>
 
-<p><br /></p>
+<p><br />
+
+
+
 
 <table class="display leaderboard_stereo" width="99%" cellspacing="0">
 <thead>
@@ -301,6 +304,47 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
+  
+  <td class="align_left"><span class="boards_title">Brisk &#43; SSS</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-14</span></td>
+  <td>F</td>
+  
+  <td>4652.0</td>
+  <td>0.2742</td>
+  <td>0.0006</td>
+  <td>0.0074</td>
+  <td>0.0336</td>
+  <td>0.0856</td>
+  <td>0.1522</td>
+ 
+  <td class="hidden_value">Anonymous</td>
+  <td class="hidden_value">We use OpenCV&#39;s implementation of brisk detector with the default settings, and for each image there are at most 8K keypoints. For each keypoint, we extract a descriptor via a CNN model.</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
 </tr>
 
 
@@ -1537,6 +1581,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
 </tbody>
 </table>
 
+
+</p>
+
+<p>
 <div id="chart-stereo-map-th" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -1586,6 +1634,8 @@ google.charts.load('current', {
 });
 </script>
 </div>
+
+
 
 <div id="chart-stereo-map-th-kp-8000" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
@@ -1637,6 +1687,8 @@ google.charts.load('current', {
 </script>
 </div>
 
+
+
 <div id="chart-stereo-map-th-kp-2048" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -1686,6 +1738,8 @@ google.charts.load('current', {
 });
 </script>
 </div>
+
+
 
 <div id="chart-stereo-map-th-kp-1024" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
@@ -1737,6 +1791,8 @@ google.charts.load('current', {
 </script>
 </div>
 
+
+
 <div id="chart-stereo-map-th-kp-512" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -1786,6 +1842,8 @@ google.charts.load('current', {
 });
 </script>
 </div>
+
+
 
 <div id="chart-stereo-map-th-kp-256" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
@@ -1837,6 +1895,8 @@ google.charts.load('current', {
 </script>
 </div>
 
+</p>
+
 <!-- cannot get this to render properly now :( -->
 
 <!--<input type="button" id="show1" value="Show 1" />-->
@@ -1884,7 +1944,16 @@ google.charts.load('current', {
 <li><a href="breakdown/phototourism/mvs/by_bag">Click here for a breakdown by subset size</a></li>
 </ul>
 
-<p><br /></p>
+<p><br />
+
+
+
+
+
+
+
+
+
 
 <table class="display leaderboard_mvs" width="99%" cellspacing="0">
 <thead>
@@ -1954,15 +2023,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-24</span></td>
   <td>F</td>
   
-  <td>79.3</td>
-  <td>2163.6</td>
+  <td>94.3</td>
+  <td>4357.8</td>
   <td>88.5</td>
-  <td>2.86</td>
-  <td>0.2199</td>
-  <td>0.3064</td>
-  <td>0.3648</td>
-  <td>0.4127</td>
-  <td>0.4512</td>
+  <td>3.25</td>
+  <td>0.2906</td>
+  <td>0.3747</td>
+  <td>0.4285</td>
+  <td>0.4725</td>
+  <td>0.5075</td>
   
   <td>&mdash;</td>
   
@@ -2011,15 +2080,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
   
-  <td>81.8</td>
-  <td>2268.8</td>
-  <td>94.0</td>
-  <td>2.88</td>
-  <td>0.2599</td>
-  <td>0.3631</td>
-  <td>0.4325</td>
-  <td>0.4854</td>
-  <td>0.5302</td>
+  <td>96.6</td>
+  <td>3901.2</td>
+  <td>94.1</td>
+  <td>3.24</td>
+  <td>0.3168</td>
+  <td>0.4199</td>
+  <td>0.4865</td>
+  <td>0.5360</td>
+  <td>0.5772</td>
   
   <td>&mdash;</td>
   
@@ -2064,19 +2133,76 @@ google.charts.load('current', {
 
 <tr>
   
+  <td class="align_left"><span class="boards_title">Brisk &#43; SSS</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-14</span></td>
+  <td>F</td>
+  
+  <td>92.9</td>
+  <td>2548.4</td>
+  <td>87.9</td>
+  <td>2.76</td>
+  <td>0.1252</td>
+  <td>0.2074</td>
+  <td>0.2694</td>
+  <td>0.3209</td>
+  <td>0.3667</td>
+  
+  <td>&mdash;</td>
+  
+  <td class="hidden_value">Anonymous</td>
+  <td class="hidden_value">We use OpenCV&#39;s implementation of brisk detector with the default settings, and for each image there are at most 8K keypoints. For each keypoint, we extract a descriptor via a CNN model.</td>
+  <td class="hidden_value"><a href="TBA">TBA</a></td>
+  <td class="hidden_value"><a href="mailto:Anonymous">Anonymous</a></td>
+  <td class="hidden_value">N/A</td>
+  <td class="hidden_value">128 float32</td>
+</tr>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+  
   <td class="align_left"><span class="boards_title">D2-Net (single scale)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-07</span></td>
   <td>F</td>
   
-  <td>79.8</td>
-  <td>2394.0</td>
+  <td>93.9</td>
+  <td>4278.0</td>
   <td>92.8</td>
-  <td>2.71</td>
-  <td>0.1721</td>
-  <td>0.2815</td>
-  <td>0.3609</td>
-  <td>0.4200</td>
-  <td>0.4688</td>
+  <td>3.06</td>
+  <td>0.2162</td>
+  <td>0.3304</td>
+  <td>0.4072</td>
+  <td>0.4627</td>
+  <td>0.5075</td>
   
   <td>&mdash;</td>
   
@@ -2125,15 +2251,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-07</span></td>
   <td>F</td>
   
-  <td>80.5</td>
-  <td>3117.8</td>
+  <td>94.6</td>
+  <td>5533.0</td>
   <td>94.4</td>
-  <td>2.62</td>
-  <td>0.1597</td>
-  <td>0.2782</td>
-  <td>0.3593</td>
-  <td>0.4249</td>
-  <td>0.4810</td>
+  <td>2.93</td>
+  <td>0.1995</td>
+  <td>0.3218</td>
+  <td>0.4001</td>
+  <td>0.4623</td>
+  <td>0.5142</td>
   
   <td>&mdash;</td>
   
@@ -2182,15 +2308,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-05</span></td>
   <td>F</td>
   
-  <td>69.1</td>
-  <td>284.7</td>
-  <td>75.0</td>
-  <td>2.24</td>
-  <td>0.0108</td>
-  <td>0.0472</td>
-  <td>0.0869</td>
-  <td>0.1291</td>
-  <td>0.1657</td>
+  <td>83.2</td>
+  <td>637.0</td>
+  <td>75.8</td>
+  <td>2.37</td>
+  <td>0.0213</td>
+  <td>0.0735</td>
+  <td>0.1236</td>
+  <td>0.1708</td>
+  <td>0.2095</td>
   
   <td>&mdash;</td>
   
@@ -2239,15 +2365,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-05</span></td>
   <td>F</td>
   
-  <td>73.5</td>
-  <td>543.5</td>
-  <td>83.7</td>
-  <td>2.23</td>
-  <td>0.0172</td>
-  <td>0.0662</td>
-  <td>0.1216</td>
-  <td>0.1741</td>
-  <td>0.2209</td>
+  <td>87.9</td>
+  <td>1278.7</td>
+  <td>83.8</td>
+  <td>2.36</td>
+  <td>0.0323</td>
+  <td>0.0991</td>
+  <td>0.1629</td>
+  <td>0.2185</td>
+  <td>0.2656</td>
   
   <td>&mdash;</td>
   
@@ -2296,15 +2422,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-05</span></td>
   <td>F</td>
   
-  <td>31.1</td>
-  <td>50.0</td>
-  <td>11.4</td>
-  <td>1.56</td>
-  <td>0.0002</td>
-  <td>0.0012</td>
-  <td>0.0028</td>
-  <td>0.0046</td>
-  <td>0.0063</td>
+  <td>34.6</td>
+  <td>64.1</td>
+  <td>22.2</td>
+  <td>1.65</td>
+  <td>0.0006</td>
+  <td>0.0034</td>
+  <td>0.0072</td>
+  <td>0.0111</td>
+  <td>0.0147</td>
   
   <td>&mdash;</td>
   
@@ -2353,15 +2479,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-05</span></td>
   <td>F</td>
   
-  <td>58.4</td>
-  <td>132.8</td>
-  <td>52.5</td>
-  <td>2.19</td>
-  <td>0.0033</td>
-  <td>0.0167</td>
-  <td>0.0353</td>
-  <td>0.0543</td>
-  <td>0.0722</td>
+  <td>69.6</td>
+  <td>260.7</td>
+  <td>56.4</td>
+  <td>2.29</td>
+  <td>0.0073</td>
+  <td>0.0307</td>
+  <td>0.0585</td>
+  <td>0.0842</td>
+  <td>0.1069</td>
   
   <td>&mdash;</td>
   
@@ -2410,15 +2536,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-07</span></td>
   <td>F</td>
   
-  <td>44.5</td>
-  <td>100.9</td>
-  <td>27.7</td>
-  <td>2.03</td>
-  <td>0.0108</td>
-  <td>0.0209</td>
-  <td>0.0286</td>
-  <td>0.0361</td>
-  <td>0.0432</td>
+  <td>52.7</td>
+  <td>153.3</td>
+  <td>38.4</td>
+  <td>2.27</td>
+  <td>0.0354</td>
+  <td>0.0543</td>
+  <td>0.0657</td>
+  <td>0.0755</td>
+  <td>0.0842</td>
   
   <td>&mdash;</td>
   
@@ -2467,15 +2593,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-09</span></td>
   <td>F</td>
   
-  <td>50.9</td>
-  <td>112.6</td>
-  <td>37.4</td>
-  <td>2.27</td>
-  <td>0.0118</td>
-  <td>0.0270</td>
-  <td>0.0394</td>
-  <td>0.0492</td>
-  <td>0.0579</td>
+  <td>60.4</td>
+  <td>170.1</td>
+  <td>45.6</td>
+  <td>2.52</td>
+  <td>0.0407</td>
+  <td>0.0677</td>
+  <td>0.0849</td>
+  <td>0.0976</td>
+  <td>0.1082</td>
   
   <td>&mdash;</td>
   
@@ -2524,15 +2650,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
   
-  <td>61.0</td>
-  <td>160.2</td>
-  <td>50.9</td>
-  <td>2.53</td>
-  <td>0.0491</td>
-  <td>0.0855</td>
-  <td>0.1071</td>
-  <td>0.1249</td>
-  <td>0.1403</td>
+  <td>72.5</td>
+  <td>273.0</td>
+  <td>56.5</td>
+  <td>2.81</td>
+  <td>0.1012</td>
+  <td>0.1438</td>
+  <td>0.1678</td>
+  <td>0.1865</td>
+  <td>0.2021</td>
   
   <td>&mdash;</td>
   
@@ -2581,15 +2707,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-24</span></td>
   <td>F</td>
   
-  <td>72.8</td>
-  <td>1432.0</td>
-  <td>77.6</td>
-  <td>2.59</td>
-  <td>0.0734</td>
-  <td>0.1209</td>
-  <td>0.1602</td>
-  <td>0.1958</td>
-  <td>0.2299</td>
+  <td>87.6</td>
+  <td>2988.1</td>
+  <td>77.9</td>
+  <td>2.81</td>
+  <td>0.1356</td>
+  <td>0.1893</td>
+  <td>0.2307</td>
+  <td>0.2664</td>
+  <td>0.2996</td>
   
   <td>&mdash;</td>
   
@@ -2638,15 +2764,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-10</span></td>
   <td>F</td>
   
-  <td>73.7</td>
-  <td>1099.8</td>
+  <td>88.7</td>
+  <td>2397.1</td>
   <td>80.7</td>
-  <td>2.55</td>
-  <td>0.0929</td>
-  <td>0.1518</td>
-  <td>0.1951</td>
-  <td>0.2343</td>
-  <td>0.2706</td>
+  <td>2.85</td>
+  <td>0.1572</td>
+  <td>0.2237</td>
+  <td>0.2688</td>
+  <td>0.3076</td>
+  <td>0.3422</td>
   
   <td>&mdash;</td>
   
@@ -2695,15 +2821,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
   <td>F/M</td>
   
-  <td>72.3</td>
-  <td>974.4</td>
+  <td>87.6</td>
+  <td>2261.4</td>
   <td>79.1</td>
-  <td>2.49</td>
-  <td>0.0841</td>
-  <td>0.1399</td>
-  <td>0.1818</td>
-  <td>0.2167</td>
-  <td>0.2510</td>
+  <td>2.78</td>
+  <td>0.1454</td>
+  <td>0.2107</td>
+  <td>0.2553</td>
+  <td>0.2912</td>
+  <td>0.3249</td>
   
   <td>&mdash;</td>
   
@@ -2752,15 +2878,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-09</span></td>
   <td>F</td>
   
-  <td>83.1</td>
-  <td>3462.9</td>
-  <td>97.1</td>
-  <td>2.90</td>
-  <td>0.3277</td>
-  <td>0.4297</td>
-  <td>0.4918</td>
-  <td>0.5422</td>
-  <td>0.5833</td>
+  <td>97.9</td>
+  <td>6020.4</td>
+  <td>97.2</td>
+  <td>3.26</td>
+  <td>0.3828</td>
+  <td>0.4821</td>
+  <td>0.5399</td>
+  <td>0.5853</td>
+  <td>0.6226</td>
   
   <td>&mdash;</td>
   
@@ -2809,15 +2935,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-08</span></td>
   <td>F</td>
   
-  <td>82.6</td>
-  <td>2854.2</td>
-  <td>95.4</td>
-  <td>2.95</td>
-  <td>0.3165</td>
-  <td>0.4109</td>
-  <td>0.4722</td>
-  <td>0.5217</td>
-  <td>0.5667</td>
+  <td>97.4</td>
+  <td>5213.3</td>
+  <td>95.5</td>
+  <td>3.33</td>
+  <td>0.3805</td>
+  <td>0.4731</td>
+  <td>0.5298</td>
+  <td>0.5741</td>
+  <td>0.6141</td>
   
   <td>&mdash;</td>
   
@@ -2866,15 +2992,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-24</span></td>
   <td>F</td>
   
-  <td>82.5</td>
-  <td>3094.0</td>
+  <td>97.3</td>
+  <td>5583.8</td>
   <td>95.8</td>
-  <td>2.99</td>
-  <td>0.3250</td>
-  <td>0.4212</td>
-  <td>0.4797</td>
-  <td>0.5319</td>
-  <td>0.5708</td>
+  <td>3.39</td>
+  <td>0.3858</td>
+  <td>0.4778</td>
+  <td>0.5317</td>
+  <td>0.5790</td>
+  <td>0.6139</td>
   
   <td>&mdash;</td>
   
@@ -2923,15 +3049,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-24</span></td>
   <td>F</td>
   
-  <td>83.2</td>
-  <td>3788.6</td>
+  <td>97.9</td>
+  <td>6552.9</td>
   <td>97.2</td>
-  <td>2.97</td>
-  <td>0.3367</td>
-  <td>0.4387</td>
-  <td>0.5019</td>
-  <td>0.5523</td>
-  <td>0.5928</td>
+  <td>3.36</td>
+  <td>0.3894</td>
+  <td>0.4887</td>
+  <td>0.5481</td>
+  <td>0.5940</td>
+  <td>0.6310</td>
   
   <td>&mdash;</td>
   
@@ -2980,15 +3106,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-24</span></td>
   <td>F</td>
   
-  <td>82.5</td>
-  <td>3313.0</td>
+  <td>97.3</td>
+  <td>6082.5</td>
   <td>96.3</td>
-  <td>2.90</td>
-  <td>0.2888</td>
-  <td>0.3861</td>
-  <td>0.4523</td>
-  <td>0.5032</td>
-  <td>0.5473</td>
+  <td>3.27</td>
+  <td>0.3513</td>
+  <td>0.4473</td>
+  <td>0.5087</td>
+  <td>0.5548</td>
+  <td>0.5942</td>
   
   <td>&mdash;</td>
   
@@ -3037,15 +3163,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-24</span></td>
   <td>F</td>
   
-  <td>78.6</td>
-  <td>2026.9</td>
+  <td>93.6</td>
+  <td>4341.5</td>
   <td>88.5</td>
-  <td>2.80</td>
-  <td>0.2143</td>
-  <td>0.2918</td>
-  <td>0.3467</td>
-  <td>0.3908</td>
-  <td>0.4293</td>
+  <td>3.15</td>
+  <td>0.2881</td>
+  <td>0.3640</td>
+  <td>0.4146</td>
+  <td>0.4550</td>
+  <td>0.4901</td>
   
   <td>&mdash;</td>
   
@@ -3094,15 +3220,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-25</span></td>
   <td>F</td>
   
-  <td>62.3</td>
-  <td>235.3</td>
-  <td>61.5</td>
-  <td>2.53</td>
-  <td>0.0004</td>
-  <td>0.0048</td>
-  <td>0.0128</td>
-  <td>0.0238</td>
-  <td>0.0371</td>
+  <td>73.9</td>
+  <td>407.3</td>
+  <td>63.9</td>
+  <td>2.82</td>
+  <td>0.0005</td>
+  <td>0.0058</td>
+  <td>0.0160</td>
+  <td>0.0294</td>
+  <td>0.0453</td>
   
   <td>&mdash;</td>
   
@@ -3151,15 +3277,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-25</span></td>
   <td>F</td>
   
-  <td>69.0</td>
-  <td>483.5</td>
-  <td>76.3</td>
-  <td>2.61</td>
-  <td>0.0009</td>
-  <td>0.0070</td>
-  <td>0.0209</td>
-  <td>0.0400</td>
-  <td>0.0611</td>
+  <td>82.3</td>
+  <td>966.6</td>
+  <td>76.5</td>
+  <td>2.92</td>
+  <td>0.0011</td>
+  <td>0.0087</td>
+  <td>0.0250</td>
+  <td>0.0463</td>
+  <td>0.0697</td>
   
   <td>&mdash;</td>
   
@@ -3208,15 +3334,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-25</span></td>
   <td>F</td>
   
-  <td>35.8</td>
-  <td>68.0</td>
-  <td>17.9</td>
-  <td>1.99</td>
+  <td>39.5</td>
+  <td>80.1</td>
+  <td>27.0</td>
+  <td>2.13</td>
   <td>0.0003</td>
-  <td>0.0014</td>
-  <td>0.0037</td>
-  <td>0.0064</td>
-  <td>0.0094</td>
+  <td>0.0017</td>
+  <td>0.0044</td>
+  <td>0.0080</td>
+  <td>0.0118</td>
   
   <td>&mdash;</td>
   
@@ -3265,15 +3391,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-25</span></td>
   <td>F</td>
   
-  <td>55.6</td>
-  <td>130.9</td>
-  <td>39.4</td>
-  <td>2.46</td>
+  <td>62.8</td>
+  <td>182.6</td>
+  <td>48.3</td>
+  <td>2.69</td>
   <td>0.0006</td>
-  <td>0.0027</td>
-  <td>0.0074</td>
-  <td>0.0130</td>
-  <td>0.0190</td>
+  <td>0.0032</td>
+  <td>0.0090</td>
+  <td>0.0163</td>
+  <td>0.0243</td>
   
   <td>&mdash;</td>
   
@@ -3322,15 +3448,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-24</span></td>
   <td>F</td>
   
-  <td>81.7</td>
-  <td>2825.6</td>
+  <td>96.5</td>
+  <td>5434.3</td>
   <td>94.1</td>
-  <td>2.84</td>
-  <td>0.2525</td>
-  <td>0.3461</td>
-  <td>0.4094</td>
-  <td>0.4623</td>
-  <td>0.5062</td>
+  <td>3.20</td>
+  <td>0.3153</td>
+  <td>0.4057</td>
+  <td>0.4643</td>
+  <td>0.5122</td>
+  <td>0.5511</td>
   
   <td>&mdash;</td>
   
@@ -3379,15 +3505,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-24</span></td>
   <td>F</td>
   
-  <td>76.9</td>
-  <td>570.6</td>
+  <td>91.2</td>
+  <td>989.7</td>
   <td>85.9</td>
-  <td>3.03</td>
-  <td>0.2276</td>
-  <td>0.3191</td>
-  <td>0.3741</td>
-  <td>0.4172</td>
-  <td>0.4514</td>
+  <td>3.50</td>
+  <td>0.2845</td>
+  <td>0.3745</td>
+  <td>0.4267</td>
+  <td>0.4665</td>
+  <td>0.4974</td>
   
   <td>&mdash;</td>
   
@@ -3436,15 +3562,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
   
-  <td>75.5</td>
-  <td>480.7</td>
-  <td>83.8</td>
-  <td>3.01</td>
-  <td>0.2232</td>
-  <td>0.3066</td>
-  <td>0.3593</td>
-  <td>0.3983</td>
-  <td>0.4295</td>
+  <td>90.1</td>
+  <td>813.6</td>
+  <td>83.9</td>
+  <td>3.47</td>
+  <td>0.2812</td>
+  <td>0.3646</td>
+  <td>0.4145</td>
+  <td>0.4506</td>
+  <td>0.4792</td>
   
   <td>&mdash;</td>
   
@@ -3493,15 +3619,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
   
-  <td>77.4</td>
-  <td>826.6</td>
+  <td>91.8</td>
+  <td>1465.2</td>
   <td>87.8</td>
-  <td>2.97</td>
-  <td>0.2133</td>
-  <td>0.3037</td>
-  <td>0.3648</td>
-  <td>0.4095</td>
-  <td>0.4448</td>
+  <td>3.40</td>
+  <td>0.2760</td>
+  <td>0.3650</td>
+  <td>0.4222</td>
+  <td>0.4631</td>
+  <td>0.4948</td>
   
   <td>&mdash;</td>
   
@@ -3550,15 +3676,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
   
-  <td>45.5</td>
-  <td>97.5</td>
-  <td>35.7</td>
-  <td>2.18</td>
-  <td>0.0471</td>
-  <td>0.0712</td>
-  <td>0.0858</td>
-  <td>0.0956</td>
-  <td>0.1041</td>
+  <td>55.1</td>
+  <td>148.9</td>
+  <td>42.5</td>
+  <td>2.55</td>
+  <td>0.0841</td>
+  <td>0.1125</td>
+  <td>0.1289</td>
+  <td>0.1400</td>
+  <td>0.1493</td>
   
   <td>&mdash;</td>
   
@@ -3607,15 +3733,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
   
-  <td>67.4</td>
-  <td>230.9</td>
-  <td>71.2</td>
-  <td>2.81</td>
-  <td>0.1551</td>
-  <td>0.2178</td>
-  <td>0.2549</td>
-  <td>0.2821</td>
-  <td>0.3033</td>
+  <td>80.9</td>
+  <td>383.5</td>
+  <td>72.5</td>
+  <td>3.24</td>
+  <td>0.2112</td>
+  <td>0.2751</td>
+  <td>0.3118</td>
+  <td>0.3383</td>
+  <td>0.3586</td>
   
   <td>&mdash;</td>
   
@@ -3664,15 +3790,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
   
-  <td>79.5</td>
-  <td>2704.8</td>
+  <td>93.7</td>
+  <td>4943.5</td>
   <td>91.9</td>
-  <td>2.83</td>
-  <td>0.1622</td>
-  <td>0.2673</td>
-  <td>0.3400</td>
-  <td>0.3958</td>
-  <td>0.4426</td>
+  <td>3.22</td>
+  <td>0.2148</td>
+  <td>0.3231</td>
+  <td>0.3932</td>
+  <td>0.4454</td>
+  <td>0.4882</td>
   
   <td>&mdash;</td>
   
@@ -3721,15 +3847,15 @@ google.charts.load('current', {
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-24</span></td>
   <td>F</td>
   
-  <td>74.9</td>
-  <td>1158.8</td>
+  <td>90.1</td>
+  <td>2864.2</td>
   <td>80.8</td>
-  <td>2.60</td>
-  <td>0.1156</td>
-  <td>0.1771</td>
-  <td>0.2219</td>
-  <td>0.2599</td>
-  <td>0.2948</td>
+  <td>2.87</td>
+  <td>0.1894</td>
+  <td>0.2555</td>
+  <td>0.3007</td>
+  <td>0.3372</td>
+  <td>0.3702</td>
   
   <td>&mdash;</td>
   
@@ -3745,6 +3871,10 @@ google.charts.load('current', {
 </tbody>
 </table>
 
+
+</p>
+
+<p>
 <div id="chart-mvs-map-th" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -3794,6 +3924,8 @@ google.charts.load('current', {
 });
 </script>
 </div>
+
+
 
 <div id="chart-mvs-map-th-kp-8000" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
@@ -3845,6 +3977,8 @@ google.charts.load('current', {
 </script>
 </div>
 
+
+
 <div id="chart-mvs-map-th-kp-2048" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -3894,6 +4028,8 @@ google.charts.load('current', {
 });
 </script>
 </div>
+
+
 
 <div id="chart-mvs-map-th-kp-1024" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
@@ -3945,6 +4081,8 @@ google.charts.load('current', {
 </script>
 </div>
 
+
+
 <div id="chart-mvs-map-th-kp-512" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -3995,6 +4133,8 @@ google.charts.load('current', {
 </script>
 </div>
 
+
+
 <div id="chart-mvs-map-th-kp-256" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -4044,6 +4184,8 @@ google.charts.load('current', {
 });
 </script>
 </div>
+
+</p>
 
 <hr>
 
@@ -4096,10 +4238,6 @@ google.charts.load('current', {
   
   
   
-  <span><a class="menu-item" href="/"></a></span>
-  
-  
-  <span><a class="menu-item" href="https://image-matching-workshop.github.io/challenge/"> | next &gt;</a></span>
   
   
   <h4 class="text-center"><a class="menu-item" href="https://image-matching-workshop.github.io/">home</a></h4>
