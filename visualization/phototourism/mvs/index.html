@@ -14,7 +14,7 @@
 
 <title>Image Matching: Local Features &amp; Beyond</title>
 
-<meta name="generator" content="Hugo 0.53" />
+<meta name="generator" content="Hugo 0.55.5" />
 
 
 
@@ -146,7 +146,7 @@ $(document).ready(function (){
 
 
 <header class="row text-left title">
-  <h1 class="title">IMW CVPR 2019: Visualization</h1>
+  <h1 class="title">IMW CVPR 2019: Visualization | MVS</h1>
 </header>
 <section id="category-pane" class="row meta">
   
@@ -154,134 +154,6 @@ $(document).ready(function (){
 <section id="content-pane" class="row">
   <div class="col-md-12 text-justify content">
     
-
-<p>Visualization examples for the MVS task on the Phototourism dataset.</p>
-
-<ul>
-<li><a href="visualization/phototourism/mvs#british_museum">Breakdown by bag size of 3 images</a></li>
-<li><a href="leaderboard">Back to the leaderboard</a></li>
-</ul>
-
-<hr>
-
-<h3 id="british-museum">British Museum</h3>
-
-<p><a name="british_museum"></a>
-
-
-
-
-
-<div id="canvas_3js">
-  <div id="title_3js"><b>british_museum</b><br />Subset size: 3, example #0</div>
-</div>
-<script type="text/javascript">
-        if ( WEBGL.isWebGLAvailable() === false ) {
-                document.body.appendChild( WEBGL.getWebGLErrorMessage() );
-        }
-
-        var container, stats;
-        var camera, controls, scene, renderer;
-
-        init();
-        animate();
-        function init() {
-                scene = new THREE.Scene();
-                scene.background = new THREE.Color( 0x000000 );
-
-                camera = new THREE.PerspectiveCamera( 15, window.innerWidth / window.innerHeight, 0.01, 40 );
-                camera.position.x = 0.4;
-                camera.position.z = - 2;
-                camera.up.set( 0, -1, 0 );
-
-                controls = new THREE.TrackballControls( camera );
-
-                controls.rotateSpeed = 2.0;
-                controls.zoomSpeed = 0.3;
-                controls.panSpeed = 0.2;
-
-                controls.noZoom = false;
-                controls.noPan = false;
-
-                controls.staticMoving = true;
-                controls.dynamicDampingFactor = 0.3;
-
-                controls.minDistance = 0.3;
-                controls.maxDistance = 0.3 * 100;
-
-                scene.add( camera );
-
-                renderer = new THREE.WebGLRenderer( { antialias: true } );
-                renderer.setPixelRatio( window.devicePixelRatio );
-                renderer.setSize( window.innerWidth, window.innerHeight );
-                renderer.setSize( 500, 500 );
-                document.body.appendChild( renderer.domElement );
-
-                var loader = new THREE.PCDLoader();
-                loader.load( "https://image-matching-workshop.github.io/viz/british_museum/d2net/set100/viz_colmap/colmap-bagsize3-bag0.pcd", function ( points ) {
-
-                        scene.add( points );
-                        var center = points.geometry.boundingSphere.center;
-                        points.material.size *= 1.2;
-                        points.material.color.setHex( 0xffffff )
-                        controls.target.set( center.x, center.y, center.z );
-                        controls.update();
-
-                } );
-
-                container = document.getElementById( 'canvas' );
-                <!--document.body.appendChild( container );-->
-                container.appendChild( renderer.domElement );
-
-                <!--stats = new Stats();-->
-                <!--container.appendChild( stats.dom );-->
-
-                window.addEventListener( 'resize', onWindowResize, false );
-
-                window.addEventListener( 'keypress', keyboard );
-        }
-
-        function onWindowResize() {
-                camera.aspect = window.innerWidth / window.innerHeight;
-                camera.updateProjectionMatrix();
-                <!--renderer.setSize( window.innerWidth, window.innerHeight );-->
-                controls.handleResize();
-        }
-
-        function keyboard( ev ) {
-
-                var points = scene.getObjectByName( 'test.pcd' );
-
-                switch ( ev.key || String.fromCharCode( ev.keyCode || ev.charCode ) ) {
-                        case '+':
-                                points.material.size *= 1.2;
-                                points.material.needsUpdate = true;
-                                break;
-
-                        case '-':
-                                points.material.size /= 1.2;
-                                points.material.needsUpdate = true;
-                                break;
-
-                        case 'c':
-                                points.material.color.setHex( Math.random() * 0xffffff );
-                                points.material.needsUpdate = true;
-                                break;
-                }
-        }
-
-        function animate() {
-                requestAnimationFrame( animate );
-                controls.update();
-                renderer.render( scene, camera );
-                stats.update();
-        }
-</script>
-
-</p>
-
-<hr />
-
   </div>
 </section>
 <section id="tag-pane" class="row meta">

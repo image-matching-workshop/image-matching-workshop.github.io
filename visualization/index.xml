@@ -12,14 +12,15 @@
     
     
     <item>
-      <title>IMW CVPR 2019: Visualization</title>
+      <title>IMW CVPR 2019: Visualization | MVS</title>
       <link>https://image-matching-workshop.github.io/visualization/phototourism/mvs/</link>
       <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
       
       <guid>https://image-matching-workshop.github.io/visualization/phototourism/mvs/</guid>
-      <description>Visualization examples for the MVS task on the Phototourism dataset.
- Breakdown by bag size of 3 images Back to the leaderboard   British Museum  british_museum
-Subset size: 3, example #0  if ( WEBGL.isWebGLAvailable() === false ) { document.body.appendChild( WEBGL.getWebGLErrorMessage() ); } var container, stats; var camera, controls, scene, renderer; init(); animate(); function init() { scene = new THREE.Scene(); scene.background = new THREE.Color( 0x000000 ); camera = new THREE.</description>
+      <description>Visualization examples for the MVS task on the Phototourism dataset. Keypoints in the SfM reconstruction are drawn in blue, keypoints without matches in red. Due to storage constraints, not all methods are listed here (this will be addressed in the future).
+ List of methods: 
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;visualization/phototourism/mvs#GEODESC-STN-12-NUMKP-2048-GEODESC-STN-12-NUMKP-2048-2048-NN&amp;quot;&amp;gt;SIFT &amp;amp;#43; GeoDesc&amp;lt;/a&amp;gt; [kp:2048, match:nn]&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;visualization/phototourism/mvs#HARDNET-STN-12-NUMKP-2048-HARDNET-STN-12-NUMKP-2048-2048-NN&amp;quot;&amp;gt;SIFT &amp;amp;#43; HardNet&amp;lt;/a&amp;gt; [kp:2048, match:nn]&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;visualization/phototourism/mvs#SIFTCV2-FIX-SIFTCV2-FIX-2048-NN&amp;quot;&amp;gt;SIFT (OpenCV)&amp;lt;/a&amp;gt; [kp:2048, match:nn]&amp;lt;/li&amp;gt;  
+ SIFT &amp;#43; GeoDesc [kp:2048, match:nn]</description>
     </item>
     
   </channel>

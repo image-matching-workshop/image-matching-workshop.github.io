@@ -23,6 +23,12 @@
   </url>
   
   <url>
+    <loc>https://image-matching-workshop.github.io/breakdown/</loc>
+    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://image-matching-workshop.github.io/papers/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
   </url>
@@ -38,29 +44,12 @@
   </url>
   
   <url>
-    <loc>https://image-matching-workshop.github.io/visualization/phototourism/mvs/</loc>
-    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://image-matching-workshop.github.io/breakdown/</loc>
-    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://image-matching-workshop.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://image-matching-workshop.github.io/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://image-matching-workshop.github.io/visualization/</loc>
-    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
     <priority>0</priority>
   </url>
   
