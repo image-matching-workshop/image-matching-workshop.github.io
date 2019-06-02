@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="description" content="Image Matching: Local Features &amp; Beyond - CVPR 2019 Workshop">
+<meta name="keywords" content="image,matching,local Features, CVPR 2019, Workshop, CVPR">
+
+<base href="https://image-matching-workshop.github.io/">
+
+<title>Image Matching: Local Features &amp; Beyond</title>
+
+<meta name="generator" content="Hugo 0.54.0" />
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+<link rel="stylesheet" href="https://image-matching-workshop.github.io/css/datatables.min.css">
+<link rel="stylesheet" href="https://image-matching-workshop.github.io/css/balloon.min.css">
+<link rel="stylesheet" href="https://image-matching-workshop.github.io/css/main.css">
+<link rel="stylesheet" href="https://image-matching-workshop.github.io/css/custom.css">
+
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="https://image-matching-workshop.github.io/js/jquery.latest.min.js"></script>
+<script type="text/javascript" src="https://image-matching-workshop.github.io/js/jquery.csv.min.js"></script>
+<script type="text/javascript" src="https://image-matching-workshop.github.io/js/datatables.min.js"></script>
+<script type="text/javascript" src="https://image-matching-workshop.github.io/js/three.js"></script>
+<script type="text/javascript" src="https://image-matching-workshop.github.io/js/PCDLoader.js"></script>
+<script type="text/javascript" src="https://image-matching-workshop.github.io/js/TrackballControls.js"></script>
+<script type="text/javascript" src="https://image-matching-workshop.github.io/js/WebGL.js"></script>
+<script type="text/javascript" src="https://image-matching-workshop.github.io/js/stats.min.js"></script>
+<script>
+$(document).ready(function (){
+    var table = $('.leaderboard_stereo').DataTable({
+        "columnDefs": [{targets:[0, 2], orderSequence: ['desc', 'asc']}],
+        "columnDefs": [{targets:[1, 3, 4, 5, 6, 7, 8, 9], orderSequence: ['desc', 'asc']}],
+        "order": [[7, 'desc']],
+        responsive: {
+            details: {
+                renderer: function ( api, rowIdx, columns ) {
+                    var data = $.map( columns, function ( col, i ) {
+                        return col.hidden ?
+                            '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
+                                '<td class="align_left details_title"><b>'+col.title+':'+'</b></td> '+
+                                '<td class="align_left details_data">'+col.data+'</td>'+
+                            '</tr>' :
+                            '';
+                    } ).join('');
+ 
+                    return data ?
+                        $('<table/>').append( data ) :
+                        false;
+                }
+            }
+        }
+    });
+
+    var table = $('.leaderboard_mvs').DataTable({
+        "columnDefs": [{targets:[0, 2], orderSequence: ['desc', 'asc']}],
+        "columnDefs": [{targets:[1, 3, 4, 5, 6, 7, 8, 9, 10, 11], orderSequence: ['desc', 'asc']}],
+        "order": [[9, 'desc']],
+        responsive: {
+            details: {
+                renderer: function ( api, rowIdx, columns ) {
+                    var data = $.map( columns, function ( col, i ) {
+                        return col.hidden ?
+                            '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
+                                '<td class="align_left details_title"><b>'+col.title+':'+'</b></td> '+
+                                '<td class="align_left details_data">'+col.data+'</td>'+
+                            '</tr>' :
+                            '';
+                    } ).join('');
+ 
+                    return data ?
+                        $('<table/>').append( data ) :
+                        false;
+                }
+            }
+        }
+    });
+
+    var table = $('.checkerboard').DataTable({
+        "columnDefs": [{targets:[0], orderSequence: ['desc', 'asc']}],
+        "columnDefs": [{targets:[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], orderSequence: ['desc', 'asc']}],
+        "order": [[12, 'desc']],
+        responsive: {
+            details: {
+                renderer: function ( api, rowIdx, columns ) {
+                    var data = $.map( columns, function ( col, i ) {
+                        return col.hidden ?
+                            '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
+                                '<td class="align_left details_title"><b>'+col.title+':'+'</b></td> '+
+                                '<td class="align_left details_data">'+col.data+'</td>'+
+                            '</tr>' :
+                            '';
+                    } ).join('');
+ 
+                    return data ?
+                        $('<table/>').append( data ) :
+                        false;
+                }
+            }
+        }
+    });
+
+    $('.tablelist').dataTable({searching: false, paging: false, info: false});
+
+    
+
+    
+    $('#btn-show-all-children').on('click', function(){
+        
+        table.rows(':not(.parent)').nodes().to$().find('td:first-child').trigger('click');
+    });
+
+    
+    $('#btn-hide-all-children').on('click', function(){
+        
+        table.rows('.parent').nodes().to$().find('td:first-child').trigger('click');
+    });
+});
+</script>
+</head>
+<body lang="en-US">
+<div class="container">
+
+
+<header class="row text-left title">
+  <h1 class="title">IMW CVPR 2019: Challenge</h1>
+</header>
+<section id="category-pane" class="row meta">
+  
+</section>
+<section id="content-pane" class="row">
+  <div class="col-md-12 text-justify content">
+    
+
+<!--LIST OF TODOS-->
+
+<!--* FOR STEREO, DETERMINE THE TRESHOLD WE USE-->
+
+<!--* UPLOAD THE TEST DATASET-->
+
+<!--* UPLOAD THE TRAINING DATASET-->
+
+<!--* WRITE THE INSTRUCTIONS TO DONWLOAD STUFF AND SUBMIT RESULTS-->
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Local features have played a key role in a wide range of computer vision
+applications throughout the past 20 years, particularly since the introduction
+of SIFT.
+<!--[SIFT](https://www.cs.ubc.ca/~lowe/papers/ijcv04.pdf).-->
+Despite the drastic
+advancements resulting from deep learning techniques, 3D reconstruction under
+challenging conditions remains somewhat of an outlier, as performance in small,
+constrained benchmarks does not necessarily translate to real-world scenarios.
+In practice, keypoint-based methods remain the most common solution to this
+problem, and techniques such as SIFT or RANSAC are still very much in use.</p>
+
+<p>Historically, machine learning research on local features has focused on
+learning patch descriptors, for which training data is relatively easy to
+obtain. However, performance on patch matching benchmarks is not always
+meaningful, as descriptors are tightly coupled with the keypoints they work on
+and image properties which can greatly vary from one domain or dataset to
+another. More representative metrics can be extracted further down the chain, as
+for instance at the 3D reconstruction level, but this requires better ground
+truth.</p>
+
+<p>In parallel, there has been a strong push over the last few years towards
+tackling the image matching problem with dense methods, that is, doing away with
+keypoints altogether. While promising results have been demonstrated under
+narrow baselines, particularly with dense, deep networks, the general
+wide-baseline scenario remains unsolved. In order to enable research in this
+area, large-scale benchmarks with training data are required.  However, current
+datasets are constrained in terms of size, photometric variations, and viewpoint
+changes.</p>
+
+<p>There is thus a clear need for new, large-scale, challenging
+benchmarks to both train and evaluate new methods for image matching. To this
+end, we propose a new challenge with two datasets. Both contain training data
+with accurate ground truth poses, along with other cues that can be used for further
+supervision.</p>
+
+<ul>
+<li><a href="challenge#pt">Dataset 1: &lsquo;Phototourism&rsquo;</a>
+
+<ul>
+<li><a href="challenge#pt_stereo">Task 1: Stereo</a></li>
+<li><a href="challenge#pt_mvs">Task 2: Multi-view reconstruction</a></li>
+<li><a href="challenge#pt_framework">Download links</a></li>
+</ul></li>
+<li><a href="challenge#silda">Dataset 2: &lsquo;SILDa&rsquo;</a>
+
+<ul>
+<li><a href="challenge#silda_description">Task: Image Matching&rsquo;</a></li>
+<li><a href="challenge#silda_submission">Download links</a></li>
+</ul></li>
+</ul>
+
+<h2 id="a-name-pt-a-dataset-1-phototourism"><a name="pt"></a>Dataset 1: Phototourism</h2>
+
+<p>In order to learn and evaluate models that can perform well under a wide range
+of situations, it is of paramount importance to collect information from
+multiple sensors obtained at different times. A natural solution is thus to turn
+to photo-tourism data.
+In this dataset we rely on 26 photo-tourism image collections of popular
+landmarks originally collected by <a href="webscope.sandbox.yahoo.com/catalog.php?datatype=i&amp;did=67">the Yahoo Flickr Creative Commons 100M (YFCC)
+dataset</a> and
+<a href="www.cs.unc.edu/~jheinly/reconstructing_the_world.html">Reconstructing the world in six
+days</a>. The sequences
+range from 75 images to almost 4k per sequence.</p>
+
+<div style="width: 100%; text-align: center; margin: 30px 0;">
+    <img style="width: 80%" src="img/yfcc/canvas_brandenburg_gate.jpg"/><br />
+    <span>Examples from brandenburg_gate</span>
+</div>
+
+<p>We can obtain dense 3D reconstructions from these collections of images with
+off-the-shelf Structure from Motion (SfM) algorithms.  We rely on
+<a href="demuc.de">COLMAP</a>, a state of the art method. In addition to a sparse point
+cloud, COLMAP is able to densify the estimates to produce noisy but useful depth
+maps for every image. We post-process these depth maps by projecting each image
+pixel to 3D space at the estimated depth, and mark it as invalid if the closest
+3D point from the reconstruction is further than a threshold. The resulting
+depth maps are still noisy, but many occluded pixels are filtered out. While not
+perfect, these estimates can be used to project points across images and train
+keypoint detectors and descriptors, as done for example by
+<a href="papers.nips.cc/paper/7861-lf-net-learning-local-features-from-images">LF-Net</a>.
+We provide these &lsquo;clean&rsquo; depth maps along with the images.</p>
+
+<p>In order to guarantee a reasonable degree of overlap for each image pair we
+perform a visibility check with the SfM points visible over both images. Our
+metric is based on the size of the bounding box containing all of the points
+visible in either image, and applied over both views. We use this criteria to
+select valid image subsets for testing, and provide the entire visibility matrix
+for training, which can be easily thresholded to generate a list of valid pairs.</p>
+
+<p>We provide 15 sequences for training and validation and 11 for testing.</p>
+
+<table class="display tablelist" cellspacing="0" width="80%">
+<thead>
+  <tr>
+    <th class="all">Training sequences</th>
+    <th class="all">Num. images</th>
+    <th class="all">Num. 3D points</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><a href="img/snapshots/brandenburg_gate.jpg">brandenburg_gate</td>
+    <td>1363</td>
+    <td>100040</td>
+  </tr>
+  <tr>
+    <td><a href="img/snapshots/buckingham_palace">buckingham_palace</td>
+    <td>1676</td>
+    <td>234052</td>
+  </tr>
+  <tr>
+    <td><a href="img/snapshots/colosseum_exterior">colosseum_exterior</td>
+    <td>2063</td>
+    <td>259807</td>
+  </tr>
+  <tr>
+    <td><a href="img/snapshots/grand_place_brussels">grand_place_brussels</td>
+    <td>1083</td>
+    <td>229788</td>
+  </tr>
+  <tr>
+    <td><a href="img/snapshots/hagia_sophia_interior">hagia_sophia_interior</td>
+    <td>888</td>
+    <td>235541</td>
+  </tr>
+  <tr>
+    <td><a href="img/snapshots/notre_dame_front_facade">notre_dame_front_facade</td>
+    <td>3765</td>
+    <td>488895</td>
+  </tr>
+  <tr>
+    <td><a href="img/snapshots/palace_of_westminster">palace_of_westminster</td>
+    <td>983</td>
+    <td>115868</td>
+  </tr>
+  <tr>
+    <td><a href="img/snapshots/pantheon_exterior">pantheon_exterior</td>
+    <td>1401</td>
+    <td>166923</td>
+  </tr>
+  <tr>
+    <td><a href="img/snapshots/prague_old_town_square">prague_old_town_square</td>
+    <td>2316</td>
+    <td>558600</td>
+  </tr>
+  <tr>
+    <td><a href="img/snapshots/sacre_coeur">sacre_coeur</td>
+    <td>1179</td>
+    <td>140659</td>
+  </tr>
+  <tr>
+    <td><a href="img/snapshots/st_peters_square">st_peters_square</td>
+    <td>2504</td>
+    <td>232329</td>
+  </tr>
+  <tr>
+    <td><a href="img/snapshots/taj_mahal">taj_mahal</td>
+    <td>1312</td>
+    <td>94121</td>
+  </tr>
+  <tr>
+    <td><a href="img/snapshots/temple_nara_japan">temple_nara_japan</td>
+    <td>904</td>
+    <td>92131</td>
+  </tr>
+  <tr>
+    <td><a href="img/snapshots/trevi_fountain">trevi_fountain</td>
+    <td>3191</td>
+    <td>580673</td>
+  </tr>
+  <tr>
+    <td><a href="img/snapshots/westminster_abbey">westminster_abbey</td>
+    <td>1061</td>
+    <td>198222</td>
+  </tr>
+</tbody>
+<tfoot>
+  <tr>
+    <td>Total</td>
+    <td>25.6k</td>
+    <td>3.7M</td>
+  </tr>
+</tfoot>
+</table>
+
+<p><br /></p>
+
+<p><table class="display tablelist" cellspacing="0" width="80%">
+<thead>
+  <tr>
+    <th class="all">Test sequences</th>
+    <th class="all">Num. images</th>
+    <th class="all">Num. 3D points</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><a href="img/snapshots/british_museum.jpg">british_museum</td>
+    <td>660</td>
+    <td>73569</td>
+  </tr>
+  <tr>
+    <td><a href="img/snapshots/florence_cathedral_side.jpg">florence_cathedral_side</td>
+    <td>108</td>
+    <td>44143</td>
+  </tr>
+  <tr>
+    <td><a href="img/snapshots/lincoln_memorial_statue.jpg">lincoln_memorial_statue</td>
+    <td>850</td>
+    <td>58661</td>
+  </tr>
+  <tr>
+    <td><a href="img/snapshots/london_bridge.jpg">london_bridge</td>
+    <td>629</td>
+    <td>72235</td>
+  </tr>
+  <tr>
+    <td><a href="img/snapshots/milan_cathedral.jpg">milan_cathedral</td>
+    <td>124</td>
+    <td>33905</td>
+  </tr>
+  <tr>
+    <td><a href="img/snapshots/mount_rushmore.jpg">mount_rushmore</td>
+    <td>138</td>
+    <td>45350</td>
+  </tr>
+  <tr>
+    <td><a href="img/snapshots/piazza_san_marco.jpg">piazza_san_marco</td>
+    <td>249</td>
+    <td>95895</td>
+  </tr>
+  <tr>
+    <td><a href="img/snapshots/reichstag.jpg">reichstag</td>
+    <td>75</td>
+    <td>17823</td>
+  </tr>
+  <tr>
+    <td><a href="img/snapshots/sagrada_familia.jpg">sagrada_familia</td>
+    <td>401</td>
+    <td>120723</td>
+  </tr>
+  <tr>
+    <td><a href="img/snapshots/st_pauls_cathedral.jpg">st_pauls_cathedral</td>
+    <td>615</td>
+    <td>98872</td>
+  </tr>
+  <tr>
+    <td><a href="img/snapshots/united_states_capitol.jpg">united_states_capitol</td>
+    <td>258</td>
+    <td>35095</td>
+  </tr>
+</tbody>
+<tfoot>
+  <tr>
+    <td>Total</td>
+    <td>4107</td>
+    <td>696k</td>
+  </tr>
+</tfoot>
+</table>
+<br /></p>
+
+<p>The challenge consists of two tracks: stereo matching, and
+multi-view reconstruction with small subsets of images. New tasks and data
+modalities will be added in future editions.</p>
+
+<h3 id="a-name-pt-stereo-a-task-1-wide-baseline-stereo-matching"><a name="pt_stereo"></a>Task 1: Wide-baseline stereo matching</h3>
+
+<p>In this task we match two images across wide baselines. Image pairs are selected
+according to visibility constraints so that at least part of the scene is
+guaranteed to overlap. The input can be a set of keypoints, or keypoints and
+correspondences. We primarily use two metrics:</p>
+
+<ul>
+<li><strong>Matching score:</strong>
+The ratio of ground truth correspondences that can be recovered with nearest
+neighbour matching (and optionally the ratio test), without a robust matching
+strategy. For this we rely on ground
+truth depth to translate pixel coordinates from one image to another and a fixed
+threshold to decide if two keypoints match. Occluded points that cannot be
+matched are excluded from the calculation.</li>
+<li><strong>Pose estimation:</strong>
+We apply robust matching with RANSAC and use the surviving inliers to retrieve
+the relative pose between the two cameras. We measure performance with the angular difference between the
+estimated and ground truth vectors for both rotation and translation. To reduce
+this to one value, we use a variable threshold (the same value for rotation and
+translation) to determine each pose as correct or not, and compute the area
+under the curve up to the angular threshold <em>x</em>.  This value is thus the mean
+average precision up to <em>x</em>, or mAP<sup>x</sup>.  We consider 5, 10, 15, 20, and
+25<sup>o</sup>.</li>
+</ul>
+
+<p>Submissions can contain up to 8000 keypoints. For the purposes of the challenge,
+we rank entries by mAP<sup>15<sup>o</sup></sup>, which we have found empirically
+to be an adequate proxy for wide-baseline stereo matching performance. Note that
+we also plan to allow submissions of the estimated poses in the future, to
+include dense methods based on deep networks.</p>
+
+<h3 id="a-name-pt-mvs-a-task-2-sfm-from-small-subsets"><a name="pt_mvs"></a>Task 2: SfM from small subsets</h3>
+
+<p>While modern solutions have shown very promising results in stereo, it is not
+clear how much of these improvements remains after large-scale reconstruction
+with Bundle Adjustment.  An alternative approach is thus to evaluate local
+features directly for SfM, as done by the <a href="https://github.com/ahojnnes/local-feature-evaluation">Comparative Evaluation
+Benchmark</a>. Unfortunately,
+it is not feasible to obtain truly accurate depth measurements for large image
+sequences collected from heterogenous sensors, so that under most circumstances
+the best we can do is collect statistics such as the number of observations
+obtained with the reconstruction, the track length, or the reprojection error.
+While this is informative, most methods seem to perform similarly under this
+scenario.</p>
+
+<p>By contrast, we propose to build SfM reconstructions from small (3, 5, 10, 25)
+subsets of images and use the poses obtained from the entire (much larger) set
+as ground truth.  We believe this can provide a better proxy for learning and
+evaluating feature extractors and matching algorithms for the task of pose
+estimation.</p>
+
+<p>In specific, we subsample the test sets to 100 images and from them, generate
+100 different subsets of 3, 5, 10, and 25 images. The subsets are sampled
+randomly from each dataset, accounting for visibility constraints. In order to
+compute the mAP, we use the same procedure as for stereo, with every possible
+combination of two images (i.e. 3 combinations for 3 images, 10 for 5 images,
+etc.) and average the results. Note that this penalizes reconstructions that
+fail to register images. If COLMAP generates multiple 3D models which cannot be
+co-registered, we consider the largest one (the one with the most images).  As
+for stereo, use mAP<sup>15<sup>o</sup></sup> to rank challenge entries.</p>
+
+<h3 id="a-name-pt-framework-a-download-links-and-and-submission-instructions"><a name="pt_framework"></a>Download links and and submission instructions</h3>
+
+<p>The data can be downloaded here:</p>
+
+<ul>
+<li><a href="https://gfx.uvic.ca/nextcloud/index.php/s/75JNSoggacQhOkQ">Download link for the training data: 127.3 Gb</a></li>
+<li><a href="http://webhome.cs.uvic.ca/~kyi/files/2019/image-matching/imw2019-test.tar.gz">Download link for the test data: 450 Mb</a></li>
+</ul>
+
+<p>Code to parse the training data and format challenge submissions can be found
+here:</p>
+
+<ul>
+<li><a href="https://github.com/vcg-uvic/sfm_benchmark_release">Data parsing and submission instructions</a></li>
+</ul>
+
+<p>Results can be submitted with this link:</p>
+
+<ul>
+<li><a href="https://gfx.uvic.ca/nextcloud/index.php/s/1z3K0JzRY4w2cfk">Submission link</a></li>
+</ul>
+
+<p>The submission website is password-protected to prevent abuse, please contact
+the organizers at <a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a> for the
+password (please account for short delays in answering and uploading close the
+deadline).</p>
+
+<h2 id="a-name-silda-a-dataset-2-silda-image-matching"><a name="silda"></a>Dataset 2: SILDa Image Matching</h2>
+
+<p>The Scape Imperial Localisation Dataset (<em>SILDa</em>) focuses on several localisation related tasks, and one of the tasks included is concerned with image matching under very significant camera pose and enviromental condition changes. The data were collected around Imperial College London over a period of one year. For the interested reader, a more detailed description of the dataset can be found <a href="https://research.scape.io/silda/">here</a>.
+<div style="width: 100%; text-align: center; margin: 30px 0;">
+    <img style="width: 80%" src="img/silda/silda-teaser.png"/><br />
+    <span>The Royal School of Mines at Imperial College London, across different conditions.</span>
+</div></p>
+
+<h3 id="a-name-silda-description-a-matching-task-description"><a name="silda_description"></a> Matching Task Description</h3>
+
+<p>The <em>SILDa Image Matching task</em>, focuses on evaluating matching performance in pairs of images with significant difficulty.
+The ground truth models for the accurate camera pose estimation were built using an SfM pipeline. Given the nature of the data, some pairs are quite challenging due to the fact that the possible matching area is constrained to a small region of an image.</p>
+
+<div style="width: 100%; text-align: center; margin: 30px 0;">
+    <img style="width: 60%" src="img/silda/11.png"/><br />
+    <img style="width: 60%" src="img/silda/15.png"/><br />
+    <img style="width: 60%" src="img/silda/40.png"/><br />
+    <img style="width: 60%" src="img/silda/62.png"/><br />
+    <img style="width: 60%" src="img/silda/63.png"/><br />
+    <span>Example of the pairs available in the SILDa Image Matching dataset.</span>
+</div>
+
+<p>The results will be based on evaluating the matching accuracy, in terms of pixel level matching. Each method will produce a list of pixel to pixel matches for each image pair, which will then be evaluated in terms of their accuracy w.r.t to the underlying epipolar geometry.</p>
+
+<h3 id="a-name-silda-submission-a-download-links-and-and-submission-instructions"><a name="silda_submission"></a>Download links and and submission instructions</h3>
+
+<p>The data can be downloaded here:</p>
+
+<ul>
+<li><a href="https://github.com/scape-research/silda#getting-the-data">Download the data</a></li>
+</ul>
+
+<p>Code to parse the test data and format challenge submissions can be found
+here:</p>
+
+<ul>
+<li><a href="https://github.com/scape-research/silda/blob/master/silda-image-matching.ipynb">Data parsing and submission instructions</a></li>
+</ul>
+
+<p>Results can be submitted directly with this link:
+Please note that the subsmission process is different than the one for the Phototourism dataset.</p>
+
+<ul>
+<li><a href="https://www.dropbox.com/request/03Jp7P1TROvmIIpXju6U?oref=e">Submission link</a></li>
+</ul>
+
+  </div>
+</section>
+<section id="tag-pane" class="row meta">
+  
+</section>
+
+
+
+
+
+
+
+
+<section id="menu-pane" class="row menu text-center">
+  
+  
+  
+  
+  
+  <h4 class="text-center"><a class="menu-item" href="https://image-matching-workshop.github.io/">home</a></h4>
+</section>
+
+
+
+<footer class="row text-center footer">
+  
+  
+</footer>
+
+</div>
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-62863910-6', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+
+</script>
+</body>
+</html>
+
+

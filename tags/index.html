@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="description" content="Image Matching: Local Features &amp; Beyond - CVPR 2019 Workshop">
+<meta name="keywords" content="image,matching,local Features, CVPR 2019, Workshop, CVPR">
+
+<base href="https://image-matching-workshop.github.io/">
+
+<title>Image Matching: Local Features &amp; Beyond</title>
+
+<meta name="generator" content="Hugo 0.54.0" />
+
+<link rel="alternate" type="application/rss&#43;xml" href="https://image-matching-workshop.github.io/tags/index.xml">
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+<link rel="stylesheet" href="https://image-matching-workshop.github.io/css/datatables.min.css">
+<link rel="stylesheet" href="https://image-matching-workshop.github.io/css/balloon.min.css">
+<link rel="stylesheet" href="https://image-matching-workshop.github.io/css/main.css">
+<link rel="stylesheet" href="https://image-matching-workshop.github.io/css/custom.css">
+
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="https://image-matching-workshop.github.io/js/jquery.latest.min.js"></script>
+<script type="text/javascript" src="https://image-matching-workshop.github.io/js/jquery.csv.min.js"></script>
+<script type="text/javascript" src="https://image-matching-workshop.github.io/js/datatables.min.js"></script>
+<script type="text/javascript" src="https://image-matching-workshop.github.io/js/three.js"></script>
+<script type="text/javascript" src="https://image-matching-workshop.github.io/js/PCDLoader.js"></script>
+<script type="text/javascript" src="https://image-matching-workshop.github.io/js/TrackballControls.js"></script>
+<script type="text/javascript" src="https://image-matching-workshop.github.io/js/WebGL.js"></script>
+<script type="text/javascript" src="https://image-matching-workshop.github.io/js/stats.min.js"></script>
+<script>
+$(document).ready(function (){
+    var table = $('.leaderboard_stereo').DataTable({
+        "columnDefs": [{targets:[0, 2], orderSequence: ['desc', 'asc']}],
+        "columnDefs": [{targets:[1, 3, 4, 5, 6, 7, 8, 9], orderSequence: ['desc', 'asc']}],
+        "order": [[7, 'desc']],
+        responsive: {
+            details: {
+                renderer: function ( api, rowIdx, columns ) {
+                    var data = $.map( columns, function ( col, i ) {
+                        return col.hidden ?
+                            '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
+                                '<td class="align_left details_title"><b>'+col.title+':'+'</b></td> '+
+                                '<td class="align_left details_data">'+col.data+'</td>'+
+                            '</tr>' :
+                            '';
+                    } ).join('');
+ 
+                    return data ?
+                        $('<table/>').append( data ) :
+                        false;
+                }
+            }
+        }
+    });
+
+    var table = $('.leaderboard_mvs').DataTable({
+        "columnDefs": [{targets:[0, 2], orderSequence: ['desc', 'asc']}],
+        "columnDefs": [{targets:[1, 3, 4, 5, 6, 7, 8, 9, 10, 11], orderSequence: ['desc', 'asc']}],
+        "order": [[9, 'desc']],
+        responsive: {
+            details: {
+                renderer: function ( api, rowIdx, columns ) {
+                    var data = $.map( columns, function ( col, i ) {
+                        return col.hidden ?
+                            '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
+                                '<td class="align_left details_title"><b>'+col.title+':'+'</b></td> '+
+                                '<td class="align_left details_data">'+col.data+'</td>'+
+                            '</tr>' :
+                            '';
+                    } ).join('');
+ 
+                    return data ?
+                        $('<table/>').append( data ) :
+                        false;
+                }
+            }
+        }
+    });
+
+    var table = $('.checkerboard').DataTable({
+        "columnDefs": [{targets:[0], orderSequence: ['desc', 'asc']}],
+        "columnDefs": [{targets:[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], orderSequence: ['desc', 'asc']}],
+        "order": [[12, 'desc']],
+        responsive: {
+            details: {
+                renderer: function ( api, rowIdx, columns ) {
+                    var data = $.map( columns, function ( col, i ) {
+                        return col.hidden ?
+                            '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
+                                '<td class="align_left details_title"><b>'+col.title+':'+'</b></td> '+
+                                '<td class="align_left details_data">'+col.data+'</td>'+
+                            '</tr>' :
+                            '';
+                    } ).join('');
+ 
+                    return data ?
+                        $('<table/>').append( data ) :
+                        false;
+                }
+            }
+        }
+    });
+
+    $('.tablelist').dataTable({searching: false, paging: false, info: false});
+
+    
+
+    
+    $('#btn-show-all-children').on('click', function(){
+        
+        table.rows(':not(.parent)').nodes().to$().find('td:first-child').trigger('click');
+    });
+
+    
+    $('#btn-hide-all-children').on('click', function(){
+        
+        table.rows('.parent').nodes().to$().find('td:first-child').trigger('click');
+    });
+});
+</script>
+</head>
+<body lang="en-US">
+<div class="container">
+
+
+<section id="list-pane" class="row list">
+  <ul >
+    
+  </ul>
+</section>
+
+
+<section id="menu-pane" class="row menu text-center">
+  
+  <h4 class="text-center"><a class="menu-item" href="https://image-matching-workshop.github.io/">home</a></h4>
+</section>
+
+
+
+<footer class="row text-center footer">
+  
+  
+</footer>
+
+</div>
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-62863910-6', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+
+</script>
+</body>
+</html>
+

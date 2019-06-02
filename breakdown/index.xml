@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Breakdowns on Image Matching: Local Features &amp; Beyond</title>
+    <link>https://image-matching-workshop.github.io/breakdown/</link>
+    <description>Recent content in Breakdowns on Image Matching: Local Features &amp; Beyond</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 02 Oct 2016 22:55:05 -0400</lastBuildDate>
+    
+	<atom:link href="https://image-matching-workshop.github.io/breakdown/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Breakdown: Phototourism | MVS | Sequences</title>
+      <link>https://image-matching-workshop.github.io/breakdown/phototourism/mvs/by_seq/</link>
+      <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
+      
+      <guid>https://image-matching-workshop.github.io/breakdown/phototourism/mvs/by_seq/</guid>
+      <description>Breakdown on the Phototourism dataset, multi-view stereo task, by sequence.
+ Back to the leaderboard  google.charts.load(&#39;current&#39;, { callback: function () { csvFile = &#34;https:\/\/image-matching-workshop.github.io\/csv\/mvs-map15-perseq.csv&#34;; $.get(csvFile, function(csvString) { var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar}); var data = new google.visualization.arrayToDataTable(arrayData); var chart = new google.visualization.LineChart(document.getElementById(&#39;chart-mvs-map15-perseq&#39;)); var options = { title: &#39;mAP at 15 degrees, per sequence&#39;, titleTextStyle: { color: &#39;#aaa&#39;, fontName: &#39;Helvetica&#39;, fontSize: 18, bold: false, }, legend: { position: &#39;right&#39;, textStyle: { fontSize: 12 }, alignment: &#39;center&#39;, }, chartArea: { left: &#39;6%&#39;, right: &#39;30%&#39;, bottom: &#39;10%&#39;, width: &#34;</description>
+    </item>
+    
+    <item>
+      <title>Breakdown: Phototourism | MVS | Subsets</title>
+      <link>https://image-matching-workshop.github.io/breakdown/phototourism/mvs/by_bag/</link>
+      <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
+      
+      <guid>https://image-matching-workshop.github.io/breakdown/phototourism/mvs/by_bag/</guid>
+      <description>Breakdown on the Phototourism dataset, multi-view stereo task, by subset size.
+ Breakdown by bag size of 3 images Breakdown by bag size of 5 images Breakdown by bag size of 10 images Breakdown by bag size of 25 images Back to the leaderboard      MVS, bag size 3   Method Date Type Ims (%) #Pts SR TL mAP5o mAP10o mAP15o mAP20o mAP25o ATE By Details Link Contact Updated Descriptor size     AKAZE (OpenCV)</description>
+    </item>
+    
+    <item>
+      <title>Breakdown: Phototourism | Stereo | Sequences</title>
+      <link>https://image-matching-workshop.github.io/breakdown/phototourism/stereo/by_seq/</link>
+      <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
+      
+      <guid>https://image-matching-workshop.github.io/breakdown/phototourism/stereo/by_seq/</guid>
+      <description>Breakdown on the Phototourism dataset, multi-view stereo task, by sequence.
+ Back to the leaderboard  google.charts.load(&#39;current&#39;, { callback: function () { csvFile = &#34;https:\/\/image-matching-workshop.github.io\/csv\/stereo-map15-perseq.csv&#34;; $.get(csvFile, function(csvString) { var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar}); var data = new google.visualization.arrayToDataTable(arrayData); var chart = new google.visualization.LineChart(document.getElementById(&#39;chart-stereo-map15-perseq&#39;)); var options = { title: &#39;mAP at 15 degrees, per sequence&#39;, titleTextStyle: { color: &#39;#aaa&#39;, fontName: &#39;Helvetica&#39;, fontSize: 18, bold: false, }, legend: { position: &#39;right&#39;, textStyle: { fontSize: 12 }, alignment: &#39;center&#39;, }, chartArea: { left: &#39;6%&#39;, right: &#39;30%&#39;, bottom: &#39;10%&#39;, width: &#34;</description>
+    </item>
+    
+  </channel>
+</rss>
