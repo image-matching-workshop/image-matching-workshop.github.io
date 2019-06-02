@@ -45,6 +45,11 @@
 <script type="text/javascript" src="https://image-matching-workshop.github.io/js/jquery.latest.min.js"></script>
 <script type="text/javascript" src="https://image-matching-workshop.github.io/js/jquery.csv.min.js"></script>
 <script type="text/javascript" src="https://image-matching-workshop.github.io/js/datatables.min.js"></script>
+<script type="text/javascript" src="https://image-matching-workshop.github.io/js/three.js"></script>
+<script type="text/javascript" src="https://image-matching-workshop.github.io/js/PCDLoader.js"></script>
+<script type="text/javascript" src="https://image-matching-workshop.github.io/js/TrackballControls.js"></script>
+<script type="text/javascript" src="https://image-matching-workshop.github.io/js/WebGL.js"></script>
+<script type="text/javascript" src="https://image-matching-workshop.github.io/js/stats.min.js"></script>
 <script>
 $(document).ready(function (){
     var table = $('.leaderboard_stereo').DataTable({
@@ -272,6 +277,14 @@ ground.</li>
 <h2 id="news">News</h2>
 
 <ul>
+<li>June 2: Uploaded the final set of results for the PT track of the challenge (apologies for the delay, we had a few last-minute submissions). Congratulations to Dawei Sun, Zixin Luo, and Jiahui Zhang for winning both tracks with their ContextDesc descriptors and a custom, deep network-based matcher! See you at the conference.</li>
+<li>May 20: Removed D2-Net, as its training data overlaps with our test data.</li>
+<li>May 16: Removed a few bugged results (SIFT below 8k points).</li>
+<li>May 15: Added Brisk+SSS to the <a href="./leaderboard">Phototourism leaderboards</a>, fixed a bug in the aggregation of results for the MVS task.</li>
+<li>May 10: Added ELF, ContextDesc and SIFT-AID/NN to the <a href="./leaderboard">Phototourism leaderboards</a>.</li>
+<li>May 8: Added more entries to the <a href="./leaderboard">Phototourism leaderboards</a>.</li>
+<li>May 7: Added D2-Net to the <a href="./leaderboard">Phototourism leaderboards</a>.</li>
+<li>May 6: Added DELF to the <a href="./leaderboard">Phototourism leaderboards</a>.</li>
 <li>April 27: Paper submission is closed. Updated the <a href="./leaderboard">leaderboards</a> with a few more entries.</li>
 <li>April 25: Updated the <a href="./leaderboard">leaderboards for the Phototourism dataset</a>. More entries coming soon.</li>
 <li>April 24: Updated <a href="https://github.com/vcg-uvic/sfm_benchmark_release">submission instructions</a> for the PhotoTourism dataset, please follow this format in future submissions.</li>
@@ -317,8 +330,10 @@ come.</li>
 
 <h2 id="sponsorship">Sponsorship</h2>
 
-<p>The prizes for the workshop challenge are sponsored by NVIDIA and Scape. Waiting
-on confirmation from other partners. Details TBA.</p>
+<p>The prizes for the workshop challenge are sponsored by Google and Scape.</p>
+
+<p><img alt="Google" src="img/logos/google.png" style="height: 75px; margin-top: 1em" />
+<img alt="Scape" src="img/logos/scape-long.png" style="height: 60px; margin-top: 0.5em; margin-left: 2em;" /></p>
 
 <p><br />
 <br />
