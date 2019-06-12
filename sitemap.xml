@@ -23,12 +23,6 @@
   </url>
   
   <url>
-    <loc>https://image-matching-workshop.github.io/breakdown/</loc>
-    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://image-matching-workshop.github.io/papers/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
   </url>
@@ -41,6 +35,12 @@
   <url>
     <loc>https://image-matching-workshop.github.io/leaderboard/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://image-matching-workshop.github.io/breakdown/</loc>
+    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
