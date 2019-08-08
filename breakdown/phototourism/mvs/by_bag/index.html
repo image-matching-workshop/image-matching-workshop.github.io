@@ -14,7 +14,7 @@
 
 <title>Image Matching: Local Features &amp; Beyond</title>
 
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.55.5" />
 
 
 
@@ -165,10 +165,7 @@ $(document).ready(function (){
 
 <hr>
 
-<p><a name="bag3"></a>
-
-
-
+<p><a name="bag3"></a></p>
 
 <table class="display leaderboard_mvs" width="99%" cellspacing="0">
 <thead>
@@ -1227,107 +1224,7 @@ $(document).ready(function (){
 
 <tr>
   
-  <td class="align_left"><span class="boards_title">SIFT &#43; Scale-invariant desc. (L)</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-19</span></td>
-  <td>F</td>
-  
-  <td>100.0</td>
-  <td>334.3</td>
-  <td>62.0</td>
-  <td>2.28</td>
-  <td>0.0397</td>
-  <td>0.1021</td>
-  <td>0.1548</td>
-  <td>0.1979</td>
-  <td>0.2358</td>
-  
-  <td>&mdash;</td>
-  
-  <td class="hidden_value">Anonymous</td>
-  <td class="hidden_value">We compute scale-invariant descriptors on SIFT keypoints (patch size: large).</td>
-  <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
-  <td class="hidden_value">N/A</td>
-  <td class="hidden_value">128 float32</td>
-</tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SIFT &#43; Scale-invariant desc. (L)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-22</span></td>
-  <td>F</td>
-  
-  <td>100.0</td>
-  <td>1236.3</td>
-  <td>87.9</td>
-  <td>2.27</td>
-  <td>0.0924</td>
-  <td>0.1788</td>
-  <td>0.2506</td>
-  <td>0.3100</td>
-  <td>0.3661</td>
-  
-  <td>&mdash;</td>
-  
-  <td class="hidden_value">Anonymous</td>
-  <td class="hidden_value">We compute scale-invariant descriptors on SIFT keypoints (patch size: large).</td>
-  <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
-  <td class="hidden_value">N/A</td>
-  <td class="hidden_value">128 float32</td>
-</tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SIFT &#43; Scale-invariant desc. (lambda=32)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td class="align_left"><span class="boards_title">Scale-invariant desc. (Log-Polar, lambda=32)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-06-25</span></td>
   <td>F</td>
   
@@ -1343,10 +1240,10 @@ $(document).ready(function (){
   
   <td>&mdash;</td>
   
-  <td class="hidden_value">Anonymous</td>
-  <td class="hidden_value">We compute scale-invariant descriptors on SIFT keypoints (patch size: large).</td>
+  <td class="hidden_value">Patrick Ebel</td>
+  <td class="hidden_value">We compute scale-invariant descriptors with a log-polar transformation of the patch. Keypoints are DoG, with a scaling factor of lambda/12 over its chosen scale. Reference: &#39;Beyond Cartesian Representations for Local Descriptors&#39;, Patrick Ebel, Anastasiia Mishchuk, Kwang Moo Yi, Pascal Fua, and Eduard Trulls, ICCV 2019.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value"><a href="mailto:patrick.ebel@epfl.ch">patrick.ebel@epfl.ch</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
@@ -1377,7 +1274,7 @@ $(document).ready(function (){
 
 <tr>
   
-  <td class="align_left"><span class="boards_title">SIFT &#43; Scale-invariant desc. (lambda=64)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td class="align_left"><span class="boards_title">Scale-invariant desc. (Log-Polar, lambda=64)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-06-24</span></td>
   <td>F</td>
   
@@ -1393,10 +1290,10 @@ $(document).ready(function (){
   
   <td>&mdash;</td>
   
-  <td class="hidden_value">Anonymous</td>
-  <td class="hidden_value">We compute scale-invariant descriptors on SIFT keypoints (patch size: large).</td>
+  <td class="hidden_value">Patrick Ebel</td>
+  <td class="hidden_value">We compute scale-invariant descriptors with a log-polar transformation of the patch. Keypoints are DoG, with a scaling factor of lambda/12 over its chosen scale. Reference: &#39;Beyond Cartesian Representations for Local Descriptors&#39;, Patrick Ebel, Anastasiia Mishchuk, Kwang Moo Yi, Pascal Fua, and Eduard Trulls, ICCV 2019.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value"><a href="mailto:patrick.ebel@epfl.ch">patrick.ebel@epfl.ch</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
@@ -1427,7 +1324,7 @@ $(document).ready(function (){
 
 <tr>
   
-  <td class="align_left"><span class="boards_title">SIFT &#43; Scale-invariant desc. (lambda=96)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td class="align_left"><span class="boards_title">Scale-invariant desc. (Log-Polar, lambda=96)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-06-20</span></td>
   <td>F</td>
   
@@ -1443,10 +1340,10 @@ $(document).ready(function (){
   
   <td>&mdash;</td>
   
-  <td class="hidden_value">Anonymous</td>
-  <td class="hidden_value">We compute scale-invariant descriptors on SIFT keypoints (patch size: large).</td>
+  <td class="hidden_value">Patrick Ebel</td>
+  <td class="hidden_value">We compute scale-invariant descriptors with a log-polar transformation of the patch. Keypoints are DoG, with a scaling factor of lambda/12 over its chosen scale. Reference: &#39;Beyond Cartesian Representations for Local Descriptors&#39;, Patrick Ebel, Anastasiia Mishchuk, Kwang Moo Yi, Pascal Fua, and Eduard Trulls, ICCV 2019.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value"><a href="mailto:patrick.ebel@epfl.ch">patrick.ebel@epfl.ch</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
@@ -2527,76 +2424,26 @@ $(document).ready(function (){
 
 <tr>
   
-  <td class="align_left"><span class="boards_title">SIFT &#43; Scale-invariant desc. (C)</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-23</span></td>
+  <td class="align_left"><span class="boards_title">Scale-invariant desc. (Cartesian, lambda=16)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-07-29</span></td>
   <td>F</td>
   
   <td>100.0</td>
-  <td>309.0</td>
-  <td>63.3</td>
-  <td>2.28</td>
-  <td>0.0476</td>
-  <td>0.1100</td>
-  <td>0.1597</td>
-  <td>0.2094</td>
-  <td>0.2500</td>
-  
-  <td>&mdash;</td>
-  
-  <td class="hidden_value">Anonymous</td>
-  <td class="hidden_value">We compute scale-invariant descriptors on SIFT keypoints (patch size: small).</td>
-  <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
-  <td class="hidden_value">N/A</td>
-  <td class="hidden_value">128 float32</td>
-</tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SIFT &#43; Scale-invariant desc. (C)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-24</span></td>
-  <td>F</td>
-  
-  <td>100.0</td>
-  <td>1158.3</td>
-  <td>88.5</td>
+  <td>1106.2</td>
+  <td>89.5</td>
   <td>2.30</td>
-  <td>0.0930</td>
-  <td>0.1876</td>
-  <td>0.2582</td>
-  <td>0.3133</td>
-  <td>0.3664</td>
+  <td>0.0964</td>
+  <td>0.1955</td>
+  <td>0.2724</td>
+  <td>0.3342</td>
+  <td>0.3836</td>
   
   <td>&mdash;</td>
   
-  <td class="hidden_value">Anonymous</td>
-  <td class="hidden_value">We compute scale-invariant descriptors on SIFT keypoints (patch size: small).</td>
+  <td class="hidden_value">Patrick Ebel</td>
+  <td class="hidden_value">We compute scale-invariant descriptors with a log-polar transformation of the patch. Keypoints are DoG, with a scaling factor of lambda/12 over its chosen scale. (This is a baseline where we use cartesian patches instead.) Reference: &#39;Beyond Cartesian Representations for Local Descriptors&#39;, Patrick Ebel, Anastasiia Mishchuk, Kwang Moo Yi, Pascal Fua, and Eduard Trulls, ICCV 2019.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value"><a href="mailto:patrick.ebel@epfl.ch">patrick.ebel@epfl.ch</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
@@ -2855,10 +2702,6 @@ $(document).ready(function (){
 </tbody>
 </table>
 
-
-</p>
-
-<p>
 <div id="chart-mvs-map-th-bagsize-3" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -2908,8 +2751,6 @@ google.charts.load('current', {
 });
 </script>
 </div>
-
-
 
 <div id="chart-mvs-map-th-bagsize-3-kp-8000" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
@@ -2961,8 +2802,6 @@ google.charts.load('current', {
 </script>
 </div>
 
-
-
 <div id="chart-mvs-map-th-bagsize-3-kp-2048" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -3012,8 +2851,6 @@ google.charts.load('current', {
 });
 </script>
 </div>
-
-
 
 <div id="chart-mvs-map-th-bagsize-3-kp-1024" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
@@ -3065,8 +2902,6 @@ google.charts.load('current', {
 </script>
 </div>
 
-
-
 <div id="chart-mvs-map-th-bagsize-3-kp-512" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -3116,8 +2951,6 @@ google.charts.load('current', {
 });
 </script>
 </div>
-
-
 
 <div id="chart-mvs-map-th-bagsize-3-kp-256" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
@@ -3169,14 +3002,9 @@ google.charts.load('current', {
 </script>
 </div>
 
-</p>
-
 <hr>
 
-<p><a name="bag5"></a>
-
-
-
+<p><a name="bag5"></a></p>
 
 <table class="display leaderboard_mvs" width="99%" cellspacing="0">
 <thead>
@@ -4235,107 +4063,7 @@ google.charts.load('current', {
 
 <tr>
   
-  <td class="align_left"><span class="boards_title">SIFT &#43; Scale-invariant desc. (L)</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-19</span></td>
-  <td>F</td>
-  
-  <td>87.5</td>
-  <td>539.9</td>
-  <td>96.2</td>
-  <td>2.52</td>
-  <td>0.1064</td>
-  <td>0.1915</td>
-  <td>0.2521</td>
-  <td>0.3038</td>
-  <td>0.3514</td>
-  
-  <td>&mdash;</td>
-  
-  <td class="hidden_value">Anonymous</td>
-  <td class="hidden_value">We compute scale-invariant descriptors on SIFT keypoints (patch size: large).</td>
-  <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
-  <td class="hidden_value">N/A</td>
-  <td class="hidden_value">128 float32</td>
-</tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SIFT &#43; Scale-invariant desc. (L)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-22</span></td>
-  <td>F</td>
-  
-  <td>94.8</td>
-  <td>2360.3</td>
-  <td>99.8</td>
-  <td>2.63</td>
-  <td>0.2395</td>
-  <td>0.3470</td>
-  <td>0.4185</td>
-  <td>0.4803</td>
-  <td>0.5305</td>
-  
-  <td>&mdash;</td>
-  
-  <td class="hidden_value">Anonymous</td>
-  <td class="hidden_value">We compute scale-invariant descriptors on SIFT keypoints (patch size: large).</td>
-  <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
-  <td class="hidden_value">N/A</td>
-  <td class="hidden_value">128 float32</td>
-</tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SIFT &#43; Scale-invariant desc. (lambda=32)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td class="align_left"><span class="boards_title">Scale-invariant desc. (Log-Polar, lambda=32)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-06-25</span></td>
   <td>F</td>
   
@@ -4351,10 +4079,10 @@ google.charts.load('current', {
   
   <td>&mdash;</td>
   
-  <td class="hidden_value">Anonymous</td>
-  <td class="hidden_value">We compute scale-invariant descriptors on SIFT keypoints (patch size: large).</td>
+  <td class="hidden_value">Patrick Ebel</td>
+  <td class="hidden_value">We compute scale-invariant descriptors with a log-polar transformation of the patch. Keypoints are DoG, with a scaling factor of lambda/12 over its chosen scale. Reference: &#39;Beyond Cartesian Representations for Local Descriptors&#39;, Patrick Ebel, Anastasiia Mishchuk, Kwang Moo Yi, Pascal Fua, and Eduard Trulls, ICCV 2019.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value"><a href="mailto:patrick.ebel@epfl.ch">patrick.ebel@epfl.ch</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
@@ -4385,7 +4113,7 @@ google.charts.load('current', {
 
 <tr>
   
-  <td class="align_left"><span class="boards_title">SIFT &#43; Scale-invariant desc. (lambda=64)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td class="align_left"><span class="boards_title">Scale-invariant desc. (Log-Polar, lambda=64)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-06-24</span></td>
   <td>F</td>
   
@@ -4401,10 +4129,10 @@ google.charts.load('current', {
   
   <td>&mdash;</td>
   
-  <td class="hidden_value">Anonymous</td>
-  <td class="hidden_value">We compute scale-invariant descriptors on SIFT keypoints (patch size: large).</td>
+  <td class="hidden_value">Patrick Ebel</td>
+  <td class="hidden_value">We compute scale-invariant descriptors with a log-polar transformation of the patch. Keypoints are DoG, with a scaling factor of lambda/12 over its chosen scale. Reference: &#39;Beyond Cartesian Representations for Local Descriptors&#39;, Patrick Ebel, Anastasiia Mishchuk, Kwang Moo Yi, Pascal Fua, and Eduard Trulls, ICCV 2019.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value"><a href="mailto:patrick.ebel@epfl.ch">patrick.ebel@epfl.ch</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
@@ -4435,7 +4163,7 @@ google.charts.load('current', {
 
 <tr>
   
-  <td class="align_left"><span class="boards_title">SIFT &#43; Scale-invariant desc. (lambda=96)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td class="align_left"><span class="boards_title">Scale-invariant desc. (Log-Polar, lambda=96)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-06-20</span></td>
   <td>F</td>
   
@@ -4451,10 +4179,10 @@ google.charts.load('current', {
   
   <td>&mdash;</td>
   
-  <td class="hidden_value">Anonymous</td>
-  <td class="hidden_value">We compute scale-invariant descriptors on SIFT keypoints (patch size: large).</td>
+  <td class="hidden_value">Patrick Ebel</td>
+  <td class="hidden_value">We compute scale-invariant descriptors with a log-polar transformation of the patch. Keypoints are DoG, with a scaling factor of lambda/12 over its chosen scale. Reference: &#39;Beyond Cartesian Representations for Local Descriptors&#39;, Patrick Ebel, Anastasiia Mishchuk, Kwang Moo Yi, Pascal Fua, and Eduard Trulls, ICCV 2019.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value"><a href="mailto:patrick.ebel@epfl.ch">patrick.ebel@epfl.ch</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
@@ -5535,76 +5263,26 @@ google.charts.load('current', {
 
 <tr>
   
-  <td class="align_left"><span class="boards_title">SIFT &#43; Scale-invariant desc. (C)</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-23</span></td>
+  <td class="align_left"><span class="boards_title">Scale-invariant desc. (Cartesian, lambda=16)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-07-29</span></td>
   <td>F</td>
   
-  <td>88.0</td>
-  <td>511.6</td>
-  <td>96.3</td>
-  <td>2.56</td>
-  <td>0.1342</td>
-  <td>0.2163</td>
-  <td>0.2765</td>
-  <td>0.3313</td>
-  <td>0.3762</td>
-  
-  <td>&mdash;</td>
-  
-  <td class="hidden_value">Anonymous</td>
-  <td class="hidden_value">We compute scale-invariant descriptors on SIFT keypoints (patch size: small).</td>
-  <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
-  <td class="hidden_value">N/A</td>
-  <td class="hidden_value">128 float32</td>
-</tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SIFT &#43; Scale-invariant desc. (C)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-24</span></td>
-  <td>F</td>
-  
-  <td>95.4</td>
-  <td>2311.5</td>
+  <td>95.8</td>
+  <td>2303.6</td>
   <td>99.9</td>
-  <td>2.68</td>
-  <td>0.2419</td>
-  <td>0.3495</td>
-  <td>0.4200</td>
-  <td>0.4738</td>
-  <td>0.5240</td>
+  <td>2.70</td>
+  <td>0.2463</td>
+  <td>0.3597</td>
+  <td>0.4327</td>
+  <td>0.4821</td>
+  <td>0.5279</td>
   
   <td>&mdash;</td>
   
-  <td class="hidden_value">Anonymous</td>
-  <td class="hidden_value">We compute scale-invariant descriptors on SIFT keypoints (patch size: small).</td>
+  <td class="hidden_value">Patrick Ebel</td>
+  <td class="hidden_value">We compute scale-invariant descriptors with a log-polar transformation of the patch. Keypoints are DoG, with a scaling factor of lambda/12 over its chosen scale. (This is a baseline where we use cartesian patches instead.) Reference: &#39;Beyond Cartesian Representations for Local Descriptors&#39;, Patrick Ebel, Anastasiia Mishchuk, Kwang Moo Yi, Pascal Fua, and Eduard Trulls, ICCV 2019.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value"><a href="mailto:patrick.ebel@epfl.ch">patrick.ebel@epfl.ch</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
@@ -5863,10 +5541,6 @@ google.charts.load('current', {
 </tbody>
 </table>
 
-
-</p>
-
-<p>
 <div id="chart-mvs-map-th-bagsize-5" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -5916,8 +5590,6 @@ google.charts.load('current', {
 });
 </script>
 </div>
-
-
 
 <div id="chart-mvs-map-th-bagsize-5-kp-8000" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
@@ -5969,8 +5641,6 @@ google.charts.load('current', {
 </script>
 </div>
 
-
-
 <div id="chart-mvs-map-th-bagsize-5-kp-2048" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -6020,8 +5690,6 @@ google.charts.load('current', {
 });
 </script>
 </div>
-
-
 
 <div id="chart-mvs-map-th-bagsize-5-kp-1024" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
@@ -6073,8 +5741,6 @@ google.charts.load('current', {
 </script>
 </div>
 
-
-
 <div id="chart-mvs-map-th-bagsize-5-kp-512" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -6124,8 +5790,6 @@ google.charts.load('current', {
 });
 </script>
 </div>
-
-
 
 <div id="chart-mvs-map-th-bagsize-5-kp-256" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
@@ -6177,14 +5841,9 @@ google.charts.load('current', {
 </script>
 </div>
 
-</p>
-
 <hr>
 
-<p><a name="bag10"></a>
-
-
-
+<p><a name="bag10"></a></p>
 
 <table class="display leaderboard_mvs" width="99%" cellspacing="0">
 <thead>
@@ -7243,107 +6902,7 @@ google.charts.load('current', {
 
 <tr>
   
-  <td class="align_left"><span class="boards_title">SIFT &#43; Scale-invariant desc. (L)</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-19</span></td>
-  <td>F</td>
-  
-  <td>92.2</td>
-  <td>1497.4</td>
-  <td>99.9</td>
-  <td>3.11</td>
-  <td>0.2843</td>
-  <td>0.3922</td>
-  <td>0.4608</td>
-  <td>0.5139</td>
-  <td>0.5549</td>
-  
-  <td>&mdash;</td>
-  
-  <td class="hidden_value">Anonymous</td>
-  <td class="hidden_value">We compute scale-invariant descriptors on SIFT keypoints (patch size: large).</td>
-  <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
-  <td class="hidden_value">N/A</td>
-  <td class="hidden_value">128 float32</td>
-</tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SIFT &#43; Scale-invariant desc. (L)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-22</span></td>
-  <td>F</td>
-  
-  <td>96.6</td>
-  <td>6446.8</td>
-  <td>99.9</td>
-  <td>3.34</td>
-  <td>0.4363</td>
-  <td>0.5443</td>
-  <td>0.6083</td>
-  <td>0.6557</td>
-  <td>0.6921</td>
-  
-  <td>&mdash;</td>
-  
-  <td class="hidden_value">Anonymous</td>
-  <td class="hidden_value">We compute scale-invariant descriptors on SIFT keypoints (patch size: large).</td>
-  <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
-  <td class="hidden_value">N/A</td>
-  <td class="hidden_value">128 float32</td>
-</tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SIFT &#43; Scale-invariant desc. (lambda=32)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td class="align_left"><span class="boards_title">Scale-invariant desc. (Log-Polar, lambda=32)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-06-25</span></td>
   <td>F</td>
   
@@ -7359,10 +6918,10 @@ google.charts.load('current', {
   
   <td>&mdash;</td>
   
-  <td class="hidden_value">Anonymous</td>
-  <td class="hidden_value">We compute scale-invariant descriptors on SIFT keypoints (patch size: large).</td>
+  <td class="hidden_value">Patrick Ebel</td>
+  <td class="hidden_value">We compute scale-invariant descriptors with a log-polar transformation of the patch. Keypoints are DoG, with a scaling factor of lambda/12 over its chosen scale. Reference: &#39;Beyond Cartesian Representations for Local Descriptors&#39;, Patrick Ebel, Anastasiia Mishchuk, Kwang Moo Yi, Pascal Fua, and Eduard Trulls, ICCV 2019.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value"><a href="mailto:patrick.ebel@epfl.ch">patrick.ebel@epfl.ch</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
@@ -7393,7 +6952,7 @@ google.charts.load('current', {
 
 <tr>
   
-  <td class="align_left"><span class="boards_title">SIFT &#43; Scale-invariant desc. (lambda=64)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td class="align_left"><span class="boards_title">Scale-invariant desc. (Log-Polar, lambda=64)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-06-24</span></td>
   <td>F</td>
   
@@ -7409,10 +6968,10 @@ google.charts.load('current', {
   
   <td>&mdash;</td>
   
-  <td class="hidden_value">Anonymous</td>
-  <td class="hidden_value">We compute scale-invariant descriptors on SIFT keypoints (patch size: large).</td>
+  <td class="hidden_value">Patrick Ebel</td>
+  <td class="hidden_value">We compute scale-invariant descriptors with a log-polar transformation of the patch. Keypoints are DoG, with a scaling factor of lambda/12 over its chosen scale. Reference: &#39;Beyond Cartesian Representations for Local Descriptors&#39;, Patrick Ebel, Anastasiia Mishchuk, Kwang Moo Yi, Pascal Fua, and Eduard Trulls, ICCV 2019.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value"><a href="mailto:patrick.ebel@epfl.ch">patrick.ebel@epfl.ch</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
@@ -7443,7 +7002,7 @@ google.charts.load('current', {
 
 <tr>
   
-  <td class="align_left"><span class="boards_title">SIFT &#43; Scale-invariant desc. (lambda=96)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td class="align_left"><span class="boards_title">Scale-invariant desc. (Log-Polar, lambda=96)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-06-20</span></td>
   <td>F</td>
   
@@ -7459,10 +7018,10 @@ google.charts.load('current', {
   
   <td>&mdash;</td>
   
-  <td class="hidden_value">Anonymous</td>
-  <td class="hidden_value">We compute scale-invariant descriptors on SIFT keypoints (patch size: large).</td>
+  <td class="hidden_value">Patrick Ebel</td>
+  <td class="hidden_value">We compute scale-invariant descriptors with a log-polar transformation of the patch. Keypoints are DoG, with a scaling factor of lambda/12 over its chosen scale. Reference: &#39;Beyond Cartesian Representations for Local Descriptors&#39;, Patrick Ebel, Anastasiia Mishchuk, Kwang Moo Yi, Pascal Fua, and Eduard Trulls, ICCV 2019.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value"><a href="mailto:patrick.ebel@epfl.ch">patrick.ebel@epfl.ch</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
@@ -8543,76 +8102,26 @@ google.charts.load('current', {
 
 <tr>
   
-  <td class="align_left"><span class="boards_title">SIFT &#43; Scale-invariant desc. (C)</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-23</span></td>
+  <td class="align_left"><span class="boards_title">Scale-invariant desc. (Cartesian, lambda=16)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-07-29</span></td>
   <td>F</td>
   
-  <td>91.3</td>
-  <td>1414.9</td>
-  <td>100.0</td>
-  <td>3.17</td>
-  <td>0.3042</td>
-  <td>0.4048</td>
-  <td>0.4688</td>
-  <td>0.5179</td>
-  <td>0.5560</td>
-  
-  <td>&mdash;</td>
-  
-  <td class="hidden_value">Anonymous</td>
-  <td class="hidden_value">We compute scale-invariant descriptors on SIFT keypoints (patch size: small).</td>
-  <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
-  <td class="hidden_value">N/A</td>
-  <td class="hidden_value">128 float32</td>
-</tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SIFT &#43; Scale-invariant desc. (C)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-24</span></td>
-  <td>F</td>
-  
-  <td>96.5</td>
-  <td>6236.5</td>
+  <td>98.1</td>
+  <td>6295.4</td>
   <td>99.9</td>
-  <td>3.42</td>
-  <td>0.4185</td>
-  <td>0.5237</td>
-  <td>0.5837</td>
-  <td>0.6304</td>
-  <td>0.6671</td>
+  <td>3.43</td>
+  <td>0.4245</td>
+  <td>0.5321</td>
+  <td>0.5971</td>
+  <td>0.6453</td>
+  <td>0.6827</td>
   
   <td>&mdash;</td>
   
-  <td class="hidden_value">Anonymous</td>
-  <td class="hidden_value">We compute scale-invariant descriptors on SIFT keypoints (patch size: small).</td>
+  <td class="hidden_value">Patrick Ebel</td>
+  <td class="hidden_value">We compute scale-invariant descriptors with a log-polar transformation of the patch. Keypoints are DoG, with a scaling factor of lambda/12 over its chosen scale. (This is a baseline where we use cartesian patches instead.) Reference: &#39;Beyond Cartesian Representations for Local Descriptors&#39;, Patrick Ebel, Anastasiia Mishchuk, Kwang Moo Yi, Pascal Fua, and Eduard Trulls, ICCV 2019.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value"><a href="mailto:patrick.ebel@epfl.ch">patrick.ebel@epfl.ch</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
@@ -8871,10 +8380,6 @@ google.charts.load('current', {
 </tbody>
 </table>
 
-
-</p>
-
-<p>
 <div id="chart-mvs-map-th-bagsize-10" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -8924,8 +8429,6 @@ google.charts.load('current', {
 });
 </script>
 </div>
-
-
 
 <div id="chart-mvs-map-th-bagsize-10-kp-8000" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
@@ -8977,8 +8480,6 @@ google.charts.load('current', {
 </script>
 </div>
 
-
-
 <div id="chart-mvs-map-th-bagsize-10-kp-2048" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -9028,8 +8529,6 @@ google.charts.load('current', {
 });
 </script>
 </div>
-
-
 
 <div id="chart-mvs-map-th-bagsize-10-kp-1024" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
@@ -9081,8 +8580,6 @@ google.charts.load('current', {
 </script>
 </div>
 
-
-
 <div id="chart-mvs-map-th-bagsize-10-kp-512" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -9132,8 +8629,6 @@ google.charts.load('current', {
 });
 </script>
 </div>
-
-
 
 <div id="chart-mvs-map-th-bagsize-10-kp-256" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
@@ -9185,14 +8680,9 @@ google.charts.load('current', {
 </script>
 </div>
 
-</p>
-
 <hr>
 
-<p><a name="bag25"></a>
-
-
-
+<p><a name="bag25"></a></p>
 
 <table class="display leaderboard_mvs" width="99%" cellspacing="0">
 <thead>
@@ -10251,107 +9741,7 @@ google.charts.load('current', {
 
 <tr>
   
-  <td class="align_left"><span class="boards_title">SIFT &#43; Scale-invariant desc. (L)</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-19</span></td>
-  <td>F</td>
-  
-  <td>96.4</td>
-  <td>4760.6</td>
-  <td>100.0</td>
-  <td>4.35</td>
-  <td>0.5280</td>
-  <td>0.6368</td>
-  <td>0.6962</td>
-  <td>0.7362</td>
-  <td>0.7662</td>
-  
-  <td>&mdash;</td>
-  
-  <td class="hidden_value">Anonymous</td>
-  <td class="hidden_value">We compute scale-invariant descriptors on SIFT keypoints (patch size: large).</td>
-  <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
-  <td class="hidden_value">N/A</td>
-  <td class="hidden_value">128 float32</td>
-</tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SIFT &#43; Scale-invariant desc. (L)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-22</span></td>
-  <td>F</td>
-  
-  <td>97.6</td>
-  <td>18715.5</td>
-  <td>100.0</td>
-  <td>4.78</td>
-  <td>0.6523</td>
-  <td>0.7595</td>
-  <td>0.8078</td>
-  <td>0.8366</td>
-  <td>0.8561</td>
-  
-  <td>&mdash;</td>
-  
-  <td class="hidden_value">Anonymous</td>
-  <td class="hidden_value">We compute scale-invariant descriptors on SIFT keypoints (patch size: large).</td>
-  <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
-  <td class="hidden_value">N/A</td>
-  <td class="hidden_value">128 float32</td>
-</tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SIFT &#43; Scale-invariant desc. (lambda=32)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td class="align_left"><span class="boards_title">Scale-invariant desc. (Log-Polar, lambda=32)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-06-25</span></td>
   <td>F</td>
   
@@ -10367,10 +9757,10 @@ google.charts.load('current', {
   
   <td>&mdash;</td>
   
-  <td class="hidden_value">Anonymous</td>
-  <td class="hidden_value">We compute scale-invariant descriptors on SIFT keypoints (patch size: large).</td>
+  <td class="hidden_value">Patrick Ebel</td>
+  <td class="hidden_value">We compute scale-invariant descriptors with a log-polar transformation of the patch. Keypoints are DoG, with a scaling factor of lambda/12 over its chosen scale. Reference: &#39;Beyond Cartesian Representations for Local Descriptors&#39;, Patrick Ebel, Anastasiia Mishchuk, Kwang Moo Yi, Pascal Fua, and Eduard Trulls, ICCV 2019.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value"><a href="mailto:patrick.ebel@epfl.ch">patrick.ebel@epfl.ch</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
@@ -10401,7 +9791,7 @@ google.charts.load('current', {
 
 <tr>
   
-  <td class="align_left"><span class="boards_title">SIFT &#43; Scale-invariant desc. (lambda=64)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td class="align_left"><span class="boards_title">Scale-invariant desc. (Log-Polar, lambda=64)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-06-24</span></td>
   <td>F</td>
   
@@ -10417,10 +9807,10 @@ google.charts.load('current', {
   
   <td>&mdash;</td>
   
-  <td class="hidden_value">Anonymous</td>
-  <td class="hidden_value">We compute scale-invariant descriptors on SIFT keypoints (patch size: large).</td>
+  <td class="hidden_value">Patrick Ebel</td>
+  <td class="hidden_value">We compute scale-invariant descriptors with a log-polar transformation of the patch. Keypoints are DoG, with a scaling factor of lambda/12 over its chosen scale. Reference: &#39;Beyond Cartesian Representations for Local Descriptors&#39;, Patrick Ebel, Anastasiia Mishchuk, Kwang Moo Yi, Pascal Fua, and Eduard Trulls, ICCV 2019.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value"><a href="mailto:patrick.ebel@epfl.ch">patrick.ebel@epfl.ch</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
@@ -10451,7 +9841,7 @@ google.charts.load('current', {
 
 <tr>
   
-  <td class="align_left"><span class="boards_title">SIFT &#43; Scale-invariant desc. (lambda=96)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td class="align_left"><span class="boards_title">Scale-invariant desc. (Log-Polar, lambda=96)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-06-20</span></td>
   <td>F</td>
   
@@ -10467,10 +9857,10 @@ google.charts.load('current', {
   
   <td>&mdash;</td>
   
-  <td class="hidden_value">Anonymous</td>
-  <td class="hidden_value">We compute scale-invariant descriptors on SIFT keypoints (patch size: large).</td>
+  <td class="hidden_value">Patrick Ebel</td>
+  <td class="hidden_value">We compute scale-invariant descriptors with a log-polar transformation of the patch. Keypoints are DoG, with a scaling factor of lambda/12 over its chosen scale. Reference: &#39;Beyond Cartesian Representations for Local Descriptors&#39;, Patrick Ebel, Anastasiia Mishchuk, Kwang Moo Yi, Pascal Fua, and Eduard Trulls, ICCV 2019.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value"><a href="mailto:patrick.ebel@epfl.ch">patrick.ebel@epfl.ch</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
@@ -11551,76 +10941,26 @@ google.charts.load('current', {
 
 <tr>
   
-  <td class="align_left"><span class="boards_title">SIFT &#43; Scale-invariant desc. (C)</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-23</span></td>
+  <td class="align_left"><span class="boards_title">Scale-invariant desc. (Cartesian, lambda=16)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
+  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-07-29</span></td>
   <td>F</td>
   
-  <td>95.8</td>
-  <td>4568.7</td>
+  <td>97.6</td>
+  <td>18349.5</td>
   <td>100.0</td>
-  <td>4.42</td>
-  <td>0.5168</td>
-  <td>0.6182</td>
-  <td>0.6763</td>
-  <td>0.7171</td>
-  <td>0.7476</td>
+  <td>4.87</td>
+  <td>0.6240</td>
+  <td>0.7293</td>
+  <td>0.7811</td>
+  <td>0.8128</td>
+  <td>0.8361</td>
   
   <td>&mdash;</td>
   
-  <td class="hidden_value">Anonymous</td>
-  <td class="hidden_value">We compute scale-invariant descriptors on SIFT keypoints (patch size: small).</td>
+  <td class="hidden_value">Patrick Ebel</td>
+  <td class="hidden_value">We compute scale-invariant descriptors with a log-polar transformation of the patch. Keypoints are DoG, with a scaling factor of lambda/12 over its chosen scale. (This is a baseline where we use cartesian patches instead.) Reference: &#39;Beyond Cartesian Representations for Local Descriptors&#39;, Patrick Ebel, Anastasiia Mishchuk, Kwang Moo Yi, Pascal Fua, and Eduard Trulls, ICCV 2019.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
-  <td class="hidden_value">N/A</td>
-  <td class="hidden_value">128 float32</td>
-</tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<tr>
-  
-  <td class="align_left"><span class="boards_title">SIFT &#43; Scale-invariant desc. (C)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
-  <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-24</span></td>
-  <td>F</td>
-  
-  <td>97.8</td>
-  <td>18226.3</td>
-  <td>100.0</td>
-  <td>4.88</td>
-  <td>0.6158</td>
-  <td>0.7233</td>
-  <td>0.7762</td>
-  <td>0.8091</td>
-  <td>0.8332</td>
-  
-  <td>&mdash;</td>
-  
-  <td class="hidden_value">Anonymous</td>
-  <td class="hidden_value">We compute scale-invariant descriptors on SIFT keypoints (patch size: small).</td>
-  <td class="hidden_value"><a href="TBA">TBA</a></td>
-  <td class="hidden_value"><a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a></td>
+  <td class="hidden_value"><a href="mailto:patrick.ebel@epfl.ch">patrick.ebel@epfl.ch</a></td>
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
@@ -11879,10 +11219,6 @@ google.charts.load('current', {
 </tbody>
 </table>
 
-
-</p>
-
-<p>
 <div id="chart-mvs-map-th-bagsize-25" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -11932,8 +11268,6 @@ google.charts.load('current', {
 });
 </script>
 </div>
-
-
 
 <div id="chart-mvs-map-th-bagsize-25-kp-8000" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
@@ -11985,8 +11319,6 @@ google.charts.load('current', {
 </script>
 </div>
 
-
-
 <div id="chart-mvs-map-th-bagsize-25-kp-2048" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -12036,8 +11368,6 @@ google.charts.load('current', {
 });
 </script>
 </div>
-
-
 
 <div id="chart-mvs-map-th-bagsize-25-kp-1024" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
@@ -12089,8 +11419,6 @@ google.charts.load('current', {
 </script>
 </div>
 
-
-
 <div id="chart-mvs-map-th-bagsize-25-kp-512" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -12141,8 +11469,6 @@ google.charts.load('current', {
 </script>
 </div>
 
-
-
 <div id="chart-mvs-map-th-bagsize-25-kp-256" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -12192,8 +11518,6 @@ google.charts.load('current', {
 });
 </script>
 </div>
-
-</p>
 
 <hr>
 
