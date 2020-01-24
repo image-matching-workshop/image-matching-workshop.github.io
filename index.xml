@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Image Matching: Local Features &amp; Beyond</title>
@@ -10,6 +10,17 @@
     
 	<atom:link href="https://image-matching-workshop.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title></title>
+      <link>https://image-matching-workshop.github.io/cvpr2019/</link>
+      <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
+      
+      <guid>https://image-matching-workshop.github.io/cvpr2019/</guid>
+      <description>Sunday 16th June 2019
+Hyatt Regency A
+Programme  08:45-09:00 Welcome (slides) 09:00-09:30 Amir Zamir (Stanford/UC Berkeley), Collection of Large-scale Densely-labeled 3D Data from the Real World Without a Single Click 09:30-10:15 Jiri Matas (CTU Prague), On the Art of Establishing Correspondence (slides) 10:15-11:00 Coffee Break &amp;amp; Poster Session 11:15-12:00 Torsten Sattler (Chalmers University of Technology), In Defense of Local Features for Visual Localization (slides) 12:00-12:15 IMW 2019 Challenge (slides) 12:15-12:30 Zixin Luo (HKUST), Winner of the Phototourism Challenge (slides) 12:30-12:45 Awards and Closing (slides)  The workshop papers are available on CVF: link.</description>
+    </item>
     
     <item>
       <title>Breakdown: Phototourism | MVS | Sequences</title>
@@ -28,8 +39,7 @@
       
       <guid>https://image-matching-workshop.github.io/breakdown/phototourism/mvs/by_bag/</guid>
       <description>Breakdown on the Phototourism dataset, multi-view stereo task, by subset size.
- Breakdown by bag size of 3 images Breakdown by bag size of 5 images Breakdown by bag size of 10 images Breakdown by bag size of 25 images Back to the leaderboard   
-  MVS, bag size 3   Method Date Type Ims (%) #Pts SR TL mAP5o mAP10o mAP15o mAP20o mAP25o ATE By Details Link Contact Updated Descriptor size     AKAZE (OpenCV)</description>
+ Breakdown by bag size of 3 images Breakdown by bag size of 5 images Breakdown by bag size of 10 images Breakdown by bag size of 25 images Back to the leaderboard      MVS, bag size 3   Method Date Type Ims (%) #Pts SR TL mAP5o mAP10o mAP15o mAP20o mAP25o ATE By Details Link Contact Updated Descriptor size     AKAZE (OpenCV)</description>
     </item>
     
     <item>
@@ -59,7 +69,8 @@ Topics Workshop topics include (but are not limited to):
       <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
       
       <guid>https://image-matching-workshop.github.io/challenge/</guid>
-      <description>Introduction Local features have played a key role in a wide range of computer vision applications throughout the past 20 years, particularly since the introduction of SIFT.  Despite the drastic advancements resulting from deep learning techniques, 3D reconstruction under challenging conditions remains somewhat of an outlier, as performance in small, constrained benchmarks does not necessarily translate to real-world scenarios. In practice, keypoint-based methods remain the most common solution to this problem, and techniques such as SIFT or RANSAC are still very much in use.</description>
+      <description>Introduction Local features have played a key role in a wide range of computer vision applications throughout the past 20 years, particularly since the introduction of SIFT.
+ Despite the drastic advancements resulting from deep learning techniques, 3D reconstruction under challenging conditions remains somewhat of an outlier, as performance in small, constrained benchmarks does not necessarily translate to real-world scenarios. In practice, keypoint-based methods remain the most common solution to this problem, and techniques such as SIFT or RANSAC are still very much in use.</description>
     </item>
     
     <item>
@@ -69,7 +80,7 @@ Topics Workshop topics include (but are not limited to):
       
       <guid>https://image-matching-workshop.github.io/leaderboard/</guid>
       <description>The challenge contains the following datasets and tasks (see this for details):
- Task P1: Stereo maching in the &amp;lsquo;Phototourism&amp;rsquo; dataset Task P2: Multi-view reconstruction in the &amp;lsquo;Phototourism&amp;rsquo; dataset Task S1: Stereo maching in the &amp;lsquo;SILDa Image Matching&amp;rsquo; dataset   Some notes:
+ Task P1: Stereo maching in the &amp;lsquo;Phototourism&amp;rsquo; dataset Task P2: Multi-view reconstruction in the &amp;lsquo;Phototourism&amp;rsquo; dataset Task S1: Stereo maching in the &amp;lsquo;SILDa Image Matching&amp;rsquo; dataset  Some notes:
  Place the mouse cursor over row headers for details about the metrics (or here for an example). You can filter using the search box and labels, which are listed under the name of the method.</description>
     </item>
     
