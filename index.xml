@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Image Matching: Local Features &amp; Beyond</title>
+    <title>Third Workshop on Image Matching: Local Features &amp; Beyond</title>
     <link>https://image-matching-workshop.github.io/</link>
-    <description>Recent content on Image Matching: Local Features &amp; Beyond</description>
+    <description>Recent content on Third Workshop on Image Matching: Local Features &amp; Beyond</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Sun, 02 Oct 2016 22:55:05 -0400</lastBuildDate>
@@ -20,6 +20,16 @@
       <description>Sunday 16th June 2019
 Hyatt Regency A
 Programme  08:45-09:00 Welcome (slides) 09:00-09:30 Amir Zamir (Stanford/UC Berkeley), Collection of Large-scale Densely-labeled 3D Data from the Real World Without a Single Click 09:30-10:15 Jiri Matas (CTU Prague), On the Art of Establishing Correspondence (slides) 10:15-11:00 Coffee Break &amp;amp; Poster Session 11:15-12:00 Torsten Sattler (Chalmers University of Technology), In Defense of Local Features for Visual Localization (slides) 12:00-12:15 IMW 2019 Challenge (slides) 12:15-12:30 Zixin Luo (HKUST), Winner of the Phototourism Challenge (slides) 12:30-12:45 Awards and Closing (slides)  The workshop papers are available on CVF: link.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://image-matching-workshop.github.io/cvpr2020/</link>
+      <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
+      
+      <guid>https://image-matching-workshop.github.io/cvpr2020/</guid>
+      <description>Important information  Youtube livestream (free access)   Schedule All times are PT (Pacific Time).
+ 8:30-8:45: Welcome 8:45-9:30: Invited talk by Prof. Krystian Mikolajczyk (Imperial College London) 9:30-10:15: Invited talk by Prof. Dieter Fox (University of Washington) 10:15-10:30: Workshop paper, &amp;ldquo;Two-stage Discriminative Re-ranking for Large-scale Landmark Retrieval&amp;rdquo;, by Shuhei Yokoo (University of Tsukuba) 10:30-10:45: Workshop paper, &amp;ldquo;Match or No Match: Keypoint Filtering based on Matching Probability&amp;rdquo;, by Alexandra Papadaki (Technical University of Berlin) 10:45-11:15: Challenge introduction 11:15-11:30: Challenge results and discussion 11:30-13:45: Talks by challenge winners/participants (final schedule to be announced next week) 13:45-14:00: Closing  About Traditional, keypoint-based formulations for image matching are still very competitive on tasks such as Structure from Motion (SfM), despite recent efforts on tackling pose estimation with dense networks.</description>
     </item>
     
     <item>

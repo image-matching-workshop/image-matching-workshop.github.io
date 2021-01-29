@@ -153,63 +153,192 @@ $(document).ready(function (){
 
 
 <header class="row text-left title">
-  <h1 class="title">IMW CVPR 2020: Call for Papers</h1>
+  <h1 class="title"></h1>
 </header>
 <section id="category-pane" class="row meta">
+  
+  <div class="col-md-12">
+    <h6 class="text-left meta">
+        PUBLISHED ON OCT 2, 2016 
+      
+    </h6>
+  </div>
   
 </section>
 <section id="content-pane" class="row">
   <div class="col-md-12 text-justify content">
     
 
-<h2 id="overview">Overview</h2>
+<h2 id="important-information">Important information</h2>
 
-<p>The goal of this workshop is to encourage and highlight novel strategies for image matching that deviate from and advance traditional formulations, with a focus on large-scale, wide-baseline matching for 3D reconstruction or pose estimation. This can be achieved by applying new technologies to sparse feature matching, or doing away with keypoints and descriptors entirely.</p>
-
-<h2 id="topics">Topics</h2>
-
-<p>Workshop topics include (but are not limited to):</p>
+<!--Unfortunately, an update broke our internal website at [cvpr20.com](cvpr20.com) and we do not have edit rights anymore, so all further updates will be done via this website.-->
 
 <ul>
-<li>Reformulating keypoint extraction and matching pipelines with deep networks.</li>
-<li>Applying geometric constraints into the training of (sparse or dense) deep networks.</li>
-<li>Leveraging additional cues such as semantics.</li>
-<li>Developing adversarial methods to deal with conditions where current methods fail (weather changes, day versus night, etc.).</li>
-<li>Exploring attention mechanisms to match salient image regions.</li>
-<li>Integrating differentiable components into 3D reconstruction frameworks.</li>
-<li>Matching across different data modalities such as aerial versus ground.</li>
+<li><strong><a href="https://youtu.be/UQ4uJX7UDB8">Youtube livestream</a></strong> (free access)
+<!--* **[Zoom link for CVPR attendees](https://zoom.us/j/96076881730?pwd=N1R6ZWprNTF1Z3VZeDRrWWdwN28yQT09)**--></li>
 </ul>
 
-<!--## Challenge-->
+<h2 id="schedule">Schedule</h2>
 
-<!---->
-
-<!--In order to advance research in these areas, we have issued a public challenge. Winners will be awarded prizes. For details please refer to the website.-->
-
-<h2 id="submission">Submission</h2>
-
-<p>We invite paper submissions in two tracks:</p>
+<p>All times are PT (Pacific Time).</p>
 
 <ul>
-<li><strong>Workshop papers:</strong> Up to 6 pages, excluding references and acknowledgements. They should use the CVPR template and be sent to <a href="https://cmt3.research.microsoft.com/IMW2020">the IMW2020 CMT site</a> (if the CMT link is not available yet, please wait a few days or reach out to us). Submissions must contain novel work and will be indexed in IEEE Xplore/CVF. They will receive at least two double-blind reviews.</li>
-<li><strong>Extended abstracts:</strong> We also allow submissions of work that is published or under review. The papers will not be archived: they will be presented as posters during the workshop. The goal of this track is to encourage debate among peers. They can be as short as two pages or as long as eight, to allow for relevant works from the main conference, and use any template. They should be sent to <a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a> directly, as a PDF, by May 15, 2020. They should not be anonymous.</li>
+<li><strong>8:30-8:45:</strong> Welcome</li>
+<li><strong>8:45-9:30:</strong> Invited talk by Prof. <a href="https://www.imperial.ac.uk/people/k.mikolajczyk">Krystian Mikolajczyk</a> (Imperial College London)</li>
+<li><strong>9:30-10:15:</strong> Invited talk by Prof. <a href="https://homes.cs.washington.edu/~fox/">Dieter Fox</a> (University of Washington)</li>
+<li><strong>10:15-10:30:</strong> Workshop paper, &ldquo;Two-stage Discriminative Re-ranking for Large-scale Landmark Retrieval&rdquo;, by Shuhei Yokoo (University of Tsukuba)</li>
+<li><strong>10:30-10:45:</strong> Workshop paper, &ldquo;Match or No Match: Keypoint Filtering based on Matching Probability&rdquo;, by Alexandra Papadaki (Technical University of Berlin)</li>
+<li><strong>10:45-11:15:</strong> Challenge introduction</li>
+<li><strong>11:15-11:30:</strong> Challenge results and discussion</li>
+<li><strong>11:30-13:45:</strong> Talks by challenge winners/participants (final schedule to be announced next week)</li>
+<li><strong>13:45-14:00:</strong> Closing</li>
+</ul>
+
+<h2 id="about">About</h2>
+
+<p>Traditional, keypoint-based formulations for image matching are still
+very competitive on tasks such as Structure from Motion (SfM), despite
+recent efforts on tackling pose estimation with dense networks.  In
+practice, many state-of-the-art pipelines still rely on methods that
+stood the test of time, such as SIFT or RANSAC.</p>
+
+<p>In this workshop, we aim to encourage novel strategies for image
+matching that deviate from and advance traditional formulations, with
+a focus on large-scale, wide-baseline matching for 3D reconstruction
+or pose estimation.  This can be achieved by applying new technologies
+to sparse feature matching, or doing away with keypoints and
+descriptors entirely.</p>
+
+<p>The workshop topics include (but are not limited to):</p>
+
+<ul>
+<li>Reformulating keypoint extraction and matching pipelines with deep
+networks.</li>
+<li>Applying geometric constraints into the training of (sparse or
+dense) deep networks.</li>
+<li>Leveraging additional cues such as semantics.</li>
+<li>Developing adversarial methods to deal with conditions where current
+methods fail (weather changes, day versus night, etc.).</li>
+<li>Exploring attention mechanisms to match salient image regions.</li>
+<li>Integrating differentiable components into 3D reconstruction
+frameworks.</li>
+<li>Matching across different data modalities such as aerial versus
+ground.</li>
+</ul>
+
+<h2 id="organisers">Organisers</h2>
+
+<p><a href="http://vbalnt.github.io/">
+<div class="item">
+    <img class="headshot" src="img/vassileios.jpg"/>
+    <span class="name">Vassileios <br>Balntas</span>
+    <span class="affiliation">Scape Technologies</span>
+</div>
+</a>
+<a href="https://www.labri.fr/perso/vlepetit/">
+<div class="item">
+    <img class="headshot" src="img/vincent.jpg"/>
+    <span class="name">Vincent <br>Lepetit</span>
+    <span class="affiliation">University of Bordeaux</span>
+</div>
+</a>
+<a href="http://cmp.felk.cvut.cz/~matas/">
+<div class="item">
+    <img class="headshot" src="img/jiri.jpg"/>
+    <span class="name"> Jiri <br>Matas</span>
+    <span class="affiliation">Czech Technical University</span>
+</div>
+</a>
+<a href="http://cmp.felk.cvut.cz/~mishkdmy/">
+<div class="item">
+    <img class="headshot" src="img/dmytro.jpg"/>
+    <span class="name">Dmytro <br>Mishkin</span>
+    <span class="affiliation">Czech Technical University</span>
+</div>
+</a>
+<a href="https://demuc.de/">
+<div class="item">
+    <img class="headshot" src="img/johannes.jpeg"/>
+    <span class="name">Johannes <br> Schönberger</span>
+    <span class="affiliation">Microsoft</span>
+</div>
+</a>
+<a href="http://icwww.epfl.ch/~trulls/">
+<div class="item">
+    <img class="headshot" src="img/eduard.png"/>
+    <span class="name">Eduard <br> Trulls</span>
+    <span class="affiliation">Google</span>
+</div>
+</a>
+<a href="https://gfx.uvic.ca/people/kmyi/">
+<div class="item">
+    <img class="headshot" src="img/kwang.jpeg"/>
+    <span class="name">Kwang Moo <br>Yi</span>
+    <span class="affiliation">University of Victoria</span>
+</div>
+</a></p>
+
+<p><br /></p>
+
+<p>The workshop will be held at <a href="http://cvpr2020.thecvf.com/">CVPR 2020</a> in Seattle, WA, on June 19, 2020 (morning).</p>
+
+<h2 id="talks">Talks</h2>
+
+<ul>
+<li>Prof. <a href="https://www.imperial.ac.uk/people/k.mikolajczyk">Krystian Mikolajczyk</a>, Imperial College London (confirmed).</li>
+<li>Prof. <a href="https://homes.cs.washington.edu/~fox/">Dieter Fox</a>, University of Washington (confirmed).</li>
+</ul>
+
+<h2 id="news">News</h2>
+
+<ul>
+<li>May 7: CVPR 2020 has moved to a fully virtual model. Stay tuned for details.</li>
+<li>February 17: Confirming Krystian Mikolajczyk and Dieter Fox as speakers.</li>
+<li>February 13: Added <a href="/papers">Call for Papers</a>.</li>
+<li>February 10: Updated website for the <a href="https://vision.uvic.ca/image-matching-challenge/">2020 challenge</a>.</li>
+<li>January 24: Updated website for 2020 CVPR edition.</li>
 </ul>
 
 <h2 id="important-dates">Important dates</h2>
 
 <ul>
-<li><strong>Paper submission deadline:</strong> March 31, 2020</li>
+<li><strong>Challenge publication:</strong> February 12, 2020</li>
+<li><strong><a href="/papers">Paper submission</a> deadline:</strong> March 31, 2020</li>
 <li><strong>Notification to authors:</strong> April 10, 2020</li>
 <li><strong>Camera-ready deadline:</strong> April 15, 2020 (papers must be archived by April 20)</li>
-<li><strong>Deadline for short abstract submission (non-archived posters):</strong> May 15, 2020</li>
+<li><strong>Challenge submission deadline:</strong> <a href="https://vision.uvic.ca/image-matching-challenge/">see challenge website</a></li>
+<li><strong>Deadline for short descriptions on challenge submissions:</strong> <a href="https://vision.uvic.ca/image-matching-challenge/">see challenge website</a></li>
+<li><strong>Deadline for <a href="/papers">short abstract</a> submission (non-archived posters):</strong> May 15, 2020</li>
 <li><strong>Workshop date:</strong> June 19, 2020 (half day: morning)</li>
 </ul>
 
 <p>(All dates are at 11:59PM, Pacific Time.)</p>
 
+<h2 id="challenge-https-vision-uvic-ca-image-matching-challenge"><a href="https://vision.uvic.ca/image-matching-challenge">Challenge</a></h2>
+
+<p>We have renewed the challenge for last year, with many changes. The framework has been <a href="https://github.com/vcg-uvic/image-matching-benchmark">open-sourced</a>, and we have greatly improved the <a href="https://vision.uvic.ca/image-matching-challenge/leaderboard/">evaluation server</a>. For details, please refer to the <a href="https://vision.uvic.ca/image-matching-challenge/">challenge website</a>.</p>
+
+<h2 id="paper-submission">Paper Submission</h2>
+
+<p>We welcome full paper submissions and extended abstracts, which will be presented in the workshop as posters. Please refer to the <a href="/papers">Call for Papers</a>.</p>
+
+<h2 id="contact">Contact</h2>
+
+<p>Please reach us with any questions at <a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a>.</p>
+
+<p><br />
+<br />
+<br /></p>
+
   </div>
 </section>
 <section id="tag-pane" class="row meta">
+  
+  <div class="col-md-12">
+    <h6 class="text-right meta">
+      
+    </h6>
+  </div>
   
 </section>
 
@@ -223,11 +352,13 @@ $(document).ready(function (){
 <section id="menu-pane" class="row menu text-center">
   
   
+  <span><a class="menu-item" href="https://image-matching-workshop.github.io/challenge/">&lt; prev | </a></span>
+  
   
   <span><a class="menu-item" href="/"></a></span>
   
   
-  <span><a class="menu-item" href="https://image-matching-workshop.github.io/leaderboard/"> | next &gt;</a></span>
+  <span><a class="menu-item" href="https://image-matching-workshop.github.io/cvpr2019/"> | next &gt;</a></span>
   
   
   <h4 class="text-center"><a class="menu-item" href="https://image-matching-workshop.github.io/">home</a></h4>
