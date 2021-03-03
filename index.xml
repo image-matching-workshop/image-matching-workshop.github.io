@@ -84,14 +84,14 @@ Programme  08:45-09:00 Welcome (slides) 09:00-09:30 Amir Zamir (Stanford/UC Berk
     </item>
     
     <item>
-      <title>IMW CVPR 2020: Call for Papers</title>
+      <title>IMW CVPR 2021: Call for Papers</title>
       <link>https://image-matching-workshop.github.io/papers/</link>
       <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
       
       <guid>https://image-matching-workshop.github.io/papers/</guid>
       <description>Overview The goal of this workshop is to encourage and highlight novel strategies for image matching that deviate from and advance traditional formulations, with a focus on large-scale, wide-baseline matching for 3D reconstruction or pose estimation. This can be achieved by applying new technologies to sparse feature matching, or doing away with keypoints and descriptors entirely.
 Topics Workshop topics include (but are not limited to):
- Reformulating keypoint extraction and matching pipelines with deep networks.</description>
+ Formulations of keypoint extraction and matching pipelines with deep networks.</description>
     </item>
     
   </channel>
