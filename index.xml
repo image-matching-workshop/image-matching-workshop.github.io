@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fourth Workshop on Image Matching: Local Features &amp; Beyond</title>
@@ -6,11 +6,7 @@
     <description>Recent content on Fourth Workshop on Image Matching: Local Features &amp; Beyond</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 02 Oct 2016 22:55:05 -0400</lastBuildDate>
-    
-	<atom:link href="https://image-matching-workshop.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 02 Oct 2016 22:55:05 -0400</lastBuildDate><atom:link href="https://image-matching-workshop.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
       <link>https://image-matching-workshop.github.io/cvpr2019/</link>
@@ -28,7 +24,7 @@ Programme  08:45-09:00 Welcome (slides) 09:00-09:30 Amir Zamir (Stanford/UC Berk
       <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
       
       <guid>https://image-matching-workshop.github.io/cvpr2020/</guid>
-      <description>Important information  Youtube livestream (free access)   Schedule All times are PT (Pacific Time).
+      <description>Important information  Youtube livestream (free access)  Schedule All times are PT (Pacific Time).
  8:30-8:45: Welcome 8:45-9:30: Invited talk by Prof. Krystian Mikolajczyk (Imperial College London) 9:30-10:15: Invited talk by Prof. Dieter Fox (University of Washington) 10:15-10:30: Workshop paper, &amp;ldquo;Two-stage Discriminative Re-ranking for Large-scale Landmark Retrieval&amp;rdquo;, by Shuhei Yokoo (University of Tsukuba) 10:30-10:45: Workshop paper, &amp;ldquo;Match or No Match: Keypoint Filtering based on Matching Probability&amp;rdquo;, by Alexandra Papadaki (Technical University of Berlin) 10:45-11:15: Challenge introduction 11:15-11:30: Challenge results and discussion 11:30-13:45: Talks by challenge winners/participants (final schedule to be announced next week) 13:45-14:00: Closing  About Traditional, keypoint-based formulations for image matching are still very competitive on tasks such as Structure from Motion (SfM), despite recent efforts on tackling pose estimation with dense networks.</description>
     </item>
     
@@ -39,7 +35,7 @@ Programme  08:45-09:00 Welcome (slides) 09:00-09:30 Amir Zamir (Stanford/UC Berk
       
       <guid>https://image-matching-workshop.github.io/cvpr2021/</guid>
       <description>Important information  Livestream on YouTube The zoom link is listed on the CVPR website (registration required).  Schedule All times are MT (Mountain Time). For convenience, 9AM MT corresponds to 8AM PT, 11AM ET, 5PM CET, and 11PM in China.
- 09:00-09:15: Welcome (full workshop slides) 09:15-10:00: Invited talk by Prof. Davide Scaramuzza (University of Zurich/ETH Zurich) 10:00-10:45: Invited talk by Prof. Marc Pollefeys (ETH Zurich/Microsoft) 10:45-11:00: Workshop paper talk by Daniel Koguciuk: &amp;ldquo;Perceptual Loss for Robust Unsupervised Homography Estimation&amp;rdquo; (paper | recording) 11:00-11:15: Workshop paper talk by Ufuk Efe: &amp;ldquo;DFM: A Performance Baseline for Deep Feature Matching&amp;rdquo; (paper | recording) 11:15-11:45: Challenge presentation (organizers) 11:45-12:15: Open discussion (organizers and participants) 12:15-13:35: Invited challenge talks (8 x 10 minutes &amp;mdash; speakers/schedule to be confirmed soon)  12:15-12:25: Fabio Bellavia (University of Palermo) 12:25-12:35: Prune Truong (ETH Zurich) 12:35-12:45: Jiaming Sun/Xingyi He (Zhejiang University/SenseTime Research) 12:45-12:55: Wei Jiang (University of British Columbia) 12:55-13:05: Megvii Inc.</description>
+ 09:00-09:15: Welcome (full workshop slides) 09:15-10:00: Invited talk by Prof. Davide Scaramuzza (University of Zurich/ETH Zurich) 10:00-10:45: Invited talk by Prof. Marc Pollefeys (ETH Zurich/Microsoft) 10:45-11:00: Workshop paper talk by Daniel Koguciuk: &amp;ldquo;Perceptual Loss for Robust Unsupervised Homography Estimation&amp;rdquo; (paper | recording) 11:00-11:15: Workshop paper talk by Ufuk Efe: &amp;ldquo;DFM: A Performance Baseline for Deep Feature Matching&amp;rdquo; (paper | recording) 11:15-11:45: Challenge presentation (organizers) 11:45-12:15: Open discussion (organizers and participants) 12:15-13:35: Invited challenge talks (8 x 10 minutes — speakers/schedule to be confirmed soon)  12:15-12:25: Fabio Bellavia (University of Palermo) 12:25-12:35: Prune Truong (ETH Zurich) 12:35-12:45: Jiaming Sun/Xingyi He (Zhejiang University/SenseTime Research) 12:45-12:55: Wei Jiang (University of British Columbia) 12:55-13:05: Megvii Inc.</description>
     </item>
     
     <item>
@@ -59,8 +55,7 @@ Programme  08:45-09:00 Welcome (slides) 09:00-09:30 Amir Zamir (Stanford/UC Berk
       
       <guid>https://image-matching-workshop.github.io/breakdown/phototourism/mvs/by_bag/</guid>
       <description>Breakdown on the Phototourism dataset, multi-view stereo task, by subset size.
- Breakdown by bag size of 3 images Breakdown by bag size of 5 images Breakdown by bag size of 10 images Breakdown by bag size of 25 images Back to the leaderboard   
-  MVS, bag size 3   Method Date Type Ims (%) #Pts SR TL mAP5o mAP10o mAP15o mAP20o mAP25o ATE By Details Link Contact Updated Descriptor size     AKAZE (OpenCV)</description>
+ Breakdown by bag size of 3 images Breakdown by bag size of 5 images Breakdown by bag size of 10 images Breakdown by bag size of 25 images Back to the leaderboard      MVS, bag size 3   Method Date Type Ims (%) #Pts SR TL mAP5o mAP10o mAP15o mAP20o mAP25o ATE By Details Link Contact Updated Descriptor size     AKAZE (OpenCV)</description>
     </item>
     
     <item>
@@ -79,7 +74,8 @@ Programme  08:45-09:00 Welcome (slides) 09:00-09:30 Amir Zamir (Stanford/UC Berk
       <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
       
       <guid>https://image-matching-workshop.github.io/challenge/</guid>
-      <description>Introduction Local features have played a key role in a wide range of computer vision applications throughout the past 20 years, particularly since the introduction of SIFT.  Despite the drastic advancements resulting from deep learning techniques, 3D reconstruction under challenging conditions remains somewhat of an outlier, as performance in small, constrained benchmarks does not necessarily translate to real-world scenarios. In practice, keypoint-based methods remain the most common solution to this problem, and techniques such as SIFT or RANSAC are still very much in use.</description>
+      <description>Introduction Local features have played a key role in a wide range of computer vision applications throughout the past 20 years, particularly since the introduction of SIFT.
+ Despite the drastic advancements resulting from deep learning techniques, 3D reconstruction under challenging conditions remains somewhat of an outlier, as performance in small, constrained benchmarks does not necessarily translate to real-world scenarios. In practice, keypoint-based methods remain the most common solution to this problem, and techniques such as SIFT or RANSAC are still very much in use.</description>
     </item>
     
     <item>
@@ -89,7 +85,7 @@ Programme  08:45-09:00 Welcome (slides) 09:00-09:30 Amir Zamir (Stanford/UC Berk
       
       <guid>https://image-matching-workshop.github.io/leaderboard/</guid>
       <description>The challenge contains the following datasets and tasks (see this for details):
- Task P1: Stereo maching in the &amp;lsquo;Phototourism&amp;rsquo; dataset Task P2: Multi-view reconstruction in the &amp;lsquo;Phototourism&amp;rsquo; dataset Task S1: Stereo maching in the &amp;lsquo;SILDa Image Matching&amp;rsquo; dataset   Some notes:
+ Task P1: Stereo maching in the &amp;lsquo;Phototourism&amp;rsquo; dataset Task P2: Multi-view reconstruction in the &amp;lsquo;Phototourism&amp;rsquo; dataset Task S1: Stereo maching in the &amp;lsquo;SILDa Image Matching&amp;rsquo; dataset  Some notes:
  Place the mouse cursor over row headers for details about the metrics (or here for an example). You can filter using the search box and labels, which are listed under the name of the method.</description>
     </item>
     

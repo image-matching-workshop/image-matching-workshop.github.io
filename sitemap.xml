@@ -1,71 +1,42 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://image-matching-workshop.github.io/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://image-matching-workshop.github.io/cvpr2019/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://image-matching-workshop.github.io/cvpr2020/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://image-matching-workshop.github.io/cvpr2021/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://image-matching-workshop.github.io/breakdown/phototourism/mvs/by_seq/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://image-matching-workshop.github.io/breakdown/phototourism/mvs/by_bag/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://image-matching-workshop.github.io/breakdown/phototourism/stereo/by_seq/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://image-matching-workshop.github.io/breakdown/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://image-matching-workshop.github.io/challenge/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://image-matching-workshop.github.io/leaderboard/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://image-matching-workshop.github.io/papers/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://image-matching-workshop.github.io/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://image-matching-workshop.github.io/tags/</loc>
-    <priority>0</priority>
   </url>
-  
 </urlset>

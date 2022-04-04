@@ -21,7 +21,7 @@
 
 <title>Fourth Workshop on Image Matching: Local Features &amp; Beyond</title>
 
-<meta name="generator" content="Hugo 0.55.5" />
+<meta name="generator" content="Hugo 0.92.1" />
 
 
 
@@ -160,23 +160,16 @@ $(document).ready(function (){
 </section>
 <section id="content-pane" class="row">
   <div class="col-md-12 text-justify content">
-    
-
-<!--TODO-->
-
+    <!--TODO-->
 <!--* Add automated images with maching results/3D point clouds, for comparison, like in the Middlebury leaderboard.-->
-
 <p>The challenge contains the following datasets and tasks (<a href="challenge">see this for details</a>):</p>
-
 <ul>
 <li><a href="leaderboard#photot_stereo">Task P1: Stereo maching in the &lsquo;Phototourism&rsquo; dataset</a></li>
 <li><a href="leaderboard#photot_mvs">Task P2: Multi-view reconstruction in the &lsquo;Phototourism&rsquo; dataset</a></li>
-<li><a href="leaderboard#silda">Task S1: Stereo maching in the &lsquo;SILDa Image Matching&rsquo; dataset</a>
-<!--* [Glossary](leaderboard#glossary)--></li>
+<li><a href="leaderboard#silda">Task S1: Stereo maching in the &lsquo;SILDa Image Matching&rsquo; dataset</a></li>
 </ul>
-
+<!--* [Glossary](leaderboard#glossary)-->
 <p>Some notes:</p>
-
 <ul>
 <li>Place the mouse cursor over row headers for details about the metrics (or <span class="balloon" data-balloon="This is an example."
 data-balloon-pos="up">here for an example</span>).</li>
@@ -187,30 +180,22 @@ allowed) keypoints per image.  Sparse feature matching can be done by
 brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one correspondences
 (&ldquo;1to1&rdquo;), or user-provided matches.</li>
 </ul>
-
 <hr>
-
-<h2 id="a-name-photot-stereo-a-p1-phototourism-dataset-mdash-stereo-task"><a name="photot_stereo"></a>[P1] Phototourism dataset &mdash; Stereo task</h2>
-
+## <a name="photot_stereo"></a>[P1] Phototourism dataset &mdash; Stereo task
 <p>Performance in stereo matching, averaged over all the test sequences.</p>
-
 <ul>
 <li><a href="breakdown/phototourism/stereo/by_seq">Click here for a breakdown by sequence</a></li>
 </ul>
-
-<p><br /></p>
-
+<br />
 <table class="display leaderboard_stereo" width="99%" cellspacing="0">
 <thead>
 <tr>
   <th colspan="10" style="text-align: center;" class="sorter-false">Stereo &mdash; averaged over all sequences</th>
 </tr>
 <tr>
-  
   <th class="all align_left" width="99%">Method</th>
   <th class="all">Date</th>
   <th class="all"><span class="balloon" data-balloon="F: Features only.&#10;M: Features and custom matches.&#10;P: Poses (TBA)." data-balloon-break data-balloon-pos="up">Type</span></th>
-  
   <th class="all"><span class="balloon" data-balloon="Average number of keypoints extracted." data-balloon-pos="up">#kp</span></th>
   <th class="all"><span class="balloon" data-balloon="Matching Score." data-balloon-pos="up">MS</span></th>
   <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 5-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>5<sup>o</sup></sup></span></th>
@@ -218,7 +203,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 15-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>15<sup>o</sup></sup></span></th>
   <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 20-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>20<sup>o</sup></sup></span></th>
   <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 25-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>25<sup>o</sup></sup></span></th>
-  
   <th class="none hidden_key">By</th>
   <th class="none hidden_key">Details</th>
   <th class="none hidden_key">Link</th>
@@ -228,31 +212,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
 </tr>
 </thead>
 <tbody>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">AKAZE (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-24</span></td>
   <td>F</td>
-  
   <td>7879.7</td>
   <td>0.2207</td>
   <td>0.0006</td>
@@ -260,7 +223,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0288</td>
   <td>0.0726</td>
   <td>0.1380</td>
- 
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">AKAZE, as implemented in OpenCV. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
@@ -268,32 +230,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">TBA</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">SphereDesc</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
-  
   <td>5356.7</td>
   <td>0.2715</td>
   <td>0.0006</td>
@@ -301,7 +241,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0403</td>
   <td>0.0978</td>
   <td>0.1737</td>
- 
   <td class="hidden_value">Anonymous</td>
   <td class="hidden_value">We use OpenCV&#39;s implementation of AKAZE detector, and for each keypoint we extract a descriptor via CNN.</td>
   <td class="hidden_value"><a href="N/A">N/A</a></td>
@@ -309,32 +248,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">Brisk &#43; SSS</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-14</span></td>
   <td>F</td>
-  
   <td>4652.0</td>
   <td>0.2742</td>
   <td>0.0006</td>
@@ -342,7 +259,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0336</td>
   <td>0.0856</td>
   <td>0.1522</td>
- 
   <td class="hidden_value">Anonymous</td>
   <td class="hidden_value">We use OpenCV&#39;s implementation of brisk detector with the default settings, and for each image there are at most 8K keypoints. For each keypoint, we extract a descriptor via a CNN model.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
@@ -350,32 +266,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">D2-Net (single scale)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-07</span></td>
   <td>F</td>
-  
   <td>5474.7</td>
   <td>0.2683</td>
   <td>0.0006</td>
@@ -383,7 +277,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0461</td>
   <td>0.1084</td>
   <td>0.1900</td>
- 
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">D2-Net: A Trainable CNN for Joint Detection and Description of Local Features. Single-scale features, brute-force nearest neighbour matching. Trained on sequences overlapping with our test set: see &#39;no PT&#39; for eligible results (this entry is provided only for reference). Paper: https://dsmn.ml/files/d2-net/d2-net.pdf</td>
   <td class="hidden_value"><a href="https://github.com/mihaidusmanu/d2-net">https://github.com/mihaidusmanu/d2-net</a></td>
@@ -391,32 +284,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">512 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">D2-Net (multiscale)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-07</span></td>
   <td>F</td>
-  
   <td>7332.7</td>
   <td>0.2793</td>
   <td>0.0006</td>
@@ -424,7 +295,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0490</td>
   <td>0.1177</td>
   <td>0.2036</td>
- 
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">D2-Net: A Trainable CNN for Joint Detection and Description of Local Features. Multi-scale features, brute-force nearest neighbour matching. Trained on sequences overlapping with our test set: see &#39;no PT&#39; for eligible results (this entry is provided only for reference). Paper: https://dsmn.ml/files/d2-net/d2-net.pdf</td>
   <td class="hidden_value"><a href="https://github.com/mihaidusmanu/d2-net">https://github.com/mihaidusmanu/d2-net</a></td>
@@ -432,32 +302,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">512 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">D2-Net (single scale, no PT dataset)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-06-01</span></td>
   <td>F</td>
-  
   <td>5542.2</td>
   <td>0.2676</td>
   <td>0.0010</td>
@@ -465,7 +313,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0449</td>
   <td>0.1062</td>
   <td>0.1888</td>
- 
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">D2-Net: A Trainable CNN for Joint Detection and Description of Local Features. Single-scale features, brute-force nearest neighbour matching. Re-trained removing conflicting sequences (models: d2_tf_no_phototourism.pth). Paper: https://dsmn.ml/files/d2-net/d2-net.pdf</td>
   <td class="hidden_value"><a href="https://github.com/mihaidusmanu/d2-net">https://github.com/mihaidusmanu/d2-net</a></td>
@@ -473,32 +320,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">512 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">D2-Net (multi-scale, no PT dataset)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-06-05</span></td>
   <td>F</td>
-  
   <td>6814.2</td>
   <td>0.2785</td>
   <td>0.0006</td>
@@ -506,7 +331,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0490</td>
   <td>0.1134</td>
   <td>0.2004</td>
- 
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">D2-Net: A Trainable CNN for Joint Detection and Description of Local Features. Multi-scale features, brute-force nearest neighbour matching. Re-trained removing conflicting sequences (models: d2_tf_no_phototourism.pth). Paper: https://dsmn.ml/files/d2-net/d2-net.pdf</td>
   <td class="hidden_value"><a href="https://github.com/mihaidusmanu/d2-net">https://github.com/mihaidusmanu/d2-net</a></td>
@@ -514,32 +338,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">512 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">DELF</span><br /><span class="boards_subtitle">kp:1024, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-05</span></td>
   <td>F</td>
-  
   <td>1024.0</td>
   <td>0.2762</td>
   <td>0.0004</td>
@@ -547,7 +349,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0297</td>
   <td>0.0744</td>
   <td>0.1361</td>
- 
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">DELF features for object retrieval, trained on the Google Landmarks dataset. Paper: https://arxiv.org/abs/1612.06321</td>
   <td class="hidden_value"><a href="https://github.com/tensorflow/models/tree/master/research/delf">https://github.com/tensorflow/models/tree/master/research/delf</a></td>
@@ -555,32 +356,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">40 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">DELF</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-05</span></td>
   <td>F</td>
-  
   <td>2038.9</td>
   <td>0.2706</td>
   <td>0.0006</td>
@@ -588,7 +367,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0324</td>
   <td>0.0770</td>
   <td>0.1408</td>
- 
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">DELF features for object retrieval, trained on the Google Landmarks dataset. Paper: https://arxiv.org/abs/1612.06321</td>
   <td class="hidden_value"><a href="https://github.com/tensorflow/models/tree/master/research/delf">https://github.com/tensorflow/models/tree/master/research/delf</a></td>
@@ -596,32 +374,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">40 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">DELF</span><br /><span class="boards_subtitle">kp:256, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-05</span></td>
   <td>F</td>
-  
   <td>256.0</td>
   <td>0.2772</td>
   <td>0.0004</td>
@@ -629,7 +385,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0217</td>
   <td>0.0534</td>
   <td>0.1032</td>
- 
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">DELF features for object retrieval, trained on the Google Landmarks dataset. Paper: https://arxiv.org/abs/1612.06321</td>
   <td class="hidden_value"><a href="https://github.com/tensorflow/models/tree/master/research/delf">https://github.com/tensorflow/models/tree/master/research/delf</a></td>
@@ -637,32 +392,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">40 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">DELF</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-05</span></td>
   <td>F</td>
-  
   <td>512.0</td>
   <td>0.2778</td>
   <td>0.0004</td>
@@ -670,7 +403,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0266</td>
   <td>0.0642</td>
   <td>0.1210</td>
- 
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">DELF features for object retrieval, trained on the Google Landmarks dataset. Paper: https://arxiv.org/abs/1612.06321</td>
   <td class="hidden_value"><a href="https://github.com/tensorflow/models/tree/master/research/delf">https://github.com/tensorflow/models/tree/master/research/delf</a></td>
@@ -678,32 +410,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">40 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">ELF-256D</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-07</span></td>
   <td>F</td>
-  
   <td>344.8</td>
   <td>0.2498</td>
   <td>0.0006</td>
@@ -711,7 +421,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0230</td>
   <td>0.0564</td>
   <td>0.1012</td>
- 
   <td class="hidden_value">Anonymous</td>
   <td class="hidden_value">ELF detector: Keypoints are local maxima of a saliency map generated by the gradient of a feature map with respect to the image of a pre-trained CNN. Descriptors are computed with the interpolation of the VGG pool3 feature map on the detected keypoints.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
@@ -719,32 +428,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">ELF-512D</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-09</span></td>
   <td>F</td>
-  
   <td>344.8</td>
   <td>0.2644</td>
   <td>0.0006</td>
@@ -752,7 +439,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0274</td>
   <td>0.0635</td>
   <td>0.1119</td>
- 
   <td class="hidden_value">Anonymous</td>
   <td class="hidden_value">ELF detector: Keypoints are local maxima of a saliency map generated by the gradient of a feature map with respect to the image of a pre-trained CNN. Descriptors are computed with the interpolation of the VGG pool3 feature map on the detected keypoints.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
@@ -760,32 +446,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">ELF-SIFT</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
-  
   <td>484.0</td>
   <td>0.2356</td>
   <td>0.0007</td>
@@ -793,7 +457,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0286</td>
   <td>0.0666</td>
   <td>0.1188</td>
- 
   <td class="hidden_value">Anonymous</td>
   <td class="hidden_value">ELF detector: Keypoints are local maxima of a saliency map generated by the gradient of a feature map with respect to the image of a pre-trained CNN. Descriptors are HOG (as in SIFT).</td>
   <td class="hidden_value"><a href="N/A">N/A</a></td>
@@ -801,32 +464,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 uint8</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">SIFT &#43; GeoDesc</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-19</span></td>
   <td>F</td>
-  
   <td>1946.0</td>
   <td>0.2404</td>
   <td>0.0007</td>
@@ -834,7 +475,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0313</td>
   <td>0.0778</td>
   <td>0.1419</td>
- 
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">GeoDesc extracted on SIFT keypoints. Feature matching with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://github.com/lzx551402/geodesc">https://github.com/lzx551402/geodesc</a></td>
@@ -842,32 +482,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">SIFT &#43; HardNet</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-19</span></td>
   <td>F</td>
-  
   <td>1946.0</td>
   <td>0.2438</td>
   <td>0.0006</td>
@@ -875,7 +493,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0319</td>
   <td>0.0776</td>
   <td>0.1407</td>
- 
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">HardNet extracted on SIFT keypoints. Models trained on the Liberty sequence of the Brown dataset. We use slightly larger patches than specified for SIFT (scale multiplying factor 16/12). Feature matching with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://github.com/DagnyT/hardnet">https://github.com/DagnyT/hardnet</a></td>
@@ -883,32 +500,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">HarrisZ/RsGLOH2</span><br /><span class="boards_subtitle">kp:8000, match:sGOr2f<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-23</span></td>
   <td>F</td>
-  
   <td>2364.4</td>
   <td>0.2475</td>
   <td>0.0007</td>
@@ -916,7 +511,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0411</td>
   <td>0.1011</td>
   <td>0.1796</td>
- 
   <td class="hidden_value">Fabio Bellavia and Carlo Colombo</td>
   <td class="hidden_value">HarrisZ keypoints and Root squared (like RootSIFT) sGLOH2 descriptors using sGOr2f* matching strategy. Distance table entries lower than their respective row-wise and column-wise averages are discarded and then matching pairs are computed using the greedy nearest neighbour as in the WISW@CAIP2019 contest. Keypoints and matches are ordered according to their ranks (best ones first).</td>
   <td class="hidden_value"><a href="http://cvg.dsi.unifi.it/cvg/index.php?id=research#descriptor">http://cvg.dsi.unifi.it/cvg/index.php?id=research#descriptor</a></td>
@@ -924,32 +518,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">HesAffNet - HardNet2</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-29</span></td>
   <td>F</td>
-  
   <td>7682.0</td>
   <td>0.2498</td>
   <td>0.0009</td>
@@ -957,7 +529,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0380</td>
   <td>0.0932</td>
   <td>0.1682</td>
- 
   <td class="hidden_value">Milan Pultar, Dmytro Mishkin, Jiří Matas</td>
   <td class="hidden_value">Detector: Hessian &#43; AffNet(affine shape) &#43; OriNet (orientation), Code and weight from https://github.com/ducha-aiki/affnet, Paper: https://arxiv.org/abs/1711.06704; Descriptor: HardNet trained on AMOS &#43; mix of other datasets, similar to Code for train: https://github.com/pultarmi/HardNet_MultiDataset, Paper: https://arxiv.org/pdf/1901.09780.pdf; DeepNets were plugged into MODS framework, but without view synthesis and matching https://github.com/ducha-aiki/mods-light-zmq; Number of max.keypoints to detect: 8k, detection done on 2x upsampled images.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
@@ -965,32 +536,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 uint8</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">Hessian - HardNet2</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-30</span></td>
   <td>F</td>
-  
   <td>7749.5</td>
   <td>0.2653</td>
   <td>0.0008</td>
@@ -998,7 +547,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0416</td>
   <td>0.1024</td>
   <td>0.1851</td>
- 
   <td class="hidden_value">Milan Pultar, Dmytro Mishkin, Jiří Matas</td>
   <td class="hidden_value">Detector: Hessian. Gravity vector orientation is assumed; Descriptor: HardNet trained on AMOS &#43; mix of other datasets, similar to Code for train: https://github.com/pultarmi/HardNet_MultiDataset Paper: https://arxiv.org/pdf/1901.09780.pdf, DeepNets were plugged into MODS framework, but without view synthesis and matching https://github.com/ducha-aiki/mods-light-zmq; Number of max.keypoints to detect: 8k, detection done on 2x upsampled images.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
@@ -1006,32 +554,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 uint8</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">ORB (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-24</span></td>
   <td>F</td>
-  
   <td>7128.0</td>
   <td>0.2239</td>
   <td>0.0002</td>
@@ -1039,7 +565,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0189</td>
   <td>0.0502</td>
   <td>0.0952</td>
- 
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">ORB, as implemented in OpenCV. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
@@ -1047,32 +572,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">TBA</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">Scale-invariant desc. (Log-Polar, lambda=32)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-06-25</span></td>
   <td>F</td>
-  
   <td>7884.6</td>
   <td>0.2558</td>
   <td>0.0009</td>
@@ -1080,7 +583,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0420</td>
   <td>0.0995</td>
   <td>0.1788</td>
- 
   <td class="hidden_value">Patrick Ebel</td>
   <td class="hidden_value">We compute scale-invariant descriptors with a log-polar transformation of the patch. Keypoints are DoG, with a scaling factor of lambda/12 over its chosen scale. Reference: &#39;Beyond Cartesian Representations for Local Descriptors&#39;, Patrick Ebel, Anastasiia Mishchuk, Kwang Moo Yi, Pascal Fua, and Eduard Trulls, ICCV 2019.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
@@ -1088,32 +590,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">Scale-invariant desc. (Log-Polar, lambda=64)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-06-24</span></td>
   <td>F</td>
-  
   <td>7884.6</td>
   <td>0.2612</td>
   <td>0.0007</td>
@@ -1121,7 +601,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0432</td>
   <td>0.1044</td>
   <td>0.1828</td>
- 
   <td class="hidden_value">Patrick Ebel</td>
   <td class="hidden_value">We compute scale-invariant descriptors with a log-polar transformation of the patch. Keypoints are DoG, with a scaling factor of lambda/12 over its chosen scale. Reference: &#39;Beyond Cartesian Representations for Local Descriptors&#39;, Patrick Ebel, Anastasiia Mishchuk, Kwang Moo Yi, Pascal Fua, and Eduard Trulls, ICCV 2019.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
@@ -1129,32 +608,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">Scale-invariant desc. (Log-Polar, lambda=96)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-06-20</span></td>
   <td>F</td>
-  
   <td>7884.6</td>
   <td>0.2638</td>
   <td>0.0008</td>
@@ -1162,7 +619,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0448</td>
   <td>0.1066</td>
   <td>0.1850</td>
- 
   <td class="hidden_value">Patrick Ebel</td>
   <td class="hidden_value">We compute scale-invariant descriptors with a log-polar transformation of the patch. Keypoints are DoG, with a scaling factor of lambda/12 over its chosen scale. Reference: &#39;Beyond Cartesian Representations for Local Descriptors&#39;, Patrick Ebel, Anastasiia Mishchuk, Kwang Moo Yi, Pascal Fua, and Eduard Trulls, ICCV 2019.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
@@ -1170,32 +626,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">SIFT-AID (NN matcher)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-10</span></td>
   <td>F</td>
-  
   <td>3828.5</td>
   <td>0.2456</td>
   <td>0.0005</td>
@@ -1203,7 +637,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0226</td>
   <td>0.0543</td>
   <td>0.0981</td>
- 
   <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
   <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
   <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
@@ -1211,32 +644,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">6272 bits</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">SIFT-AID (custom matcher)</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
   <td>F/M</td>
-  
   <td>3828.5</td>
   <td>0.2454</td>
   <td>0.0005</td>
@@ -1244,7 +655,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0218</td>
   <td>0.0515</td>
   <td>0.0960</td>
- 
   <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
   <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
   <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
@@ -1252,32 +662,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">6272 bits</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">SIFT &#43; ContextDesc</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-09</span></td>
   <td>F</td>
-  
   <td>7515.2</td>
   <td>0.3006</td>
   <td>0.0008</td>
@@ -1285,7 +673,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0439</td>
   <td>0.1025</td>
   <td>0.1832</td>
- 
   <td class="hidden_value">Zixin Luo</td>
   <td class="hidden_value">ContextDesc extracted on SIFT keypoints. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search. Features are quantized to uint8 and extracted from the code provided by the authors.</td>
   <td class="hidden_value"><a href="https://github.com/lzx551402/contextdesc">https://github.com/lzx551402/contextdesc</a></td>
@@ -1293,32 +680,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 uint8</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">SIFT-Dense-ContextDesc</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-28</span></td>
   <td>F</td>
-  
   <td>7515.2</td>
   <td>0.2855</td>
   <td>0.0007</td>
@@ -1326,7 +691,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0432</td>
   <td>0.1001</td>
   <td>0.1779</td>
- 
   <td class="hidden_value">Zixin Luo, Jiahui Zhang</td>
   <td class="hidden_value">Dense-ContextDesc is a variant of ContextDesc, where descriptors are densely extracted from full images, instead of image patches, while other settings stay unchanged as original ContextDesc. We find Dense-ContextDesc performs better regarding in particular illumination changes. Dense-ContextDesc is extracted on SIFT keypoints. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search. Features are quantized to uint8 and extracted from the code provided by the authors. The model will be available on the authors&#39; GitHub page.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
@@ -1334,32 +698,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">TBA</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">SIFT &#43; ContextDesc &#43; Inlier Classification V2</span><br /><span class="boards_subtitle">kp:8000, match:custom<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-28</span></td>
   <td>F/M</td>
-  
   <td>7515.2</td>
   <td>0.3633</td>
   <td>0.0016</td>
@@ -1367,7 +709,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0823</td>
   <td>0.1818</td>
   <td>0.2963</td>
- 
   <td class="hidden_value">Dawei Sun, Zixin Luo, Jiahui Zhang</td>
   <td class="hidden_value">We use the SIFT detector and ContextDesc descriptor, and then we train an improved inlier classification and fundamental matrix estimation network based on [Yi et al. CVPR2018] (https://arxiv.org/pdf/1711.05971.pdf).</td>
   <td class="hidden_value"><a href="https://github.com/lzx551402/contextdesc">https://github.com/lzx551402/contextdesc</a></td>
@@ -1375,32 +716,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">SIFT-GeoDesc-GitHub</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-08</span></td>
   <td>F</td>
-  
   <td>7515.2</td>
   <td>0.2337</td>
   <td>0.0007</td>
@@ -1408,7 +727,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0368</td>
   <td>0.0904</td>
   <td>0.1653</td>
- 
   <td class="hidden_value">Zixin Luo</td>
   <td class="hidden_value">GeoDesc extracted on SIFT keypoints. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search. Features extracted from the code provided by the authors.</td>
   <td class="hidden_value"><a href="https://arxiv.org/abs/1807.06294">https://arxiv.org/abs/1807.06294</a></td>
@@ -1416,32 +734,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">SIFT &#43; GeoDesc</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-24</span></td>
   <td>F</td>
-  
   <td>7885.0</td>
   <td>0.2329</td>
   <td>0.0007</td>
@@ -1449,7 +745,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0367</td>
   <td>0.0907</td>
   <td>0.1655</td>
- 
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">GeoDesc extracted on SIFT keypoints. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://github.com/lzx551402/geodesc">https://github.com/lzx551402/geodesc</a></td>
@@ -1457,32 +752,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">SIFT &#43; HardNet</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-24</span></td>
   <td>F</td>
-  
   <td>7885.0</td>
   <td>0.2523</td>
   <td>0.0009</td>
@@ -1490,7 +763,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0425</td>
   <td>0.1005</td>
   <td>0.1793</td>
- 
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">HardNet extracted on SIFT keypoints. Number of keypoints: 8000 per image. Models trained on the Liberty sequence of the Brown dataset. We use slightly larger paches than specified for SIFT (scale multiplying factor 16/12). Feature matching with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://github.com/DagnyT/hardnet">https://github.com/DagnyT/hardnet</a></td>
@@ -1498,32 +770,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">SIFT &#43; L2-Net</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-24</span></td>
   <td>F</td>
-  
   <td>7885.0</td>
   <td>0.2476</td>
   <td>0.0009</td>
@@ -1531,7 +781,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0400</td>
   <td>0.0929</td>
   <td>0.1696</td>
- 
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">L2-Net extracted on SIFT keypoints. Number of keypoints: 8000 per image. Models trained on the Liberty sequence of the Brown dataset. We use slightly larger paches than specified for SIFT (scale multiplying factor 16/12). Feature matching with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://github.com/yuruntian/L2-Net">https://github.com/yuruntian/L2-Net</a></td>
@@ -1539,32 +788,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">SIFT &#43; ContextDesc &#43; Inlier Classification V1</span><br /><span class="boards_subtitle">kp:8000, match:custom<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-29</span></td>
   <td>F/M</td>
-  
   <td>7515.2</td>
   <td>0.3623</td>
   <td>0.0018</td>
@@ -1572,7 +799,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0752</td>
   <td>0.1699</td>
   <td>0.2789</td>
- 
   <td class="hidden_value">Dawei Sun, Zixin Luo, Jiahui Zhang</td>
   <td class="hidden_value">We use the SIFT detector and ContextDesc descriptor, and then we train an inlier classification and fundamental matrix estimation network using the architecture of [Yi et al. CVPR2018] (https://arxiv.org/pdf/1711.05971.pdf).</td>
   <td class="hidden_value"><a href="https://github.com/lzx551402/contextdesc">https://github.com/lzx551402/contextdesc</a></td>
@@ -1580,32 +806,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">SIFT (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-24</span></td>
   <td>F</td>
-  
   <td>7884.4</td>
   <td>0.2148</td>
   <td>0.0004</td>
@@ -1613,7 +817,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0277</td>
   <td>0.0692</td>
   <td>0.1303</td>
- 
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SIFT, as implemented in OpenCV. Feature matching with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
@@ -1621,32 +824,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">SIFT &#43; TFeat</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-24</span></td>
   <td>F</td>
-  
   <td>7885.0</td>
   <td>0.2359</td>
   <td>0.0007</td>
@@ -1654,7 +835,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0357</td>
   <td>0.0845</td>
   <td>0.1540</td>
- 
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">T-Feat extracted on SIFT keypoints. Number of keypoints: 8000 per image. Models trained on the Liberty sequence of the Brown dataset. We use slightly larger paches than specified for SIFT (scale multiplying factor 16/12). Feature matching with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://github.com/vbalnt/tfeat">https://github.com/vbalnt/tfeat</a></td>
@@ -1662,32 +842,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">SIFT (OpenCV)</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-17</span></td>
   <td>F</td>
-  
   <td>2048.0</td>
   <td>0.2215</td>
   <td>0.0004</td>
@@ -1695,7 +853,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0223</td>
   <td>0.0570</td>
   <td>0.1060</td>
- 
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SIFT, as implemented in OpenCV. Feature matching with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
@@ -1703,32 +860,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">Superpoint (nn matcher)</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-06-07</span></td>
   <td>F</td>
-  
   <td>1880.6</td>
   <td>0.2464</td>
   <td>0.0008</td>
@@ -1736,7 +871,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0415</td>
   <td>0.0975</td>
   <td>0.1696</td>
- 
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SuperPoint features from the submission &#39;SuperPoint &#43; Custom Matcher (v2)&#39; with a brute-force 1:1 matcher instead of the custom matcher. For reference.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
@@ -1744,32 +878,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">Superpoint (1:1 matcher)</span><br /><span class="boards_subtitle">kp:2048, match:nn1to1<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-06-07</span></td>
   <td>F</td>
-  
   <td>1880.6</td>
   <td>0.2651</td>
   <td>0.0008</td>
@@ -1777,7 +889,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0519</td>
   <td>0.1168</td>
   <td>0.2016</td>
- 
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SuperPoint features from the submission &#39;SuperPoint &#43; Custom Matcher (v2)&#39; with a brute-force 1:1 matcher instead of the custom matcher. For reference.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
@@ -1785,32 +896,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">SuperPoint (default)</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-24</span></td>
   <td>F</td>
-  
   <td>1266.5</td>
   <td>0.2576</td>
   <td>0.0008</td>
@@ -1818,7 +907,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0414</td>
   <td>0.0970</td>
   <td>0.1676</td>
- 
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels. We extract features with the default parameters and use however many are returned (about 1200 on average). Feature matching done with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
@@ -1826,32 +914,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">SuperPoint</span><br /><span class="boards_subtitle">kp:1024, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
-  
   <td>1024.0</td>
   <td>0.2565</td>
   <td>0.0008</td>
@@ -1859,7 +925,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0402</td>
   <td>0.0953</td>
   <td>0.1658</td>
- 
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels. We lower the default detection threshold to take the number of features indicated in the label. Feature matching done with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
@@ -1867,32 +932,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">SuperPoint</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
-  
   <td>2048.0</td>
   <td>0.2495</td>
   <td>0.0009</td>
@@ -1900,7 +943,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0416</td>
   <td>0.0930</td>
   <td>0.1641</td>
- 
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels. We lower the default detection threshold to take the number of features indicated in the label. Feature matching done with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
@@ -1908,32 +950,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">SuperPoint</span><br /><span class="boards_subtitle">kp:256, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
-  
   <td>256.0</td>
   <td>0.2485</td>
   <td>0.0008</td>
@@ -1941,7 +961,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0308</td>
   <td>0.0731</td>
   <td>0.1270</td>
- 
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels. We lower the default detection threshold to take the number of features indicated in the label. Feature matching done with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
@@ -1949,32 +968,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">SuperPoint</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
-  
   <td>512.0</td>
   <td>0.2553</td>
   <td>0.0007</td>
@@ -1982,7 +979,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0377</td>
   <td>0.0897</td>
   <td>0.1569</td>
- 
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels. We lower the default detection threshold to take the number of features indicated in the label. Feature matching done with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
@@ -1990,32 +986,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">SuperPoint</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
-  
   <td>8000.0</td>
   <td>0.2404</td>
   <td>0.0008</td>
@@ -2023,7 +997,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0387</td>
   <td>0.0879</td>
   <td>0.1529</td>
- 
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels. We lower the default detection threshold to take the number of features indicated in the label. Feature matching done with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
@@ -2031,32 +1004,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">Scale-invariant desc. (Cartesian, lambda=16)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-07-29</span></td>
   <td>F</td>
-  
   <td>7884.6</td>
   <td>0.2490</td>
   <td>0.0012</td>
@@ -2064,7 +1015,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0405</td>
   <td>0.0988</td>
   <td>0.1792</td>
- 
   <td class="hidden_value">Patrick Ebel</td>
   <td class="hidden_value">We compute scale-invariant descriptors with a log-polar transformation of the patch. Keypoints are DoG, with a scaling factor of lambda/12 over its chosen scale. (This is a baseline where we use cartesian patches instead.) Reference: &#39;Beyond Cartesian Representations for Local Descriptors&#39;, Patrick Ebel, Anastasiia Mishchuk, Kwang Moo Yi, Pascal Fua, and Eduard Trulls, ICCV 2019.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
@@ -2072,32 +1022,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">SuperPoint (trained on coco &#43; phototourism training set)</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-30</span></td>
   <td>F</td>
-  
   <td>1562.8</td>
   <td>0.2479</td>
   <td>0.0010</td>
@@ -2105,7 +1033,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0389</td>
   <td>0.0920</td>
   <td>0.1654</td>
- 
   <td class="hidden_value">Daniel DeTone, Paul Sarlin, Tomasz Malisiewicz, Andrew Rabinovich</td>
   <td class="hidden_value">SuperPoint V1 model trained on COCO homographic warps at VGA resolution, plus pairs from the phototourism training set using the GT poses and depths for correspondence. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels. We extract features with the default parameters and use however many are returned.</td>
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
@@ -2113,32 +1040,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">SuperPoint &#43; Custom Matcher (v1)</span><br /><span class="boards_subtitle">kp:2048, match:custom<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-30</span></td>
   <td>F/M</td>
-  
   <td>1502.0</td>
   <td>0.3548</td>
   <td>0.0011</td>
@@ -2146,7 +1051,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0590</td>
   <td>0.1338</td>
   <td>0.2257</td>
- 
   <td class="hidden_value">Paul-Edouard Sarlin, Daniel DeTone, Tomasz Malisiewicz, Andrew Rabinovich</td>
   <td class="hidden_value">Features are extracted by a modified SuperPoint: - retrained on the phototourism training set; - keypoints refinement; - better descriptor sampling; - adjusted thresholds. A custom matcher estimates the image rotation and rejects outlier matches using the correspondence classifier introduced in &#39;Learning To Find Good Correspondences&#39; (Yi et al., 2018).</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
@@ -2154,32 +1058,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">SuperPoint &#43; Custom Matcher (v2)</span><br /><span class="boards_subtitle">kp:2048, match:custom<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-28</span></td>
   <td>F/M</td>
-  
   <td>1880.6</td>
   <td>0.3547</td>
   <td>0.0012</td>
@@ -2187,7 +1069,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0640</td>
   <td>0.1413</td>
   <td>0.2396</td>
- 
   <td class="hidden_value">Paul-Edouard Sarlin, Daniel DeTone, Tomasz Malisiewicz, Andrew Rabinovich</td>
   <td class="hidden_value">Features are extracted by a modified SuperPoint: - retrained on the phototourism training set, - keypoints refinement, - better descriptor sampling, - adjusted thresholds; A custom matcher estimates the image rotation and rejects outlier matches using the correspondence classifier introduced in &#39;Learning To Find Good Correspondences&#39; (Yi et al., 2018).</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
@@ -2195,32 +1076,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">SURF (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-24</span></td>
   <td>F</td>
-  
   <td>7748.8</td>
   <td>0.2078</td>
   <td>0.0006</td>
@@ -2228,7 +1087,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0210</td>
   <td>0.0542</td>
   <td>0.1059</td>
- 
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SURF, as implemented in OpenCV. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
@@ -2236,32 +1094,10 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">TBA</td>
 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
-  
   <td class="align_left"><span class="boards_title">SIFT &#43; ContextDesc</span><br /><span class="boards_subtitle">kp:8000, match:nn1to1<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-06-07</span></td>
   <td>F</td>
-  
   <td>7515.2</td>
   <td>0.3112</td>
   <td>0.0009</td>
@@ -2269,7 +1105,6 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td>0.0513</td>
   <td>0.1226</td>
   <td>0.2151</td>
- 
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">ContextDesc extracted on SIFT keypoints. Number of keypoints: 8000 per image. Feature matching with nearest-neighbour search, enforcing cross-match consistency. Features are quantized to uint8 and extracted from the code provided by the authors.</td>
   <td class="hidden_value"><a href="https://github.com/lzx551402/contextdesc">https://github.com/lzx551402/contextdesc</a></td>
@@ -2277,11 +1112,8 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">TBA</td>
 </tr>
-
-
 </tbody>
 </table>
-
 <div id="chart-stereo-map-th" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -2331,7 +1163,6 @@ google.charts.load('current', {
 });
 </script>
 </div>
-
 <div id="chart-stereo-map-th-kp-8000" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -2381,7 +1212,6 @@ google.charts.load('current', {
 });
 </script>
 </div>
-
 <div id="chart-stereo-map-th-kp-2048" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -2431,7 +1261,6 @@ google.charts.load('current', {
 });
 </script>
 </div>
-
 <div id="chart-stereo-map-th-kp-1024" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -2481,7 +1310,6 @@ google.charts.load('current', {
 });
 </script>
 </div>
-
 <div id="chart-stereo-map-th-kp-512" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -2531,7 +1359,6 @@ google.charts.load('current', {
 });
 </script>
 </div>
-
 <div id="chart-stereo-map-th-kp-256" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -2581,68 +1408,42 @@ google.charts.load('current', {
 });
 </script>
 </div>
-
 <!-- cannot get this to render properly now :( -->
-
 <!--<input type="button" id="show1" value="Show 1" />-->
-
 <!--<input type="button" id="show2" value="Show 2" />-->
-
 <!--<script type="text/javascript">-->
-
 <!--$("#show1").click(function(){-->
-
 <!--  document.getElementById('chart-stereo-map-th').style.visibility = 'visible';-->
-
 <!--  $('chart-stereo-map-th').css("height", "400px");-->
-
 <!--  document.getElementById('chart-stereo-map-th-1024').style.visibility = 'none';-->
-
 <!--  $('chart-stereo-map-th-1024').css("height", "0px");-->
-
 <!--});-->
-
 <!--$("#show2").click(function(){-->
-
 <!--  document.getElementById('chart-stereo-map-th').style.visibility = 'none';-->
-
 <!--  $('chart-stereo-map-th').css("height", "0px");-->
-
 <!--  document.getElementById('chart-stereo-map-th-1024').style.visibility = 'visible';-->
-
 <!--  $('chart-stereo-map-th-1024').css("height", "400px");-->
-
 <!--});-->
-
 <!--</script>-->
-
 <hr>
-
-<p><br /></p>
-
-<h2 id="a-name-photot-mvs-a-p2-phototourism-dataset-mdash-multi-view-task"><a name="photot_mvs"></a>[P2] Phototourism dataset &mdash; Multi-view task</h2>
-
+<br />
+## <a name="photot_mvs"></a>[P2] Phototourism dataset &mdash; Multi-view task
 <p>Performance in SfM reconstruction, averaged over all the test sequences.</p>
-
 <ul>
 <li><a href="breakdown/phototourism/mvs/by_seq">Click here for a breakdown by sequence</a></li>
-<li><a href="breakdown/phototourism/mvs/by_bag">Click here for a breakdown by subset size</a>
-<!--* [Click here for visualizations](visualization/phototourism/mvs)--></li>
+<li><a href="breakdown/phototourism/mvs/by_bag">Click here for a breakdown by subset size</a></li>
 </ul>
-
-<p><br /></p>
-
+<!--* [Click here for visualizations](visualization/phototourism/mvs)-->
+<br />
 <table class="display leaderboard_mvs" width="99%" cellspacing="0">
 <thead>
 <tr>
   <th colspan="13" style="text-align: center;" class="sorter-false">MVS &mdash; averaged over all sequences</th>
 </tr>
 <tr>
-  
   <th class="all align_left" width="99%">Method</th>
   <th class="all">Date</th>
   <th class="all"><span class="balloon" data-balloon="F: Features only.&#10;M: Features and custom matches." data-balloon-break data-balloon-pos="up">Type</span></th>
-  
   <th class="all"><span class="balloon" data-balloon="Ratio of images successfully&#10;registered (min: 3)." data-balloon-break data-balloon-pos="up">Ims (%)</span></th>
   <th class="all"><span class="balloon" data-balloon="Average number of 3D points&#10;in the reconstruction." data-balloon-break data-balloon-pos="up">#Pts</span></th>
   <th class="all"><span class="balloon" data-balloon="Success ratio in the&#10;3D reconstruction (%)." data-balloon-break data-balloon-pos="up">SR</span></th>
@@ -2653,7 +1454,6 @@ google.charts.load('current', {
   <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 20-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>20<sup>o</sup></sup></span></th>
   <th class="all"><span class="balloon" data-balloon="Mean Average Precision&#10;at a 25-degree threshold." data-balloon-break data-balloon-pos="up">mAP<sup>25<sup>o</sup></sup></span></th>
   <th class="all"><span class="balloon" data-balloon="Average Trajectory Error." data-balloon-break data-balloon-pos="up">ATE</span></th>
-  
   <th class="none hidden_key">By</th>
   <th class="none hidden_key">Details</th>
   <th class="none hidden_key">Link</th>
@@ -2663,43 +1463,10 @@ google.charts.load('current', {
 </tr>
 </thead>
 <tbody>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">AKAZE (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-24</span></td>
   <td>F</td>
-  
   <td>94.3</td>
   <td>4357.8</td>
   <td>88.5</td>
@@ -2709,9 +1476,7 @@ google.charts.load('current', {
   <td>0.4285</td>
   <td>0.4725</td>
   <td>0.5075</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">AKAZE, as implemented in OpenCV. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
@@ -2719,44 +1484,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">TBA</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">SphereDesc</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
-  
   <td>96.6</td>
   <td>3901.2</td>
   <td>94.1</td>
@@ -2766,9 +1497,7 @@ google.charts.load('current', {
   <td>0.4865</td>
   <td>0.5360</td>
   <td>0.5772</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Anonymous</td>
   <td class="hidden_value">We use OpenCV&#39;s implementation of AKAZE detector, and for each keypoint we extract a descriptor via CNN.</td>
   <td class="hidden_value"><a href="N/A">N/A</a></td>
@@ -2776,44 +1505,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">Brisk &#43; SSS</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-14</span></td>
   <td>F</td>
-  
   <td>92.9</td>
   <td>2548.4</td>
   <td>87.9</td>
@@ -2823,9 +1518,7 @@ google.charts.load('current', {
   <td>0.2694</td>
   <td>0.3209</td>
   <td>0.3667</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Anonymous</td>
   <td class="hidden_value">We use OpenCV&#39;s implementation of brisk detector with the default settings, and for each image there are at most 8K keypoints. For each keypoint, we extract a descriptor via a CNN model.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
@@ -2833,44 +1526,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">D2-Net (single scale)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-07</span></td>
   <td>F</td>
-  
   <td>93.9</td>
   <td>4278.0</td>
   <td>92.8</td>
@@ -2880,9 +1539,7 @@ google.charts.load('current', {
   <td>0.4072</td>
   <td>0.4627</td>
   <td>0.5075</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">D2-Net: A Trainable CNN for Joint Detection and Description of Local Features. Single-scale features, brute-force nearest neighbour matching. Trained on sequences overlapping with our test set: see &#39;no PT&#39; for eligible results (this entry is provided only for reference). Paper: https://dsmn.ml/files/d2-net/d2-net.pdf</td>
   <td class="hidden_value"><a href="https://github.com/mihaidusmanu/d2-net">https://github.com/mihaidusmanu/d2-net</a></td>
@@ -2890,44 +1547,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">512 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">D2-Net (multiscale)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-07</span></td>
   <td>F</td>
-  
   <td>94.6</td>
   <td>5533.0</td>
   <td>94.4</td>
@@ -2937,9 +1560,7 @@ google.charts.load('current', {
   <td>0.4001</td>
   <td>0.4623</td>
   <td>0.5142</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">D2-Net: A Trainable CNN for Joint Detection and Description of Local Features. Multi-scale features, brute-force nearest neighbour matching. Trained on sequences overlapping with our test set: see &#39;no PT&#39; for eligible results (this entry is provided only for reference). Paper: https://dsmn.ml/files/d2-net/d2-net.pdf</td>
   <td class="hidden_value"><a href="https://github.com/mihaidusmanu/d2-net">https://github.com/mihaidusmanu/d2-net</a></td>
@@ -2947,44 +1568,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">512 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">D2-Net (single scale, no PT dataset)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-06-01</span></td>
   <td>F</td>
-  
   <td>93.9</td>
   <td>4289.3</td>
   <td>92.8</td>
@@ -2994,9 +1581,7 @@ google.charts.load('current', {
   <td>0.4102</td>
   <td>0.4652</td>
   <td>0.5112</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">D2-Net: A Trainable CNN for Joint Detection and Description of Local Features. Single-scale features, brute-force nearest neighbour matching. Re-trained removing conflicting sequences (models: d2_tf_no_phototourism.pth). Paper: https://dsmn.ml/files/d2-net/d2-net.pdf</td>
   <td class="hidden_value"><a href="https://github.com/mihaidusmanu/d2-net">https://github.com/mihaidusmanu/d2-net</a></td>
@@ -3004,44 +1589,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">512 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">D2-Net (multi-scale, no PT dataset)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-06-05</span></td>
   <td>F</td>
-  
   <td>94.5</td>
   <td>5098.5</td>
   <td>94.0</td>
@@ -3051,9 +1602,7 @@ google.charts.load('current', {
   <td>0.3967</td>
   <td>0.4579</td>
   <td>0.5098</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">D2-Net: A Trainable CNN for Joint Detection and Description of Local Features. Multi-scale features, brute-force nearest neighbour matching. Re-trained removing conflicting sequences (models: d2_tf_no_phototourism.pth). Paper: https://dsmn.ml/files/d2-net/d2-net.pdf</td>
   <td class="hidden_value"><a href="https://github.com/mihaidusmanu/d2-net">https://github.com/mihaidusmanu/d2-net</a></td>
@@ -3061,44 +1610,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">512 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">DELF</span><br /><span class="boards_subtitle">kp:1024, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-05</span></td>
   <td>F</td>
-  
   <td>83.2</td>
   <td>637.0</td>
   <td>75.8</td>
@@ -3108,9 +1623,7 @@ google.charts.load('current', {
   <td>0.1236</td>
   <td>0.1708</td>
   <td>0.2095</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">DELF features for object retrieval, trained on the Google Landmarks dataset. Paper: https://arxiv.org/abs/1612.06321</td>
   <td class="hidden_value"><a href="https://github.com/tensorflow/models/tree/master/research/delf">https://github.com/tensorflow/models/tree/master/research/delf</a></td>
@@ -3118,44 +1631,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">40 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">DELF</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-05</span></td>
   <td>F</td>
-  
   <td>87.9</td>
   <td>1278.7</td>
   <td>83.8</td>
@@ -3165,9 +1644,7 @@ google.charts.load('current', {
   <td>0.1629</td>
   <td>0.2185</td>
   <td>0.2656</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">DELF features for object retrieval, trained on the Google Landmarks dataset. Paper: https://arxiv.org/abs/1612.06321</td>
   <td class="hidden_value"><a href="https://github.com/tensorflow/models/tree/master/research/delf">https://github.com/tensorflow/models/tree/master/research/delf</a></td>
@@ -3175,44 +1652,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">40 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">DELF</span><br /><span class="boards_subtitle">kp:256, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-05</span></td>
   <td>F</td>
-  
   <td>34.6</td>
   <td>64.1</td>
   <td>22.2</td>
@@ -3222,9 +1665,7 @@ google.charts.load('current', {
   <td>0.0072</td>
   <td>0.0111</td>
   <td>0.0147</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">DELF features for object retrieval, trained on the Google Landmarks dataset. Paper: https://arxiv.org/abs/1612.06321</td>
   <td class="hidden_value"><a href="https://github.com/tensorflow/models/tree/master/research/delf">https://github.com/tensorflow/models/tree/master/research/delf</a></td>
@@ -3232,44 +1673,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">40 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">DELF</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-05</span></td>
   <td>F</td>
-  
   <td>69.6</td>
   <td>260.7</td>
   <td>56.4</td>
@@ -3279,9 +1686,7 @@ google.charts.load('current', {
   <td>0.0585</td>
   <td>0.0842</td>
   <td>0.1069</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">DELF features for object retrieval, trained on the Google Landmarks dataset. Paper: https://arxiv.org/abs/1612.06321</td>
   <td class="hidden_value"><a href="https://github.com/tensorflow/models/tree/master/research/delf">https://github.com/tensorflow/models/tree/master/research/delf</a></td>
@@ -3289,44 +1694,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">40 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">ELF-256D</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-07</span></td>
   <td>F</td>
-  
   <td>52.7</td>
   <td>153.3</td>
   <td>38.4</td>
@@ -3336,9 +1707,7 @@ google.charts.load('current', {
   <td>0.0657</td>
   <td>0.0755</td>
   <td>0.0842</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Anonymous</td>
   <td class="hidden_value">ELF detector: Keypoints are local maxima of a saliency map generated by the gradient of a feature map with respect to the image of a pre-trained CNN. Descriptors are computed with the interpolation of the VGG pool3 feature map on the detected keypoints.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
@@ -3346,44 +1715,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">ELF-512D</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-09</span></td>
   <td>F</td>
-  
   <td>60.4</td>
   <td>170.1</td>
   <td>45.6</td>
@@ -3393,9 +1728,7 @@ google.charts.load('current', {
   <td>0.0849</td>
   <td>0.0976</td>
   <td>0.1082</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Anonymous</td>
   <td class="hidden_value">ELF detector: Keypoints are local maxima of a saliency map generated by the gradient of a feature map with respect to the image of a pre-trained CNN. Descriptors are computed with the interpolation of the VGG pool3 feature map on the detected keypoints.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
@@ -3403,44 +1736,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">ELF-SIFT</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
-  
   <td>72.5</td>
   <td>273.0</td>
   <td>56.5</td>
@@ -3450,9 +1749,7 @@ google.charts.load('current', {
   <td>0.1678</td>
   <td>0.1865</td>
   <td>0.2021</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Anonymous</td>
   <td class="hidden_value">ELF detector: Keypoints are local maxima of a saliency map generated by the gradient of a feature map with respect to the image of a pre-trained CNN. Descriptors are HOG (as in SIFT).</td>
   <td class="hidden_value"><a href="N/A">N/A</a></td>
@@ -3460,44 +1757,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 uint8</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">SIFT &#43; GeoDesc</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-19</span></td>
   <td>F</td>
-  
   <td>92.8</td>
   <td>1470.4</td>
   <td>88.6</td>
@@ -3507,9 +1770,7 @@ google.charts.load('current', {
   <td>0.3802</td>
   <td>0.4273</td>
   <td>0.4638</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">GeoDesc extracted on SIFT keypoints. Feature matching with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://github.com/lzx551402/geodesc">https://github.com/lzx551402/geodesc</a></td>
@@ -3517,44 +1778,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">SIFT &#43; HardNet</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-19</span></td>
   <td>F</td>
-  
   <td>92.9</td>
   <td>1635.2</td>
   <td>88.1</td>
@@ -3564,9 +1791,7 @@ google.charts.load('current', {
   <td>0.3778</td>
   <td>0.4232</td>
   <td>0.4611</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">HardNet extracted on SIFT keypoints. Models trained on the Liberty sequence of the Brown dataset. We use slightly larger patches than specified for SIFT (scale multiplying factor 16/12). Feature matching with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://github.com/DagnyT/hardnet">https://github.com/DagnyT/hardnet</a></td>
@@ -3574,44 +1799,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">HarrisZ/RsGLOH2</span><br /><span class="boards_subtitle">kp:8000, match:sGOr2f<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-23</span></td>
   <td>F</td>
-  
   <td>96.6</td>
   <td>1727.7</td>
   <td>94.0</td>
@@ -3621,9 +1812,7 @@ google.charts.load('current', {
   <td>0.5040</td>
   <td>0.5545</td>
   <td>0.5935</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Fabio Bellavia and Carlo Colombo</td>
   <td class="hidden_value">HarrisZ keypoints and Root squared (like RootSIFT) sGLOH2 descriptors using sGOr2f* matching strategy. Distance table entries lower than their respective row-wise and column-wise averages are discarded and then matching pairs are computed using the greedy nearest neighbour as in the WISW@CAIP2019 contest. Keypoints and matches are ordered according to their ranks (best ones first).</td>
   <td class="hidden_value"><a href="http://cvg.dsi.unifi.it/cvg/index.php?id=research#descriptor">http://cvg.dsi.unifi.it/cvg/index.php?id=research#descriptor</a></td>
@@ -3631,44 +1820,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">HesAffNet - HardNet2</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-29</span></td>
   <td>F</td>
-  
   <td>96.8</td>
   <td>5418.9</td>
   <td>95.7</td>
@@ -3678,9 +1833,7 @@ google.charts.load('current', {
   <td>0.5284</td>
   <td>0.5756</td>
   <td>0.6154</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Milan Pultar, Dmytro Mishkin, Jiří Matas</td>
   <td class="hidden_value">Detector: Hessian &#43; AffNet(affine shape) &#43; OriNet (orientation), Code and weight from https://github.com/ducha-aiki/affnet, Paper: https://arxiv.org/abs/1711.06704; Descriptor: HardNet trained on AMOS &#43; mix of other datasets, similar to Code for train: https://github.com/pultarmi/HardNet_MultiDataset, Paper: https://arxiv.org/pdf/1901.09780.pdf; DeepNets were plugged into MODS framework, but without view synthesis and matching https://github.com/ducha-aiki/mods-light-zmq; Number of max.keypoints to detect: 8k, detection done on 2x upsampled images.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
@@ -3688,44 +1841,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 uint8</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">Hessian - HardNet2</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-30</span></td>
   <td>F</td>
-  
   <td>95.1</td>
   <td>5707.2</td>
   <td>94.1</td>
@@ -3735,9 +1854,7 @@ google.charts.load('current', {
   <td>0.5055</td>
   <td>0.5467</td>
   <td>0.5794</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Milan Pultar, Dmytro Mishkin, Jiří Matas</td>
   <td class="hidden_value">Detector: Hessian. Gravity vector orientation is assumed; Descriptor: HardNet trained on AMOS &#43; mix of other datasets, similar to Code for train: https://github.com/pultarmi/HardNet_MultiDataset Paper: https://arxiv.org/pdf/1901.09780.pdf, DeepNets were plugged into MODS framework, but without view synthesis and matching https://github.com/ducha-aiki/mods-light-zmq; Number of max.keypoints to detect: 8k, detection done on 2x upsampled images.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
@@ -3745,44 +1862,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 uint8</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">ORB (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-24</span></td>
   <td>F</td>
-  
   <td>87.6</td>
   <td>2988.1</td>
   <td>77.9</td>
@@ -3792,9 +1875,7 @@ google.charts.load('current', {
   <td>0.2307</td>
   <td>0.2664</td>
   <td>0.2996</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">ORB, as implemented in OpenCV. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
@@ -3802,44 +1883,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">TBA</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">Scale-invariant desc. (Log-Polar, lambda=32)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-06-25</span></td>
   <td>F</td>
-  
   <td>97.7</td>
   <td>6627.9</td>
   <td>96.4</td>
@@ -3849,9 +1896,7 @@ google.charts.load('current', {
   <td>0.5389</td>
   <td>0.5855</td>
   <td>0.6246</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Patrick Ebel</td>
   <td class="hidden_value">We compute scale-invariant descriptors with a log-polar transformation of the patch. Keypoints are DoG, with a scaling factor of lambda/12 over its chosen scale. Reference: &#39;Beyond Cartesian Representations for Local Descriptors&#39;, Patrick Ebel, Anastasiia Mishchuk, Kwang Moo Yi, Pascal Fua, and Eduard Trulls, ICCV 2019.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
@@ -3859,44 +1904,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">Scale-invariant desc. (Log-Polar, lambda=64)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-06-24</span></td>
   <td>F</td>
-  
   <td>97.6</td>
   <td>6792.6</td>
   <td>96.4</td>
@@ -3906,9 +1917,7 @@ google.charts.load('current', {
   <td>0.5396</td>
   <td>0.5848</td>
   <td>0.6221</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Patrick Ebel</td>
   <td class="hidden_value">We compute scale-invariant descriptors with a log-polar transformation of the patch. Keypoints are DoG, with a scaling factor of lambda/12 over its chosen scale. Reference: &#39;Beyond Cartesian Representations for Local Descriptors&#39;, Patrick Ebel, Anastasiia Mishchuk, Kwang Moo Yi, Pascal Fua, and Eduard Trulls, ICCV 2019.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
@@ -3916,44 +1925,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">Scale-invariant desc. (Log-Polar, lambda=96)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-06-20</span></td>
   <td>F</td>
-  
   <td>97.6</td>
   <td>6831.3</td>
   <td>96.9</td>
@@ -3963,9 +1938,7 @@ google.charts.load('current', {
   <td>0.5427</td>
   <td>0.5886</td>
   <td>0.6255</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Patrick Ebel</td>
   <td class="hidden_value">We compute scale-invariant descriptors with a log-polar transformation of the patch. Keypoints are DoG, with a scaling factor of lambda/12 over its chosen scale. Reference: &#39;Beyond Cartesian Representations for Local Descriptors&#39;, Patrick Ebel, Anastasiia Mishchuk, Kwang Moo Yi, Pascal Fua, and Eduard Trulls, ICCV 2019.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
@@ -3973,44 +1946,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">SIFT-AID (NN matcher)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-10</span></td>
   <td>F</td>
-  
   <td>88.7</td>
   <td>2397.1</td>
   <td>80.7</td>
@@ -4020,9 +1959,7 @@ google.charts.load('current', {
   <td>0.2688</td>
   <td>0.3076</td>
   <td>0.3422</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
   <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
   <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
@@ -4030,44 +1967,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">6272 bits</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">SIFT-AID (custom matcher)</span><br /><span class="boards_subtitle">kp:8000, match:sift-aid<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-29</span></td>
   <td>F/M</td>
-  
   <td>87.6</td>
   <td>2261.4</td>
   <td>79.1</td>
@@ -4077,9 +1980,7 @@ google.charts.load('current', {
   <td>0.2553</td>
   <td>0.2912</td>
   <td>0.3249</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Mariano Rodríguez, Gabriele Facciolo, Rafael Grompone Von Gioi, Pablo Musé, Jean-Michel Morel, Julie Delon</td>
   <td class="hidden_value">We extract the keypoints using OpenCV&#39;s implementation of SIFT. The AID descriptors are computed with a CNN from patches extracted at each keypoint location, the result is a binary descriptor of 6272 bits. The matching is computed as the Hamming distance between the descriptors, with the decision threshold set at 4000. Preprint: https://hal.archives-ouvertes.fr/hal-02016010. Code: https://github.com/rdguez-mariano/sift-aid</td>
   <td class="hidden_value"><a href="https://hal.archives-ouvertes.fr/hal-02016010">https://hal.archives-ouvertes.fr/hal-02016010</a></td>
@@ -4087,44 +1988,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">6272 bits</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">SIFT &#43; ContextDesc</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-09</span></td>
   <td>F</td>
-  
   <td>97.9</td>
   <td>6020.4</td>
   <td>97.2</td>
@@ -4134,9 +2001,7 @@ google.charts.load('current', {
   <td>0.5399</td>
   <td>0.5853</td>
   <td>0.6226</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Zixin Luo</td>
   <td class="hidden_value">ContextDesc extracted on SIFT keypoints. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search. Features are quantized to uint8 and extracted from the code provided by the authors.</td>
   <td class="hidden_value"><a href="https://github.com/lzx551402/contextdesc">https://github.com/lzx551402/contextdesc</a></td>
@@ -4144,44 +2009,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 uint8</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">SIFT-Dense-ContextDesc</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-28</span></td>
   <td>F</td>
-  
   <td>96.6</td>
   <td>5084.7</td>
   <td>94.8</td>
@@ -4191,9 +2022,7 @@ google.charts.load('current', {
   <td>0.5129</td>
   <td>0.5582</td>
   <td>0.5946</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Zixin Luo, Jiahui Zhang</td>
   <td class="hidden_value">Dense-ContextDesc is a variant of ContextDesc, where descriptors are densely extracted from full images, instead of image patches, while other settings stay unchanged as original ContextDesc. We find Dense-ContextDesc performs better regarding in particular illumination changes. Dense-ContextDesc is extracted on SIFT keypoints. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search. Features are quantized to uint8 and extracted from the code provided by the authors. The model will be available on the authors&#39; GitHub page.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
@@ -4201,44 +2030,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">TBA</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">SIFT &#43; ContextDesc &#43; Inlier Classification V2</span><br /><span class="boards_subtitle">kp:8000, match:custom<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-28</span></td>
   <td>F/M</td>
-  
   <td>98.6</td>
   <td>6126.0</td>
   <td>97.5</td>
@@ -4248,9 +2043,7 @@ google.charts.load('current', {
   <td>0.7389</td>
   <td>0.7750</td>
   <td>0.8006</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Dawei Sun, Zixin Luo, Jiahui Zhang</td>
   <td class="hidden_value">We use the SIFT detector and ContextDesc descriptor, and then we train an improved inlier classification and fundamental matrix estimation network based on [Yi et al. CVPR2018] (https://arxiv.org/pdf/1711.05971.pdf).</td>
   <td class="hidden_value"><a href="https://github.com/lzx551402/contextdesc">https://github.com/lzx551402/contextdesc</a></td>
@@ -4258,44 +2051,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">SIFT-GeoDesc-GitHub</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-08</span></td>
   <td>F</td>
-  
   <td>97.4</td>
   <td>5213.3</td>
   <td>95.5</td>
@@ -4305,9 +2064,7 @@ google.charts.load('current', {
   <td>0.5298</td>
   <td>0.5741</td>
   <td>0.6141</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Zixin Luo</td>
   <td class="hidden_value">GeoDesc extracted on SIFT keypoints. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search. Features extracted from the code provided by the authors.</td>
   <td class="hidden_value"><a href="https://arxiv.org/abs/1807.06294">https://arxiv.org/abs/1807.06294</a></td>
@@ -4315,44 +2072,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">SIFT &#43; GeoDesc</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-24</span></td>
   <td>F</td>
-  
   <td>97.3</td>
   <td>5583.8</td>
   <td>95.8</td>
@@ -4362,9 +2085,7 @@ google.charts.load('current', {
   <td>0.5317</td>
   <td>0.5790</td>
   <td>0.6139</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">GeoDesc extracted on SIFT keypoints. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://github.com/lzx551402/geodesc">https://github.com/lzx551402/geodesc</a></td>
@@ -4372,44 +2093,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">SIFT &#43; HardNet</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-24</span></td>
   <td>F</td>
-  
   <td>97.9</td>
   <td>6552.9</td>
   <td>97.2</td>
@@ -4419,9 +2106,7 @@ google.charts.load('current', {
   <td>0.5481</td>
   <td>0.5940</td>
   <td>0.6310</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">HardNet extracted on SIFT keypoints. Number of keypoints: 8000 per image. Models trained on the Liberty sequence of the Brown dataset. We use slightly larger paches than specified for SIFT (scale multiplying factor 16/12). Feature matching with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://github.com/DagnyT/hardnet">https://github.com/DagnyT/hardnet</a></td>
@@ -4429,44 +2114,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">SIFT &#43; L2-Net</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-24</span></td>
   <td>F</td>
-  
   <td>97.3</td>
   <td>6082.5</td>
   <td>96.3</td>
@@ -4476,9 +2127,7 @@ google.charts.load('current', {
   <td>0.5087</td>
   <td>0.5548</td>
   <td>0.5942</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">L2-Net extracted on SIFT keypoints. Number of keypoints: 8000 per image. Models trained on the Liberty sequence of the Brown dataset. We use slightly larger paches than specified for SIFT (scale multiplying factor 16/12). Feature matching with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://github.com/yuruntian/L2-Net">https://github.com/yuruntian/L2-Net</a></td>
@@ -4486,44 +2135,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">SIFT &#43; ContextDesc &#43; Inlier Classification V1</span><br /><span class="boards_subtitle">kp:8000, match:custom<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-29</span></td>
   <td>F/M</td>
-  
   <td>98.4</td>
   <td>6045.8</td>
   <td>97.8</td>
@@ -4533,9 +2148,7 @@ google.charts.load('current', {
   <td>0.7169</td>
   <td>0.7545</td>
   <td>0.7849</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Dawei Sun, Zixin Luo, Jiahui Zhang</td>
   <td class="hidden_value">We use the SIFT detector and ContextDesc descriptor, and then we train an inlier classification and fundamental matrix estimation network using the architecture of [Yi et al. CVPR2018] (https://arxiv.org/pdf/1711.05971.pdf).</td>
   <td class="hidden_value"><a href="https://github.com/lzx551402/contextdesc">https://github.com/lzx551402/contextdesc</a></td>
@@ -4543,44 +2156,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">SIFT (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-24</span></td>
   <td>F</td>
-  
   <td>93.6</td>
   <td>4341.5</td>
   <td>88.5</td>
@@ -4590,9 +2169,7 @@ google.charts.load('current', {
   <td>0.4146</td>
   <td>0.4550</td>
   <td>0.4901</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SIFT, as implemented in OpenCV. Feature matching with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
@@ -4600,44 +2177,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">SIFT &#43; TFeat</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-24</span></td>
   <td>F</td>
-  
   <td>96.5</td>
   <td>5434.3</td>
   <td>94.1</td>
@@ -4647,9 +2190,7 @@ google.charts.load('current', {
   <td>0.4643</td>
   <td>0.5122</td>
   <td>0.5511</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">T-Feat extracted on SIFT keypoints. Number of keypoints: 8000 per image. Models trained on the Liberty sequence of the Brown dataset. We use slightly larger paches than specified for SIFT (scale multiplying factor 16/12). Feature matching with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://github.com/vbalnt/tfeat">https://github.com/vbalnt/tfeat</a></td>
@@ -4657,44 +2198,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">SIFT (OpenCV)</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-17</span></td>
   <td>F</td>
-  
   <td>85.3</td>
   <td>1214.3</td>
   <td>76.9</td>
@@ -4704,9 +2211,7 @@ google.charts.load('current', {
   <td>0.2439</td>
   <td>0.2762</td>
   <td>0.3038</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SIFT, as implemented in OpenCV. Feature matching with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
@@ -4714,44 +2219,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">Superpoint (nn matcher)</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-06-07</span></td>
   <td>F</td>
-  
   <td>95.0</td>
   <td>1578.8</td>
   <td>90.3</td>
@@ -4761,9 +2232,7 @@ google.charts.load('current', {
   <td>0.4778</td>
   <td>0.5207</td>
   <td>0.5578</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SuperPoint features from the submission &#39;SuperPoint &#43; Custom Matcher (v2)&#39; with a brute-force 1:1 matcher instead of the custom matcher. For reference.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
@@ -4771,44 +2240,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">Superpoint (1:1 matcher)</span><br /><span class="boards_subtitle">kp:2048, match:nn1to1<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-06-07</span></td>
   <td>F</td>
-  
   <td>95.6</td>
   <td>1525.9</td>
   <td>91.4</td>
@@ -4818,9 +2253,7 @@ google.charts.load('current', {
   <td>0.5440</td>
   <td>0.5877</td>
   <td>0.6210</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SuperPoint features from the submission &#39;SuperPoint &#43; Custom Matcher (v2)&#39; with a brute-force 1:1 matcher instead of the custom matcher. For reference.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
@@ -4828,44 +2261,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">SuperPoint (default)</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-24</span></td>
   <td>F</td>
-  
   <td>91.2</td>
   <td>989.7</td>
   <td>85.9</td>
@@ -4875,9 +2274,7 @@ google.charts.load('current', {
   <td>0.4267</td>
   <td>0.4665</td>
   <td>0.4974</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels. We extract features with the default parameters and use however many are returned (about 1200 on average). Feature matching done with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
@@ -4885,44 +2282,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">SuperPoint</span><br /><span class="boards_subtitle">kp:1024, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
-  
   <td>90.1</td>
   <td>813.6</td>
   <td>83.9</td>
@@ -4932,9 +2295,7 @@ google.charts.load('current', {
   <td>0.4145</td>
   <td>0.4506</td>
   <td>0.4792</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels. We lower the default detection threshold to take the number of features indicated in the label. Feature matching done with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
@@ -4942,44 +2303,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">SuperPoint</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
-  
   <td>91.8</td>
   <td>1465.2</td>
   <td>87.8</td>
@@ -4989,9 +2316,7 @@ google.charts.load('current', {
   <td>0.4222</td>
   <td>0.4631</td>
   <td>0.4948</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels. We lower the default detection threshold to take the number of features indicated in the label. Feature matching done with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
@@ -4999,44 +2324,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">SuperPoint</span><br /><span class="boards_subtitle">kp:256, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
-  
   <td>55.1</td>
   <td>148.9</td>
   <td>42.5</td>
@@ -5046,9 +2337,7 @@ google.charts.load('current', {
   <td>0.1289</td>
   <td>0.1400</td>
   <td>0.1493</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels. We lower the default detection threshold to take the number of features indicated in the label. Feature matching done with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
@@ -5056,44 +2345,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">SuperPoint</span><br /><span class="boards_subtitle">kp:512, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
-  
   <td>80.9</td>
   <td>383.5</td>
   <td>72.5</td>
@@ -5103,9 +2358,7 @@ google.charts.load('current', {
   <td>0.3118</td>
   <td>0.3383</td>
   <td>0.3586</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels. We lower the default detection threshold to take the number of features indicated in the label. Feature matching done with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
@@ -5113,44 +2366,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">SuperPoint</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-26</span></td>
   <td>F</td>
-  
   <td>93.7</td>
   <td>4943.5</td>
   <td>91.9</td>
@@ -5160,9 +2379,7 @@ google.charts.load('current', {
   <td>0.3932</td>
   <td>0.4454</td>
   <td>0.4882</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SuperPoint features. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels. We lower the default detection threshold to take the number of features indicated in the label. Feature matching done with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
@@ -5170,44 +2387,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">Scale-invariant desc. (Cartesian, lambda=16)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-07-29</span></td>
   <td>F</td>
-  
   <td>97.9</td>
   <td>7013.7</td>
   <td>97.3</td>
@@ -5217,9 +2400,7 @@ google.charts.load('current', {
   <td>0.5208</td>
   <td>0.5686</td>
   <td>0.6076</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Patrick Ebel</td>
   <td class="hidden_value">We compute scale-invariant descriptors with a log-polar transformation of the patch. Keypoints are DoG, with a scaling factor of lambda/12 over its chosen scale. (This is a baseline where we use cartesian patches instead.) Reference: &#39;Beyond Cartesian Representations for Local Descriptors&#39;, Patrick Ebel, Anastasiia Mishchuk, Kwang Moo Yi, Pascal Fua, and Eduard Trulls, ICCV 2019.</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
@@ -5227,44 +2408,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">128 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">SuperPoint (trained on coco &#43; phototourism training set)</span><br /><span class="boards_subtitle">kp:2048, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-30</span></td>
   <td>F</td>
-  
   <td>94.3</td>
   <td>1213.1</td>
   <td>88.6</td>
@@ -5274,9 +2421,7 @@ google.charts.load('current', {
   <td>0.4735</td>
   <td>0.5176</td>
   <td>0.5521</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Daniel DeTone, Paul Sarlin, Tomasz Malisiewicz, Andrew Rabinovich</td>
   <td class="hidden_value">SuperPoint V1 model trained on COCO homographic warps at VGA resolution, plus pairs from the phototourism training set using the GT poses and depths for correspondence. If necessary, we downsample the images so that the largest dimension is at most 1024 pixels. We extract features with the default parameters and use however many are returned.</td>
   <td class="hidden_value"><a href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork">https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork</a></td>
@@ -5284,44 +2429,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">SuperPoint &#43; Custom Matcher (v1)</span><br /><span class="boards_subtitle">kp:2048, match:custom<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-30</span></td>
   <td>F/M</td>
-  
   <td>96.5</td>
   <td>1129.8</td>
   <td>92.0</td>
@@ -5331,9 +2442,7 @@ google.charts.load('current', {
   <td>0.6320</td>
   <td>0.6721</td>
   <td>0.7010</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Paul-Edouard Sarlin, Daniel DeTone, Tomasz Malisiewicz, Andrew Rabinovich</td>
   <td class="hidden_value">Features are extracted by a modified SuperPoint: - retrained on the phototourism training set; - keypoints refinement; - better descriptor sampling; - adjusted thresholds. A custom matcher estimates the image rotation and rejects outlier matches using the correspondence classifier introduced in &#39;Learning To Find Good Correspondences&#39; (Yi et al., 2018).</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
@@ -5341,44 +2450,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">SuperPoint &#43; Custom Matcher (v2)</span><br /><span class="boards_subtitle">kp:2048, match:custom<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-05-28</span></td>
   <td>F/M</td>
-  
   <td>96.5</td>
   <td>1349.6</td>
   <td>92.1</td>
@@ -5388,9 +2463,7 @@ google.charts.load('current', {
   <td>0.6458</td>
   <td>0.6841</td>
   <td>0.7122</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Paul-Edouard Sarlin, Daniel DeTone, Tomasz Malisiewicz, Andrew Rabinovich</td>
   <td class="hidden_value">Features are extracted by a modified SuperPoint: - retrained on the phototourism training set, - keypoints refinement, - better descriptor sampling, - adjusted thresholds; A custom matcher estimates the image rotation and rejects outlier matches using the correspondence classifier introduced in &#39;Learning To Find Good Correspondences&#39; (Yi et al., 2018).</td>
   <td class="hidden_value"><a href="TBA">TBA</a></td>
@@ -5398,44 +2471,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">256 float32</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">SURF (OpenCV)</span><br /><span class="boards_subtitle">kp:8000, match:nn<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-04-24</span></td>
   <td>F</td>
-  
   <td>90.1</td>
   <td>2864.2</td>
   <td>80.8</td>
@@ -5445,9 +2484,7 @@ google.charts.load('current', {
   <td>0.3007</td>
   <td>0.3372</td>
   <td>0.3702</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">SURF, as implemented in OpenCV. Number of keypoints: 8000 per image. Feature matching with brute-force nearest-neighbour search.</td>
   <td class="hidden_value"><a href="https://opencv.org">https://opencv.org</a></td>
@@ -5455,44 +2492,10 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">TBA</td>
 </tr>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <tr>
-  
   <td class="align_left"><span class="boards_title">SIFT &#43; ContextDesc</span><br /><span class="boards_subtitle">kp:8000, match:nn1to1<span></td>
   <td data-sorter="shortDate" data-date-format="yyyymmdd"><span class="nolinebreak">19-06-07</span></td>
   <td>F</td>
-  
   <td>98.1</td>
   <td>6472.1</td>
   <td>98.0</td>
@@ -5502,9 +2505,7 @@ google.charts.load('current', {
   <td>0.6017</td>
   <td>0.6464</td>
   <td>0.6826</td>
-  
   <td>&mdash;</td>
-  
   <td class="hidden_value">Challenge organizers</td>
   <td class="hidden_value">ContextDesc extracted on SIFT keypoints. Number of keypoints: 8000 per image. Feature matching with nearest-neighbour search, enforcing cross-match consistency. Features are quantized to uint8 and extracted from the code provided by the authors.</td>
   <td class="hidden_value"><a href="https://github.com/lzx551402/contextdesc">https://github.com/lzx551402/contextdesc</a></td>
@@ -5512,11 +2513,8 @@ google.charts.load('current', {
   <td class="hidden_value">N/A</td>
   <td class="hidden_value">TBA</td>
 </tr>
-  
-
 </tbody>
 </table>
-
 <div id="chart-mvs-map-th" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -5566,7 +2564,6 @@ google.charts.load('current', {
 });
 </script>
 </div>
-
 <div id="chart-mvs-map-th-kp-8000" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -5616,7 +2613,6 @@ google.charts.load('current', {
 });
 </script>
 </div>
-
 <div id="chart-mvs-map-th-kp-2048" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -5666,7 +2662,6 @@ google.charts.load('current', {
 });
 </script>
 </div>
-
 <div id="chart-mvs-map-th-kp-1024" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -5716,7 +2711,6 @@ google.charts.load('current', {
 });
 </script>
 </div>
-
 <div id="chart-mvs-map-th-kp-512" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -5766,7 +2760,6 @@ google.charts.load('current', {
 });
 </script>
 </div>
-
 <div id="chart-mvs-map-th-kp-256" style="width: 100%; height: 500px; margin-top: 1em">
 <script type="text/javascript">
 google.charts.load('current', {
@@ -5816,18 +2809,12 @@ google.charts.load('current', {
 });
 </script>
 </div>
-
 <hr>
-
 <p><br /><br /></p>
-
-<h2 id="a-name-silda-a-s1-silda-dataset-mdash-image-matching-task"><a name="silda"></a>[S1] SILDa dataset &mdash; Image matching task</h2>
-
+<h2 id="a-namesildaas1-silda-dataset-mdash-image-matching-task"><a name="silda"></a>[S1] SILDa dataset — Image matching task</h2>
 <p>Coming Soon.</p>
-
-<p><br /><br />
-<!--### <a name="glossary"></a>Glossary--></p>
-
+<p><br /><br /></p>
+<!--### <a name="glossary"></a>Glossary-->
 <!--Stereo task:
 
 <ul>
@@ -5837,7 +2824,6 @@ google.charts.load('current', {
   <li><b>mAP<sup>x</sup>:</b> Mean average precision at angular threshold *x*.</li>
 </ul>
 -->
-
 <!--Multi-view reconstruction task:
 
 <ul>
