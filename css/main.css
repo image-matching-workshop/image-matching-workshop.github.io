@@ -125,11 +125,11 @@ div.content
 .header
 {
     margin-top: 60px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 .banner
 {
-    max-width: 100%;
+    max-width: 90%;
 }
 .info
 {
@@ -182,14 +182,12 @@ h3.intro
 }
 .menu-item
 {
-    font-family: 'Lato', sans-serif;
-    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
     font-weight: 300;
-		margin: 0 0.5em;
+		margin: 0 1em;
 
     text-decoration: none;
-
-    color: #966 !important;
 }
 .meta
 {
@@ -322,7 +320,7 @@ div.item {
 .affiliation {
     font-family: 'Roboto Slab', 'Roboto', 'Lato', sans-serif;
     display: block;
-    font-size:14px;
+    font-size: 14px;
     font-weight: 300;
 }
 span.nolinebreak { white-space: nowrap; }
