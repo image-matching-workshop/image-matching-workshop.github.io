@@ -302,11 +302,11 @@ div.item {
     vertical-align: top;
     display: inline-block;
     text-align: center;
-    width: 110px;
+    width: 150px;
 }
 .headshot {
-    width: 85px;
-    height: 85px;
+    width: 125px;
+    height: 125px;
     background-color: grey;
     border-radius: 50%;
 }
