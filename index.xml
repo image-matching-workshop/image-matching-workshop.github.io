@@ -103,14 +103,5 @@ Task P1: Stereo maching in the &amp;lsquo;Phototourism&amp;rsquo; dataset Task P
 Place the mouse cursor over row headers for details about the metrics (or here for an example). You can filter using the search box and labels, which are listed under the name of the method.</description>
     </item>
     
-    <item>
-      <title>IMW CVPR 2023: Call for Papers</title>
-      <link>https://image-matching-workshop.github.io/papers/</link>
-      <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
-      
-      <guid>https://image-matching-workshop.github.io/papers/</guid>
-      <description>Overview We are pleased to announce the fifth edition of the Image Matching Workshop, co-located with CVPR 2023. Its goal is to encourage and highlight novel strategies for image matching that deviate from and advance traditional formulations, with a focus on large-scale, wide-baseline matching for 3D reconstruction and pose estimation. This can be achieved by applying new technologies to sparse feature matching, or doing away with keypoints and descriptors entirely, such as with dense solutions.</description>
-    </item>
-    
   </channel>
 </rss>
