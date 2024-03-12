@@ -6,38 +6,28 @@
     <description>Recent content in Breakdowns on Fourth Workshop on Image Matching: Local Features &amp; Beyond</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 02 Oct 2016 22:55:05 -0400</lastBuildDate><atom:link href="https://image-matching-workshop.github.io/breakdown/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Oct 2016 22:55:05 -0400</lastBuildDate>
+    <atom:link href="https://image-matching-workshop.github.io/breakdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Breakdown: Phototourism | MVS | Sequences</title>
       <link>https://image-matching-workshop.github.io/breakdown/phototourism/mvs/by_seq/</link>
       <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
-      
       <guid>https://image-matching-workshop.github.io/breakdown/phototourism/mvs/by_seq/</guid>
-      <description>Breakdown on the Phototourism dataset, multi-view stereo task, by sequence.
-Back to the leaderboard MVS &amp;mdash; All sequences &amp;mdash; Sorted by mAP15o Method BM FCS LMS LB MC MR PSM RS SF SPC USC AVG Date Type By Details Link Contact Updated Descriptor size AKAZE (OpenCV)
-kp:8000, match:nn 0.3576 0.4385 0.5551 0.3696 0.5935 0.3131 0.2543 0.4708 0.5709 0.6054 0.1847 0.4285 19-04-24 F Challenge organizers AKAZE, as implemented in OpenCV. Number of keypoints: 8000 per image.</description>
+      <description>Breakdown on the Phototourism dataset, multi-view stereo task, by sequence.&#xA;Back to the leaderboard MVS &amp;mdash; All sequences &amp;mdash; Sorted by mAP15o Method BM FCS LMS LB MC MR PSM RS SF SPC USC AVG Date Type By Details Link Contact Updated Descriptor size AKAZE (OpenCV)&#xA;kp:8000, match:nn 0.3576 0.4385 0.5551 0.3696 0.5935 0.3131 0.2543 0.4708 0.5709 0.6054 0.1847 0.4285 19-04-24 F Challenge organizers AKAZE, as implemented in OpenCV. Number of keypoints: 8000 per image.</description>
     </item>
-    
     <item>
       <title>Breakdown: Phototourism | MVS | Subsets</title>
       <link>https://image-matching-workshop.github.io/breakdown/phototourism/mvs/by_bag/</link>
       <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
-      
       <guid>https://image-matching-workshop.github.io/breakdown/phototourism/mvs/by_bag/</guid>
-      <description>Breakdown on the Phototourism dataset, multi-view stereo task, by subset size.
-Breakdown by bag size of 3 images Breakdown by bag size of 5 images Breakdown by bag size of 10 images Breakdown by bag size of 25 images Back to the leaderboard MVS, bag size 3 Method Date Type Ims (%) #Pts SR TL mAP5o mAP10o mAP15o mAP20o mAP25o ATE By Details Link Contact Updated Descriptor size AKAZE (OpenCV)</description>
+      <description>Breakdown on the Phototourism dataset, multi-view stereo task, by subset size.&#xA;Breakdown by bag size of 3 images Breakdown by bag size of 5 images Breakdown by bag size of 10 images Breakdown by bag size of 25 images Back to the leaderboard MVS, bag size 3 Method Date Type Ims (%) #Pts SR TL mAP5o mAP10o mAP15o mAP20o mAP25o ATE By Details Link Contact Updated Descriptor size AKAZE (OpenCV)</description>
     </item>
-    
     <item>
       <title>Breakdown: Phototourism | Stereo | Sequences</title>
       <link>https://image-matching-workshop.github.io/breakdown/phototourism/stereo/by_seq/</link>
       <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
-      
       <guid>https://image-matching-workshop.github.io/breakdown/phototourism/stereo/by_seq/</guid>
-      <description>Breakdown on the Phototourism dataset, multi-view stereo task, by sequence.
-Back to the leaderboard Stereo &amp;mdash; All sequences &amp;mdash; Sorted by mAP15o Method BM FCS LMS LB MC MR PSM RS SF SPC USC AVG Date Type By Details Link Contact Updated Descriptor size AKAZE (OpenCV)
-kp:8000, match:nn 0.0558 0.0133 0.0177 0.0575 0.0207 0.0112 0.0210 0.0329 0.0139 0.0102 0.0628 0.0288 19-04-24 F Challenge organizers AKAZE, as implemented in OpenCV. Number of keypoints: 8000 per image.</description>
+      <description>Breakdown on the Phototourism dataset, multi-view stereo task, by sequence.&#xA;Back to the leaderboard Stereo &amp;mdash; All sequences &amp;mdash; Sorted by mAP15o Method BM FCS LMS LB MC MR PSM RS SF SPC USC AVG Date Type By Details Link Contact Updated Descriptor size AKAZE (OpenCV)&#xA;kp:8000, match:nn 0.0558 0.0133 0.0177 0.0575 0.0207 0.0112 0.0210 0.0329 0.0139 0.0102 0.0628 0.0288 19-04-24 F Challenge organizers AKAZE, as implemented in OpenCV. Number of keypoints: 8000 per image.</description>
     </item>
-    
   </channel>
 </rss>
