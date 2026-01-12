@@ -21,7 +21,7 @@
 
 <title>Seventh Workshop on Image Matching: Local Features &amp; Beyond</title>
 
-<meta name="generator" content="Hugo 0.131.0">
+<meta name="generator" content="Hugo 0.150.1">
 
 
 
@@ -212,7 +212,7 @@ supervision.</p>
 </ul>
 </li>
 </ul>
-<h2 id="a-nameptadataset-1-phototourism"><a name="pt"></a>Dataset 1: Phototourism</h2>
+<h2 id="dataset-1-phototourism"><a name="pt"></a>Dataset 1: Phototourism</h2>
 <p>In order to learn and evaluate models that can perform well under a wide range
 of situations, it is of paramount importance to collect information from
 multiple sensors obtained at different times. A natural solution is thus to turn
@@ -417,7 +417,7 @@ for training, which can be easily thresholded to generate a list of valid pairs.
 <p>The challenge consists of two tracks: stereo matching, and
 multi-view reconstruction with small subsets of images. New tasks and data
 modalities will be added in future editions.</p>
-<h3 id="a-namept_stereoatask-1-wide-baseline-stereo-matching"><a name="pt_stereo"></a>Task 1: Wide-baseline stereo matching</h3>
+<h3 id="task-1-wide-baseline-stereo-matching"><a name="pt_stereo"></a>Task 1: Wide-baseline stereo matching</h3>
 <p>In this task we match two images across wide baselines. Image pairs are selected
 according to visibility constraints so that at least part of the scene is
 guaranteed to overlap. The input can be a set of keypoints, or keypoints and
@@ -445,7 +445,7 @@ we rank entries by mAP<sup>15<sup>o</sup></sup>, which we have found empirically
 to be an adequate proxy for wide-baseline stereo matching performance. Note that
 we also plan to allow submissions of the estimated poses in the future, to
 include dense methods based on deep networks.</p>
-<h3 id="a-namept_mvsatask-2-sfm-from-small-subsets"><a name="pt_mvs"></a>Task 2: SfM from small subsets</h3>
+<h3 id="task-2-sfm-from-small-subsets"><a name="pt_mvs"></a>Task 2: SfM from small subsets</h3>
 <p>While modern solutions have shown very promising results in stereo, it is not
 clear how much of these improvements remains after large-scale reconstruction
 with Bundle Adjustment.  An alternative approach is thus to evaluate local
@@ -471,7 +471,7 @@ etc.) and average the results. Note that this penalizes reconstructions that
 fail to register images. If COLMAP generates multiple 3D models which cannot be
 co-registered, we consider the largest one (the one with the most images).  As
 for stereo, use mAP<sup>15<sup>o</sup></sup> to rank challenge entries.</p>
-<h3 id="a-namept_frameworkadownload-links-and-and-submission-instructions"><a name="pt_framework"></a>Download links and and submission instructions</h3>
+<h3 id="download-links-and-and-submission-instructions"><a name="pt_framework"></a>Download links and and submission instructions</h3>
 <p>The data can be downloaded here:</p>
 <ul>
 <li><a href="https://gfx.uvic.ca/nextcloud/index.php/s/75JNSoggacQhOkQ">Download link for the training data: 127.3 Gb</a></li>
@@ -490,13 +490,13 @@ here:</p>
 the organizers at <a href="mailto:imagematching@uvic.ca">imagematching@uvic.ca</a> for the
 password (please account for short delays in answering and uploading close the
 deadline).</p>
-<h2 id="a-namesildaadataset-2-silda-image-matching"><a name="silda"></a>Dataset 2: SILDa Image Matching</h2>
+<h2 id="dataset-2-silda-image-matching"><a name="silda"></a>Dataset 2: SILDa Image Matching</h2>
 <p>The Scape Imperial Localisation Dataset (<em>SILDa</em>) focuses on several localisation related tasks, and one of the tasks included is concerned with image matching under very significant camera pose and enviromental condition changes. The data were collected around Imperial College London over a period of one year. For the interested reader, a more detailed description of the dataset can be found <a href="https://research.scape.io/silda/">here</a>.</p>
 <div style="width: 100%; text-align: center; margin: 30px 0;">
     <img style="width: 80%" src="img/silda/silda-teaser.png"/><br />
     <span>The Royal School of Mines at Imperial College London, across different conditions.</span>
 </div>
-<h3 id="a-namesilda_descriptiona-matching-task-description"><a name="silda_description"></a> Matching Task Description</h3>
+<h3 id="matching-task-description"><a name="silda_description"></a> Matching Task Description</h3>
 <p>The <em>SILDa Image Matching task</em>, focuses on evaluating matching performance in pairs of images with significant difficulty.
 The ground truth models for the accurate camera pose estimation were built using an SfM pipeline. Given the nature of the data, some pairs are quite challenging due to the fact that the possible matching area is constrained to a small region of an image.</p>
 <div style="width: 100%; text-align: center; margin: 30px 0;">
@@ -508,7 +508,7 @@ The ground truth models for the accurate camera pose estimation were built using
     <span>Example of the pairs available in the SILDa Image Matching dataset.</span>
 </div>
 <p>The results will be based on evaluating the matching accuracy, in terms of pixel level matching. Each method will produce a list of pixel to pixel matches for each image pair, which will then be evaluated in terms of their accuracy w.r.t to the underlying epipolar geometry.</p>
-<h3 id="a-namesilda_submissionadownload-links-and-and-submission-instructions"><a name="silda_submission"></a>Download links and and submission instructions</h3>
+<h3 id="download-links-and-and-submission-instructions-1"><a name="silda_submission"></a>Download links and and submission instructions</h3>
 <p>The data can be downloaded here:</p>
 <ul>
 <li><a href="https://github.com/scape-research/silda#getting-the-data">Download the data</a></li>
@@ -562,13 +562,6 @@ Please note that the subsmission process is different than the one for the Photo
 </div>
 
 
-
-
-  
-    
-      
-    
-  
 
 
 
