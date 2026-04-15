@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} !image-matching.github.io$ [NC]
+RewriteRule ^(.*)$ http://image-matching.github.io/$1 [L,R=301]
