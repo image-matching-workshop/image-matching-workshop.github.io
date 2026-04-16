@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=50913&amp;path=livereload" data-no-instant defer></script>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,30 +17,28 @@
 <meta name="description" content="Image Matching: Local Features &amp; Beyond - CVPR 2026 Workshop">
 <meta name="keywords" content="image,matching,local Features, CVPR 2026, Workshop, CVPR">
 
-<base href="https://image-matching-workshop.github.io/">
-
 <title>Eighth Workshop on Image Matching: Local Features &amp; Beyond</title>
 
-<meta name="generator" content="Hugo 0.152.2">
+<meta name="generator" content="Hugo 0.160.1">
 
 
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
-<link rel="stylesheet" href="https://image-matching-workshop.github.io/css/datatables.min.css">
-<link rel="stylesheet" href="https://image-matching-workshop.github.io/css/balloon.min.css">
-<link rel="stylesheet" href="https://image-matching-workshop.github.io/css/main.css">
-<link rel="stylesheet" href="https://image-matching-workshop.github.io/css/custom.css">
+<link rel="stylesheet" href="../css/datatables.min.css">
+<link rel="stylesheet" href="../css/balloon.min.css">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/custom.css">
 
 
 
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="../manifest.json">
+<link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5">
 <meta name="theme-color" content="#ffffff">
 
 
@@ -48,14 +46,14 @@
 
 
 <script src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript" src="https://image-matching-workshop.github.io/js/jquery.latest.min.js"></script>
-<script type="text/javascript" src="https://image-matching-workshop.github.io/js/jquery.csv.min.js"></script>
-<script type="text/javascript" src="https://image-matching-workshop.github.io/js/datatables.min.js"></script>
-<script type="text/javascript" src="https://image-matching-workshop.github.io/js/three.js"></script>
-<script type="text/javascript" src="https://image-matching-workshop.github.io/js/PCDLoader.js"></script>
-<script type="text/javascript" src="https://image-matching-workshop.github.io/js/TrackballControls.js"></script>
-<script type="text/javascript" src="https://image-matching-workshop.github.io/js/WebGL.js"></script>
-<script type="text/javascript" src="https://image-matching-workshop.github.io/js/stats.min.js"></script>
+<script type="text/javascript" src="../js/jquery.latest.min.js"></script>
+<script type="text/javascript" src="../js/jquery.csv.min.js"></script>
+<script type="text/javascript" src="../js/datatables.min.js"></script>
+<script type="text/javascript" src="../js/three.js"></script>
+<script type="text/javascript" src="../js/PCDLoader.js"></script>
+<script type="text/javascript" src="../js/TrackballControls.js"></script>
+<script type="text/javascript" src="../js/WebGL.js"></script>
+<script type="text/javascript" src="../js/stats.min.js"></script>
 <script>
 $(document).ready(function (){
     var table = $('.leaderboard_stereo').DataTable({
@@ -1118,7 +1116,7 @@ brute-force nearest neighbour search (&ldquo;nn&rdquo;), one to one corresponden
 <script type="text/javascript">
 google.charts.load('current', {
   callback: function () {
-    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/stereo-map-th.csv";
+    csvFile = "http:\/\/localhost:50913\/csv\/stereo-map-th.csv";
     $.get(csvFile, function(csvString) {
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
       var data = new google.visualization.arrayToDataTable(arrayData);
@@ -1167,7 +1165,7 @@ google.charts.load('current', {
 <script type="text/javascript">
 google.charts.load('current', {
   callback: function () {
-    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/stereo-map-th-kp-8000.csv";
+    csvFile = "http:\/\/localhost:50913\/csv\/stereo-map-th-kp-8000.csv";
     $.get(csvFile, function(csvString) {
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
       var data = new google.visualization.arrayToDataTable(arrayData);
@@ -1216,7 +1214,7 @@ google.charts.load('current', {
 <script type="text/javascript">
 google.charts.load('current', {
   callback: function () {
-    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/stereo-map-th-kp-2048.csv";
+    csvFile = "http:\/\/localhost:50913\/csv\/stereo-map-th-kp-2048.csv";
     $.get(csvFile, function(csvString) {
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
       var data = new google.visualization.arrayToDataTable(arrayData);
@@ -1265,7 +1263,7 @@ google.charts.load('current', {
 <script type="text/javascript">
 google.charts.load('current', {
   callback: function () {
-    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/stereo-map-th-kp-1024.csv";
+    csvFile = "http:\/\/localhost:50913\/csv\/stereo-map-th-kp-1024.csv";
     $.get(csvFile, function(csvString) {
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
       var data = new google.visualization.arrayToDataTable(arrayData);
@@ -1314,7 +1312,7 @@ google.charts.load('current', {
 <script type="text/javascript">
 google.charts.load('current', {
   callback: function () {
-    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/stereo-map-th-kp-512.csv";
+    csvFile = "http:\/\/localhost:50913\/csv\/stereo-map-th-kp-512.csv";
     $.get(csvFile, function(csvString) {
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
       var data = new google.visualization.arrayToDataTable(arrayData);
@@ -1363,7 +1361,7 @@ google.charts.load('current', {
 <script type="text/javascript">
 google.charts.load('current', {
   callback: function () {
-    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/stereo-map-th-kp-256.csv";
+    csvFile = "http:\/\/localhost:50913\/csv\/stereo-map-th-kp-256.csv";
     $.get(csvFile, function(csvString) {
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
       var data = new google.visualization.arrayToDataTable(arrayData);
@@ -2519,7 +2517,7 @@ google.charts.load('current', {
 <script type="text/javascript">
 google.charts.load('current', {
   callback: function () {
-    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th.csv";
+    csvFile = "http:\/\/localhost:50913\/csv\/mvs-map-th.csv";
     $.get(csvFile, function(csvString) {
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
       var data = new google.visualization.arrayToDataTable(arrayData);
@@ -2568,7 +2566,7 @@ google.charts.load('current', {
 <script type="text/javascript">
 google.charts.load('current', {
   callback: function () {
-    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-kp-8000.csv";
+    csvFile = "http:\/\/localhost:50913\/csv\/mvs-map-th-kp-8000.csv";
     $.get(csvFile, function(csvString) {
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
       var data = new google.visualization.arrayToDataTable(arrayData);
@@ -2617,7 +2615,7 @@ google.charts.load('current', {
 <script type="text/javascript">
 google.charts.load('current', {
   callback: function () {
-    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-kp-2048.csv";
+    csvFile = "http:\/\/localhost:50913\/csv\/mvs-map-th-kp-2048.csv";
     $.get(csvFile, function(csvString) {
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
       var data = new google.visualization.arrayToDataTable(arrayData);
@@ -2666,7 +2664,7 @@ google.charts.load('current', {
 <script type="text/javascript">
 google.charts.load('current', {
   callback: function () {
-    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-kp-1024.csv";
+    csvFile = "http:\/\/localhost:50913\/csv\/mvs-map-th-kp-1024.csv";
     $.get(csvFile, function(csvString) {
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
       var data = new google.visualization.arrayToDataTable(arrayData);
@@ -2715,7 +2713,7 @@ google.charts.load('current', {
 <script type="text/javascript">
 google.charts.load('current', {
   callback: function () {
-    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-kp-512.csv";
+    csvFile = "http:\/\/localhost:50913\/csv\/mvs-map-th-kp-512.csv";
     $.get(csvFile, function(csvString) {
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
       var data = new google.visualization.arrayToDataTable(arrayData);
@@ -2764,7 +2762,7 @@ google.charts.load('current', {
 <script type="text/javascript">
 google.charts.load('current', {
   callback: function () {
-    csvFile = "https:\/\/image-matching-workshop.github.io\/csv\/mvs-map-th-kp-256.csv";
+    csvFile = "http:\/\/localhost:50913\/csv\/mvs-map-th-kp-256.csv";
     $.get(csvFile, function(csvString) {
       var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
       var data = new google.visualization.arrayToDataTable(arrayData);
@@ -2854,13 +2852,13 @@ google.charts.load('current', {
   
   
   
-  <span><a class="menu-item" href="/"></a></span>
+  <span><a class="menu-item" href="../"></a></span>
   
   
-  <span><a class="menu-item" href="https://image-matching-workshop.github.io/challenge/"> | next &gt;</a></span>
+  <span><a class="menu-item" href="http://localhost:50913/challenge/"> | next &gt;</a></span>
   
   
-  <h4 class="text-center"><a class="menu-item" href="https://image-matching-workshop.github.io/">home</a></h4>
+  <h4 class="text-center"><a class="menu-item" href="http://localhost:50913/">home</a></h4>
 </section>
 
 
