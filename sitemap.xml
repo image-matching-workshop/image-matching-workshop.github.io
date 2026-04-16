@@ -2,47 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:50913/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:50913/cvpr2019/</loc>
+    <loc>http://localhost:1313/cvpr2019/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:50913/cvpr2020/</loc>
+    <loc>http://localhost:1313/cvpr2020/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:50913/cvpr2021/</loc>
+    <loc>http://localhost:1313/cvpr2021/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:50913/cvpr2022/</loc>
+    <loc>http://localhost:1313/cvpr2022/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:50913/cvpr2023/</loc>
+    <loc>http://localhost:1313/cvpr2023/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:50913/cvpr2025/</loc>
+    <loc>http://localhost:1313/cvpr2025/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:50913/breakdown/phototourism/mvs/by_seq/</loc>
+    <loc>http://localhost:1313/breakdown/phototourism/mvs/by_seq/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:50913/breakdown/phototourism/mvs/by_bag/</loc>
+    <loc>http://localhost:1313/breakdown/phototourism/mvs/by_bag/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:50913/breakdown/phototourism/stereo/by_seq/</loc>
+    <loc>http://localhost:1313/breakdown/phototourism/stereo/by_seq/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:50913/breakdown/</loc>
+    <loc>http://localhost:1313/breakdown/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:50913/challenge/</loc>
+    <loc>http://localhost:1313/challenge/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:50913/leaderboard/</loc>
+    <loc>http://localhost:1313/leaderboard/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:50913/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>http://localhost:50913/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>
